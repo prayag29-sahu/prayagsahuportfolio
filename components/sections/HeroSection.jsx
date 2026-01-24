@@ -419,7 +419,6 @@
 
 'use client';
 
-import Image from "next/image";
 import ParallaxSection from "@/components/ui/ParallaxSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
