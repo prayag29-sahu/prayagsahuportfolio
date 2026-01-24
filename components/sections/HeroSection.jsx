@@ -482,7 +482,6 @@ export default function HeroSection() {
 
                     {/* RIGHT TEXT + TECH BUBBLES */}
                     <div className="text-center lg:text-right -mt-20">
-
                         {/* TECH BUBBLES (ABOVE DEVELOPER) */}
                         <div className="mb-6 -mt-20">
                             <IconScrollVelocity
@@ -496,7 +495,6 @@ export default function HeroSection() {
                                 ]}
                             />
                         </div>
-
                             <BlurText
                                 text="DEVELOPER"
                                 delay={200}
@@ -505,8 +503,6 @@ export default function HeroSection() {
                                 onAnimationComplete={handleAnimationComplete}
                                 className="text-5xl md:text-6xl lg:text-7xl font-extrabold  text-white leading-none"
                             />
-
-
                         <p className="mt-4 text-gray-400 max-w-sm lg:ml-auto">
                             Full Stack Developer specializing in scalable web, apps & modern UI systems.
                         </p>
