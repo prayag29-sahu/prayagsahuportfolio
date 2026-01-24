@@ -282,11 +282,11 @@ export default function Navbar() {
           bg-black/80 backdrop-blur-xl border border-white/10 shadow-lg"
                 >
                     <Image
-                        src="/images/2.png"
+                        src="/images/hero3.png"
                         alt="avatar"
                         width={100}
                         height={100}
-                        className="w-11 h-11 rounded-full object-cover"
+                        className="w-12 h-12 rounded-full object-cover"
                     />
 
                     <NavLink label="Home" />

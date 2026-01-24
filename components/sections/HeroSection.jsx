@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 // 'use client';
 
 // export default function HeroSection() {
@@ -295,15 +296,150 @@
 
 
 
+// 'use client';
+
+// import Image from "next/image";
+// import ParallaxSection from "@/components/ui/ParallaxSection";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//     faJava,
+//     faNodeJs,
+//     faReact,
+//     faFigma
+// } from "@fortawesome/free-brands-svg-icons";
+// import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+// import { byPrefixAndName } from "@fortawesome/free-brands-svg-icons";
+
+
+// export default function HeroSection() {
+//     return (
+//         <ParallaxSection
+//             backgroundImage="/images/bg-1.png"
+//             height="100vh"
+//         >
+//             <section
+//                 id="home"
+//                 className="relative min-h-screen flex items-center justify-center pt-28"
+//             >
+//                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 items-center gap-10">
+
+//                     {/* LEFT TEXT */}
+//                     <div className="text-center lg:text-left mb-20 pb-20">
+//                         <p className="tracking-widest text-lg text-white/70 uppercase mb-3">
+//                             Prayag Sahu
+//                         </p>
+
+//                         <h1 className="text-7xl md:text-8xl lg:text-9xl font-extrabold text-white leading-none">
+//                             FULL STACK
+//                         </h1>
+//                     </div>
+
+//                     {/* CENTER IMAGE */}
+//                     <div className="flex justify-center relative">
+//                         <div className="relative ml-10 w-[300px] h-[520px] rounded-2xl overflow-hidden shadow-2xl z-10">
+//                             <Image
+//                                 src="/images/hero1.png"
+//                                 alt="Prayag Sahu"
+//                                 width={900}
+//                                 height={800}
+//                                 className="object-cover"
+//                             />
+//                         </div>
+
+
+//                         <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+//                             <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+//                                 <div className="flex flex-row gap-12">
+//                                     <TechBubble icon={faReact} color="#61DBFB" />
+//                                     <TechBubble icon={faFigma} color="#F24E1E" />
+//                                     <TechBubble icon={faJava} color="#f89820" />
+//                                     <TechBubble icon={faDatabase} color="#4DB33D" />
+//                                     <TechBubble icon={faNodeJs} color="#68A063" />
+//                                 </div>
+//                             </div>
+//                         </div>
+
+
+
+//                     </div>
+
+
+
+
+//                     {/* RIGHT TEXT */}
+//                     <div className="text-center lg:text-right">
+//                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-none">
+//                             DEVELOPER
+//                         </h1>
+
+//                         <p className="mt-4 text-gray-400 max-w-sm lg:ml-auto">
+//                             Full Stack Developer specializing in scalable web apps & modern UI systems.
+//                         </p>
+//                     </div>
+
+//                 </div>
+
+
+//                 {/* KEEP THIS EXACTLY AS REQUESTED */}
+//                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+//                     <div className="w-6 h-10 border-2 border-blue-500 rounded-full flex justify-center p-2">
+//                         <div className="w-1.5 h-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" />
+//                     </div>
+//                 </div>
+
+//             </section>
+
+//         </ParallaxSection>
+//     );
+// }
+
+// /* ================= TECH ORBIT COMPONENT ================= */
+
+
+// function TechBubble({ icon, color }) {
+//     return (
+//         <div
+//             className="w-14 h-14 rounded-full bg-black/80
+//       backdrop-blur-xl border border-white/10
+//       flex items-center justify-center animate-float shadow-lg"
+//         >
+//             <FontAwesomeIcon
+//                 icon={icon}
+//                 className="text-5xl"
+//                 style={{ color }}
+//             />
+//         </div>
+//     );
+// }
+
+
+
+
+
+
 'use client';
 
 import Image from "next/image";
 import ParallaxSection from "@/components/ui/ParallaxSection";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faJava,
+    faNodeJs,
+    faReact,
+    faFigma
+} from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import TiltedCard from '@/components/ui/TiltedCard';
+import IconScrollVelocity from '@/components/ui/IconScrollVelocity';
+import BlurText from "@/components/ui/BlurText";
 
 export default function HeroSection() {
+    const handleAnimationComplete = () => {
+        console.log('Animation completed!');
+    };
     return (
         <ParallaxSection
-            backgroundImage="/images/bg1.png"
+            backgroundImage="/images/bg-1.png"
             height="100vh"
         >
             <section
@@ -314,70 +450,80 @@ export default function HeroSection() {
 
                     {/* LEFT TEXT */}
                     <div className="text-center lg:text-left mb-20 pb-20">
-                        <p className="tracking-widest text-lg text-white/70 uppercase mb-3">
-                            Prayag Sahu
-                        </p>
-
-                        <h1 className="text-7xl md:text-8xl lg:text-9xl font-extrabold text-white leading-none">
-                            FULL STACK
-                        </h1>
+                        <BlurText
+                            text="FULL STACK"
+                            delay={200}
+                            animateBy="words"
+                            direction="top"
+                            onAnimationComplete={handleAnimationComplete}
+                            className="text-7xl md:text-8xl lg:text-9xl font-extrabold text-white leading-none"
+                        />
                     </div>
 
                     {/* CENTER IMAGE */}
                     <div className="flex justify-center relative">
-                        <div className="relative w-[300px] h-[520px] rounded-2xl overflow-hidden shadow-2xl z-10">
-                            <Image
-                                src="/images/2.png"
-                                alt="Prayag Sahu"
-                                width={600}
-                                height={800}
-                                className="object-cover"
+                        <div className="relative ml-10 w-[300px] h-[520px] rounded-2xl overflow-hidden shadow-2xl z-10">
+                            <TiltedCard
+                                imageSrc="/images/hero1.png"
+                                captionText="Freelance Full Stack Developer · India"
+                                imageWidth="320px"
+                                imageHeight="320px"
+                                rotateAmplitude={20}
+                                scaleOnHover={1.08}
+                                showTooltip
+                                displayOverlayContent
+                                overlayContent={
+                                    <p className="text-white font-semibold">
+                                        Prayag Sahu
+                                    </p>
+                                }
+                            />
+
+                        </div>
+                    </div>
+
+                    {/* RIGHT TEXT + TECH BUBBLES */}
+                    <div className="text-center lg:text-right -mt-20">
+
+                        {/* TECH BUBBLES (ABOVE DEVELOPER) */}
+                        <div className="mb-6 -mt-20">
+                            <IconScrollVelocity
+                                velocity={90}
+                                icons={[
+                                    <FontAwesomeIcon icon={faReact} className="text-4xl" style={{ color: '#61DBFB' }} />,
+                                    <FontAwesomeIcon icon={faFigma} className="text-4xl" style={{ color: '#F24E1E' }} />,
+                                    <FontAwesomeIcon icon={faJava} className="text-4xl" style={{ color: '#f89820' }} />,
+                                    <FontAwesomeIcon icon={faDatabase} className="text-4xl" style={{ color: '#4DB33D' }} />,
+                                    <FontAwesomeIcon icon={faNodeJs} className="text-4xl" style={{ color: '#68A063' }} />,
+                                ]}
                             />
                         </div>
 
-                        {/* TECH ORBITS */}
-                        <TechBubble top="10%" left="-20px" src="/stack/react.png" />
-                        <TechBubble top="10%" right="-26px" src="/stack/node.png" />
-                        <TechBubble bottom="140px" left="93%" src="/stack/next.png" />
-                        <TechBubble top="65%" left="-26px" src="/stack/java.png" />
-                    </div>
+                            <BlurText
+                                text="DEVELOPER"
+                                delay={200}
+                                animateBy="words"
+                                direction="top"
+                                onAnimationComplete={handleAnimationComplete}
+                                className="text-5xl md:text-6xl lg:text-7xl font-extrabold  text-white leading-none"
+                            />
 
-                    {/* RIGHT TEXT */}
-                    <div className="text-center lg:text-right">
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-none">
-                            DEVELOPER
-                        </h1>
 
                         <p className="mt-4 text-gray-400 max-w-sm lg:ml-auto">
-                            Full Stack Developer specializing in scalable web apps & modern UI systems.
+                            Full Stack Developer specializing in scalable web, apps & modern UI systems.
                         </p>
                     </div>
 
                 </div>
 
-
-                {/* KEEP THIS EXACTLY AS REQUESTED */}
+                {/* SCROLL INDICATOR */}
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
                     <div className="w-6 h-10 border-2 border-blue-500 rounded-full flex justify-center p-2">
                         <div className="w-1.5 h-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" />
                     </div>
                 </div>
+
             </section>
         </ParallaxSection>
-    );
-}
-
-/* ================= TECH ORBIT COMPONENT ================= */
-
-function TechBubble({ top, bottom, left, right, src }) {
-    return (
-        <div
-            className="absolute w-14 h-14 rounded-full bg-black/80
-      backdrop-blur-xl border border-white/10
-      flex items-center justify-center animate-float"
-            style={{ top, bottom, left, right }}
-        >
-            <Image src={src} alt="tech" width={50} height={50} />
-        </div>
     );
 }
