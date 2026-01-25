@@ -152,20 +152,20 @@ export default function PortfolioCard({
   animation: vibrate 2.5s infinite;
 }
 
-/* Ring pulse animation */
-@keyframes ringPulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.6;
-  }
-  70% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+        /* Ring pulse animation */
+        @keyframes ringPulse {
+            0% {
+            transform: scale(1);
+            opacity: 0.6;
+            }
+            70% {
+            transform: scale(1.6);
+            opacity: 0;
+            }
+            100% {
+            opacity: 0;
+            }
+        }
 
         /* Vibrate animation */
         @keyframes vibrate {
