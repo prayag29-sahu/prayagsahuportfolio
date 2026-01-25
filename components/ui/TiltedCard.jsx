@@ -47,13 +47,13 @@ export default function PortfolioCard({
             {/* INTERNAL CSS */}
             <style>{`
         .portfolio-card {
-          width: 350px;
-          height: 220px;
-          background: rgba(110, 160, 70, 0.9);
-          border-radius: 20px;
-          box-shadow: 0 35px 80px rgba(0,0,0,.15);
-          position: relative;
-          transition: height .5s;
+            width: 350px;
+            height: 220px;
+            background: rgba(110, 160, 70, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 35px 80px rgba(0,0,0,.15);
+            position: relative;
+            transition: height .5s;
 
           /* SCROLL ANIMATION DEFAULT */
             opacity: 0;
