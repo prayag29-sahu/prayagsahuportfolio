@@ -105,12 +105,12 @@ export default function PortfolioCard({
         }
 
         .details {
-          transform: translateY(130px);
-          transition: .6s;
+            transform: translateY(130px);
+            transition: .6s;
         }
 
         .portfolio-card:hover .details {
-          transform: translateY(0);
+            transform: translateY(0);
         }
 
         .social-card {
