@@ -455,17 +455,23 @@ export default function HeroSection() {
                             className="text-7xl md:text-8xl lg:text-9xl font-extrabold text-white leading-none"
                         />
                     </div>
+
+                    {/* CENTER IMAGE */}
                     <div className="flex justify-center relative">
                         <div className="relative ml-10 -mt-20  z-10">
                             <TiltedCard
                                 imageSrc="/images/hero1.png"
                                 name="Prayag Sahu"
                                 role="Freelancer"
+
                             />
+
                         </div>
                     </div>
-                    <div className="text-center lg:text-right -mt-20">
 
+                    {/* RIGHT TEXT + TECH BUBBLES */}
+                    <div className="text-center lg:text-right -mt-20">
+                        {/* TECH BUBBLES (ABOVE DEVELOPER) */}
                         <div className="mb-6 -mt-20">
                             <IconScrollVelocity
                                 velocity={90}
