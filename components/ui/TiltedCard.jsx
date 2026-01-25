@@ -180,12 +180,12 @@ export default function PortfolioCard({
 
 
         .social-control {
-          transition: .45s ease;
-          transform-origin: 18px 18px;
+            transition: .45s ease;
+            transform-origin: 18px 18px;
         }
 
         .social-open .social-control {
-          transform: rotate(-135deg);
+            transform: rotate(-135deg);
         }
 
         @keyframes up {
