@@ -202,8 +202,7 @@ export default function PortfolioCard({
 
         .bounce-up { animation: up 1s ease-in-out forwards; }
         .bounce-down { animation: down 1s ease-in-out forwards; }
-      `}</style>
-
+        `}</style>
             <div ref={cardRef} className="portfolio-card">
 
                 {/* IMAGE */}
@@ -335,8 +334,6 @@ export default function PortfolioCard({
 
 
             </div>
-
-            
         </>
     );
 }
