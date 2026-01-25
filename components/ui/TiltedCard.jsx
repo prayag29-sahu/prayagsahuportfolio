@@ -114,25 +114,25 @@ export default function PortfolioCard({
         }
 
         .social-card {
-          width: 280px;
-          height: 52px;
-          background: #111;
-          padding: 8px 12px;
-          border-radius: 999px;
-          position: absolute;
-          bottom: -26px;
-          left: 0;
-          right: 0;
-          margin: auto;
+            width: 280px;
+            height: 52px;
+            background: #111;
+            padding: 8px 12px;
+            border-radius: 999px;
+            position: absolute;
+            bottom: -26px;
+            left: 0;
+            right: 0;
+            margin: auto;
         
-          display: flex;
-          align-items: center;
+            display: flex;
+            align-items: center;
         
-          /* 🔥 BOTTOM HIGHLIGHT */
-          border-bottom: 2px solid rgba(110, 160, 70, 0.9);
+            /* 🔥 BOTTOM HIGHLIGHT */
+            border-bottom: 2px solid rgba(110, 160, 70, 0.9);
         
-          /* subtle glow */
-          box-shadow:
+            /* subtle glow */
+            box-shadow:
             0 6px 14px rgba(110, 160, 70, 0.25),
             inset 0 -1px 0 rgba(190, 255, 120, 0.2);
         }
