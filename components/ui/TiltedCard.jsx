@@ -71,37 +71,35 @@ export default function PortfolioCard({
         .portfolio-card:hover {
           height: 420px;
         }
-.imgBx {
-  position: absolute;
-  left: 50%;
-  top: -90px;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 200px;
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: .5s;
-
-  /* GREEN BORDER HIGHLIGHT */
-  border: 2px solid rgba(110, 160, 70, 0.9);
-
-  /* SOFT GLOW EFFECT */
-  box-shadow:
-    0 15px 50px rgba(0,0,0,.5),
-    0 0 12px rgba(110, 160, 70, 0.35);
-}
+        .imgBx {
+            position: absolute;
+            left: 50%;
+            top: -90px;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: .5s;
+            /* GREEN BORDER HIGHLIGHT */
+            border: 2px solid rgba(110, 160, 70, 0.9);
+            /* SOFT GLOW EFFECT */
+            box-shadow:
+                0 15px 50px rgba(0,0,0,.5),
+                0 0 12px rgba(110, 160, 70, 0.35);
+        }
 
 
         .portfolio-card:hover .imgBx {
-          width: 250px;
-          height: 250px;
+            width: 250px;
+            height: 250px;
         }
 
         .imgBx img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .details {
