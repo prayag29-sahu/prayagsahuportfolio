@@ -464,10 +464,7 @@ export default function HeroSection() {
                             />
                         </div>
                     </div>
-
-                    {/* RIGHT TEXT + TECH BUBBLES */}
                     <div className="text-center lg:text-right -mt-20">
-                        {/* TECH BUBBLES (ABOVE DEVELOPER) */}
                         <div className="mb-6 -mt-20">
                             <IconScrollVelocity
                                 velocity={90}
@@ -494,8 +491,6 @@ export default function HeroSection() {
                     </div>
 
                 </div>
-
-                {/* SCROLL INDICATOR */}
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
                     <div className="w-6 h-10 border-2 border-[rgba(90,130,60,0.9)]  rounded-full flex justify-center p-2">
                         <div className="w-1.5 h-3 bg-gradient-to-r from-[rgba(90,130,60,0.9)] to-[rgba(110,160,70,0.9)] rounded-full" />
