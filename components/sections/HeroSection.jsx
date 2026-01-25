@@ -445,6 +445,8 @@ export default function HeroSection() {
                 className="relative min-h-screen flex items-center justify-center pt-28"
             >
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 items-center gap-10">
+
+                    {/* LEFT TEXT */}
                     <div className="text-center lg:text-left mb-20 pb-20">
                         <BlurText
                             text="FULL STACK"
