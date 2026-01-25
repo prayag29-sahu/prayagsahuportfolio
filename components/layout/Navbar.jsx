@@ -279,7 +279,11 @@ export default function Navbar() {
             <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
                 <nav
                     className="hidden md:flex items-center gap-8 px-5 py-2 rounded-full
-          bg-black/80 backdrop-blur-xl border border-white/10 shadow-lg"
+    bg-black/80 backdrop-blur-xl border border-white/10 shadow-lg"
+                    style={{
+                        borderBottom: '2px solid rgba(110, 160, 70, 0.9)',
+                        boxShadow: '0 6px 14px rgba(124, 255, 0, 0.25)',
+                    }}
                 >
                     <Image
                         src="/images/hero3.png"
@@ -287,7 +291,12 @@ export default function Navbar() {
                         width={100}
                         height={100}
                         className="w-12 h-12 rounded-full object-cover"
+                        style={{
+                            border: '2px solid rgba(110, 160, 70, 0.9)',
+                            boxShadow: '0 0 8px rgba(110, 160, 70, 0.6)',
+                        }}
                     />
+
 
                     <NavLink label="Home" />
                     <NavLink label="About" />

@@ -198,7 +198,8 @@ body {
 @tailwind utilities;
 
 :root {
-  --neon-green: #7CFF00;
+  /* --neon-green: #7CFF00; */
+  --neon-green: rgba(110, 160, 70, 0.9);
   --dark-bg: #000000;
   --dark-surface: #0a0a0a;
 }

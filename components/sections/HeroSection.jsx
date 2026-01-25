@@ -445,8 +445,6 @@ export default function HeroSection() {
                 className="relative min-h-screen flex items-center justify-center pt-28"
             >
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 items-center gap-10">
-
-                    {/* LEFT TEXT */}
                     <div className="text-center lg:text-left mb-20 pb-20">
                         <BlurText
                             text="FULL STACK"
@@ -457,26 +455,13 @@ export default function HeroSection() {
                             className="text-7xl md:text-8xl lg:text-9xl font-extrabold text-white leading-none"
                         />
                     </div>
-
-                    {/* CENTER IMAGE */}
                     <div className="flex justify-center relative">
-                        <div className="relative ml-10 w-[300px] h-[520px] rounded-2xl overflow-hidden shadow-2xl z-10">
+                        <div className="relative ml-10 -mt-20  z-10">
                             <TiltedCard
                                 imageSrc="/images/hero1.png"
-                                captionText="Freelance Full Stack Developer · India"
-                                imageWidth="320px"
-                                imageHeight="320px"
-                                rotateAmplitude={20}
-                                scaleOnHover={1.08}
-                                showTooltip
-                                displayOverlayContent
-                                overlayContent={
-                                    <p className="text-white font-semibold">
-                                        Prayag Sahu
-                                    </p>
-                                }
+                                name="Prayag Sahu"
+                                role="Freelancer"
                             />
-
                         </div>
                     </div>
 
@@ -495,14 +480,14 @@ export default function HeroSection() {
                                 ]}
                             />
                         </div>
-                            <BlurText
-                                text="DEVELOPER"
-                                delay={200}
-                                animateBy="words"
-                                direction="top"
-                                onAnimationComplete={handleAnimationComplete}
-                                className="text-5xl md:text-6xl lg:text-7xl font-extrabold  text-white leading-none"
-                            />
+                        <BlurText
+                            text="DEVELOPER"
+                            delay={200}
+                            animateBy="words"
+                            direction="top"
+                            onAnimationComplete={handleAnimationComplete}
+                            className="text-5xl md:text-6xl lg:text-7xl font-extrabold  text-white leading-none"
+                        />
                         <p className="mt-4 text-gray-400 max-w-sm lg:ml-auto">
                             Full Stack Developer specializing in scalable web, apps & modern UI systems.
                         </p>
@@ -512,8 +497,8 @@ export default function HeroSection() {
 
                 {/* SCROLL INDICATOR */}
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-                    <div className="w-6 h-10 border-2 border-blue-500 rounded-full flex justify-center p-2">
-                        <div className="w-1.5 h-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" />
+                    <div className="w-6 h-10 border-2 border-[rgba(90,130,60,0.9)]  rounded-full flex justify-center p-2">
+                        <div className="w-1.5 h-3 bg-gradient-to-r from-[rgba(90,130,60,0.9)] to-[rgba(110,160,70,0.9)] rounded-full" />
                     </div>
                 </div>
 
