@@ -56,20 +56,20 @@ export default function PortfolioCard({
           transition: height .5s;
 
           /* SCROLL ANIMATION DEFAULT */
-          opacity: 0;
-          transform: translateY(60px) scale(0.98);
-          transition:
+            opacity: 0;
+            transform: translateY(60px) scale(0.98);
+            transition:
             opacity .8s ease,
             transform .8s ease;
         }
 
         .portfolio-card.in-view {
-          opacity: 1;
-          transform: translateY(0) scale(1);
+            opacity: 1;
+            transform: translateY(0) scale(1);
         }
 
         .portfolio-card:hover {
-          height: 420px;
+            height: 420px;
         }
         .imgBx {
             position: absolute;
