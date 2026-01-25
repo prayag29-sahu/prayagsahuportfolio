@@ -167,16 +167,16 @@ export default function PortfolioCard({
   }
 }
 
-/* Vibrate animation */
-@keyframes vibrate {
-  0% { transform: translateX(0); }
-  2% { transform: translateX(-1px); }
-  4% { transform: translateX(1px); }
-  6% { transform: translateX(-1px); }
-  8% { transform: translateX(1px); }
-  10% { transform: translateX(0); }
-  100% { transform: translateX(0); }
-}
+        /* Vibrate animation */
+        @keyframes vibrate {
+            0% { transform: translateX(0); }
+            2% { transform: translateX(-1px); }
+            4% { transform: translateX(1px); }
+            6% { transform: translateX(-1px); }
+            8% { transform: translateX(1px); }
+            10% { transform: translateX(0); }
+            100% { transform: translateX(0); }
+        }
 
 
         .social-control {
