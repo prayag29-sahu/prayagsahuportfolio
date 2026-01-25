@@ -195,9 +195,9 @@ export default function PortfolioCard({
         }
 
         @keyframes down {
-          0%,100% { transform: rotate(0); }
-          50%,60% { transform: rotate(6deg); }
-          88% { transform: rotate(-1deg); }
+            0%,100% { transform: rotate(0); }
+            50%,60% { transform: rotate(6deg); }
+            88% { transform: rotate(-1deg); }
         }
 
         .bounce-up { animation: up 1s ease-in-out forwards; }
