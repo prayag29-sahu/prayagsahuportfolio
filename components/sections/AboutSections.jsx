@@ -264,24 +264,14 @@ export default function AboutContent() {
                 className="py-24 "
             >
                 <div className="max-w-7xl mx-auto px-6">
-
                     {/* HEADER */}
                     <div className="text-center mb-16">
-                        <div
-                            className={`w-full lg:px-[12%] px-[5%]  flex flex-col justify-center items-center 
-  `}
-                        >
-
+                        <div className={`w-full lg:px-[12%] px-[5%]  flex flex-col justify-center items-center `}>
                             <div className="flex items-center justify-center gap-6 mb-4">
-
                                 {/* LEFT LINE */}
-                                <div
-                                    className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-r from-transparent via-cyan-400 to-blue-400`}
-                                ></div>
-
+                                <div className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-r from-transparent via-cyan-400 to-blue-400`} ></div>
                                 {/* TITLE */}
-                                <h1
-                                    className={`text-3xl sm:text-4xl md:text-5xl  font-extrabold tracking-wide drop-shadow-lg transition-all bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`}
+                                <h1 className={`text-3xl sm:text-4xl md:text-5xl  font-extrabold tracking-wide drop-shadow-lg transition-all bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`}
                                 >
                                     About Me
                                 </h1>
