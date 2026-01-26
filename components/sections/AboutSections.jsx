@@ -275,7 +275,9 @@ export default function AboutContent() {
                                     About Me
                                 </h1>
                                 {/* RIGHT LINE */}
-                                <div className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`} ></div>
+                                <div
+                                    className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`}
+                                ></div>
 
                             </div>
 
