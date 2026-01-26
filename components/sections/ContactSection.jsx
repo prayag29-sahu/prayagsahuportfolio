@@ -228,16 +228,12 @@ export default function Contact() {
                                             </span>
                                         </h2>
                                     </h1>
-
                                     {/* RIGHT LINE */}
                                     <div
                                         className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`}
                                     ></div>
-
                                 </div>
-
                             </div>
-
                             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                                 Looking for a reliable full stack developer or freelancer?
                                 I&apos;m open to job opportunities, freelance projects, and
