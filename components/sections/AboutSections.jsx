@@ -277,12 +277,16 @@ export default function AboutContent() {
                                 {/* RIGHT LINE */}
                                 <div className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`} ></div>
                             </div>
+
                         </div>
                     </div>
+
                     {/* MAIN GRID */}
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
+
                         {/* LEFT SIDE */}
                         <div className="space-y-10">
+
                             {/* MAIN IMAGE */}
                             <div className="relative bg-[#0f172a] p-4 rounded-2xl border border-white/5 shadow-xl hover:scale-[1.02] transition hover:border-cyan-400/40">
                                 <Image
@@ -302,6 +306,7 @@ export default function AboutContent() {
                                     </div>
                                 </div>
                             </div>
+
                             {/* SKILLS UNDER IMAGE */}
                             <div className="grid grid-cols-2 gap-4">
                                 {[
