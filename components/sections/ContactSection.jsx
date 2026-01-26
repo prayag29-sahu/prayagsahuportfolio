@@ -208,8 +208,7 @@ export default function Contact() {
 
                             <div
                                 className={`w-full lg:px-[12%] px-[5%]  flex flex-col justify-center items-center 
-  `}
-                            >
+  `}                            >
 
                                 <div className="flex items-center justify-center gap-6 mb-4">
 
