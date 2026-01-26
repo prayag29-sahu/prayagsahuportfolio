@@ -271,27 +271,19 @@ export default function AboutContent() {
                                 {/* LEFT LINE */}
                                 <div className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-r from-transparent via-cyan-400 to-blue-400`} ></div>
                                 {/* TITLE */}
-                                <h1 className={`text-3xl sm:text-4xl md:text-5xl  font-extrabold tracking-wide drop-shadow-lg transition-all bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`}
-                                >
+                                <h1 className={`text-3xl sm:text-4xl md:text-5xl  font-extrabold tracking-wide drop-shadow-lg transition-all bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`} >
                                     About Me
                                 </h1>
-
                                 {/* RIGHT LINE */}
-                                <div
-                                    className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`}
-                                ></div>
-
+                                <div className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`} ></div>
                             </div>
 
                         </div>
                     </div>
-
                     {/* MAIN GRID */}
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
-
                         {/* LEFT SIDE */}
                         <div className="space-y-10">
-
                             {/* MAIN IMAGE */}
                             <div className="relative bg-[#0f172a] p-4 rounded-2xl border border-white/5 shadow-xl hover:scale-[1.02] transition hover:border-cyan-400/40">
                                 <Image
@@ -301,7 +293,6 @@ export default function AboutContent() {
                                     height={900}
                                     className="rounded-xl object-cover w-full h-[580px]"
                                 />
-
                                 {/* AVAILABILITY */}
                                 <div className="absolute -bottom-5 -right-5 bg-[#0b1022] px-4 py-2 rounded-xl border border-white/10 shadow-lg">
                                     <div className="flex items-center gap-2">
@@ -312,7 +303,6 @@ export default function AboutContent() {
                                     </div>
                                 </div>
                             </div>
-
                             {/* SKILLS UNDER IMAGE */}
                             <div className="grid grid-cols-2 gap-4">
                                 {[
@@ -347,17 +337,14 @@ export default function AboutContent() {
                                 ))}
                             </div>
                         </div>
-
                         {/* RIGHT SIDE – CONTENT */}
                         <div className="space-y-8">
-
                             <div className="bg-[#0f172a] p-8 rounded-2xl border border-white/5 space-y-6 hover:border-cyan-400/30 transition">
                                 <p className="text-gray-300 leading-relaxed">
                                     I am <strong>Prayag Sahu</strong>, a Computer Science and Engineering
                                     undergraduate and <strong>Freelance Full Stack Developer </strong>
                                     from Jabalpur, Madhya Pradesh.
                                 </p>
-
                                 <p className="text-gray-300 leading-relaxed">
                                     I completed my higher secondary education under <strong>MPBSE </strong>
                                     with first division and am currently pursuing
@@ -365,14 +352,12 @@ export default function AboutContent() {
                                     <strong> Baderia Global Institute of Engineering & Management</strong>,
                                     affiliated with <strong>RGPV University</strong>.
                                 </p>
-
                                 <p className="text-gray-300 leading-relaxed">
                                     My technical expertise includes <strong>C++, Java, JavaScript</strong>,
                                     full stack web development, and <strong>database systems</strong>.
                                     I focus on writing clean, maintainable code and designing scalable,
                                     backend-driven solutions.
                                 </p>
-
                                 <p className="text-gray-300 leading-relaxed">
                                     I am a quick learner with strong problem-solving skills and attention
                                     to detail. Currently, I am learning
@@ -393,7 +378,6 @@ export default function AboutContent() {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
         </ParallaxSection>
