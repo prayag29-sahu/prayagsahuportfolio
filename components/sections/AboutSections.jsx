@@ -274,12 +274,8 @@ export default function AboutContent() {
                                 <h1 className={`text-3xl sm:text-4xl md:text-5xl  font-extrabold tracking-wide drop-shadow-lg transition-all bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`} >
                                     About Me
                                 </h1>
-
                                 {/* RIGHT LINE */}
-                                <div
-                                    className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`}
-                                ></div>
-
+                                <div className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`} ></div>
                             </div>
 
                         </div>
