@@ -255,8 +255,8 @@ import ParallaxSection from "../ui/ParallaxSection";
 export default function AboutContent() {
     return (
         <ParallaxSection
-            // backgroundImage="/img/img2.jpeg"
-            backgroundImage="/images/bg1.png"
+            backgroundImage="/img/img2.jpeg"
+            // backgroundImage="/images/bg1.png"
             height="400px"
         >
             <section
