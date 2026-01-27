@@ -141,231 +141,231 @@
 
 
 
-// 'use client';
+'use client';
 
-// import { useState } from "react";
-// import { ChevronLeft, ChevronRight } from "lucide-react";
-// import ParallaxSection from "@/components/ui/ParallaxSection";
-// export default function ProjectsPage() {
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import ParallaxSection from "@/components/ui/ParallaxSection";
+export default function ProjectsPage() {
 
-//     /* ===================== DATA ===================== */
+    /* ===================== DATA ===================== */
 
-//     const mainProjects = [
-//         {
-//             title: "Ghotul Homestay Platform",
-//             stack: "React • Node • PostgreSQL",
-//             image: "/images/projects/ghotul.png",
-//         },
-//         {
-//             title: "3D Developer Portfolio",
-//             stack: "Next.js • Tailwind",
-//             image: "/images/projects/portfolio.png",
-//         },
-//         {
-//             title: "Java Bank System",
-//             stack: "Java • OOP • DB",
-//             image: "/images/projects/bank.png",
-//         },
-//         {
-//             title: "Online Quiz App",
-//             stack: "HTML • JS • Django",
-//             image: "/images/projects/quiz.png",
-//         },
-//     ];
+    const mainProjects = [
+        {
+            title: "Ghotul Homestay Platform",
+            stack: "React • Node • PostgreSQL",
+            image: "/images/projects/ghotul.png",
+        },
+        {
+            title: "3D Developer Portfolio",
+            stack: "Next.js • Tailwind",
+            image: "/images/projects/portfolio.png",
+        },
+        {
+            title: "Java Bank System",
+            stack: "Java • OOP • DB",
+            image: "/images/projects/bank.png",
+        },
+        {
+            title: "Online Quiz App",
+            stack: "HTML • JS • Django",
+            image: "/images/projects/quiz.png",
+        },
+    ];
 
-//     const sliderProjects = [
-//         {
-//             title: "Mini CRM Tool",
-//             description: "Small scale CRM dashboard",
-//             image: "/images/projects/s1.png",
-//             video: "/videos/s1.mp4",
-//         },
-//         {
-//             title: "Landing Page UI",
-//             description: "Marketing UI concept",
-//             image: "/images/projects/s2.png",
-//             video: "/videos/s2.mp4",
-//         },
-//         {
-//             title: "Todo App",
-//             description: "Task management app",
-//             image: "/images/projects/s3.png",
-//             video: "/videos/s3.mp4",
-//         },
-//         {
-//             title: "Weather App",
-//             description: "API based weather app",
-//             image: "/images/projects/s4.png",
-//             video: "/videos/s4.mp4",
-//         },
-//     ];
+    const sliderProjects = [
+        {
+            title: "Mini CRM Tool",
+            description: "Small scale CRM dashboard",
+            image: "/images/projects/s1.png",
+            video: "/videos/s1.mp4",
+        },
+        {
+            title: "Landing Page UI",
+            description: "Marketing UI concept",
+            image: "/images/projects/s2.png",
+            video: "/videos/s2.mp4",
+        },
+        {
+            title: "Todo App",
+            description: "Task management app",
+            image: "/images/projects/s3.png",
+            video: "/videos/s3.mp4",
+        },
+        {
+            title: "Weather App",
+            description: "API based weather app",
+            image: "/images/projects/s4.png",
+            video: "/videos/s4.mp4",
+        },
+    ];
 
-//     /* ===================== SLIDER STATE ===================== */
+    /* ===================== SLIDER STATE ===================== */
 
-//     const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(0);
 
-//     const next = () =>
-//         setIndex((prev) => (prev + 1) % sliderProjects.length);
+    const next = () =>
+        setIndex((prev) => (prev + 1) % sliderProjects.length);
 
-//     const prev = () =>
-//         setIndex((prev) =>
-//             prev === 0 ? sliderProjects.length - 1 : prev - 1
-//         );
+    const prev = () =>
+        setIndex((prev) =>
+            prev === 0 ? sliderProjects.length - 1 : prev - 1
+        );
 
-//     /* ===================== UI ===================== */
-
-
+    /* ===================== UI ===================== */
 
 
-//     return (
-//         <ParallaxSection
-//             // backgroundImage="/img/img1.jpeg"
-//             backgroundImage="/images/bg1.png"
-//             height="400px"
-//         >
-//             <section
-//                 id="projects"
-//                 className="min-h-screen py-20 "
-//             >
-//                 <div className="max-w-7xl mx-auto px-6">
 
-//                     {/* HEADER */}
-//                     <div className="text-center mb-14">
-//                         <div
-//                             className={`w-full lg:px-[12%] px-[5%]  flex flex-col justify-center items-center 
-//   `}
-//                         >
 
-//                             <div className="flex items-center justify-center gap-6 mb-4">
+    return (
+        <ParallaxSection
+            // backgroundImage="/img/img1.jpeg"
+            backgroundImage="/images/bg1.png"
+            height="400px"
+        >
+            <section
+                id="projects"
+                className="min-h-screen py-20 "
+            >
+                <div className="max-w-7xl mx-auto px-6">
 
-//                                 {/* LEFT LINE */}
-//                                 <div
-//                                     className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-r from-transparent via-cyan-400 to-blue-400`}
-//                                 ></div>
+                    {/* HEADER */}
+                    <div className="text-center mb-14">
+                        <div
+                            className={`w-full lg:px-[12%] px-[5%]  flex flex-col justify-center items-center 
+  `}
+                        >
 
-//                                 {/* TITLE */}
-//                                 <h1
-//                                     className={`text-3xl sm:text-4xl md:text-5xl  font-extrabold tracking-wide drop-shadow-lg transition-all bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`}
-//                                 >
-//                                     <h2 className="text-4xl md:text-5xl font-bold text-white ">
-//                                         Project {" "}
-//                                         <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-//                                             Showcase
-//                                         </span>
-//                                     </h2>
-//                                 </h1>
+                            <div className="flex items-center justify-center gap-6 mb-4">
 
-//                                 {/* RIGHT LINE */}
-//                                 <div
-//                                     className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`}
-//                                 ></div>
+                                {/* LEFT LINE */}
+                                <div
+                                    className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-r from-transparent via-cyan-400 to-blue-400`}
+                                ></div>
 
-//                             </div>
+                                {/* TITLE */}
+                                <h1
+                                    className={`text-3xl sm:text-4xl md:text-5xl  font-extrabold tracking-wide drop-shadow-lg transition-all bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`}
+                                >
+                                    <h2 className="text-4xl md:text-5xl font-bold text-white ">
+                                        Project {" "}
+                                        <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                                            Showcase
+                                        </span>
+                                    </h2>
+                                </h1>
 
-//                         </div>
-//                         <p className="text-gray-400 max-w-2xl mx-auto">
-//                             Major projects on the left and a live preview slider on the right
-//                         </p>
-//                     </div>
+                                {/* RIGHT LINE */}
+                                <div
+                                    className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`}
+                                ></div>
 
-//                     {/* MAIN GRID */}
-//                     <div className="grid lg:grid-cols-3 gap-10 items-start">
+                            </div>
 
-//                         {/* ================= LEFT : 2x2 GRID ================= */}
-//                         <div className="grid grid-cols-2 gap-6">
-//                             {mainProjects.map((project, i) => (
-//                                 <SmallProjectCard key={i} project={project} />
-//                             ))}
-//                         </div>
+                        </div>
+                        <p className="text-gray-400 max-w-2xl mx-auto">
+                            Major projects on the left and a live preview slider on the right
+                        </p>
+                    </div>
 
-//                         {/* ================= RIGHT : BIG SLIDER ================= */}
-//                         <div className="lg:col-span-2 relative">
+                    {/* MAIN GRID */}
+                    <div className="grid lg:grid-cols-3 gap-10 items-start">
 
-//                             {/* SLIDE */}
-//                             <ProjectSlide project={sliderProjects[index]} />
+                        {/* ================= LEFT : 2x2 GRID ================= */}
+                        <div className="grid grid-cols-2 gap-6">
+                            {mainProjects.map((project, i) => (
+                                <SmallProjectCard key={i} project={project} />
+                            ))}
+                        </div>
 
-//                             {/* CONTENT STRIP */}
-//                             <div className="bg-black/60 p-6 border border-white/10">
-//                                 <h3 className="text-xl font-bold text-white">
-//                                     {sliderProjects[index].title}
-//                                 </h3>
-//                                 <p className="text-gray-300 text-sm mt-1">
-//                                     {sliderProjects[index].description}
-//                                 </p>
-//                             </div>
+                        {/* ================= RIGHT : BIG SLIDER ================= */}
+                        <div className="lg:col-span-2 relative">
 
-//                             {/* CONTROLS */}
-//                             <div className="absolute bottom-6 right-6 flex gap-3">
-//                                 <button
-//                                     onClick={prev}
-//                                     className="p-3 bg-black/70 hover:bg-cyan-500 rounded-full text-white transition"
-//                                 >
-//                                     <ChevronLeft />
-//                                 </button>
-//                                 <button
-//                                     onClick={next}
-//                                     className="p-3 bg-black/70 hover:bg-cyan-500 rounded-full text-white transition"
-//                                 >
-//                                     <ChevronRight />
-//                                 </button>
-//                             </div>
+                            {/* SLIDE */}
+                            <ProjectSlide project={sliderProjects[index]} />
 
-//                         </div>
-//                     </div>
-//                 </div>
-//             </section>
-//         </ParallaxSection>
-//     );
-// }
+                            {/* CONTENT STRIP */}
+                            <div className="bg-black/60 p-6 border border-white/10">
+                                <h3 className="text-xl font-bold text-white">
+                                    {sliderProjects[index].title}
+                                </h3>
+                                <p className="text-gray-300 text-sm mt-1">
+                                    {sliderProjects[index].description}
+                                </p>
+                            </div>
 
-// /* ===================== SMALL CARD ===================== */
+                            {/* CONTROLS */}
+                            <div className="absolute bottom-6 right-6 flex gap-3">
+                                <button
+                                    onClick={prev}
+                                    className="p-3 bg-black/70 hover:bg-cyan-500 rounded-full text-white transition"
+                                >
+                                    <ChevronLeft />
+                                </button>
+                                <button
+                                    onClick={next}
+                                    className="p-3 bg-black/70 hover:bg-cyan-500 rounded-full text-white transition"
+                                >
+                                    <ChevronRight />
+                                </button>
+                            </div>
 
-// function SmallProjectCard({ project }) {
-//     return (
-//         <div className="border border-white/10 rounded-xl overflow-hidden bg-white/5 hover:border-cyan-400/50 transition">
-//             <img
-//                 src={project.image}
-//                 alt={project.title}
-//                 className="w-full h-40 object-cover"
-//             />
-//             <div className="p-3 bg-black/50">
-//                 <h4 className="text-sm font-semibold text-white">
-//                     {project.title}
-//                 </h4>
-//                 <p className="text-xs text-gray-400">
-//                     {project.stack}
-//                 </p>
-//             </div>
-//         </div>
-//     );
-// }
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </ParallaxSection>
+    );
+}
 
-// /* ===================== BIG SLIDE ===================== */
+/* ===================== SMALL CARD ===================== */
 
-// function ProjectSlide({ project }) {
-//     return (
-//         <div className="relative group rounded-xl overflow-hidden border border-white/10">
+function SmallProjectCard({ project }) {
+    return (
+        <div className="border border-white/10 rounded-xl overflow-hidden bg-white/5 hover:border-cyan-400/50 transition">
+            <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-40 object-cover"
+            />
+            <div className="p-3 bg-black/50">
+                <h4 className="text-sm font-semibold text-white">
+                    {project.title}
+                </h4>
+                <p className="text-xs text-gray-400">
+                    {project.stack}
+                </p>
+            </div>
+        </div>
+    );
+}
 
-//             {/* IMAGE */}
-//             <img
-//                 src={project.image}
-//                 alt={project.title}
-//                 className="w-full h-[360px] object-cover transition-opacity duration-500 group-hover:opacity-0"
-//             />
+/* ===================== BIG SLIDE ===================== */
 
-//             {/* VIDEO ON HOVER */}
-//             <video
-//                 src={project.video}
-//                 muted
-//                 loop
-//                 playsInline
-//                 className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-//                 onMouseEnter={(e) => e.currentTarget.play()}
-//                 onMouseLeave={(e) => {
-//                     e.currentTarget.pause();
-//                     e.currentTarget.currentTime = 0;
-//                 }}
-//             />
-//         </div>
-//     );
-// }
+function ProjectSlide({ project }) {
+    return (
+        <div className="relative group rounded-xl overflow-hidden border border-white/10">
+
+            {/* IMAGE */}
+            <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-[360px] object-cover transition-opacity duration-500 group-hover:opacity-0"
+            />
+
+            {/* VIDEO ON HOVER */}
+            <video
+                src={project.video}
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                onMouseEnter={(e) => e.currentTarget.play()}
+                onMouseLeave={(e) => {
+                    e.currentTarget.pause();
+                    e.currentTarget.currentTime = 0;
+                }}
+            />
+        </div>
+    );
+}
