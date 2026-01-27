@@ -295,7 +295,7 @@ export default function ProjectsPage() {
                             </div>
 
                             {/* CONTROLS */}
-                            <div className="absolute bottom-6 right-6 flex gap-3">
+                            {/* <div className="absolute bottom-6 right-6 flex gap-3">
                                 <button
                                     onClick={prev}
                                     className="p-3 bg-black/70 hover:bg-cyan-500 rounded-full text-white transition"
@@ -308,7 +308,7 @@ export default function ProjectsPage() {
                                 >
                                     <ChevronRight />
                                 </button>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>
