@@ -285,14 +285,14 @@ export default function ProjectsPage() {
                             <ProjectSlide project={sliderProjects[index]} />
 
                             {/* CONTENT STRIP */}
-                            <div className="bg-black/60 p-6 border border-white/10">
+                            {/* <div className="bg-black/60 p-6 border border-white/10">
                                 <h3 className="text-xl font-bold text-white">
                                     {sliderProjects[index].title}
                                 </h3>
                                 <p className="text-gray-300 text-sm mt-1">
                                     {sliderProjects[index].description}
                                 </p>
-                            </div>
+                            </div> */}
 
                             {/* CONTROLS */}
                             <div className="absolute bottom-6 right-6 flex gap-3">
