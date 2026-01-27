@@ -282,7 +282,7 @@ export default function ProjectsPage() {
                         <div className="lg:col-span-2 relative">
 
                             {/* SLIDE */}
-                            {/* <ProjectSlide project={sliderProjects[index]} />
+                            <ProjectSlide project={sliderProjects[index]} />
 
                             {/* CONTENT STRIP */}
                             <div className="bg-black/60 p-6 border border-white/10">
@@ -292,10 +292,10 @@ export default function ProjectsPage() {
                                 <p className="text-gray-300 text-sm mt-1">
                                     {sliderProjects[index].description}
                                 </p>
-                            </div> */}
+                            </div>
 
                             {/* CONTROLS */}
-                            {/* <div className="absolute bottom-6 right-6 flex gap-3">
+                            <div className="absolute bottom-6 right-6 flex gap-3">
                                 <button
                                     onClick={prev}
                                     className="p-3 bg-black/70 hover:bg-cyan-500 rounded-full text-white transition"
@@ -308,7 +308,7 @@ export default function ProjectsPage() {
                                 >
                                     <ChevronRight />
                                 </button>
-                            </div> */}
+                            </div>
 
                         </div>
                     </div>
