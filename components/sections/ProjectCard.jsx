@@ -320,25 +320,25 @@ export default function ProjectsPage() {
 
 /* ===================== SMALL CARD ===================== */
 
-function SmallProjectCard({ project }) {
-    return (
-        <div className="border border-white/10 rounded-xl overflow-hidden bg-white/5 hover:border-cyan-400/50 transition">
-            <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-40 object-cover"
-            />
-            <div className="p-3 bg-black/50">
-                <h4 className="text-sm font-semibold text-white">
-                    {project.title}
-                </h4>
-                <p className="text-xs text-gray-400">
-                    {project.stack}
-                </p>
-            </div>
-        </div>
-    );
-}
+// function SmallProjectCard({ project }) {
+//     return (
+//         <div className="border border-white/10 rounded-xl overflow-hidden bg-white/5 hover:border-cyan-400/50 transition">
+//             <img
+//                 src={project.image}
+//                 alt={project.title}
+//                 className="w-full h-40 object-cover"
+//             />
+//             <div className="p-3 bg-black/50">
+//                 <h4 className="text-sm font-semibold text-white">
+//                     {project.title}
+//                 </h4>
+//                 <p className="text-xs text-gray-400">
+//                     {project.stack}
+//                 </p>
+//             </div>
+//         </div>
+//     );
+// }
 
 /* ===================== BIG SLIDE ===================== */
 
