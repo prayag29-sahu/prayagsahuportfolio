@@ -214,6 +214,9 @@ export default function ProjectsPage() {
 
     /* ===================== UI ===================== */
 
+
+
+    
     return (
         <ParallaxSection
             // backgroundImage="/img/img1.jpeg"
