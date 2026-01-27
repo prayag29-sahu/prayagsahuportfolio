@@ -320,52 +320,52 @@ export default function ProjectsPage() {
 
 /* ===================== SMALL CARD ===================== */
 
-// function SmallProjectCard({ project }) {
-//     return (
-//         <div className="border border-white/10 rounded-xl overflow-hidden bg-white/5 hover:border-cyan-400/50 transition">
-//             <img
-//                 src={project.image}
-//                 alt={project.title}
-//                 className="w-full h-40 object-cover"
-//             />
-//             <div className="p-3 bg-black/50">
-//                 <h4 className="text-sm font-semibold text-white">
-//                     {project.title}
-//                 </h4>
-//                 <p className="text-xs text-gray-400">
-//                     {project.stack}
-//                 </p>
-//             </div>
-//         </div>
-//     );
-// }
+function SmallProjectCard({ project }) {
+    return (
+        <div className="border border-white/10 rounded-xl overflow-hidden bg-white/5 hover:border-cyan-400/50 transition">
+            <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-40 object-cover"
+            />
+            <div className="p-3 bg-black/50">
+                <h4 className="text-sm font-semibold text-white">
+                    {project.title}
+                </h4>
+                <p className="text-xs text-gray-400">
+                    {project.stack}
+                </p>
+            </div>
+        </div>
+    );
+}
 
-// /* ===================== BIG SLIDE ===================== */
+/* ===================== BIG SLIDE ===================== */
 
-// function ProjectSlide({ project }) {
-//     return (
-//         <div className="relative group rounded-xl overflow-hidden border border-white/10">
+function ProjectSlide({ project }) {
+    return (
+        <div className="relative group rounded-xl overflow-hidden border border-white/10">
 
-//             {/* IMAGE */}
-//             <img
-//                 src={project.image}
-//                 alt={project.title}
-//                 className="w-full h-[360px] object-cover transition-opacity duration-500 group-hover:opacity-0"
-//             />
+            {/* IMAGE */}
+            <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-[360px] object-cover transition-opacity duration-500 group-hover:opacity-0"
+            />
 
-//             {/* VIDEO ON HOVER */}
-//             <video
-//                 src={project.video}
-//                 muted
-//                 loop
-//                 playsInline
-//                 className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-//                 onMouseEnter={(e) => e.currentTarget.play()}
-//                 onMouseLeave={(e) => {
-//                     e.currentTarget.pause();
-//                     e.currentTarget.currentTime = 0;
-//                 }}
-//             />
-//         </div>
-//     );
-// }
+            {/* VIDEO ON HOVER */}
+            <video
+                src={project.video}
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                onMouseEnter={(e) => e.currentTarget.play()}
+                onMouseLeave={(e) => {
+                    e.currentTarget.pause();
+                    e.currentTarget.currentTime = 0;
+                }}
+            />
+        </div>
+    );
+}
