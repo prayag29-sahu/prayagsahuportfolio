@@ -388,143 +388,157 @@
 // }
 
 
-
 'use client';
 
 import Image from 'next/image';
+import ParallaxSection from '@/components/ui/ParallaxSection';
+import {
+    RiUser3Line,
+    RiUserHeartLine,
+    RiCalendarLine,
+    RiMapPinLine,
+} from 'react-icons/ri';
 
 export default function AboutPage() {
     return (
-        <section className="min-h-screen bg-[#f4f6f3] flex">
+        <ParallaxSection backgroundImage="/images/bg-1.png" height="100vh">
+            <section className="min-h-screen flex text-white">
 
-            {/* LEFT SIDEBAR */}
-            <aside
-                className="hidden lg:flex flex-col items-center w-64 py-10"
-                style={{ backgroundColor: 'rgba(110,160,70,0.9)' }}
-            >
-                {/* PROFILE IMAGE */}
-                <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                    <Image
-                        src="/images/hero1.png"
-                        alt="Prayag Sahu"
-                        width={300}
-                        height={300}
-                        className="object-cover"
-                    />
-                </div>
-
-                {/* NAV LINKS */}
-                <nav className="mt-12 space-y-6 text-white font-semibold tracking-widest text-sm">
-                    <p className="opacity-90">HOME</p>
-                    <p className="opacity-100 underline">ABOUT ME</p>
-                    <p className="opacity-90">RESUME</p>
-                    <p className="opacity-90">PORTFOLIO</p>
-                    <p className="opacity-90">CONTACT</p>
-                </nav>
-            </aside>
-
-            {/* MAIN CONTENT */}
-            <div className="flex-1 px-6 lg:px-16 py-12">
-
-                {/* HEADING */}
-                <h1 className="text-5xl font-extrabold tracking-widest text-gray-900">
-                    ABOUT ME
-                </h1>
-
-                {/* INTRO */}
-                <p className="mt-6 text-gray-700 leading-relaxed max-w-4xl">
-                    <strong>I am Prayag Sahu</strong>, a Computer Science and Engineering
-                    undergraduate and <strong>Freelance Full Stack Developer</strong> from
-                    Jabalpur, Madhya Pradesh.
-                    <br /><br />
-                    I completed my higher secondary education under MPBSE with first
-                    division and am currently pursuing B.Tech (CSE) from
-                    <strong> Baderia Global Institute of Engineering & Management</strong>,
-                    affiliated with <strong>RGPV University</strong>.
-                </p>
-
-                {/* PERSONAL DETAILS */}
-                <div className="mt-8 text-gray-700 space-y-2">
-                    <p>👤 <strong>Name:</strong> Prayag Sahu</p>
-                    <p>👨‍👧 <strong>Father’s Name:</strong> Prakash Chandra Sahu</p>
-                    <p>👩‍👦 <strong>Mother’s Name:</strong> Maya Sahu</p>
-                    <p>🎂 <strong>Date of Birth:</strong> 02 Oct 2005</p>
-                    <p>🏡 <strong>Location:</strong> Jabalpur, Madhya Pradesh</p>
-                </div>
-
-                {/* WHAT I DO */}
-                <h2
-                    className="mt-14 inline-block px-6 py-2 rounded-full font-semibold text-black"
+                {/* LEFT SIDEBAR */}
+                <aside
+                    className="hidden lg:flex flex-col items-center w-72 py-10"
                     style={{ backgroundColor: 'rgba(110,160,70,0.9)' }}
                 >
-                    What I Do
-                </h2>
+                    {/* PROFILE IMAGE */}
+                    <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                        <Image
+                            src="/images/hero1.png"
+                            alt="Prayag Sahu"
+                            width={300}
+                            height={300}
+                            className="object-cover"
+                        />
+                    </div>
 
-                <div className="mt-6 grid md:grid-cols-3 gap-6">
-                    <SkillCard title="Full Stack Development" />
-                    <SkillCard title="Backend Engineering" />
-                    <SkillCard title="Problem Solving & DSA" />
+                    {/* PERSONAL INFO */}
+                    <div className="mt-10 space-y-4 text-sm text-white">
+                        <InfoItem icon={<RiUser3Line />} label="Name" value="Prayag Sahu" />
+                        <InfoItem icon={<RiUserHeartLine />} label="Father" value="Prakash Chandra Sahu" />
+                        <InfoItem icon={<RiUserHeartLine />} label="Mother" value="Maya Sahu" />
+                        <InfoItem icon={<RiCalendarLine />} label="DOB" value="02 Oct 2005" />
+                        <InfoItem icon={<RiMapPinLine />} label="Location" value="Jabalpur, MP" />
+                    </div>
+                </aside>
+
+                {/* MAIN CONTENT */}
+                <div className="flex-1 px-6 lg:px-16 py-14">
+
+                    {/* HEADING */}
+                    <h1 className="text-5xl font-extrabold tracking-widest">
+                        ABOUT ME
+                    </h1>
+
+                    {/* DESCRIPTION */}
+                    <p className="mt-6 max-w-4xl text-white/80 leading-relaxed">
+                        I am <strong>Prayag Sahu</strong>, a Computer Science and Engineering
+                        undergraduate and <strong>Freelance Full Stack Developer</strong> from
+                        Jabalpur, Madhya Pradesh.
+                        <br /><br />
+                        I completed my higher secondary education under MPBSE with first
+                        division and am currently pursuing B.Tech (CSE) from
+                        <strong> Baderia Global Institute of Engineering & Management</strong>,
+                        affiliated with <strong>RGPV University</strong>.
+                    </p>
+
+                    {/* TWO COLUMN AREA */}
+                    <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+                        {/* WHAT I DO – LEFT */}
+                        <div>
+                            <SectionTag title="What I Do" />
+
+                            <div className="mt-6 space-y-6">
+                                <VerticalSkill title="Full Stack Development" />
+                                <VerticalSkill title="Backend Engineering" />
+                                <VerticalSkill title="Problem Solving & DSA" />
+                            </div>
+                        </div>
+
+                        {/* FUN FACTS – RIGHT */}
+                        <div>
+                            <SectionTag title="Fun Facts" />
+
+                            <div className="mt-8 grid grid-cols-2 gap-5">
+                                <MiniFact value="2+" label="Internships" />
+                                <MiniFact value="5+" label="Hackathons" />
+                                <MiniFact value="6+" label="Months Exp" />
+                                <MiniFact value="10+" label="Projects" />
+                                <MiniFact value="∞" label="Learning" />
+                                <MiniFact value="24/7" label="Coding" />
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-
-                {/* EXTRA DESCRIPTION */}
-                <p className="mt-8 text-gray-700 leading-relaxed max-w-4xl">
-                    My technical expertise includes C++, Java, JavaScript, full stack web
-                    development, and database systems. I focus on writing clean,
-                    maintainable code and designing scalable, backend-driven solutions.
-                    <br /><br />
-                    I am a quick learner with strong problem-solving skills and attention
-                    to detail. Currently, I am learning Python for data analytics and
-                    enhancing my backend engineering capabilities.
-                </p>
-
-                {/* FUN FACTS */}
-                <h2
-                    className="mt-14 inline-block px-6 py-2 rounded-full font-semibold text-black"
-                    style={{ backgroundColor: 'rgba(110,160,70,0.9)' }}
-                >
-                    Fun Facts
-                </h2>
-
-                <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-6">
-                    <FactCard value="2+" label="Internships" />
-                    <FactCard value="5+" label="Hackathons" />
-                    <FactCard value="6+" label="Months Experience" />
-                    <FactCard value="10+" label="Projects" />
-                    <FactCard value="∞" label="Learning Mindset" />
-                    <FactCard value="24/7" label="Coding Passion" />
-                </div>
-
-            </div>
-        </section>
+            </section>
+        </ParallaxSection>
     );
 }
 
 /* ================= SUB COMPONENTS ================= */
 
-function SkillCard({ title }) {
+function InfoItem({ icon, label, value }) {
     return (
-        <div className="p-6 rounded-xl bg-white shadow-md border-l-4"
-            style={{ borderColor: 'rgba(110,160,70,0.9)' }}
-        >
-            <h3 className="font-semibold text-gray-900">{title}</h3>
-            <p className="mt-2 text-sm text-gray-600">
-                Clean code, scalable architecture, and performance-focused development.
-            </p>
+        <div className="flex items-center gap-3">
+            <span className="text-xl">{icon}</span>
+            <span className="font-semibold">{label}:</span>
+            <span className="opacity-90">{value}</span>
         </div>
     );
 }
 
-function FactCard({ value, label }) {
+function SectionTag({ title }) {
     return (
-        <div className="w-full aspect-square rounded-full bg-black text-white
-      flex flex-col items-center justify-center shadow-lg">
+        <h2
+            className="inline-block px-6 py-2 rounded-full font-semibold text-black"
+            style={{ backgroundColor: 'rgba(110,160,70,0.9)' }}
+        >
+            {title}
+        </h2>
+    );
+}
+
+function VerticalSkill({ title }) {
+    return (
+        <div className="flex items-start gap-4">
+            <div
+                className="w-10 h-10 rounded-full flex items-center justify-center text-black font-bold"
+                style={{ backgroundColor: 'rgba(110,160,70,0.9)' }}
+            >
+                ✔
+            </div>
+            <div>
+                <h3 className="font-semibold">{title}</h3>
+                <p className="text-sm text-white/70">
+                    Clean, scalable and performance-focused development.
+                </p>
+            </div>
+        </div>
+    );
+}
+
+function MiniFact({ value, label }) {
+    return (
+        <div className="w-full rounded-full bg-black/80 py-4 text-center shadow-md">
             <h3
-                className="text-3xl font-extrabold"
+                className="text-2xl font-extrabold"
                 style={{ color: 'rgba(110,160,70,0.9)' }}
             >
                 {value}
             </h3>
-            <p className="text-xs mt-1 uppercase tracking-widest">{label}</p>
+            <p className="text-xs tracking-widest uppercase text-white/70">
+                {label}
+            </p>
         </div>
     );
 }
