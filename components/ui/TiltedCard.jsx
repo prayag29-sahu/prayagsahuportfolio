@@ -244,7 +244,6 @@ export default function PortfolioCard({
                     </div>
 
                     {/* SOCIAL */}
-                    {/* SOCIAL */}
                     <div className="social-card">
                         <div className="social-control flex items-center gap-3">
 
@@ -310,36 +309,7 @@ export default function PortfolioCard({
 
 
                 </div>
-                {/* <div className="flex justify-between mt-10">
-                    <button className="px-6 py-2 rounded-full bg-black"
-                        style={{
-                            color: 'rgba(110, 160, 70, 0.9)',
-                            border: '2px solid rgba(110, 160, 70, 0.9)',
-                            boxShadow: '0 0 8px rgba(110, 160, 70, 0.6)',
-                        }}>
-                        Hire Me
-                    </button>
-                    <a href="tel:+917999926855">
-                        <button
-                            className="px-6 py-2 rounded-full
-    flex items-center gap-2
-    text-black relative overflow-hidden
-    phone-ring phone-vibrate"
-                            style={{
-                                backgroundColor: 'white',
-                                color: 'rgba(110, 160, 70, 0.9)',
-                                border: '2px solid rgba(110, 160, 70, 0.9)',
-                                boxShadow: '0 0 8px rgba(110, 160, 70, 0.6)',
-                            }}
-                        >
-                            <RiPhoneLine className="text-lg relative z-10" />
-                            Call
-                        </button>
-                    </a>
-
-
-
-                </div> */}
+                
             </div>
             <div className="flex justify-between mt-20">
                 <button className="px-6 py-2 rounded-full btn bg-black"
