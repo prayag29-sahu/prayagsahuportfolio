@@ -70,7 +70,7 @@ export default function PortfolioCard({
         }
 
         .portfolio-card:hover {
-            height: 420px;
+            height: 320px;
         }
         .imgBx {
             position: absolute;
@@ -104,12 +104,12 @@ export default function PortfolioCard({
         }
 
         .details {
-            transform: translateY(130px);
+            transform: translateY(90px);
             transition: .6s;
         }
 
         .portfolio-card:hover .details {
-            transform: translateY(0);
+            transform: translateY(30px);
         }
 
         .social-card {
@@ -202,7 +202,8 @@ export default function PortfolioCard({
         .bounce-up { animation: up 1s ease-in-out forwards; }
         .bounce-down { animation: down 1s ease-in-out forwards; }
         `}</style>
-            <div ref={cardRef} className="portfolio-card">
+            <div className='mt-20' >
+            <div ref={cardRef} className="portfolio-card ">
 
                 {/* IMAGE */}
                 <div className="imgBx">
@@ -211,14 +212,14 @@ export default function PortfolioCard({
 
                 {/* CONTENT */}
                 <div className="absolute inset-0 flex items-end justify-center">
-                    <div className="details text-center p-10 w-full text-white">
+                    <div className="details text-center p-8 w-full text-white">
                         <h2 className="text-xl font-semibold">
                             {name}
                             <br />
                             <span className="text-lg opacity-60">{role}</span>
                         </h2>
 
-                        <div className="flex justify-between my-5 text-black">
+                        <div className="flex justify-between my-5 mt-2 pb-3 text-black">
                             <div>
                                 <h3 className="font-bold">2+</h3>
                                 <span className="text-sm opacity-60">Hackathons</span>
@@ -233,36 +234,7 @@ export default function PortfolioCard({
                             </div>
                         </div>
 
-                        <div className="flex justify-between">
-                            <button className="px-6 py-2 rounded-full bg-black"
-                                style={{
-                                    color: 'rgba(110, 160, 70, 0.9)',
-                                    border: '2px solid rgba(110, 160, 70, 0.9)',
-                                    boxShadow: '0 0 8px rgba(110, 160, 70, 0.6)',
-                                }}>
-                                Hire Me
-                            </button>
-                            <a href="tel:+917999926855">
-                                <button
-                                    className="px-6 py-2 rounded-full
-    flex items-center gap-2
-    text-black relative overflow-hidden
-    phone-ring phone-vibrate"
-                                    style={{
-                                        backgroundColor: 'white',
-                                        color: 'rgba(110, 160, 70, 0.9)',
-                                        border: '2px solid rgba(110, 160, 70, 0.9)',
-                                        boxShadow: '0 0 8px rgba(110, 160, 70, 0.6)',
-                                    }}
-                                >
-                                    <RiPhoneLine className="text-lg relative z-10" />
-                                    Call
-                                </button>
-                            </a>
-
-
-
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -317,13 +289,13 @@ export default function PortfolioCard({
                                 <RiFacebookLine />
                             </SocialIcon>
 
-                            <SocialIcon href="https://instagram.com">
+                            {/* <SocialIcon href="https://instagram.com">
                                 <RiInstagramLine />
-                            </SocialIcon>
-
-                            {/* <SocialIcon href="https://twitter.com">
-                                <RiTwitterXLine />
                             </SocialIcon> */}
+
+                            <SocialIcon href="https://twitter.com">
+                                <RiTwitterXLine />
+                            </SocialIcon>
                         </div>
 
                     </div>
@@ -332,6 +304,37 @@ export default function PortfolioCard({
 
 
 
+            </div>
+            <div className="flex justify-between mt-10">
+                <button className="px-6 py-2 rounded-full bg-black"
+                    style={{
+                        color: 'rgba(110, 160, 70, 0.9)',
+                        border: '2px solid rgba(110, 160, 70, 0.9)',
+                        boxShadow: '0 0 8px rgba(110, 160, 70, 0.6)',
+                    }}>
+                    Hire Me
+                </button>
+                <a href="tel:+917999926855">
+                    <button
+                        className="px-6 py-2 rounded-full
+    flex items-center gap-2
+    text-black relative overflow-hidden
+    phone-ring phone-vibrate"
+                        style={{
+                            backgroundColor: 'white',
+                            color: 'rgba(110, 160, 70, 0.9)',
+                            border: '2px solid rgba(110, 160, 70, 0.9)',
+                            boxShadow: '0 0 8px rgba(110, 160, 70, 0.6)',
+                        }}
+                    >
+                        <RiPhoneLine className="text-lg relative z-10" />
+                        Call
+                    </button>
+                </a>
+
+
+
+                </div>
             </div>
         </>
     );
