@@ -265,7 +265,7 @@ export default function PortfolioCard({
         transition-opacity duration-300"
                                     style={{ color: 'rgba(110, 160, 70, 0.9)' }}
                                 >
-                                    Social Media Accounts
+                                    My Social Networks
                                 </span>
                             )}
 

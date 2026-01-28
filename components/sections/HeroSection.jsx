@@ -430,6 +430,7 @@ import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import TiltedCard from '@/components/ui/TiltedCard';
 import IconScrollVelocity from '@/components/ui/IconScrollVelocity';
 import BlurText from "@/components/ui/BlurText";
+import AnimatedDocumentsButton from '@/components/ui/AnimatedDocumentsButton';
 
 export default function HeroSection() {
     const handleAnimationComplete = () => {
@@ -447,7 +448,7 @@ export default function HeroSection() {
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 items-center gap-10">
 
                     {/* LEFT TEXT */}
-                    <div className="text-center lg:text-left mb-20 pb-20">
+                    <div className="text-center lg:text-left mb-20 pb-25">
                         <BlurText
                             text="FULL STACK"
                             delay={200}
@@ -456,6 +457,9 @@ export default function HeroSection() {
                             onAnimationComplete={handleAnimationComplete}
                             className="text-7xl md:text-8xl lg:text-9xl font-extrabold text-white leading-none"
                         />
+                        <div className="flex justify-center mt-12 -mb-20">
+                            <AnimatedDocumentsButton text="Download CV" />
+                        </div>
                     </div>
 
                     {/* CENTER IMAGE */}
