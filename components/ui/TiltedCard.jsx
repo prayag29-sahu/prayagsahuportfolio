@@ -212,7 +212,7 @@ export default function PortfolioCard({
 
                     {/* CONTENT */}
                     <div className="absolute inset-0 flex items-end justify-center">
-                        <div className="details text-center p-8 w-full text-white">
+                        <div className="details text-center p-10 w-full text-white">
                             <h2 className="text-xl font-semibold">
                                 {name}
                                 <br />
