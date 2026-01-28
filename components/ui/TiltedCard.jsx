@@ -113,7 +113,7 @@ export default function PortfolioCard({
         }
 
         .social-card {
-            width: 280px;
+            width: 290px;
             height: 52px;
             background: #111;
             padding: 8px 12px;
@@ -202,110 +202,141 @@ export default function PortfolioCard({
         .bounce-up { animation: up 1s ease-in-out forwards; }
         .bounce-down { animation: down 1s ease-in-out forwards; }
         `}</style>
-            <div className='mt-20' >
-            <div ref={cardRef} className="portfolio-card ">
+            <div className='mt-20 mb-10' >
+                <div ref={cardRef} className="portfolio-card ">
 
-                {/* IMAGE */}
-                <div className="imgBx">
-                    <Image src={imageSrc} alt={name} width={1024} height={980} />
-                </div>
-
-                {/* CONTENT */}
-                <div className="absolute inset-0 flex items-end justify-center">
-                    <div className="details text-center p-8 w-full text-white">
-                        <h2 className="text-xl font-semibold">
-                            {name}
-                            <br />
-                            <span className="text-lg opacity-60">{role}</span>
-                        </h2>
-
-                        <div className="flex justify-between my-5 mt-2 pb-3 text-black">
-                            <div>
-                                <h3 className="font-bold">2+</h3>
-                                <span className="text-sm opacity-60">Hackathons</span>
-                            </div>
-                            <div>
-                                <h3 className="font-bold">2</h3>
-                                <span className="text-sm opacity-60">Internships</span>
-                            </div>
-                            <div>
-                                <h3 className="font-bold">6 months</h3>
-                                <span className="text-sm opacity-60">Experience</span>
-                            </div>
-                        </div>
-
-                        
+                    {/* IMAGE */}
+                    <div className="imgBx">
+                        <Image src={imageSrc} alt={name} width={1024} height={980} />
                     </div>
-                </div>
 
-                {/* SOCIAL */}
-                {/* SOCIAL */}
-                <div className="social-card">
-                    <div className="social-control flex items-center gap-3">
+                    {/* CONTENT */}
+                    <div className="absolute inset-0 flex items-end justify-center">
+                        <div className="details text-center p-8 w-full text-white">
+                            <h2 className="text-xl font-semibold">
+                                {name}
+                                <br />
+                                <span className="text-lg opacity-60">{role}</span>
+                            </h2>
 
-                        {/* TOGGLE BUTTON */}
-                        <button
-                            onClick={() => setOpen(!open)}
-                            className="w-9 h-9 rounded-full
+                            <div className="flex justify-between my-5 mt-2 pb-3 text-black">
+                                <div>
+                                    <h3 className="font-bold">2+</h3>
+                                    <span className="text-sm opacity-60">Hackathons</span>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold">2</h3>
+                                    <span className="text-sm opacity-60">Internships</span>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold">6 months</h3>
+                                    <span className="text-sm opacity-60">Experience</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    {/* SOCIAL */}
+                    {/* SOCIAL */}
+                    <div className="social-card">
+                        <div className="social-control flex items-center gap-3">
+
+                            {/* TOGGLE BUTTON */}
+                            <button
+                                onClick={() => setOpen(!open)}
+                                className="w-9 h-9 rounded-full
       flex items-center justify-center
       text-black text-xl shrink-0
       transition-transform duration-300"
-                            style={{
-                                backgroundColor: 'rgba(110, 160, 70, 0.9)',
-                                transform: open ? 'rotate(45deg)' : 'rotate(0deg)',
-                            }}
-                        >
-                            <RiAddLine />
-                        </button>
-
-                        {/* TEXT (WHEN CLOSED) */}
-                        {!open && (
-                            <span
-                                className="text-sm font-medium whitespace-nowrap
-        transition-opacity duration-300"
-                                style={{ color: 'rgba(110, 160, 70, 0.9)' }}
+                                style={{
+                                    backgroundColor: 'rgba(110, 160, 70, 0.9)',
+                                    transform: open ? 'rotate(45deg)' : 'rotate(0deg)',
+                                }}
                             >
-                                Social Media Accounts
-                            </span>
-                        )}
+                                <RiAddLine />
+                            </button>
 
-                        {/* SOCIAL ICONS (WHEN OPEN) */}
-                        <div
-                            className={`flex items-center gap-6 transition-all duration-300
+                            {/* TEXT (WHEN CLOSED) */}
+                            {!open && (
+                                <span
+                                    className="text-sm font-medium whitespace-nowrap
+        transition-opacity duration-300"
+                                    style={{ color: 'rgba(110, 160, 70, 0.9)' }}
+                                >
+                                    Social Media Accounts
+                                </span>
+                            )}
+
+                            {/* SOCIAL ICONS (WHEN OPEN) */}
+                            <div
+                                className={`flex items-center gap-6 transition-all duration-300
       ${open
-                                    ? 'opacity-100 translate-x-0'
-                                    : 'opacity-0 -translate-x-3 pointer-events-none absolute'
-                                }`}
-                        >
-                            <SocialIcon href="https://www.linkedin.com/in/prayag-sahu29">
-                                <RiLinkedinLine />
-                            </SocialIcon>
+                                        ? 'opacity-100 translate-x-0'
+                                        : 'opacity-0 -translate-x-3 pointer-events-none absolute'
+                                    }`}
+                            >
+                                <SocialIcon href="https://www.linkedin.com/in/prayag-sahu29">
+                                    <RiLinkedinLine />
+                                </SocialIcon>
 
-                            <SocialIcon href="https://github.com/prayag29-sahu">
-                                <RiGithubLine />
-                            </SocialIcon>
+                                <SocialIcon href="https://github.com/prayag29-sahu">
+                                    <RiGithubLine />
+                                </SocialIcon>
 
-                            <SocialIcon href="https://facebook.com">
-                                <RiFacebookLine />
-                            </SocialIcon>
+                                <SocialIcon href="https://facebook.com">
+                                    <RiFacebookLine />
+                                </SocialIcon>
 
-                            {/* <SocialIcon href="https://instagram.com">
+                                {/* <SocialIcon href="https://instagram.com">
                                 <RiInstagramLine />
                             </SocialIcon> */}
 
-                            <SocialIcon href="https://twitter.com">
-                                <RiTwitterXLine />
-                            </SocialIcon>
+                                <SocialIcon href="https://twitter.com">
+                                    <RiTwitterXLine />
+                                </SocialIcon>
+                            </div>
+
                         </div>
-
                     </div>
+
+
+
+
                 </div>
+                {/* <div className="flex justify-between mt-10">
+                    <button className="px-6 py-2 rounded-full bg-black"
+                        style={{
+                            color: 'rgba(110, 160, 70, 0.9)',
+                            border: '2px solid rgba(110, 160, 70, 0.9)',
+                            boxShadow: '0 0 8px rgba(110, 160, 70, 0.6)',
+                        }}>
+                        Hire Me
+                    </button>
+                    <a href="tel:+917999926855">
+                        <button
+                            className="px-6 py-2 rounded-full
+    flex items-center gap-2
+    text-black relative overflow-hidden
+    phone-ring phone-vibrate"
+                            style={{
+                                backgroundColor: 'white',
+                                color: 'rgba(110, 160, 70, 0.9)',
+                                border: '2px solid rgba(110, 160, 70, 0.9)',
+                                boxShadow: '0 0 8px rgba(110, 160, 70, 0.6)',
+                            }}
+                        >
+                            <RiPhoneLine className="text-lg relative z-10" />
+                            Call
+                        </button>
+                    </a>
 
 
 
-
+                </div> */}
             </div>
-            <div className="flex justify-between mt-10">
+            <div className="flex justify-between mt-20">
                 <button className="px-6 py-2 rounded-full bg-black"
                     style={{
                         color: 'rgba(110, 160, 70, 0.9)',
@@ -334,7 +365,6 @@ export default function PortfolioCard({
 
 
 
-                </div>
             </div>
         </>
     );
