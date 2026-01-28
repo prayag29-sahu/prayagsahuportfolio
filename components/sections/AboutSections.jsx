@@ -410,12 +410,12 @@ export default function AboutPage() {
                     style={{ backgroundColor: 'rgba(110,160,70,0.9)' }}
                 >
                     {/* PROFILE IMAGE */}
-                    <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                    <div className="w-38 h-38 rounded-full overflow-hidden border-4 border-white shadow-lg">
                         <Image
-                            src="/images/hero1.png"
+                            src="/images/about.png"
                             alt="Prayag Sahu"
-                            width={300}
-                            height={300}
+                            width={1024}
+                            height={980}
                             className="object-cover"
                         />
                     </div>
