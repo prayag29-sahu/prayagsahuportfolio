@@ -13,6 +13,7 @@ import {
     RiPhoneLine,
     RiCloseLine,
 } from 'react-icons/ri';
+import Image from 'next/image';
 
 export default function PortfolioCard({
     imageSrc,
@@ -205,7 +206,7 @@ export default function PortfolioCard({
 
                 {/* IMAGE */}
                 <div className="imgBx">
-                    <img src={imageSrc} alt={name} />
+                    <Image src={imageSrc} alt={name} width={1024} height={980} />
                 </div>
 
                 {/* CONTENT */}
@@ -219,8 +220,8 @@ export default function PortfolioCard({
 
                         <div className="flex justify-between my-5 text-black">
                             <div>
-                                <h3 className="font-bold">5+</h3>
-                                <span className="text-sm opacity-60">Projects</span>
+                                <h3 className="font-bold">2+</h3>
+                                <span className="text-sm opacity-60">Hackathons</span>
                             </div>
                             <div>
                                 <h3 className="font-bold">2</h3>
@@ -298,17 +299,17 @@ export default function PortfolioCard({
 
                         {/* SOCIAL ICONS (WHEN OPEN) */}
                         <div
-                            className={`flex items-center gap-3 transition-all duration-300
+                            className={`flex items-center gap-6 transition-all duration-300
       ${open
                                     ? 'opacity-100 translate-x-0'
                                     : 'opacity-0 -translate-x-3 pointer-events-none absolute'
                                 }`}
                         >
-                            <SocialIcon href="https://www.linkedin.com/in/your-profile">
+                            <SocialIcon href="https://www.linkedin.com/in/prayag-sahu29">
                                 <RiLinkedinLine />
                             </SocialIcon>
 
-                            <SocialIcon href="https://github.com/your-username">
+                            <SocialIcon href="https://github.com/prayag29-sahu">
                                 <RiGithubLine />
                             </SocialIcon>
 
@@ -320,9 +321,9 @@ export default function PortfolioCard({
                                 <RiInstagramLine />
                             </SocialIcon>
 
-                            <SocialIcon href="https://twitter.com">
+                            {/* <SocialIcon href="https://twitter.com">
                                 <RiTwitterXLine />
-                            </SocialIcon>
+                            </SocialIcon> */}
                         </div>
 
                     </div>
