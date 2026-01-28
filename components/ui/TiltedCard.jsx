@@ -201,6 +201,11 @@ export default function PortfolioCard({
 
         .bounce-up { animation: up 1s ease-in-out forwards; }
         .bounce-down { animation: down 1s ease-in-out forwards; }
+
+        .btn:active {
+          transform: scale(0.95);
+        }
+
         `}</style>
             <div className='mt-20 mb-10' >
                 <div ref={cardRef} className="portfolio-card ">
@@ -337,7 +342,7 @@ export default function PortfolioCard({
                 </div> */}
             </div>
             <div className="flex justify-between mt-20">
-                <button className="px-6 py-2 rounded-full bg-black"
+                <button className="px-6 py-2 rounded-full btn bg-black"
                     style={{
                         color: 'rgba(110, 160, 70, 0.9)',
                         border: '2px solid rgba(110, 160, 70, 0.9)',
@@ -348,7 +353,7 @@ export default function PortfolioCard({
                 <a href="tel:+917999926855">
                     <button
                         className="px-6 py-2 rounded-full
-    flex items-center gap-2
+    flex items-center gap-2 btn 
     text-black relative overflow-hidden
     phone-ring phone-vibrate"
                         style={{
