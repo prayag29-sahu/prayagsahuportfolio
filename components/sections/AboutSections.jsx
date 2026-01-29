@@ -466,8 +466,6 @@ export default function AboutPage() {
 
                         {/* FUN FACTS – RIGHT */}
                         <div>
-                            <SectionTag title="Fun Facts" />
-
                             <div className="mt-8 grid grid-cols-2 gap-5">
                                 <MiniFact value="2+" label="Internships" />
                                 <MiniFact value="5+" label="Hackathons" />
