@@ -588,14 +588,17 @@ function InfoItem({ icon, label, value }) {
 
 function SectionTag({ title }) {
     return (
-        <h2
-            className="inline-block px-6 py-2 rounded-full font-semibold text-black"
-            style={{ backgroundColor: 'rgba(110,160,70,0.9)' }}
-        >
-            {title}
-        </h2>
+        <div className="inline-block">
+            <h2 className="font-semibold tracking-wide text-[#6ea046]">
+                {title}
+            </h2>
+            <div className="h-1 w-15 bg-[#6ea046] rounded-full mt-1" />
+        </div>
     );
 }
+
+
+
 
 function VerticalSkill({ icon, title, desc }) {
     return (
