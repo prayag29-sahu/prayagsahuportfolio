@@ -562,18 +562,6 @@ export default function AboutPage() {
                             <div className="mt-3 space-y-5">
                                 <SectionTag title="I Have" />
 
-                                {/* <HighlightItem
-                                    icon={<RiTeamLine />}
-                                    title="Family Background"
-                                    text="I belong to a nuclear family with strong values and support."
-                                />
-
-                                <HighlightItem
-                                    icon={<RiBookOpenLine />}
-                                    title="Hobbies & Interests"
-                                    text="Reading books, listening to music, and coding in my free time."
-                                /> */}
-
                                 <HighlightItem
                                     icon={<RiLightbulbFlashLine />}
                                     title="Core Strengths"
@@ -657,22 +645,6 @@ function VerticalSkill({ icon, title, desc }) {
     );
 }
 
-
-// function MiniFact({ value, label }) {
-//     return (
-//         <div className="w-full rounded-full bg-black/80 py-4 text-center shadow-md">
-//             <h3
-//                 className="text-2xl font-extrabold"
-//                 style={{ color: 'rgba(110,160,70,0.9)' }}
-//             >
-//                 {value}
-//             </h3>
-//             <p className="text-xs tracking-widest uppercase text-white/70">
-//                 {label}
-//             </p>
-//         </div>
-//     );
-// }
 
 
 function HighlightItem({ icon, title, text }) {
