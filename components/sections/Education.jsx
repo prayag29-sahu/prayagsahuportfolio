@@ -684,8 +684,6 @@
 
 
 
-
-
 'use client';
 
 import {
@@ -706,109 +704,147 @@ import ParallaxSection from "@/components/ui/ParallaxSection";
 export default function Education() {
     return (
         <ParallaxSection backgroundImage="/images/bg-1.png" height="100vh">
-            <section id="education" className="py-20 text-white">
-                <div className="max-w-7xl mx-auto px-6">
+            <section id="education" className="min-h-screen text-white flex">
 
-                    {/* HEADING */}
-                    <div className="mb-14">
-                        <h2 className="text-4xl lg:text-5xl font-extrabold tracking-widest">
-                            EDUCATION & <span className="text-[#6ea046]">LEARNING</span>
-                        </h2>
-                        <div className="h-1 w-80 bg-[#6ea046] rounded-full mt-3" />
-                    </div>
+                {/* MAIN CONTENT */}
+                <div className="flex-1 py-20 px-6">
+                    <div className="max-w-6xl mx-auto">
 
-                    {/* MAIN GRID → IMAGE LAYOUT */}
-                    <div className="grid lg:grid-cols-[1fr_1fr_280px] gap-10 items-start">
+                        {/* HEADING */}
+                        <div className="mb-14">
+                            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-widest">
+                                EDUCATION & <span className="text-[#6ea046]">LEARNING</span>
+                            </h2>
+                            <div className="h-1 w-80 bg-[#6ea046] rounded-full mt-3" />
+                        </div>
 
-                        {/* ACADEMIC */}
-                        <div className="bg-black/40 p-8 rounded-2xl border border-white/10 shadow-xl">
-                            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-                                <GraduationCap className="text-[#6ea046]" />
-                                Academic
-                            </h3>
+                        {/* CONTENT GRID */}
+                        <div className="grid lg:grid-cols-2 gap-12">
 
-                            <div className="relative">
-                                <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-[#6ea046]/40" />
+                            {/* ACADEMIC */}
+                            <div
+                                className="
+    bg-black/40
+    p-8
+    rounded-2xl
+    border border-white/10
+    shadow-[0_18px_35px_rgba(110,160,70,0.35)]
+    hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)]
+    transition-shadow
+    duration-300
+  "
+                            >
 
-                                <div className="space-y-10">
-                                    <TimelineItem
-                                        icon={<School size={16} />}
-                                        year="2020 – 2021"
-                                        title="10th Grade (MPBSE)"
-                                        institute="Sarvottam H.S. School"
-                                        extra="93.2% • School Topper"
+
+
+                                <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
+                                    <GraduationCap className="text-[#6ea046]" />
+                                    Academic
+                                </h3>
+
+                                <div className="relative">
+                                    <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-[#6ea046]/40" />
+
+                                    <div className="space-y-10">
+                                        <TimelineItem
+                                            icon={<School size={16} />}
+                                            year="2020 – 2021"
+                                            title="10th Grade (MPBSE)"
+                                            institute="Sarvottam Higher Secondary School"
+                                            extra="93.2% • School Topper"
+                                        />
+                                        <TimelineItem
+                                            icon={<School size={16} />}
+                                            year="2022 – 2023"
+                                            title="12th Grade (Maths + Biology)"
+                                            institute="Sarvottam Higher Secondary School"
+                                            extra="88.6% • School Topper"
+                                        />
+                                        <TimelineItem
+                                            icon={<GraduationCap size={16} />}
+                                            year="2023 – 2027"
+                                            title="B.Tech – Computer Science & Engineering"
+                                            institute="Baderia GIEM (RGPV)"
+                                            extra="SGPA 8.81 • College Rank 2nd"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* CERTIFICATIONS */}
+                            <div className="bg-black/40 p-8 rounded-2xl border border-white/10
+    shadow-[0_18px_35px_rgba(110,160,70,0.35)]
+    hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)]
+    transition-shadow
+    duration-300">
+
+                                <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
+                                    <Award className="text-[#6ea046]" />
+                                    Certifications
+                                </h3>
+
+                                <div className="space-y-6">
+                                    <CertCard
+                                        icon={<Trophy />}
+                                        title="NPTEL – DBMS (IIT Kharagpur)"
+                                        desc="Silver + Elite Certificate"
                                     />
-                                    <TimelineItem
-                                        icon={<School size={16} />}
-                                        year="2022 – 2023"
-                                        title="12th Grade (Maths + Biology)"
-                                        institute="Sarvottam H.S. School"
-                                        extra="88.6% • School Topper"
+                                    <CertCard
+                                        icon={<BookOpen />}
+                                        title="freeCodeCamp"
+                                        desc="Frontend & Full Stack Development"
                                     />
-                                    <TimelineItem
-                                        icon={<GraduationCap size={16} />}
-                                        year="2023 – 2027"
-                                        title="B.Tech – CSE"
-                                        institute="Baderia GIEM (RGPV)"
-                                        extra="SGPA 8.81 • College Rank 2nd"
+                                    <CertCard
+                                        icon={<Code2 />}
+                                        title="InterviewBit"
+                                        desc="DSA • Badges • Streak"
+                                    />
+                                    <CertCard
+                                        icon={<Award />}
+                                        title="Hackathons"
+                                        desc="SIH • Brahmax • College Hackathons"
                                     />
                                 </div>
                             </div>
+
                         </div>
-
-                        {/* CERTIFICATIONS */}
-                        <div className="bg-black/40 p-8 rounded-2xl border border-white/10 shadow-xl">
-                            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-                                <Award className="text-[#6ea046]" />
-                                Certifications
-                            </h3>
-
-                            <div className="space-y-6">
-                                <CertCard
-                                    icon={<Trophy />}
-                                    title="NPTEL – DBMS (IIT KGP)"
-                                    desc="Silver + Elite"
-                                />
-                                <CertCard
-                                    icon={<BookOpen />}
-                                    title="freeCodeCamp"
-                                    desc="Web & Full Stack"
-                                />
-                                <CertCard
-                                    icon={<Code2 />}
-                                    title="InterviewBit"
-                                    desc="DSA • Badges • Streak"
-                                />
-                                <CertCard
-                                    icon={<Award />}
-                                    title="Hackathons"
-                                    desc="SIH • Brahmax"
-                                />
-                            </div>
-                        </div>
-
-                        {/* CONTINUOUS LEARNING (RIGHT BAR) */}
-                        <div className="bg-[#6ea046]/90 rounded-2xl p-6 shadow-xl text-black sticky top-28">
-                            <h3 className="text-xl font-bold mb-8">
-                                Learning
-                            </h3>
-
-                            <div className="space-y-6">
-                                <Stat icon={<Layers />} value="20+" label="Projects" />
-                                <Stat icon={<BookMarked />} value="5+" label="Courses" />
-                                <Stat icon={<Medal />} value="8+" label="Certificates" />
-                                <Stat icon={<BadgeCheck />} value="10+" label="Badges" />
-                            </div>
-                        </div>
-
                     </div>
                 </div>
+
+                {/* RIGHT SIDE – FULL HEIGHT LEARNING PANEL */}
+                <aside
+                    className="
+            hidden lg:flex
+            flex-col
+            w-80
+            px-8
+            py-20
+            relative
+            shadow-[-10px_0_35px_rgba(0,0,0,0.45)]
+          "
+                    style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
+                >
+                    {/* soft inner gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-l from-black/20 via-transparent to-transparent pointer-events-none" />
+
+                    <h3 className="text-2xl font-bold text-black mb-10 relative z-10">
+                        Learning
+                    </h3>
+
+                    <div className="space-y-8 relative z-10">
+                        <Stat icon={<Layers />} value="20+" label="Projects" />
+                        <Stat icon={<BookMarked />} value="5+" label="Courses" />
+                        <Stat icon={<Medal />} value="8+" label="Certificates" />
+                        <Stat icon={<BadgeCheck />} value="10+" label="Badges" />
+                    </div>
+                </aside>
+
             </section>
         </ParallaxSection>
     );
 }
 
-/* ================= COMPONENTS ================= */
+/* ================= SUB COMPONENTS ================= */
 
 function TimelineItem({ icon, year, title, institute, extra }) {
     return (
@@ -830,7 +866,11 @@ function TimelineItem({ icon, year, title, institute, extra }) {
 
 function CertCard({ icon, title, desc }) {
     return (
-        <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+        <div className="
+      flex items-center gap-4 p-4 rounded-xl 
+      bg-white/5 border border-white/10
+      shadow-[0_10px_25px_rgba(0,0,0,0.35)]
+    ">
             <div className="w-10 h-10 rounded-full bg-[#6ea046] flex items-center justify-center text-black">
                 {icon}
             </div>
@@ -844,13 +884,13 @@ function CertCard({ icon, title, desc }) {
 
 function Stat({ icon, value, label }) {
     return (
-        <div className="flex items-center gap-4 border-b border-black/20 pb-4 last:border-none">
-            <div className="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center">
+        <div className="flex items-center gap-4 pb-6 border-b border-black/20 last:border-none">
+            <div className="w-11 h-11 rounded-full bg-black/20 flex items-center justify-center">
                 {icon}
             </div>
             <div>
-                <div className="text-2xl font-bold">{value}</div>
-                <div className="text-sm opacity-80">{label}</div>
+                <div className="text-2xl font-bold text-black">{value}</div>
+                <div className="text-sm text-black/80">{label}</div>
             </div>
         </div>
     );
