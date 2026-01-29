@@ -402,16 +402,6 @@ import {
     RiNodejsLine,
     RiDatabase2Line,
     RiAndroidLine,
-
-    // RiTeamLine,
-    // RiBookOpenLine,
-    // RiHeadphoneLine,
-    // RiCodeLine,
-    // RiLightbulbFlashLine,
-    // RiFocus2Line,
-    // RiGraduationCapLine,
-    // RiTargetLine,
-    // RiRocketLine,
 } from 'react-icons/ri';
 import {
     RiTeamLine,
