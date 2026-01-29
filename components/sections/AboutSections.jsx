@@ -432,30 +432,6 @@ export default function AboutPage() {
             <section className="min-h-screen flex text-white">
 
                 {/* LEFT SIDEBAR */}
-                {/* <aside
-                    className="hidden lg:flex flex-col items-center w-72 py-8"
-                    style={{ backgroundColor: 'rgba(110,160,70,0.9)' }}
-                >
-                    
-                    <div className="w-38 h-38 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                        <Image
-                            src="/images/about.png"
-                            alt="Prayag Sahu"
-                            width={1024}
-                            height={980}
-                            className="object-cover"
-                        />
-                    </div>
-
-                   
-                    <div className="mt-10 space-y-4 text-sm text-white">
-                        <InfoItem icon={<RiUser3Line />} label="Name" value="Prayag Sahu" />
-                        <InfoItem icon={<RiUserHeartLine />} label="Father" value="Prakash Chandra Sahu" />
-                        <InfoItem icon={<RiUserHeartLine />} label="Mother" value="Maya Sahu" />
-                        <InfoItem icon={<RiCalendarLine />} label="DOB" value="02 Oct 2005" />
-                        <InfoItem icon={<RiMapPinLine />} label="Location" value="Jabalpur, MP" />
-                    </div>
-                </aside> */}
                 <aside
                     className="
     hidden lg:flex
