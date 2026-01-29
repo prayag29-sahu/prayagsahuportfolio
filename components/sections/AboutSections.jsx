@@ -397,6 +397,11 @@ import {
     RiUserHeartLine,
     RiCalendarLine,
     RiMapPinLine,
+    RiCodeSSlashLine,
+    RiReactjsLine,
+    RiNodejsLine,
+    RiDatabase2Line,
+    RiAndroidLine,
 } from 'react-icons/ri';
 
 export default function AboutPage() {
@@ -455,13 +460,34 @@ export default function AboutPage() {
 
                         {/* WHAT I DO – LEFT */}
                         <div>
-                            <SectionTag title="What I Do" />
+                            <SectionTag title="I Can Do" />
 
                             <div className="mt-6 space-y-6">
-                                <VerticalSkill title="Full Stack Development" />
-                                <VerticalSkill title="Backend Engineering" />
-                                <VerticalSkill title="Problem Solving & DSA" />
+                                <VerticalSkill
+                                    icon={<RiReactjsLine />}
+                                    title="Frontend Development"
+                                    desc="Building responsive, accessible user interfaces using HTML, CSS, JavaScript, React, Next.js, and Tailwind CSS."
+                                />
+
+                                <VerticalSkill
+                                    icon={<RiNodejsLine />}
+                                    title="Backend & API Development"
+                                    desc="Developing scalable REST APIs with Node.js and Express, including authentication, authorization, and secure server logic."
+                                />
+
+                                <VerticalSkill
+                                    icon={<RiDatabase2Line />}
+                                    title="Database Management"
+                                    desc="Designing and managing relational databases using PostgreSQL with proper schema design, relations, and optimized queries."
+                                />
+
+                                <VerticalSkill
+                                    icon={<RiAndroidLine />}
+                                    title="Android App Development"
+                                    desc="Building Android applications using React Native with API integration and shared backend services."
+                                />
                             </div>
+
                         </div>
 
                         {/* FUN FACTS – RIGHT */}
@@ -506,24 +532,30 @@ function SectionTag({ title }) {
     );
 }
 
-function VerticalSkill({ title }) {
+function VerticalSkill({ icon, title, desc }) {
     return (
         <div className="flex items-start gap-4">
             <div
-                className="w-10 h-10 rounded-full flex items-center justify-center text-black font-bold"
-                style={{ backgroundColor: 'rgba(110,160,70,0.9)' }}
+                className="w-10 h-10 rounded-full flex items-center justify-center text-black text-xl shrink-0"
+                style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
             >
-                ✔
+                {icon}
             </div>
+
             <div>
-                <h3 className="font-semibold">{title}</h3>
-                <p className="text-sm text-white/70">
-                    Clean, scalable and performance-focused development.
+                <h3 className="font-semibold text-white flex items-center gap-2">
+                    {/* <RiCodeSSlashLine className="text-green-400" /> */}
+                    {title}
+                </h3>
+
+                <p className="text-sm text-white/70 leading-relaxed mt-1">
+                    {desc}
                 </p>
             </div>
         </div>
     );
 }
+
 
 function MiniFact({ value, label }) {
     return (
