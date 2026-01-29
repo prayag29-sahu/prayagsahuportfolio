@@ -402,7 +402,29 @@ import {
     RiNodejsLine,
     RiDatabase2Line,
     RiAndroidLine,
+
+    // RiTeamLine,
+    // RiBookOpenLine,
+    // RiHeadphoneLine,
+    // RiCodeLine,
+    // RiLightbulbFlashLine,
+    // RiFocus2Line,
+    // RiGraduationCapLine,
+    // RiTargetLine,
+    // RiRocketLine,
 } from 'react-icons/ri';
+import {
+    RiTeamLine,
+    RiBookOpenLine,
+    RiHeadphoneLine,
+    RiCodeLine,
+    RiLightbulbFlashLine,
+    RiFocus3Line,
+    RiGraduationCapLine,
+    RiRocketLine,
+} from "react-icons/ri";
+
+
 
 export default function AboutPage() {
     return (
@@ -410,11 +432,11 @@ export default function AboutPage() {
             <section className="min-h-screen flex text-white">
 
                 {/* LEFT SIDEBAR */}
-                <aside
-                    className="hidden lg:flex flex-col items-center w-72 py-10"
+                {/* <aside
+                    className="hidden lg:flex flex-col items-center w-72 py-8"
                     style={{ backgroundColor: 'rgba(110,160,70,0.9)' }}
                 >
-                    {/* PROFILE IMAGE */}
+                    
                     <div className="w-38 h-38 rounded-full overflow-hidden border-4 border-white shadow-lg">
                         <Image
                             src="/images/about.png"
@@ -425,8 +447,51 @@ export default function AboutPage() {
                         />
                     </div>
 
-                    {/* PERSONAL INFO */}
+                   
                     <div className="mt-10 space-y-4 text-sm text-white">
+                        <InfoItem icon={<RiUser3Line />} label="Name" value="Prayag Sahu" />
+                        <InfoItem icon={<RiUserHeartLine />} label="Father" value="Prakash Chandra Sahu" />
+                        <InfoItem icon={<RiUserHeartLine />} label="Mother" value="Maya Sahu" />
+                        <InfoItem icon={<RiCalendarLine />} label="DOB" value="02 Oct 2005" />
+                        <InfoItem icon={<RiMapPinLine />} label="Location" value="Jabalpur, MP" />
+                    </div>
+                </aside> */}
+                <aside
+                    className="
+    hidden lg:flex
+    flex-col items-center
+    w-80
+    py-10
+    relative
+    border-r
+    border-white/10
+    shadow-[8px_0_30px_rgba(0,0,0,0.35)]
+  "
+                    style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
+                >
+                    {/* RIGHT SIDE PREMIUM SHADOW + GLOW */}
+                    <div className="
+    pointer-events-none
+    absolute top-0 right-0 h-full w-6
+    bg-gradient-to-l
+    from-black/30
+    via-black/10
+    to-transparent
+  " />
+
+                    {/* PROFILE IMAGE */}
+                    <div className="w-50 h-50 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                        <Image
+                            src="/images/about.png"
+                            alt="Prayag Sahu"
+                            width={1024}
+                            height={980}
+                            className="object-cover"
+                        />
+                    </div>
+
+                    {/* PERSONAL INFO */}
+                    <div className="mt-12 space-y-5 text-sm text-white w-full px-6">
                         <InfoItem icon={<RiUser3Line />} label="Name" value="Prayag Sahu" />
                         <InfoItem icon={<RiUserHeartLine />} label="Father" value="Prakash Chandra Sahu" />
                         <InfoItem icon={<RiUserHeartLine />} label="Mother" value="Maya Sahu" />
@@ -435,8 +500,10 @@ export default function AboutPage() {
                     </div>
                 </aside>
 
+
+
                 {/* MAIN CONTENT */}
-                <div className="flex-1 px-6 lg:px-16 py-14">
+                <div className="flex-1 px-6 lg:px-16 py-5">
 
                     {/* HEADING */}
                     <h1 className="text-5xl font-extrabold tracking-widest">
@@ -456,7 +523,7 @@ export default function AboutPage() {
                     </p>
 
                     {/* TWO COLUMN AREA */}
-                    <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
 
                         {/* WHAT I DO – LEFT */}
                         <div>
@@ -492,14 +559,48 @@ export default function AboutPage() {
 
                         {/* FUN FACTS – RIGHT */}
                         <div>
-                            <div className="mt-8 grid grid-cols-2 gap-5">
-                                <MiniFact value="2+" label="Internships" />
-                                <MiniFact value="5+" label="Hackathons" />
-                                <MiniFact value="6+" label="Months Exp" />
-                                <MiniFact value="10+" label="Projects" />
-                                <MiniFact value="∞" label="Learning" />
-                                <MiniFact value="24/7" label="Coding" />
+                            <div className="mt-3 space-y-5">
+                                <SectionTag title="I Have" />
+
+                                {/* <HighlightItem
+                                    icon={<RiTeamLine />}
+                                    title="Family Background"
+                                    text="I belong to a nuclear family with strong values and support."
+                                />
+
+                                <HighlightItem
+                                    icon={<RiBookOpenLine />}
+                                    title="Hobbies & Interests"
+                                    text="Reading books, listening to music, and coding in my free time."
+                                /> */}
+
+                                <HighlightItem
+                                    icon={<RiLightbulbFlashLine />}
+                                    title="Core Strengths"
+                                    text="Hardworking, self-motivated, quick learner with strong problem-solving and attention to detail."
+                                />
+
+                                <HighlightItem
+                                    icon={<RiGraduationCapLine />}
+                                    title="Technical Background"
+                                    text="Computer Science student with experience in frontend development, C++, and currently learning Java."
+                                />
+
+                                <HighlightItem
+                                    icon={<RiFocus3Line />}
+                                    title="Career Goals"
+                                    text="Short-term goal is to join a reputed company; long-term goal is to become a successful software engineer."
+                                />
+
+                                <HighlightItem
+                                    icon={<RiRocketLine />}
+                                    title="Learning Mindset"
+                                    text="Always eager to learn new technologies and continuously improve skills."
+                                />
+
                             </div>
+
+
                         </div>
 
                     </div>
@@ -557,18 +658,39 @@ function VerticalSkill({ icon, title, desc }) {
 }
 
 
-function MiniFact({ value, label }) {
+// function MiniFact({ value, label }) {
+//     return (
+//         <div className="w-full rounded-full bg-black/80 py-4 text-center shadow-md">
+//             <h3
+//                 className="text-2xl font-extrabold"
+//                 style={{ color: 'rgba(110,160,70,0.9)' }}
+//             >
+//                 {value}
+//             </h3>
+//             <p className="text-xs tracking-widest uppercase text-white/70">
+//                 {label}
+//             </p>
+//         </div>
+//     );
+// }
+
+
+function HighlightItem({ icon, title, text }) {
     return (
-        <div className="w-full rounded-full bg-black/80 py-4 text-center shadow-md">
-            <h3
-                className="text-2xl font-extrabold"
-                style={{ color: 'rgba(110,160,70,0.9)' }}
+        <div className="flex items-start gap-4">
+            <div
+                className="w-10 h-10 rounded-full flex items-center justify-center text-xl text-black shrink-0"
+                style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
             >
-                {value}
-            </h3>
-            <p className="text-xs tracking-widest uppercase text-white/70">
-                {label}
-            </p>
+                {icon}
+            </div>
+
+            <div className='gap-3'>
+                <h4 className="font-semibold mb-1 text-white">{title}</h4>
+                <p className="text-sm text-white/70 leading-relaxed">
+                    {text}
+                </p>
+            </div>
         </div>
     );
 }
