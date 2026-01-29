@@ -482,9 +482,15 @@ export default function AboutPage() {
                 <div className="flex-1 px-6 lg:px-16 py-5">
 
                     {/* HEADING */}
-                    <h1 className="text-5xl font-extrabold tracking-widest">
+                    {/* <h1 className="text-5xl font-extrabold tracking-widest">
                         ABOUT ME
-                    </h1>
+                    </h1> */}
+                    <div className="inline-block">
+                        <h2 className="text-5xl font-extrabold tracking-widest">
+                            ABOUT ME
+                        </h2>
+                        <div className="h-1 w-15 bg-[#6ea046] rounded-full mt-1" />
+                    </div>
 
                     {/* DESCRIPTION */}
                     <p className="mt-6 max-w-4xl text-white/80 leading-relaxed">
@@ -589,7 +595,7 @@ function InfoItem({ icon, label, value }) {
 function SectionTag({ title }) {
     return (
         <div className="inline-block">
-            <h2 className="font-semibold tracking-wide text-[#6ea046]">
+            <h2 className="font-semibold tracking-wide ">
                 {title}
             </h2>
             <div className="h-1 w-15 bg-[#6ea046] rounded-full mt-1" />
