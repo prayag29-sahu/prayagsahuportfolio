@@ -705,11 +705,9 @@ export default function Education() {
     return (
         <ParallaxSection backgroundImage="/images/bg-1.png" height="100vh">
             <section id="education" className="min-h-screen text-white flex">
-
                 {/* MAIN CONTENT */}
                 <div className="flex-1 py-20 px-6">
                     <div className="max-w-6xl mx-auto">
-
                         {/* HEADING */}
                         <div className="mb-14">
                             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-widest">
@@ -717,10 +715,8 @@ export default function Education() {
                             </h2>
                             <div className="h-1 w-80 bg-[#6ea046] rounded-full mt-3" />
                         </div>
-
                         {/* CONTENT GRID */}
                         <div className="grid lg:grid-cols-2 gap-12">
-
                             {/* ACADEMIC */}
                             <div
                                 className=" bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300"
@@ -756,19 +752,13 @@ export default function Education() {
                                     </div>
                                 </div>
                             </div>
-
                             {/* CERTIFICATIONS */}
-                            <div className="bg-black/40 p-8 rounded-2xl border border-white/10
-    shadow-[0_18px_35px_rgba(110,160,70,0.35)]
-    hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)]
-    transition-shadow
-    duration-300">
-
+                            <div className="bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300">
+                                
                                 <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
                                     <Award className="text-[#6ea046]" />
                                     Certifications
                                 </h3>
-
                                 <div className="space-y-6">
                                     <CertCard
                                         icon={<Trophy />}
@@ -792,22 +782,12 @@ export default function Education() {
                                     />
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
                 {/* RIGHT SIDE – FULL HEIGHT LEARNING PANEL */}
                 <aside
-                    className="
-            hidden lg:flex
-            flex-col
-            w-80
-            px-8
-            py-20
-            relative
-            shadow-[-10px_0_35px_rgba(0,0,0,0.45)]
-          "
+                    className=" hidden lg:flex flex-col w-80 px-8 py-20 relative shadow-[-10px_0_35px_rgba(0,0,0,0.45)]"
                     style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
                 >
                     {/* soft inner gradient */}
