@@ -723,28 +723,14 @@ export default function Education() {
 
                             {/* ACADEMIC */}
                             <div
-                                className="
-    bg-black/40
-    p-8
-    rounded-2xl
-    border border-white/10
-    shadow-[0_18px_35px_rgba(110,160,70,0.35)]
-    hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)]
-    transition-shadow
-    duration-300
-  "
+                                className=" bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300"
                             >
-
-
-
                                 <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
                                     <GraduationCap className="text-[#6ea046]" />
                                     Academic
                                 </h3>
-
                                 <div className="relative">
                                     <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-[#6ea046]/40" />
-
                                     <div className="space-y-10">
                                         <TimelineItem
                                             icon={<School size={16} />}
