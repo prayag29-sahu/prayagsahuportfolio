@@ -809,49 +809,49 @@ export default function Education() {
 
 /* ================= SUB COMPONENTS ================= */
 
-// function TimelineItem({ icon, year, title, institute, extra }) {
-//     return (
-//         <div className="flex items-start gap-6">
-//             <div className="w-8 h-8 bg-[#6ea046] rounded-full flex items-center justify-center text-black z-10">
-//                 {icon}
-//             </div>
-//             <div>
-//                 <div className="text-sm text-[#6ea046] flex items-center gap-2">
-//                     <Calendar size={14} /> {year}
-//                 </div>
-//                 <h4 className="text-lg font-semibold">{title}</h4>
-//                 <p className="text-white/70">{institute}</p>
-//                 <p className="text-sm text-white/50 mt-1">{extra}</p>
-//             </div>
-//         </div>
-//     );
-// }
+function TimelineItem({ icon, year, title, institute, extra }) {
+    return (
+        <div className="flex items-start gap-6">
+            <div className="w-8 h-8 bg-[#6ea046] rounded-full flex items-center justify-center text-black z-10">
+                {icon}
+            </div>
+            <div>
+                <div className="text-sm text-[#6ea046] flex items-center gap-2">
+                    <Calendar size={14} /> {year}
+                </div>
+                <h4 className="text-lg font-semibold">{title}</h4>
+                <p className="text-white/70">{institute}</p>
+                <p className="text-sm text-white/50 mt-1">{extra}</p>
+            </div>
+        </div>
+    );
+}
 
-// function CertCard({ icon, title, desc }) {
-//     return (
-//         <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10shadow-[0_10px_25px_rgba(0,0,0,0.35)]
-//     ">
-//             <div className="w-10 h-10 rounded-full bg-[#6ea046] flex items-center justify-center text-black">
-//                 {icon}
-//             </div>
-//             <div>
-//                 <h4 className="font-semibold">{title}</h4>
-//                 <p className="text-sm text-white/70">{desc}</p>
-//             </div>
-//         </div>
-//     );
-// }
+function CertCard({ icon, title, desc }) {
+    return (
+        <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10shadow-[0_10px_25px_rgba(0,0,0,0.35)]
+    ">
+            <div className="w-10 h-10 rounded-full bg-[#6ea046] flex items-center justify-center text-black">
+                {icon}
+            </div>
+            <div>
+                <h4 className="font-semibold">{title}</h4>
+                <p className="text-sm text-white/70">{desc}</p>
+            </div>
+        </div>
+    );
+}
 
-// function Stat({ icon, value, label }) {
-//     return (
-//         <div className="flex items-center gap-4 pb-6 border-b border-black/20 last:border-none">
-//             <div className="w-11 h-11 rounded-full bg-black/20 flex items-center justify-center">
-//                 {icon}
-//             </div>
-//             <div>
-//                 <div className="text-2xl font-bold text-black">{value}</div>
-//                 <div className="text-sm text-black/80">{label}</div>
-//             </div>
-//         </div>
-//     );
-// }
+function Stat({ icon, value, label }) {
+    return (
+        <div className="flex items-center gap-4 pb-6 border-b border-black/20 last:border-none">
+            <div className="w-11 h-11 rounded-full bg-black/20 flex items-center justify-center">
+                {icon}
+            </div>
+            <div>
+                <div className="text-2xl font-bold text-black">{value}</div>
+                <div className="text-sm text-black/80">{label}</div>
+            </div>
+        </div>
+    );
+}
