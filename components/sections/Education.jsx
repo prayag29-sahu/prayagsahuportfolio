@@ -809,23 +809,23 @@ export default function Education() {
 
 /* ================= SUB COMPONENTS ================= */
 
-function TimelineItem({ icon, year, title, institute, extra }) {
-    return (
-        <div className="flex items-start gap-6">
-            <div className="w-8 h-8 bg-[#6ea046] rounded-full flex items-center justify-center text-black z-10">
-                {icon}
-            </div>
-            <div>
-                <div className="text-sm text-[#6ea046] flex items-center gap-2">
-                    <Calendar size={14} /> {year}
-                </div>
-                <h4 className="text-lg font-semibold">{title}</h4>
-                <p className="text-white/70">{institute}</p>
-                <p className="text-sm text-white/50 mt-1">{extra}</p>
-            </div>
-        </div>
-    );
-}
+// function TimelineItem({ icon, year, title, institute, extra }) {
+//     return (
+//         <div className="flex items-start gap-6">
+//             <div className="w-8 h-8 bg-[#6ea046] rounded-full flex items-center justify-center text-black z-10">
+//                 {icon}
+//             </div>
+//             <div>
+//                 <div className="text-sm text-[#6ea046] flex items-center gap-2">
+//                     <Calendar size={14} /> {year}
+//                 </div>
+//                 <h4 className="text-lg font-semibold">{title}</h4>
+//                 <p className="text-white/70">{institute}</p>
+//                 <p className="text-sm text-white/50 mt-1">{extra}</p>
+//             </div>
+//         </div>
+//     );
+// }
 
 // function CertCard({ icon, title, desc }) {
 //     return (
