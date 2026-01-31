@@ -827,20 +827,20 @@ function TimelineItem({ icon, year, title, institute, extra }) {
     );
 }
 
-function CertCard({ icon, title, desc }) {
-    return (
-        <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10shadow-[0_10px_25px_rgba(0,0,0,0.35)]
-    ">
-            <div className="w-10 h-10 rounded-full bg-[#6ea046] flex items-center justify-center text-black">
-                {icon}
-            </div>
-            <div>
-                <h4 className="font-semibold">{title}</h4>
-                <p className="text-sm text-white/70">{desc}</p>
-            </div>
-        </div>
-    );
-}
+// function CertCard({ icon, title, desc }) {
+//     return (
+//         <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10shadow-[0_10px_25px_rgba(0,0,0,0.35)]
+//     ">
+//             <div className="w-10 h-10 rounded-full bg-[#6ea046] flex items-center justify-center text-black">
+//                 {icon}
+//             </div>
+//             <div>
+//                 <h4 className="font-semibold">{title}</h4>
+//                 <p className="text-sm text-white/70">{desc}</p>
+//             </div>
+//         </div>
+//     );
+// }
 
 // function Stat({ icon, value, label }) {
 //     return (
