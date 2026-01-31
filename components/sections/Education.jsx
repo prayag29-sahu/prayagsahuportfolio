@@ -702,109 +702,109 @@ import {
 import ParallaxSection from "@/components/ui/ParallaxSection";
 
 export default function Education() {
-    // return (
-    //     <ParallaxSection backgroundImage="/images/bg-1.png" height="100vh">
-    //         <section id="education" className="min-h-screen text-white flex">
-    //             {/* MAIN CONTENT */}
-    //             <div className="flex-1 py-20 px-6">
-    //                 <div className="max-w-6xl mx-auto">
-    //                     {/* HEADING */}
-    //                     <div className="mb-14">
-    //                         <h2 className="text-4xl lg:text-5xl font-extrabold tracking-widest">
-    //                             EDUCATION & <span className="text-[#6ea046]">LEARNING</span>
-    //                         </h2>
-    //                         <div className="h-1 w-80 bg-[#6ea046] rounded-full mt-3" />
-    //                     </div>
-    //                     {/* CONTENT GRID */}
-    //                     <div className="grid lg:grid-cols-2 gap-12">
-    //                         {/* ACADEMIC */}
-    //                         <div
-    //                             className=" bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300"
-    //                         >
-    //                             <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-    //                                 <GraduationCap className="text-[#6ea046]" />
-    //                                 Academic
-    //                             </h3>
-    //                             <div className="relative">
-    //                                 <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-[#6ea046]/40" />
-    //                                 <div className="space-y-10">
-    //                                     <TimelineItem
-    //                                         icon={<School size={16} />}
-    //                                         year="2020 – 2021"
-    //                                         title="10th Grade (MPBSE)"
-    //                                         institute="Sarvottam Higher Secondary School"
-    //                                         extra="93.2% • School Topper"
-    //                                     />
-    //                                     <TimelineItem
-    //                                         icon={<School size={16} />}
-    //                                         year="2022 – 2023"
-    //                                         title="12th Grade (Maths + Biology)"
-    //                                         institute="Sarvottam Higher Secondary School"
-    //                                         extra="88.6% • School Topper"
-    //                                     />
-    //                                     <TimelineItem
-    //                                         icon={<GraduationCap size={16} />}
-    //                                         year="2023 – 2027"
-    //                                         title="B.Tech – Computer Science & Engineering"
-    //                                         institute="Baderia GIEM (RGPV)"
-    //                                         extra="SGPA 8.81 • College Rank 2nd"
-    //                                     />
-    //                                 </div>
-    //                             </div>
-    //                         </div>
-    //                         {/* CERTIFICATIONS */}
-    //                         <div className="bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300">
+    return (
+        <ParallaxSection backgroundImage="/images/bg-1.png" height="100vh">
+            <section id="education" className="min-h-screen text-white flex">
+                {/* MAIN CONTENT */}
+                <div className="flex-1 py-20 px-6">
+                    <div className="max-w-6xl mx-auto">
+                        {/* HEADING */}
+                        <div className="mb-14">
+                            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-widest">
+                                EDUCATION & <span className="text-[#6ea046]">LEARNING</span>
+                            </h2>
+                            <div className="h-1 w-80 bg-[#6ea046] rounded-full mt-3" />
+                        </div>
+                        {/* CONTENT GRID */}
+                        <div className="grid lg:grid-cols-2 gap-12">
+                            {/* ACADEMIC */}
+                            <div
+                                className=" bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300"
+                            >
+                                <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
+                                    <GraduationCap className="text-[#6ea046]" />
+                                    Academic
+                                </h3>
+                                <div className="relative">
+                                    <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-[#6ea046]/40" />
+                                    <div className="space-y-10">
+                                        <TimelineItem
+                                            icon={<School size={16} />}
+                                            year="2020 – 2021"
+                                            title="10th Grade (MPBSE)"
+                                            institute="Sarvottam Higher Secondary School"
+                                            extra="93.2% • School Topper"
+                                        />
+                                        <TimelineItem
+                                            icon={<School size={16} />}
+                                            year="2022 – 2023"
+                                            title="12th Grade (Maths + Biology)"
+                                            institute="Sarvottam Higher Secondary School"
+                                            extra="88.6% • School Topper"
+                                        />
+                                        <TimelineItem
+                                            icon={<GraduationCap size={16} />}
+                                            year="2023 – 2027"
+                                            title="B.Tech – Computer Science & Engineering"
+                                            institute="Baderia GIEM (RGPV)"
+                                            extra="SGPA 8.81 • College Rank 2nd"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            {/* CERTIFICATIONS */}
+                            <div className="bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300">
                                 
-    //                             <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-    //                                 <Award className="text-[#6ea046]" />
-    //                                 Certifications
-    //                             </h3>
-    //                             <div className="space-y-6">
-    //                                 <CertCard
-    //                                     icon={<Trophy />}
-    //                                     title="NPTEL – DBMS (IIT Kharagpur)"
-    //                                     desc="Silver + Elite Certificate"
-    //                                 />
-    //                                 <CertCard
-    //                                     icon={<BookOpen />}
-    //                                     title="freeCodeCamp"
-    //                                     desc="Frontend & Full Stack Development"
-    //                                 />
-    //                                 <CertCard
-    //                                     icon={<Code2 />}
-    //                                     title="InterviewBit"
-    //                                     desc="DSA • Badges • Streak"
-    //                                 />
-    //                                 <CertCard
-    //                                     icon={<Award />}
-    //                                     title="Hackathons"
-    //                                     desc="SIH • Brahmax • College Hackathons"
-    //                                 />
-    //                             </div>
-    //                         </div>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //             {/* RIGHT SIDE – FULL HEIGHT LEARNING PANEL */}
-    //             <aside
-    //                 className=" hidden lg:flex flex-col w-80 px-8 py-20 relative shadow-[-10px_0_35px_rgba(0,0,0,0.45)]"
-    //                 style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
-    //             >
-    //                 {/* soft inner gradient */}
-    //                 <div className="absolute inset-0 bg-gradient-to-l from-black/20 via-transparent to-transparent pointer-events-none" />
-    //                 <h3 className="text-2xl font-bold text-black mb-10 relative z-10">
-    //                     Learning
-    //                 </h3>
-    //                 <div className="space-y-8 relative z-10">
-    //                     <Stat icon={<Layers />} value="20+" label="Projects" />
-    //                     <Stat icon={<BookMarked />} value="5+" label="Courses" />
-    //                     <Stat icon={<Medal />} value="8+" label="Certificates" />
-    //                     <Stat icon={<BadgeCheck />} value="10+" label="Badges" />
-    //                 </div>
-    //             </aside>
-    //         </section>
-    //     </ParallaxSection>
-    // );
+                                <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
+                                    <Award className="text-[#6ea046]" />
+                                    Certifications
+                                </h3>
+                                <div className="space-y-6">
+                                    <CertCard
+                                        icon={<Trophy />}
+                                        title="NPTEL – DBMS (IIT Kharagpur)"
+                                        desc="Silver + Elite Certificate"
+                                    />
+                                    <CertCard
+                                        icon={<BookOpen />}
+                                        title="freeCodeCamp"
+                                        desc="Frontend & Full Stack Development"
+                                    />
+                                    <CertCard
+                                        icon={<Code2 />}
+                                        title="InterviewBit"
+                                        desc="DSA • Badges • Streak"
+                                    />
+                                    <CertCard
+                                        icon={<Award />}
+                                        title="Hackathons"
+                                        desc="SIH • Brahmax • College Hackathons"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* RIGHT SIDE – FULL HEIGHT LEARNING PANEL */}
+                <aside
+                    className=" hidden lg:flex flex-col w-80 px-8 py-20 relative shadow-[-10px_0_35px_rgba(0,0,0,0.45)]"
+                    style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
+                >
+                    {/* soft inner gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-l from-black/20 via-transparent to-transparent pointer-events-none" />
+                    <h3 className="text-2xl font-bold text-black mb-10 relative z-10">
+                        Learning
+                    </h3>
+                    <div className="space-y-8 relative z-10">
+                        <Stat icon={<Layers />} value="20+" label="Projects" />
+                        <Stat icon={<BookMarked />} value="5+" label="Courses" />
+                        <Stat icon={<Medal />} value="8+" label="Certificates" />
+                        <Stat icon={<BadgeCheck />} value="10+" label="Badges" />
+                    </div>
+                </aside>
+            </section>
+        </ParallaxSection>
+    );
 }
 
 /* ================= SUB COMPONENTS ================= */
