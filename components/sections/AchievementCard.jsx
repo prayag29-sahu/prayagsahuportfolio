@@ -288,24 +288,24 @@ export default function AchievementCard() {
             </section>
         </ParallaxSection>
     );
-// }
+}
 
-// /* STAT CARD */
-// function AchievementStat({ icon, value, label, desc, color }) {
-//     return (
-//         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all transform hover:scale-105">
-//             <div className={`flex justify-center mb-3 ${color}`}>
-//                 {icon}
-//             </div>
-//             <div className={`text-4xl font-bold mb-2 ${color}`}>
-//                 {value}
-//             </div>
-//             <div className="text-white font-semibold mb-2">
-//                 {label}
-//             </div>
-//             <div className="text-gray-300 text-sm">
-//                 {desc}
-//             </div>
-//         </div>
-//     );
-// }
+/* STAT CARD */
+function AchievementStat({ icon, value, label, desc, color }) {
+    return (
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all transform hover:scale-105">
+            <div className={`flex justify-center mb-3 ${color}`}>
+                {icon}
+            </div>
+            <div className={`text-4xl font-bold mb-2 ${color}`}>
+                {value}
+            </div>
+            <div className="text-white font-semibold mb-2">
+                {label}
+            </div>
+            <div className="text-gray-300 text-sm">
+                {desc}
+            </div>
+        </div>
+    );
+}
