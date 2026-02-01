@@ -1,60 +1,60 @@
-// "use client";
+"use client";
 
-// import { ReactNode } from "react";
-// import clsx from "clsx";
+import { ReactNode } from "react";
+import clsx from "clsx";
 
-// interface ParallaxSectionProps {
-//     backgroundImage?: string;
-//     videoSrc?: string;
-//     height?: string;
-//     overlay?: boolean;
-//     children: ReactNode;
-// }
+interface ParallaxSectionProps {
+    backgroundImage?: string;
+    videoSrc?: string;
+    height?: string;
+    overlay?: boolean;
+    children: ReactNode;
+}
 
-// export default function ParallaxSection({
-//     backgroundImage,
-//     videoSrc,
-//     height = "100vh",
-//     overlay = true,
-//     children,
-// }: ParallaxSectionProps) {
-//     return (
-//         <section
-//             className={clsx(
-//                 "relative w-full overflow-hidden flex items-center justify-center"
-//             )}
-//             style={{
-//                 minHeight: height,
-//                 backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
-//                 backgroundSize: "cover",
-//                 backgroundPosition: "center",
-//                 backgroundAttachment: backgroundImage ? "fixed" : undefined,
-//             }}
-//         >
-//             {/* VIDEO BACKGROUND */}
-//             {videoSrc && (
-//                 <video
-//                     src={videoSrc}
-//                     autoPlay
-//                     muted
-//                     loop
-//                     playsInline
-//                     className="absolute inset-0 w-[150%] h-full object-cover "
-//                 />
-//             )}
+export default function ParallaxSection({
+    backgroundImage,
+    videoSrc,
+    height = "100vh",
+    overlay = true,
+    children,
+}: ParallaxSectionProps) {
+    return (
+        <section
+            className={clsx(
+                "relative w-full overflow-hidden flex items-center justify-center"
+            )}
+            style={{
+                minHeight: height,
+                backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundAttachment: backgroundImage ? "fixed" : undefined,
+            }}
+        >
+            {/* VIDEO BACKGROUND */}
+            {videoSrc && (
+                <video
+                    src={videoSrc}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 w-[150%] h-full object-cover "
+                />
+            )}
 
-//             {/* OVERLAY */}
-//             {overlay && (
-//                 <div className="absolute inset-0 bg-black/40 z-[1]" />
-//             )}
+            {/* OVERLAY */}
+            {overlay && (
+                <div className="absolute inset-0 bg-black/40 z-[1]" />
+            )}
 
-//             {/* CONTENT */}
-//             <div className="relative z-[2] w-full">
-//                 {children}
-//             </div>
-//         </section>
-//     );
-// }
+            {/* CONTENT */}
+            <div className="relative z-[2] w-full">
+                {children}
+            </div>
+        </section>
+    );
+}
 
 
 // New UI
