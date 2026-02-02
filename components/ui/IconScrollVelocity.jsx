@@ -11,7 +11,6 @@ import {
 } from 'motion/react';
 function useElementWidth(ref) {
     const [width, setWidth] = useState(0);
-
     useLayoutEffect(() => {
         function updateWidth() {
             if (ref.current) setWidth(ref.current.offsetWidth);
@@ -20,7 +19,6 @@ function useElementWidth(ref) {
         window.addEventListener('resize', updateWidth);
         return () => window.removeEventListener('resize', updateWidth);
     }, []);
-
     return width;
 }
 export default function IconScrollVelocity({
@@ -74,8 +72,7 @@ export default function IconScrollVelocity({
                         {icons.map((IconEl, idx) => (
                             <div
                                 key={idx}
-                                className="w-14 h-14 rounded-full bg-black/80 backdrop-blur-xl border border-white/10 flex items-center justify-center shadow-lg"
-                            >
+                                className="w-14 h-14 rounded-full bg-black/80 backdrop-blur-xl border border-white/10 flex items-center justify-center shadow-lg">
                                 {IconEl}
                             </div>
                         ))}
