@@ -365,8 +365,10 @@ function SocialIcon({ href, children }) {
 
 
 // for android but not best
+
 {/* ================= MOBILE VERSION ================= */ }
-{/* <div className="lg:hidden px-4 py-16">
+
+<div className="lg:hidden px-4 py-16">
     <div
         className="w-full max-w-sm mx-auto rounded-2xl
     bg-[rgba(110,160,70,0.9)]
@@ -491,4 +493,4 @@ function SocialIcon({ href, children }) {
         </div>
 
     </div>
-</div> */}
+</div> 
