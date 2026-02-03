@@ -13,10 +13,10 @@ export default function CursorBubble() {
             mouseY = e.clientY;
         };
         const animate = () => {
-            bubbleX += (mouseX - bubbleX) * speed;
-            bubbleY += (mouseY - bubbleY) * speed;
-            bubble.style.transform = `translate(${bubbleX}px, ${bubbleY}px)`;
-            requestAnimationFrame(animate);
+            // bubbleX += (mouseX - bubbleX) * speed;
+            // bubbleY += (mouseY - bubbleY) * speed;
+            // bubble.style.transform = `translate(${bubbleX}px, ${bubbleY}px)`;
+            // requestAnimationFrame(animate);
         };
         window.addEventListener('mousemove', onMouseMove);
         animate();
