@@ -364,131 +364,131 @@ function SocialIcon({ href, children }) {
 }
 
 
-// // for android but not best
-// {/* ================= MOBILE VERSION ================= */ }
-// {/* <div className="lg:hidden px-4 py-16">
-//     <div
-//         className="w-full max-w-sm mx-auto rounded-2xl
-//     bg-[rgba(110,160,70,0.9)]
-//     shadow-xl relative
-//     transition-all duration-500"
-//     >
+// for android but not best
+{/* ================= MOBILE VERSION ================= */ }
+{/* <div className="lg:hidden px-4 py-16">
+    <div
+        className="w-full max-w-sm mx-auto rounded-2xl
+    bg-[rgba(110,160,70,0.9)]
+    shadow-xl relative
+    transition-all duration-500"
+    >
 
-//         <div className="relative -top-14 flex justify-center">
-//             <div
-//                 className="w-36 h-36 rounded-2xl bg-white overflow-hidden"
-//                 style={{
-//                     border: '2px solid rgba(110,160,70,0.9)',
-//                     boxShadow: '0 0 12px rgba(110,160,70,.5)',
-//                 }}
-//             >
-//                 <img
-//                     src={imageSrc}
-//                     alt={name}
-//                     className="w-full h-full object-cover"
-//                 />
-//             </div>
-//         </div>
+        <div className="relative -top-14 flex justify-center">
+            <div
+                className="w-36 h-36 rounded-2xl bg-white overflow-hidden"
+                style={{
+                    border: '2px solid rgba(110,160,70,0.9)',
+                    boxShadow: '0 0 12px rgba(110,160,70,.5)',
+                }}
+            >
+                <img
+                    src={imageSrc}
+                    alt={name}
+                    className="w-full h-full object-cover"
+                />
+            </div>
+        </div>
 
 
-//         <div className="pt-20 px-6 pb-6 text-center text-white">
-//             <h2 className="text-xl font-semibold">
-//                 {name}
-//             </h2>
-//             <p className="text-base opacity-80 mt-1">
-//                 {role}
-//             </p>
+        <div className="pt-20 px-6 pb-6 text-center text-white">
+            <h2 className="text-xl font-semibold">
+                {name}
+            </h2>
+            <p className="text-base opacity-80 mt-1">
+                {role}
+            </p>
 
  
-//             <div className="flex justify-between mt-6 text-black">
-//                 <div>
-//                     <h3 className="font-bold">5+</h3>
-//                     <span className="text-xs opacity-60">Projects</span>
-//                 </div>
-//                 <div>
-//                     <h3 className="font-bold">2</h3>
-//                     <span className="text-xs opacity-60">Internships</span>
-//                 </div>
-//                 <div>
-//                     <h3 className="font-bold">6 mo</h3>
-//                     <span className="text-xs opacity-60">Experience</span>
-//                 </div>
-//             </div>
+            <div className="flex justify-between mt-6 text-black">
+                <div>
+                    <h3 className="font-bold">5+</h3>
+                    <span className="text-xs opacity-60">Projects</span>
+                </div>
+                <div>
+                    <h3 className="font-bold">2</h3>
+                    <span className="text-xs opacity-60">Internships</span>
+                </div>
+                <div>
+                    <h3 className="font-bold">6 mo</h3>
+                    <span className="text-xs opacity-60">Experience</span>
+                </div>
+            </div>
 
-//             <div className="flex gap-3 mt-6">
-//                 <button
-//                     className="flex-1 py-2 rounded-full bg-black text-sm"
-//                     style={{
-//                         color: 'rgba(110,160,70,0.9)',
-//                         border: '2px solid rgba(110,160,70,0.9)',
-//                     }}
-//                 >
-//                     Hire Me
-//                 </button>
+            <div className="flex gap-3 mt-6">
+                <button
+                    className="flex-1 py-2 rounded-full bg-black text-sm"
+                    style={{
+                        color: 'rgba(110,160,70,0.9)',
+                        border: '2px solid rgba(110,160,70,0.9)',
+                    }}
+                >
+                    Hire Me
+                </button>
 
-//                 <a href="tel:+917999926855" className="flex-1">
-//                     <button
-//                         className="w-full py-2 rounded-full
-//             flex items-center justify-center gap-2
-//             bg-white text-sm relative overflow-hidden
-//             phone-ring"
-//                         style={{
-//                             color: 'rgba(110,160,70,0.9)',
-//                             border: '2px solid rgba(110,160,70,0.9)',
-//                         }}
-//                     >
-//                         <RiPhoneLine className="text-lg z-10 relative" />
-//                         Call
-//                     </button>
-//                 </a>
-//             </div>
-//         </div>
+                <a href="tel:+917999926855" className="flex-1">
+                    <button
+                        className="w-full py-2 rounded-full
+            flex items-center justify-center gap-2
+            bg-white text-sm relative overflow-hidden
+            phone-ring"
+                        style={{
+                            color: 'rgba(110,160,70,0.9)',
+                            border: '2px solid rgba(110,160,70,0.9)',
+                        }}
+                    >
+                        <RiPhoneLine className="text-lg z-10 relative" />
+                        Call
+                    </button>
+                </a>
+            </div>
+        </div>
 
-//         <div
-//             className="absolute -bottom-6 left-1/2 -translate-x-1/2
-//       w-[92%] h-12 rounded-full bg-[#111]
-//       flex items-center gap-3 px-3"
-//             style={{
-//                 borderBottom: '2px solid rgba(110,160,70,0.9)',
-//                 boxShadow: '0 6px 14px rgba(110,160,70,.25)',
-//             }}
-//         >
-//             <button
-//                 onClick={() => setOpen(!open)}
-//                 className="w-9 h-9 rounded-full
-//         flex items-center justify-center text-black"
-//                 style={{
-//                     backgroundColor: 'rgba(110,160,70,0.9)',
-//                     transform: open ? 'rotate(45deg)' : 'rotate(0)',
-//                     transition: 'transform .3s',
-//                 }}
-//             >
-//                 <RiAddLine />
-//             </button>
+        <div
+            className="absolute -bottom-6 left-1/2 -translate-x-1/2
+      w-[92%] h-12 rounded-full bg-[#111]
+      flex items-center gap-3 px-3"
+            style={{
+                borderBottom: '2px solid rgba(110,160,70,0.9)',
+                boxShadow: '0 6px 14px rgba(110,160,70,.25)',
+            }}
+        >
+            <button
+                onClick={() => setOpen(!open)}
+                className="w-9 h-9 rounded-full
+        flex items-center justify-center text-black"
+                style={{
+                    backgroundColor: 'rgba(110,160,70,0.9)',
+                    transform: open ? 'rotate(45deg)' : 'rotate(0)',
+                    transition: 'transform .3s',
+                }}
+            >
+                <RiAddLine />
+            </button>
 
-//             {!open && (
-//                 <span
-//                     className="text-xs"
-//                     style={{ color: 'rgba(110,160,70,0.9)' }}
-//                 >
-//                     Social Media Accounts
-//                 </span>
-//             )}
+            {!open && (
+                <span
+                    className="text-xs"
+                    style={{ color: 'rgba(110,160,70,0.9)' }}
+                >
+                    Social Media Accounts
+                </span>
+            )}
 
-//             {open && (
-//                 <div className="flex items-center gap-3 ml-auto">
-//                     <SocialIcon href="https://www.linkedin.com/in/your-profile">
-//                         <RiLinkedinLine />
-//                     </SocialIcon>
-//                     <SocialIcon href="https://github.com/your-username">
-//                         <RiGithubLine />
-//                     </SocialIcon>
-//                     <SocialIcon href="https://instagram.com">
-//                         <RiInstagramLine />
-//                     </SocialIcon>
-//                 </div>
-//             )}
-//         </div>
+            {open && (
+                <div className="flex items-center gap-3 ml-auto">
+                    <SocialIcon href="https://www.linkedin.com/in/your-profile">
+                        <RiLinkedinLine />
+                    </SocialIcon>
+                    <SocialIcon href="https://github.com/your-username">
+                        <RiGithubLine />
+                    </SocialIcon>
+                    <SocialIcon href="https://instagram.com">
+                        <RiInstagramLine />
+                    </SocialIcon>
+                </div>
+            )}
+        </div>
 
-//     </div>
-// </div> */}
+    </div>
+</div> */}
