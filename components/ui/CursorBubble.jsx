@@ -24,22 +24,5 @@ export default function CursorBubble() {
             window.removeEventListener('mousemove', onMouseMove);
         };
     }, []);
-
     return null;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
