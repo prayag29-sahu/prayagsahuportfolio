@@ -273,7 +273,7 @@ export default function PortfolioCard({
                                 </span>
                             )}
                             {/* SOCIAL ICONS (WHEN OPEN) */}
-                            <div
+                            {/* <div
                                 className={`flex items-center gap-6 transition-all duration-300
       ${open
                                         ? 'opacity-100 translate-x-0'
@@ -295,7 +295,7 @@ export default function PortfolioCard({
                                 <SocialIcon href="https://twitter.com">
                                     <RiTwitterXLine />
                                 </SocialIcon>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>                
