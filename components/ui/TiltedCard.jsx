@@ -272,7 +272,6 @@ export default function PortfolioCard({
                                     My Social Networks
                                 </span>
                             )}
-
                             {/* SOCIAL ICONS (WHEN OPEN) */}
                             <div
                                 className={`flex items-center gap-6 transition-all duration-300
@@ -284,30 +283,21 @@ export default function PortfolioCard({
                                 <SocialIcon href="https://www.linkedin.com/in/prayag-sahu29">
                                     <RiLinkedinLine />
                                 </SocialIcon>
-
                                 <SocialIcon href="https://github.com/prayag29-sahu">
                                     <RiGithubLine />
                                 </SocialIcon>
-
                                 <SocialIcon href="https://facebook.com">
                                     <RiFacebookLine />
                                 </SocialIcon>
-
                                 {/* <SocialIcon href="https://instagram.com">
                                 <RiInstagramLine />
                             </SocialIcon> */}
-
                                 <SocialIcon href="https://twitter.com">
                                     <RiTwitterXLine />
                                 </SocialIcon>
                             </div>
-
                         </div>
                     </div>
-
-
-
-
                 </div>                
             </div>
             <div className="flex justify-between mt-20">
