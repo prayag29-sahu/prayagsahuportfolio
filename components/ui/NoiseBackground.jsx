@@ -14,7 +14,6 @@ export default function NoiseBackground({ children }) {
             canvas.height = window.innerHeight;
             drawNoise();
         };
-
         const drawNoise = () => {
             const imageData = ctx.createImageData(canvas.width, canvas.height);
             const buffer = imageData.data;
@@ -24,9 +23,8 @@ export default function NoiseBackground({ children }) {
                 buffer[i] = shade;
                 buffer[i + 1] = shade;
                 buffer[i + 2] = shade;
-                buffer[i + 3] = 20; // opacity (KEY)
+                buffer[i + 3] = 20; 
             }
-
             ctx.putImageData(imageData, 0, 0);
         };
 
@@ -38,13 +36,10 @@ export default function NoiseBackground({ children }) {
 
     return (
         <div className="relative min-h-screen bg-[#0b0b0b] overflow-hidden">
-            {/* Grain Canvas */}
             <canvas
                 ref={canvasRef}
                 className="pointer-events-none fixed inset-0 z-0 opacity-40 mix-blend-overlay"
             />
-
-            {/* Content */}
             <div className="relative z-10">{children}</div>
         </div>
     );
