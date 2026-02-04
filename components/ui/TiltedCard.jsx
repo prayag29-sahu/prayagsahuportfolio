@@ -308,8 +308,7 @@ export default function PortfolioCard({
 
 
 
-                </div>
-                
+                </div>                
             </div>
             <div className="flex justify-between mt-20">
                 <button className="px-6 py-2 rounded-full btn bg-black"
@@ -322,10 +321,7 @@ export default function PortfolioCard({
                 </button>
                 <a href="tel:+917999926855">
                     <button
-                        className="px-6 py-2 rounded-full
-    flex items-center gap-2 btn 
-    text-black relative overflow-hidden
-    phone-ring phone-vibrate"
+                        className="px-6 py-2 rounded-full flex items-center gap-2 btn  text-black relative overflow-hidden phone-ring phone-vibrate"
                         style={{
                             backgroundColor: 'white',
                             color: 'rgba(110, 160, 70, 0.9)',
@@ -346,17 +342,12 @@ function SocialIcon({ href, children }) {
         <a
             href={href}
             target="_blank"
-            className="w-8 h-8 rounded-full
-      flex items-center justify-center
-      transition-transform duration-300
-      hover:scale-110"
+            className="w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110"
             style={{
                 backgroundColor: '#fff',
                 color: 'rgba(110, 160, 70, 0.9)',
             }}
-        >
-            {children}
-        </a>
+        > {children} </a>
     );
 }
 
