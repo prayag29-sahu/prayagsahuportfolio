@@ -1,10 +1,7 @@
 'use client';
-
 import { useEffect, useRef } from 'react';
-
 export default function NoiseBackground({ children }) {
     const canvasRef = useRef(null);
-
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
@@ -17,7 +14,6 @@ export default function NoiseBackground({ children }) {
         const drawNoise = () => {
             const imageData = ctx.createImageData(canvas.width, canvas.height);
             const buffer = imageData.data;
-
             for (let i = 0; i < buffer.length; i += 4) {
                 const shade = Math.random() * 255;
                 buffer[i] = shade;
@@ -27,13 +23,10 @@ export default function NoiseBackground({ children }) {
             }
             ctx.putImageData(imageData, 0, 0);
         };
-
         resize();
         window.addEventListener('resize', resize);
-
         return () => window.removeEventListener('resize', resize);
     }, []);
-
     return (
         <div className="relative min-h-screen bg-[#0b0b0b] overflow-hidden">
             <canvas
