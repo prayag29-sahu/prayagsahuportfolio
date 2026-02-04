@@ -337,9 +337,6 @@ export default function PortfolioCard({
                         Call
                     </button>
                 </a>
-
-
-
             </div>
         </>
     );
