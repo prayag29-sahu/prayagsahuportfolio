@@ -88,12 +88,3 @@ export default function IconScrollVelocity({
 
 
 
-
-
-
-
-
-
-
-
-
