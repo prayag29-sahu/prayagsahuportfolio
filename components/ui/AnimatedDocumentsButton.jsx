@@ -108,7 +108,7 @@ export default function AnimatedDocumentsButton({ text = 'Documents' }) {
 
                     {/* PAGE */}
                     <svg className="filePage" viewBox="0 0 88 99" fill="none">
-                        <rect width="88" height="99" fill="white" />
+                        {/* <rect width="88" height="99" fill="white" /> */}
                     </svg>
 
                     {/* FRONT */}
