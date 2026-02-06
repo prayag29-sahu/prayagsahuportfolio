@@ -121,7 +121,7 @@ export default function AnimatedDocumentsButton({ text = 'Documents' }) {
                 </span>
 
                 {/* TEXT */}
-                <span className="doc-text">{text}</span>
+                {/* <span className="doc-text">{text}</span> */}
             </button>
         </>
     );
