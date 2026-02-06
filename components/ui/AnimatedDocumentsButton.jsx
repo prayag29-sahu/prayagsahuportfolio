@@ -100,10 +100,10 @@ export default function AnimatedDocumentsButton({ text = 'Documents' }) {
                 <span className="folder">
                     {/* BACK */}
                     <svg className="fileBack" viewBox="0 0 146 113" fill="none">
-                        <path
+                        {/* <path
                             d="M0 4C0 1.79 1.79 0 4 0H50L64 13H142c2.2 0 4 1.8 4 4v92c0 2.2-1.8 4-4 4H4c-2.21 0-4-1.8-4-4V4Z"
                             fill="rgba(80,120,50,1)"
-                        />
+                        /> */}
                     </svg>
 
                     {/* PAGE */}
