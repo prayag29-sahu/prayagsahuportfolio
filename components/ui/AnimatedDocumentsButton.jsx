@@ -108,15 +108,15 @@ export default function AnimatedDocumentsButton({ text = 'Documents' }) {
 
                     {/* PAGE */}
                     <svg className="filePage" viewBox="0 0 88 99" fill="none">
-                        {/* <rect width="88" height="99" fill="white" /> */}
+                        <rect width="88" height="99" fill="white" />
                     </svg>
 
                     {/* FRONT */}
                     <svg className="fileFront" viewBox="0 0 160 79" fill="none">
-                        {/* <path
+                        <path
                             d="M2 10h156l-9 66H10L2 10Z"
                             fill="rgba(140,200,90,1)"
-                        /> */}
+                        />
                     </svg>
                 </span>
 
