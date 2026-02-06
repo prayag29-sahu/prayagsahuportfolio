@@ -4,7 +4,7 @@ export default function AnimatedDocumentsButton({ text = 'Documents' }) {
     return (
         <>
             {/* INTERNAL CSS */}
-            <style>{`
+            {/* <style>{`
         .doc-btn {
           position: relative;
           display: flex;
@@ -92,7 +92,7 @@ export default function AnimatedDocumentsButton({ text = 'Documents' }) {
           color: white;
           z-index: 2;
         }
-      `}</style>
+      `}</style> */}
 
             {/* BUTTON */}
             <button className="doc-btn">
