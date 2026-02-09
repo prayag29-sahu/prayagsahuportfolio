@@ -902,8 +902,8 @@ function CertCard({ icon, title, desc, image }) {
                     alt={title}
                     className="
     w-full
-    h-full
-    object-fit
+    h-20
+    object-cover
     rounded-md
     hover:scale-105
     transition-transform
