@@ -910,15 +910,33 @@ function CertCard({ icon, title, desc, image }) {
 }
 
 
+// function Stat({ icon, value, label }) {
+//     return (
+//         <div className="flex items-center gap-4 pb-6 border-b border-black/20 last:border-none">
+//             <div className="w-11 h-11 rounded-full bg-black/20 flex items-center justify-center">
+//                 {icon}
+//             </div>
+//             <div>
+//                 <div className="text-2xl font-bold text-black">{value}</div>
+//                 <div className="text-sm text-black/80">{label}</div>
+//             </div>
+//         </div>
+//     );
+// }
 function Stat({ icon, value, label }) {
     return (
-        <div className="flex items-center gap-4 pb-6 border-b border-black/20 last:border-none">
-            <div className="w-11 h-11 rounded-full bg-black/20 flex items-center justify-center">
+        <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-xl bg-black/20 flex items-center justify-center text-black">
                 {icon}
             </div>
+
             <div>
-                <div className="text-2xl font-bold text-black">{value}</div>
-                <div className="text-sm text-black/80">{label}</div>
+                <div className="text-2xl font-bold text-black">
+                    {value}
+                </div>
+                <div className="text-sm font-medium text-black/80">
+                    {label}
+                </div>
             </div>
         </div>
     );
