@@ -701,7 +701,7 @@ import {
     BadgeCheck
 } from "lucide-react";
 import ParallaxSection from "@/components/ui/ParallaxSection";
-
+import ShowcaseSection from '@/components/ui/ShowcaseSection';
 export default function Education() {
     return (
         <ParallaxSection backgroundImage="/images/bg-1.png" height="100vh">
@@ -821,21 +821,28 @@ export default function Education() {
                 </div>
                 {/* RIGHT SIDE – FULL HEIGHT LEARNING PANEL */}
                 <aside
-                    className=" hidden lg:flex flex-col w-80 px-8 py-20 relative shadow-[-10px_0_35px_rgba(0,0,0,0.45)]"
+                    className="hidden lg:flex flex-col w-80 px-8 py-20 relative shadow-[-10px_0_35px_rgba(0,0,0,0.45)]"
                     style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
                 >
                     {/* soft inner gradient */}
                     <div className="absolute inset-0 bg-gradient-to-l from-black/20 via-transparent to-transparent pointer-events-none" />
+
                     <h3 className="text-2xl font-bold text-black mb-10 relative z-10">
-                        Learning
+                        Showcase
                     </h3>
+
                     <div className="space-y-8 relative z-10">
-                        <Stat icon={<Layers />} value="20+" label="Projects" />
-                        <Stat icon={<BookMarked />} value="5+" label="Courses" />
-                        <Stat icon={<Medal />} value="8+" label="Certificates" />
-                        <Stat icon={<BadgeCheck />} value="10+" label="Badges" />
+                        {SHOWCASE_STATS.map((item, index) => (
+                            <Stat
+                                key={index}
+                                icon={item.icon}
+                                value={item.value}
+                                label={item.label}
+                            />
+                        ))}
                     </div>
                 </aside>
+
             </section>
         </ParallaxSection>
     );
