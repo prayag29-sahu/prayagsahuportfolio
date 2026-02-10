@@ -795,7 +795,7 @@ export default function Education() {
                                         icon={<BookOpen />}
                                         title="freeCodeCamp"
                                         desc="Frontend & Full Stack Development"
-                                        image="/images/certificates/freecodecamp.jpg"
+                                        image="/images/01_certificates/01_Major_06/freecodecampwebdevelopment.png"
                                     />
 
                                     <CertCard
