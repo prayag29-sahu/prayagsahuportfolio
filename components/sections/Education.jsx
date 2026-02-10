@@ -802,7 +802,7 @@ export default function Education() {
                                         icon={<Code2 />}
                                         title="InterviewBit"
                                         desc="DSA • Badges • Streak"
-                                        image="/images/certificates/interviewbit.jpg"
+                                        image="/images/01_badges/array-master.png"
                                     />
 
                                     <CertCard
