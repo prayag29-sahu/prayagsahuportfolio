@@ -891,9 +891,7 @@ function CertCard({ icon, title, desc, image }) {
 
             {/* RIGHT : CERT IMAGE */}
             <div
-                className=" w-24 h-20 rounded-lg overflow-hidden border border-white/10 shadow-[0_8px_18px_rgba(110,160,70,0.35)]
-  "
-            >
+                className=" w-24 h-20 rounded-lg overflow-hidden border border-white/10 shadow-[0_8px_18px_rgba(110,160,70,0.35)]">
                 <img
                     src={image}
                     alt={title}
