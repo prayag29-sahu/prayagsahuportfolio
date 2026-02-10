@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // 'use client';
 
 
@@ -891,27 +892,28 @@ function CertCard({ icon, title, desc, image }) {
             {/* RIGHT : CERT IMAGE */}
             <div
                 className="
-          rounded-lg
-          overflow-hidden
-          border border-white/10
-          shadow-[0_8px_18px_rgba(110,160,70,0.35)]
-        "
+    w-24 h-20         
+    rounded-lg
+    overflow-hidden
+    border border-white/10
+    shadow-[0_8px_18px_rgba(110,160,70,0.35)]
+  "
             >
                 <img
                     src={image}
                     alt={title}
                     className="
-    w-full
-    h-full
-    object-fit
-    rounded-md
-    hover:scale-105
-    transition-transform
-    duration-300
-  "
+      w-full
+      h-full
+      object-cover     
+      rounded-md
+      hover:scale-105
+      transition-transform
+      duration-300
+    "
                 />
-
             </div>
+
         </div>
     );
 }
