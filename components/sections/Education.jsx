@@ -809,7 +809,7 @@ export default function Education() {
                                         icon={<Award />}
                                         title="Hackathons"
                                         desc="SIH • Brahmax • College Hackathons"
-                                        image="/images/certificates/hackathon.jpg"
+                                        image="/images/01_certificates/01_Major_06/sih.jpg"
                                     />
                                 </div>
                             </div>
