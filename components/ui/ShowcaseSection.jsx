@@ -371,16 +371,16 @@ export default function ShowcaseAside() {
     );
 }
 
-function Stat({ icon, value, label }) {
-    return (
-        <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-black/20 flex items-center justify-center text-black">
-                {icon}
-            </div>
-            <div>
-                <div className="text-2xl font-bold text-black">{value}</div>
-                <div className="text-sm font-medium text-black/80">{label}</div>
-            </div>
-        </div>
-    );
-}
+// function Stat({ icon, value, label }) {
+//     return (
+//         <div className="flex items-center gap-4">
+//             <div className="w-12 h-12 rounded-xl bg-black/20 flex items-center justify-center text-black">
+//                 {icon}
+//             </div>
+//             <div>
+//                 <div className="text-2xl font-bold text-black">{value}</div>
+//                 <div className="text-sm font-medium text-black/80">{label}</div>
+//             </div>
+//         </div>
+//     );
+// }
