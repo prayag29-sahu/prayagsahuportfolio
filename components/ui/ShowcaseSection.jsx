@@ -339,12 +339,12 @@ function CarouselItem({ item, index, itemWidth, x, offset }) {
 
 /* ================= ASIDE ================= */
 export default function ShowcaseAside() {
-    // const showcaseItems = [
-    //     { title: 'Projects', desc: 'Major & Mini', image: '/images/projects/ghotul.png' },
-    //     { title: 'Certificates', desc: 'NPTEL • Oracle', image: '/images/01_certificates/01_Major_06/NPTEL_DBMS.png' },
-    //     { title: 'Hackathons', desc: 'SIH • Brahmax', image: '/images/01_certificates/01_Major_06/sih.jpg' },
-    //     { title: 'Badges', desc: 'Cisco • Credly', image: '/images/01_badges/array-master.png' },
-    // ];
+    const showcaseItems = [
+        { title: 'Projects', desc: 'Major & Mini', image: '/images/projects/ghotul.png' },
+        { title: 'Certificates', desc: 'NPTEL • Oracle', image: '/images/01_certificates/01_Major_06/NPTEL_DBMS.png' },
+        { title: 'Hackathons', desc: 'SIH • Brahmax', image: '/images/01_certificates/01_Major_06/sih.jpg' },
+        { title: 'Badges', desc: 'Cisco • Credly', image: '/images/01_badges/array-master.png' },
+    ];
 
     return (
         <aside
@@ -357,12 +357,12 @@ export default function ShowcaseAside() {
                 Learning Showcase
             </h3>
 
-            {/* <div className="space-y-6 mb-10 relative z-10">
+            <div className="space-y-6 mb-10 relative z-10">
                 <Stat icon={<Layers />} value="40+" label="Projects" />
                 <Stat icon={<BookMarked />} value="20+" label="Courses" />
                 <Stat icon={<Medal />} value="21+" label="Certificates" />
                 <Stat icon={<BadgeCheck />} value="20+" label="Badges" />
-            </div> */}
+            </div>
 
             <div className="relative z-10">
                 <SimpleCarousel items={showcaseItems} />
