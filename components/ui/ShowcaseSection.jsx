@@ -339,12 +339,12 @@ function CarouselItem({ item, index, itemWidth, x, offset }) {
 
 /* ================= ASIDE ================= */
 export default function ShowcaseAside() {
-    const showcaseItems = [
-        { title: 'Projects', desc: 'Major & Mini', image: '/images/projects/ghotul.png' },
-        { title: 'Certificates', desc: 'NPTEL • Oracle', image: '/images/01_certificates/01_Major_06/NPTEL_DBMS.png' },
-        { title: 'Hackathons', desc: 'SIH • Brahmax', image: '/images/01_certificates/01_Major_06/sih.jpg' },
-        { title: 'Badges', desc: 'Cisco • Credly', image: '/images/01_badges/array-master.png' },
-    ];
+    // const showcaseItems = [
+    //     { title: 'Projects', desc: 'Major & Mini', image: '/images/projects/ghotul.png' },
+    //     { title: 'Certificates', desc: 'NPTEL • Oracle', image: '/images/01_certificates/01_Major_06/NPTEL_DBMS.png' },
+    //     { title: 'Hackathons', desc: 'SIH • Brahmax', image: '/images/01_certificates/01_Major_06/sih.jpg' },
+    //     { title: 'Badges', desc: 'Cisco • Credly', image: '/images/01_badges/array-master.png' },
+    // ];
 
     return (
         <aside
