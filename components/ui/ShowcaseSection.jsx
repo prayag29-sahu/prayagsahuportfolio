@@ -298,44 +298,44 @@ function CarouselItem({ item, index, itemWidth, x, offset }) {
 }
 
 /* ================= SIMPLE CAROUSEL ================= */
-function SimpleCarousel({ items }) {
-    const GAP = 16;
-    const WIDTH = 260;
-    const OFFSET = WIDTH + GAP;
+// function SimpleCarousel({ items }) {
+//     const GAP = 16;
+//     const WIDTH = 260;
+//     const OFFSET = WIDTH + GAP;
 
-    const x = useMotionValue(0);
-    const [index, setIndex] = useState(0);
+//     const x = useMotionValue(0);
+//     const [index, setIndex] = useState(0);
 
-    useEffect(() => {
-        const i = setInterval(
-            () => setIndex((p) => (p + 1) % items.length),
-            2200
-        );
-        return () => clearInterval(i);
-    }, [items.length]);
+//     useEffect(() => {
+//         const i = setInterval(
+//             () => setIndex((p) => (p + 1) % items.length),
+//             2200
+//         );
+//         return () => clearInterval(i);
+//     }, [items.length]);
 
-    return (
-        <div className="overflow-hidden">
-            <motion.div
-                className="flex"
-                style={{ gap: GAP, x }}
-                animate={{ x: -index * OFFSET }}
-                transition={{ type: 'spring', stiffness: 280, damping: 30 }}
-            >
-                {items.map((item, i) => (
-                    <CarouselItem
-                        key={i}
-                        item={item}
-                        index={i}
-                        itemWidth={WIDTH}
-                        x={x}
-                        offset={OFFSET}
-                    />
-                ))}
-            </motion.div>
-        </div>
-    );
-}
+//     return (
+//         <div className="overflow-hidden">
+//             <motion.div
+//                 className="flex"
+//                 style={{ gap: GAP, x }}
+//                 animate={{ x: -index * OFFSET }}
+//                 transition={{ type: 'spring', stiffness: 280, damping: 30 }}
+//             >
+//                 {items.map((item, i) => (
+//                     <CarouselItem
+//                         key={i}
+//                         item={item}
+//                         index={i}
+//                         itemWidth={WIDTH}
+//                         x={x}
+//                         offset={OFFSET}
+//                     />
+//                 ))}
+//             </motion.div>
+//         </div>
+//     );
+// }
 
 /* ================= ASIDE ================= */
 export default function ShowcaseAside() {
