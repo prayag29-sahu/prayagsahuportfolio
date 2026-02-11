@@ -357,12 +357,12 @@ export default function ShowcaseAside() {
                 Learning Showcase
             </h3>
 
-            <div className="space-y-6 mb-10 relative z-10">
+            {/* <div className="space-y-6 mb-10 relative z-10">
                 <Stat icon={<Layers />} value="40+" label="Projects" />
                 <Stat icon={<BookMarked />} value="20+" label="Courses" />
                 <Stat icon={<Medal />} value="21+" label="Certificates" />
                 <Stat icon={<BadgeCheck />} value="20+" label="Badges" />
-            </div>
+            </div> */}
 
             <div className="relative z-10">
                 <SimpleCarousel items={showcaseItems} />
