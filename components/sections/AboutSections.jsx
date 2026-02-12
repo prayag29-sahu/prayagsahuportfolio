@@ -664,8 +664,69 @@ import {
 } from "react-icons/ri";
 import { MapPin, GraduationCap, Briefcase, Rocket } from "lucide-react";
 import "./About.css"
+import { useState } from "react";
+
+import { ChevronDown } from "lucide-react";
+
 
 export default function AboutSection() {
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const toggleItem = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
+
+    const skills = [
+        {
+            icon: <RiReactjsLine />,
+            title: "Frontend Engineering",
+            desc: "Building responsive, accessible user interfaces using HTML, CSS, JavaScript, React, Next.js and Tailwind CSS with performance-first architecture."
+        },
+        {
+            icon: <RiNodejsLine />,
+            title: "Backend & API Systems",
+            desc: "Developing scalable REST APIs using Node.js and Express including authentication, authorization and secure server logic."
+        },
+        {
+            icon: <RiDatabase2Line />,
+            title: "Database Architecture",
+            desc: "Designing optimized relational schemas using PostgreSQL with efficient queries, indexing strategies and clean data modeling."
+        },
+        {
+            icon: <RiAndroidLine />,
+            title: "Mobile Application Development",
+            desc: "Building cross-platform mobile applications using React Native integrated with backend services and APIs."
+        }
+    ];
+    const [activeIndex1, setActiveIndex1] = useState(null);
+
+    const toggleItem1 = (index) => {
+        setActiveIndex1(activeIndex1 === index ? null : index);
+    };
+
+    const traits = [
+        {
+            icon: <RiLightbulbFlashLine />,
+            title: "Core Strengths",
+            desc: "Hardworking, self-motivated and detail-oriented developer with strong analytical thinking and problem-solving ability."
+        },
+        {
+            icon: <RiGraduationCapLine />,
+            title: "Technical Foundation",
+            desc: "Computer Science student with solid fundamentals in programming, data structures and modern web development."
+        },
+        {
+            icon: <RiFocus3Line />,
+            title: "Career Vision",
+            desc: "Focused on building a long-term career as a software engineer by continuously improving technical depth and system design understanding."
+        },
+        {
+            icon: <RiRocketLine />,
+            title: "Growth Mindset",
+            desc: "Actively learning new technologies and frameworks to stay aligned with evolving industry standards."
+        }
+    ];
+
     return (
         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
 
@@ -686,10 +747,10 @@ export default function AboutSection() {
                                 className="object-cover"
                             />
                         </div>
-                       
+
 
                         {/* INFO UNDER IMAGE */}
-                       
+
 
                     </div>
 
@@ -698,7 +759,7 @@ export default function AboutSection() {
 
                         <p className="about-desc">
                             I am <span className="highlight">Prayag Sahu</span>, a Computer Science
-                            and Engineering undergraduate and Freelance Full Stack Developer
+                            Engineer undergraduate and Freelance Full Stack Developer
                             from Jabalpur, Madhya Pradesh.
                             <br /><br />
                             I completed my Higher Secondary Education under MPBSE with
@@ -714,7 +775,7 @@ export default function AboutSection() {
                             <MapPin size={18} />
                             <span>Jabalpur, Madhya Pradesh</span>
                             <GraduationCap size={18} />
-                            <span>B.Tech (CSE) – RGPV</span>
+                            <span>B.Tech (CSE) BGIEM – RGPV</span>
                         </div>
 
                         <div className="info-item mt-2">
@@ -725,7 +786,7 @@ export default function AboutSection() {
                         </div>
 
                     </div>
-                    
+
 
                 </div>
 
@@ -735,25 +796,69 @@ export default function AboutSection() {
 
                     {/* I CAN DO */}
                     <div className="about-card">
-                        <h2 className="card-title">I CAN DO</h2>
+                        <h2 className="card-title">CORE EXPERTISE</h2>
 
                         <div className="card-list">
-                            <CardItem icon={<RiReactjsLine />} text="Modern Frontend (React / Next.js / Tailwind)" />
-                            <CardItem icon={<RiNodejsLine />} text="Backend APIs (Node.js / Express)" />
-                            <CardItem icon={<RiDatabase2Line />} text="Database Design (PostgreSQL)" />
-                            <CardItem icon={<RiAndroidLine />} text="Mobile Apps (React Native)" />
+                            {skills.map((skill, index) => (
+                                <div key={index} className="accordion-item">
+
+                                    <div
+                                        className="accordion-header"
+                                        onClick={() => toggleItem(index)}
+                                    >
+                                        <div className="left">
+                                            <span className="card-icon">{skill.icon}</span>
+                                            <span>{skill.title}</span>
+                                        </div>
+
+                                        <ChevronDown
+                                            size={18}
+                                            className={`arrow ${activeIndex === index ? "rotate" : ""}`}
+                                        />
+                                    </div>
+
+                                    {activeIndex === index && (
+                                        <div className="accordion-content">
+                                            {skill.desc}
+                                        </div>
+                                    )}
+
+                                </div>
+                            ))}
                         </div>
                     </div>
 
                     {/* I HAVE */}
                     <div className="about-card">
-                        <h2 className="card-title">I HAVE</h2>
+                        <h2 className="card-title">CORE QUALITIES</h2>
 
                         <div className="card-list">
-                            <CardItem icon={<RiLightbulbFlashLine />} text="Strong Problem Solving Skills" />
-                            <CardItem icon={<RiGraduationCapLine />} text="Computer Science Background" />
-                            <CardItem icon={<RiFocus3Line />} text="Clear Career Vision" />
-                            <CardItem icon={<RiRocketLine />} text="Continuous Learning Mindset" />
+                            {traits.map((trait, index) => (
+                                <div key={index} className="accordion-item">
+
+                                    <div
+                                        className="accordion-header"
+                                        onClick={() => toggleItem1(index)}
+                                    >
+                                        <div className="left">
+                                            <span className="card-icon">{trait.icon}</span>
+                                            <span>{trait.title}</span>
+                                        </div>
+
+                                        <ChevronDown
+                                            size={18}
+                                            className={`arrow ${activeIndex1 === index ? "rotate" : ""}`}
+                                        />
+                                    </div>
+
+                                    {activeIndex1 === index && (
+                                        <div className="accordion-content">
+                                            {trait.desc}
+                                        </div>
+                                    )}
+
+                                </div>
+                            ))}
                         </div>
                     </div>
 

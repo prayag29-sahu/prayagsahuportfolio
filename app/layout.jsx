@@ -64,14 +64,14 @@
 
 
 
-import { Inter } from 'next/font/google';
+
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import CursorBubble from '@/components/ui/CursorBubble';
 
 
-const inter = Inter({ subsets: ['latin'] });
+
 
 export const metadata = {
   title: 'Prayag Sahu - Full Stack Developer',
@@ -81,7 +81,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} text-white antialiased`}>
+      <body className={`$text-white antialiased`}>
         <Navbar />
         <CursorBubble />
 
