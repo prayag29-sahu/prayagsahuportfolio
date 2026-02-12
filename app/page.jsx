@@ -3,6 +3,7 @@
 import HeroSection from "@/components/sections/HeroSection"
 import AboutSection from "@/components/sections/AboutSections"
 import EducationSection from "@/components/sections/Education"
+import EducationSection2 from "@/components/sections/Education2"
 import SkillsSection from "@/components/sections/SkillCard"
 import ProjectsSection from "@/components/sections/ProjectCard"
 import AchievementsSection from "@/components/sections/AchievementCard"
@@ -23,6 +24,7 @@ export default function Portfolio() {
 
       {/* ================= Education ================= */}
       <EducationSection />
+      <EducationSection2 />
       
       {/* ================= JOURNEY ================= */}
       {/* <JourneySection /> */}

@@ -685,206 +685,333 @@
 
 
 
+// 'use client';
+
+// import {
+//     GraduationCap,
+//     School,
+//     Award,
+//     Calendar,
+//     BookOpen,
+//     Trophy,
+//     Code2,
+//     Layers,
+//     BookMarked,
+//     Medal,
+//     BadgeCheck
+// } from "lucide-react";
+// import ParallaxSection from "@/components/ui/ParallaxSection";
+// import ShowcaseSection from '@/components/ui/ShowcaseSection';
+// export default function Education() {
+//     return (
+//         <ParallaxSection backgroundImage="/images/bg.png" height="100vh">
+//             <section id="education" className="min-h-screen text-white flex">
+//                 {/* MAIN CONTENT */}
+//                 <div className="flex-1 py-20 px-6">
+//                     <div className="max-w-6xl mx-auto">
+//                         {/* HEADING */}
+//                         <div className="mb-14">
+//                             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-widest">
+//                                 EDUCATION & <span className="text-[#6ea046]">LEARNING</span>
+//                             </h2>
+//                             <div className="h-1 w-80 bg-[#6ea046] rounded-full mt-3" />
+//                         </div>
+//                         {/* CONTENT GRID */}
+//                         <div className="grid lg:grid-cols-2 gap-12">
+//                             {/* ACADEMIC */}
+//                             <div
+//                                 className=" bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300"
+//                             >
+//                                 <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
+//                                     <GraduationCap className="text-[#6ea046]" />
+//                                     Academic
+//                                 </h3>
+//                                 <div className="relative">
+//                                     <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-[#6ea046]/40" />
+//                                     <div className="space-y-10">
+//                                         <TimelineItem
+//                                             icon={<School size={16} />}
+//                                             year="2020 – 2021"
+//                                             title="10th Grade (MPBSE)"
+//                                             institute="Sarvottam Higher Secondary School"
+//                                             extra="93.2% • School Topper"
+//                                         />
+//                                         <TimelineItem
+//                                             icon={<School size={16} />}
+//                                             year="2022 – 2023"
+//                                             title="12th Grade (Maths + Biology)"
+//                                             institute="Sarvottam Higher Secondary School"
+//                                             extra="88.6% • School Topper"
+//                                         />
+//                                         <TimelineItem
+//                                             icon={<GraduationCap size={16} />}
+//                                             year="2023 – 2027"
+//                                             title="B.Tech – Computer Science & Engineering"
+//                                             institute="Baderia GIEM (RGPV)"
+//                                             extra="SGPA 8.81 • College Rank 2nd"
+//                                         />
+//                                     </div>
+//                                 </div>
+//                             </div>
+//                             {/* CERTIFICATIONS */}
+//                             {/* <div className="bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300">
+                                
+//                                 <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
+//                                     <Award className="text-[#6ea046]" />
+//                                     Certifications
+//                                 </h3>
+//                                 <div className="space-y-6">
+//                                     <CertCard
+//                                         icon={<Trophy />}
+//                                         title="NPTEL – DBMS (IIT Kharagpur)"
+//                                         desc="Silver + Elite Certificate"
+//                                     />
+//                                     <CertCard
+//                                         icon={<BookOpen />}
+//                                         title="freeCodeCamp"
+//                                         desc="Frontend & Full Stack Development"
+//                                     />
+//                                     <CertCard
+//                                         icon={<Code2 />}
+//                                         title="InterviewBit"
+//                                         desc="DSA • Badges • Streak"
+//                                     />
+//                                     <CertCard
+//                                         icon={<Award />}
+//                                         title="Hackathons"
+//                                         desc="SIH • Brahmax • College Hackathons"
+//                                     />
+//                                 </div>
+//                             </div> */}
+//                             <div className="bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300">
+//                                 <div className="space-y-6">
+//                                     <CertCard
+//                                         icon={<Trophy />}
+//                                         title="NPTEL – DBMS (IIT Kharagpur)"
+//                                         desc="Silver + Elite Certificate"
+//                                         image="/images/01_certificates/01_Major_06/NPTEL_DBMS.png"
+//                                     />
+
+//                                     <CertCard
+//                                         icon={<BookOpen />}
+//                                         title="freeCodeCamp"
+//                                         desc="Frontend & Full Stack Development"
+//                                         image="/images/01_certificates/01_Major_06/freecodecampwebdevelopment.png"
+//                                     />
+
+//                                     <CertCard
+//                                         icon={<Code2 />}
+//                                         title="InterviewBit"
+//                                         desc="DSA • Badges • Streak"
+//                                         image="/images/01_badges/array-master.png"
+//                                     />
+
+//                                     <CertCard
+//                                         icon={<Award />}
+//                                         title="Hackathons"
+//                                         desc="SIH • Brahmax • College Hackathons"
+//                                         image="/images/01_certificates/01_Major_06/sih.jpg"
+//                                     />
+//                                 </div>
+//                             </div>
+
+
+//                         </div>
+//                     </div>
+//                 </div>
+//                 {/* RIGHT SIDE – FULL HEIGHT LEARNING PANEL */}
+//                 <ShowcaseSection />
+
+//             </section>
+//         </ParallaxSection>
+//     );
+// }
+
+// /* ================= SUB COMPONENTS ================= */
+
+// function TimelineItem({ icon, year, title, institute, extra }) {
+//     return (
+//         <div className="flex items-start gap-6">
+//             <div className="w-8 h-8 bg-[#6ea046] rounded-full flex items-center justify-center text-black z-10">
+//                 {icon}
+//             </div>
+//             <div>
+//                 <div className="text-sm text-[#6ea046] flex items-center gap-2">
+//                     <Calendar size={14} /> {year}
+//                 </div>
+//                 <h4 className="text-lg font-semibold">{title}</h4>
+//                 <p className="text-white/70">{institute}</p>
+//                 <p className="text-sm text-white/50 mt-1">{extra}</p>
+//             </div>
+//         </div>
+//     );
+// }
+
+// function CertCard({ icon, title, desc, image }) {
+//     return (
+//         <div
+//             className="
+//         grid grid-cols-1 lg:grid-cols-[1fr_160px]
+//         gap-4
+//         p-4
+//         rounded-xl
+//         bg-white/5
+//         border border-white/10
+//         shadow-[0_10px_25px_rgba(0,0,0,0.35)]
+//         hover:shadow-[0_15px_35px_rgba(110,160,70,0.45)]
+//         transition-shadow
+//         duration-300
+//       "
+//         >
+//             {/* LEFT : TEXT */}
+//             <div className="flex items-center gap-4">
+//                 <div className="w-10 h-10 rounded-full bg-[#6ea046] flex items-center justify-center text-black shrink-0">
+//                     {icon}
+//                 </div>
+
+//                 <div>
+//                     <h4 className="font-semibold text-white">{title}</h4>
+//                     <p className="text-sm text-white/70">{desc}</p>
+//                 </div>
+//             </div>
+
+//             {/* RIGHT : CERT IMAGE */}
+//             <div
+//                 className=" w-24 h-20 rounded-lg overflow-hidden border border-white/10 shadow-[0_8px_18px_rgba(110,160,70,0.35)]">
+//                 <img
+//                     src={image}
+//                     alt={title}
+//                     className=" w-full h-full object-fit rounded-md hover:scale-105 transition-transform duration-300" />
+//             </div>
+
+//         </div>
+//     );
+// }
+
+
+
+
+
+
 'use client';
 
-import {
-    GraduationCap,
-    School,
-    Award,
-    Calendar,
-    BookOpen,
-    Trophy,
-    Code2,
-    Layers,
-    BookMarked,
-    Medal,
-    BadgeCheck
-} from "lucide-react";
-import ParallaxSection from "@/components/ui/ParallaxSection";
-import ShowcaseSection from '@/components/ui/ShowcaseSection';
+import ParallaxSection from '@/components/ui/ParallaxSection';
+
 export default function Education() {
+    const educationData = [
+        {
+            title: "B.TECH – COMPUTER SCIENCE & ENGINEERING",
+            institute: "Baderia Global Institute of Engineering & Management (RGPV)",
+            duration: "2023 – 2027",
+            points: [
+                "Current SGPA: 8.81",
+                "College Rank: 2nd",
+                "Focused on Full Stack Development & System Design"
+            ],
+            color: "bg-yellow-400"
+        },
+        {
+            title: "12TH GRADE (MPBSE)",
+            institute: "Sarvottam Higher Secondary School",
+            duration: "2022 – 2023",
+            points: [
+                "88.6% with Maths & Biology",
+                "School Topper",
+                "Strong foundation in analytical subjects"
+            ],
+            color: "bg-red-500"
+        },
+        {
+            title: "10TH GRADE (MPBSE)",
+            institute: "Sarvottam Higher Secondary School",
+            duration: "2020 – 2021",
+            points: [
+                "93.2%",
+                "School Topper",
+                "Built early interest in technology"
+            ],
+            color: "bg-green-400"
+        }
+    ];
+
     return (
-        <ParallaxSection backgroundImage="/images/bg.png" height="100vh">
-            <section id="education" className="min-h-screen text-white flex">
-                {/* MAIN CONTENT */}
-                <div className="flex-1 py-20 px-6">
-                    <div className="max-w-6xl mx-auto">
-                        {/* HEADING */}
-                        <div className="mb-14">
-                            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-widest">
-                                EDUCATION & <span className="text-[#6ea046]">LEARNING</span>
-                            </h2>
-                            <div className="h-1 w-80 bg-[#6ea046] rounded-full mt-3" />
-                        </div>
-                        {/* CONTENT GRID */}
-                        <div className="grid lg:grid-cols-2 gap-12">
-                            {/* ACADEMIC */}
-                            <div
-                                className=" bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300"
-                            >
-                                <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-                                    <GraduationCap className="text-[#6ea046]" />
-                                    Academic
-                                </h3>
-                                <div className="relative">
-                                    <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-[#6ea046]/40" />
-                                    <div className="space-y-10">
-                                        <TimelineItem
-                                            icon={<School size={16} />}
-                                            year="2020 – 2021"
-                                            title="10th Grade (MPBSE)"
-                                            institute="Sarvottam Higher Secondary School"
-                                            extra="93.2% • School Topper"
-                                        />
-                                        <TimelineItem
-                                            icon={<School size={16} />}
-                                            year="2022 – 2023"
-                                            title="12th Grade (Maths + Biology)"
-                                            institute="Sarvottam Higher Secondary School"
-                                            extra="88.6% • School Topper"
-                                        />
-                                        <TimelineItem
-                                            icon={<GraduationCap size={16} />}
-                                            year="2023 – 2027"
-                                            title="B.Tech – Computer Science & Engineering"
-                                            institute="Baderia GIEM (RGPV)"
-                                            extra="SGPA 8.81 • College Rank 2nd"
-                                        />
+        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
+
+            <section id="education" className="relative py-28 text-white">
+
+                <div className="max-w-6xl mx-auto px-6">
+
+                    {/* HEADING */}
+                    <div className="mb-20">
+                        <h2 className="text-6xl font-extrabold tracking-tight">
+                            EDUCATION<span className="highlight">_LOG</span>
+                        </h2>
+                    </div>
+
+                    {/* TIMELINE WRAPPER */}
+                    <div className="relative">
+
+                        {/* Vertical Line */}
+                        <div className="absolute left-3 top-0 bottom-0 w-[3px] bg-[#6ea046] " />
+
+                        <div className="space-y-20">
+
+                            {educationData.map((item, index) => (
+                                <div key={index} className="relative flex items-start gap-10">
+
+                                    {/* Timeline Node */}
+                                    <div className="relative z-10">
+                                        <div className={`w-6 h-6 ${item.color} border-2 border-white shadow-[0_0_10px_rgba(255,255,255,0.4)]`} />
                                     </div>
+
+                                    {/* Card */}
+                                    <div className="
+                    flex-1 
+                    bg-black/60 
+                    backdrop-blur-md 
+                    border border-white/20 
+                    p-10 
+                    rounded-xl
+                    shadow-[0_20px_40px_rgba(0,0,0,0.6)]
+                    hover:shadow-[0_25px_50px_rgba(110,160,70,0.4)]
+                    transition-all duration-300
+                  ">
+
+                                        {/* Duration Badge */}
+                                        <div className="absolute top-6 right-6 bg-white text-black px-4 py-1 text-sm font-semibold tracking-wide rounded">
+                                            {item.duration}
+                                        </div>
+
+                                        {/* Title */}
+                                        <h3 className="text-2xl font-bold mb-4 tracking-wide">
+                                            {item.title}
+                                        </h3>
+
+                                        <div className="highlight font-semibold mb-6">
+                                            @ {item.institute}
+                                        </div>
+
+                                        <ul className="space-y-3 text-white/80">
+                                            {item.points.map((point, i) => (
+                                                <li key={i} className="flex items-start gap-2">
+                                                    <span className="text-green-400">•</span>
+                                                    <span>{point}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+
+                                    </div>
+
                                 </div>
-                            </div>
-                            {/* CERTIFICATIONS */}
-                            {/* <div className="bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300">
-                                
-                                <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-                                    <Award className="text-[#6ea046]" />
-                                    Certifications
-                                </h3>
-                                <div className="space-y-6">
-                                    <CertCard
-                                        icon={<Trophy />}
-                                        title="NPTEL – DBMS (IIT Kharagpur)"
-                                        desc="Silver + Elite Certificate"
-                                    />
-                                    <CertCard
-                                        icon={<BookOpen />}
-                                        title="freeCodeCamp"
-                                        desc="Frontend & Full Stack Development"
-                                    />
-                                    <CertCard
-                                        icon={<Code2 />}
-                                        title="InterviewBit"
-                                        desc="DSA • Badges • Streak"
-                                    />
-                                    <CertCard
-                                        icon={<Award />}
-                                        title="Hackathons"
-                                        desc="SIH • Brahmax • College Hackathons"
-                                    />
-                                </div>
-                            </div> */}
-                            <div className="bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300">
-                                <div className="space-y-6">
-                                    <CertCard
-                                        icon={<Trophy />}
-                                        title="NPTEL – DBMS (IIT Kharagpur)"
-                                        desc="Silver + Elite Certificate"
-                                        image="/images/01_certificates/01_Major_06/NPTEL_DBMS.png"
-                                    />
-
-                                    <CertCard
-                                        icon={<BookOpen />}
-                                        title="freeCodeCamp"
-                                        desc="Frontend & Full Stack Development"
-                                        image="/images/01_certificates/01_Major_06/freecodecampwebdevelopment.png"
-                                    />
-
-                                    <CertCard
-                                        icon={<Code2 />}
-                                        title="InterviewBit"
-                                        desc="DSA • Badges • Streak"
-                                        image="/images/01_badges/array-master.png"
-                                    />
-
-                                    <CertCard
-                                        icon={<Award />}
-                                        title="Hackathons"
-                                        desc="SIH • Brahmax • College Hackathons"
-                                        image="/images/01_certificates/01_Major_06/sih.jpg"
-                                    />
-                                </div>
-                            </div>
-
+                            ))}
 
                         </div>
                     </div>
+
                 </div>
-                {/* RIGHT SIDE – FULL HEIGHT LEARNING PANEL */}
-                <ShowcaseSection />
 
             </section>
+
         </ParallaxSection>
     );
 }
-
-/* ================= SUB COMPONENTS ================= */
-
-function TimelineItem({ icon, year, title, institute, extra }) {
-    return (
-        <div className="flex items-start gap-6">
-            <div className="w-8 h-8 bg-[#6ea046] rounded-full flex items-center justify-center text-black z-10">
-                {icon}
-            </div>
-            <div>
-                <div className="text-sm text-[#6ea046] flex items-center gap-2">
-                    <Calendar size={14} /> {year}
-                </div>
-                <h4 className="text-lg font-semibold">{title}</h4>
-                <p className="text-white/70">{institute}</p>
-                <p className="text-sm text-white/50 mt-1">{extra}</p>
-            </div>
-        </div>
-    );
-}
-
-function CertCard({ icon, title, desc, image }) {
-    return (
-        <div
-            className="
-        grid grid-cols-1 lg:grid-cols-[1fr_160px]
-        gap-4
-        p-4
-        rounded-xl
-        bg-white/5
-        border border-white/10
-        shadow-[0_10px_25px_rgba(0,0,0,0.35)]
-        hover:shadow-[0_15px_35px_rgba(110,160,70,0.45)]
-        transition-shadow
-        duration-300
-      "
-        >
-            {/* LEFT : TEXT */}
-            <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#6ea046] flex items-center justify-center text-black shrink-0">
-                    {icon}
-                </div>
-
-                <div>
-                    <h4 className="font-semibold text-white">{title}</h4>
-                    <p className="text-sm text-white/70">{desc}</p>
-                </div>
-            </div>
-
-            {/* RIGHT : CERT IMAGE */}
-            <div
-                className=" w-24 h-20 rounded-lg overflow-hidden border border-white/10 shadow-[0_8px_18px_rgba(110,160,70,0.35)]">
-                <img
-                    src={image}
-                    alt={title}
-                    className=" w-full h-full object-fit rounded-md hover:scale-105 transition-transform duration-300" />
-            </div>
-
-        </div>
-    );
-}
-
