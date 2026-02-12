@@ -330,20 +330,6 @@ export default function AchievementCard() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* STAT CARD */
 function AchievementStat({ icon, value, label, desc, color }) {
     return (
@@ -363,3 +349,24 @@ function AchievementStat({ icon, value, label, desc, color }) {
         </div>
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
