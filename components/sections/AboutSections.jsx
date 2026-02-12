@@ -873,14 +873,14 @@ export default function AboutSection() {
 
 /* ================= CARD ITEM ================= */
 
-function CardItem({ icon, text }) {
-    return (
-        <div className="card-item">
-            <span className="card-icon">{icon}</span>
-            <span>{text}</span>
-        </div>
-    );
-}
+// function CardItem({ icon, text }) {
+//     return (
+//         <div className="card-item">
+//             <span className="card-icon">{icon}</span>
+//             <span>{text}</span>
+//         </div>
+//     );
+// }
 
 
 
