@@ -648,66 +648,131 @@
 
 
 
-
-
 'use client';
 
-import Image from "next/image";
-import ParallaxSection from "@/components/ui/ParallaxSection";
-import "../sections/About.css"
+import Image from 'next/image';
+import ParallaxSection from '@/components/ui/ParallaxSection';
+import {
+    RiReactjsLine,
+    RiNodejsLine,
+    RiDatabase2Line,
+    RiAndroidLine,
+    RiLightbulbFlashLine,
+    RiGraduationCapLine,
+    RiFocus3Line,
+    RiRocketLine,
+} from "react-icons/ri";
+import { MapPin, GraduationCap, Briefcase, Rocket } from "lucide-react";
+import "./About.css"
 
-export default function AboutPage() {
+export default function AboutSection() {
     return (
-        <ParallaxSection backgroundImage="/images/bg.png" height="100vh">
+        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
 
+            <section className="about-wrapper">
 
-                <div className="about-container">
+                {/* ===================== TOP CONTAINER ===================== */}
+                <div className="about-top">
 
-                    {/* LEFT IMAGE AREA */}
-                    <div className="avatar-box">
-                        {/* <div className="avatar-label">AVATAR.JPG</div> */}
-                        <Image
-                            src="/images/hero3.png"
-                            alt="Prayag Sahu"
-                            width={300}
-                            height={600}
-                            className="avatar-image"
-                        />
+                    {/* LEFT SIDE */}
+                    <div className="about-left">
+
+                        <div className="about-image">
+                            <Image
+                                src="/images/hero3.png"
+                                alt="Prayag Sahu"
+                                width={400}
+                                height={500}
+                                className="object-cover"
+                            />
+                        </div>
+                       
+
+                        {/* INFO UNDER IMAGE */}
+                       
+
                     </div>
 
-                    {/* RIGHT CONTENT AREA */}
-                    <div className="about-content">
+                    {/* RIGHT SIDE */}
+                    <div className="about-text">
 
-                        <h1 className="about-title">WHO AM I?</h1>
-
-                        <p className="about-description">
-                            I am Prayag. A creative developer who believes the web has become
-                            too sanitized. I bring personality back to code.
+                        <p className="about-desc">
+                            I am <span className="highlight">Prayag Sahu</span>, a Computer Science
+                            and Engineering undergraduate and Freelance Full Stack Developer
+                            from Jabalpur, Madhya Pradesh.
+                            <br /><br />
+                            I completed my Higher Secondary Education under MPBSE with
+                            First Division and I am currently pursuing
+                            <strong> B.Tech (CSE)</strong> from
+                            <strong> Baderia Global Institute of Engineering & Management</strong>,
+                            affiliated with <strong>RGPV University</strong>.
+                            <br />
+                            I focus on building modern, scalable and performance-driven web
+                            applications using clean architecture and practical problem solving.
                         </p>
-
-                        <div className="about-points">
-                            <p>&gt; Specialized in Designing and Web Development.</p>
-                            <p>&gt; Obsessed with Perfection and AI.</p>
-                            <p>&gt; 3+ years of shipping code that works.</p>
+                        <div className="info-item mt-7">
+                            <MapPin size={18} />
+                            <span>Jabalpur, Madhya Pradesh</span>
+                            <GraduationCap size={18} />
+                            <span>B.Tech (CSE) – RGPV</span>
                         </div>
 
-                        <div className="about-status">
-                            <div className="location-btn">
-                                📍 LOCATION: JABALPUR, MP
-                            </div>
-
-                            <div className="available-btn">
-                                <span className="green-dot"></span>
-                                STATUS: AVAILABLE
-                            </div>
+                        <div className="info-item mt-2">
+                            <Briefcase size={18} />
+                            <span>Freelance Full Stack Developer</span>
+                            <Rocket size={18} />
+                            <span>Open to Opportunities</span>
                         </div>
 
                     </div>
+                    
 
                 </div>
 
 
+                {/* ===================== BOTTOM GRID ===================== */}
+                <div className="about-bottom">
+
+                    {/* I CAN DO */}
+                    <div className="about-card">
+                        <h2 className="card-title">I CAN DO</h2>
+
+                        <div className="card-list">
+                            <CardItem icon={<RiReactjsLine />} text="Modern Frontend (React / Next.js / Tailwind)" />
+                            <CardItem icon={<RiNodejsLine />} text="Backend APIs (Node.js / Express)" />
+                            <CardItem icon={<RiDatabase2Line />} text="Database Design (PostgreSQL)" />
+                            <CardItem icon={<RiAndroidLine />} text="Mobile Apps (React Native)" />
+                        </div>
+                    </div>
+
+                    {/* I HAVE */}
+                    <div className="about-card">
+                        <h2 className="card-title">I HAVE</h2>
+
+                        <div className="card-list">
+                            <CardItem icon={<RiLightbulbFlashLine />} text="Strong Problem Solving Skills" />
+                            <CardItem icon={<RiGraduationCapLine />} text="Computer Science Background" />
+                            <CardItem icon={<RiFocus3Line />} text="Clear Career Vision" />
+                            <CardItem icon={<RiRocketLine />} text="Continuous Learning Mindset" />
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
 
         </ParallaxSection>
+    );
+}
+
+
+/* ================= CARD ITEM ================= */
+
+function CardItem({ icon, text }) {
+    return (
+        <div className="card-item">
+            <span className="card-icon">{icon}</span>
+            <span>{text}</span>
+        </div>
     );
 }

@@ -197,6 +197,20 @@ body {
 @tailwind components;
 @tailwind utilities;
 
+
+
+body {
+  font-family: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.about-desc {
+  font-family: 'Segoe UI', 'Inter', sans-serif;
+}
+
+.about-title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 :root {
   /* --neon-green: #7CFF00; */
   --neon-green: rgba(110, 160, 70, 0.9);
