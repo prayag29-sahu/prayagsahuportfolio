@@ -554,3 +554,26 @@ button:hover~#cursor-bubble {
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+
+
+
+/* ========================= */
+/* BIG OUTLINE TEXT STYLE */
+/* ========================= */
+/* ========================= */
+/* BIG OUTLINE TEXT - DARK BG */
+/* ========================= */
+
+.outline-text {
+  font-family: "Anton", sans-serif;
+  font-size: 8vw;
+  font-weight: 900;
+  line-height: 0.9;
+  margin: -20;
+
+  color: transparent;
+  -webkit-text-stroke: 3px #ffffff;
+  /* White border */
+  letter-spacing: 2px;
+}

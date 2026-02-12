@@ -70,6 +70,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import CursorBubble from '@/components/ui/CursorBubble';
 
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
@@ -80,7 +81,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-black text-white antialiased`}>
+      <body className={`${inter.className} text-white antialiased`}>
         <Navbar />
         <CursorBubble />
 
