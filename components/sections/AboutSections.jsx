@@ -863,6 +863,27 @@ export default function AboutSection() {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ================= CARD ITEM ================= */
 
 // function CardItem({ icon, text }) {
