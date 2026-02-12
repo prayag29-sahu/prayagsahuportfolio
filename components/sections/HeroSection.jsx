@@ -450,14 +450,6 @@ export default function HeroSection() {
 
                     {/* LEFT TEXT */}
                     <div className="text-center lg:text-left mb-20 pb-25">
-                        {/* <BlurText
-                            text="FULL STACK"
-                            delay={200}
-                            animateBy="words"
-                            direction="top"
-                            onAnimationComplete={handleAnimationComplete}
-                            className="text-7xl md:text-8xl lg:text-9xl font-extrabold text-white leading-none"
-                        /> */}
                         <h1 className="outline-text">FULL STACK</h1>
 
                         <div className="flex justify-center mt-12 -mb-20">

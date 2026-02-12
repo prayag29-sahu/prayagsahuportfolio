@@ -704,7 +704,7 @@ import ParallaxSection from "@/components/ui/ParallaxSection";
 import ShowcaseSection from '@/components/ui/ShowcaseSection';
 export default function Education() {
     return (
-        <ParallaxSection backgroundImage="/images/bg-1.png" height="100vh">
+        <ParallaxSection backgroundImage="/images/bg.png" height="100vh">
             <section id="education" className="min-h-screen text-white flex">
                 {/* MAIN CONTENT */}
                 <div className="flex-1 py-20 px-6">

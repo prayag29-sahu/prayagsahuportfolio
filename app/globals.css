@@ -571,6 +571,7 @@ button:hover~#cursor-bubble {
   font-weight: 900;
   line-height: 0.9;
   margin: -20;
+  padding-bottom: 30px;
 
   color: transparent;
   -webkit-text-stroke: 3px #ffffff;

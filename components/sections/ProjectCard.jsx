@@ -220,7 +220,7 @@ export default function ProjectsPage() {
     return (
         <ParallaxSection
             // backgroundImage="/img/img1.jpeg"
-            backgroundImage="/images/bg1.png"
+            backgroundImage="/images/bg.png"
             height="400px"
         >
             <section

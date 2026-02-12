@@ -137,7 +137,7 @@ export default function AchievementCard() {
     return (
         <ParallaxSection
             // backgroundImage="/img/img2.jpeg"
-            backgroundImage="/images/bg1.png"
+            backgroundImage="/images/bg.png"
             height="400px"
         >
             <section

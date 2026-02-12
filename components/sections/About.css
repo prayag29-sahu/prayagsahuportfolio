@@ -1,0 +1,115 @@
+
+/* =============================== */
+/* CONTAINER */
+/* =============================== */
+
+.about-container {
+    width: 150%;
+    margin-top: -300px;
+    max-width: 1200px;
+    /* background: #efefef; */
+    border: 4px solid black;
+    display: flex;
+    gap: 80px;
+    padding-left: 300px;
+    box-shadow: 15px 15px 0px black;
+    position: relative;
+}
+
+/* =============================== */
+/* AVATAR SECTION */
+/* =============================== */
+
+.avatar-box {
+    position: relative;
+    border: 4px solid black;
+    padding: 10px;
+    background: white;
+    box-shadow: 10px 10px 0px black;
+}
+
+.avatar-label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-weight: bold;
+}
+
+.avatar-image {
+    object-fit: fill;
+}
+
+/* =============================== */
+/* CONTENT AREA */
+/* =============================== */
+
+.about-content {
+    flex: 1;
+}
+
+.about-title {
+    
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.about-description {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    background: yellow;
+    padding: 2px 6px;
+}
+
+/* =============================== */
+/* BULLET POINTS */
+/* =============================== */
+
+.about-points {
+    border-left: 4px solid purple;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 2;
+}
+
+/* =============================== */
+/* STATUS BUTTONS */
+/* =============================== */
+
+.about-status {
+    display: flex;
+    gap: 30px;
+}
+
+.location-btn {
+    background: black;
+    color: white;
+    padding: 12px 25px;
+    font-weight: bold;
+}
+
+.available-btn {
+    background: #32e35a;
+    color: black;
+    padding: 12px 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.green-dot {
+    width: 12px;
+    height: 12px;
+    background: #00ff00;
+    border-radius: 50%;
+}

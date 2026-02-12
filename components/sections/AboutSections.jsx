@@ -388,256 +388,326 @@
 // }
 
 
+// 'use client';
+
+// import Image from 'next/image';
+// import ParallaxSection from '@/components/ui/ParallaxSection';
+// import {
+//     RiUser3Line,
+//     RiUserHeartLine,
+//     RiCalendarLine,
+//     RiMapPinLine,
+//     RiCodeSSlashLine,
+//     RiReactjsLine,
+//     RiNodejsLine,
+//     RiDatabase2Line,
+//     RiAndroidLine,
+// } from 'react-icons/ri';
+// import {
+//     RiTeamLine,
+//     RiBookOpenLine,
+//     RiHeadphoneLine,
+//     RiCodeLine,
+//     RiLightbulbFlashLine,
+//     RiFocus3Line,
+//     RiGraduationCapLine,
+//     RiRocketLine,
+// } from "react-icons/ri";
+
+
+
+// export default function AboutPage() {
+//     return (
+//         <ParallaxSection backgroundImage="/images/bg.png" height="100vh">
+//             <section className="min-h-screen flex text-white">
+
+//                 {/* LEFT SIDEBAR */}
+//                 <aside
+//                     className="
+//     hidden lg:flex
+//     flex-col items-center
+//     w-80
+//     py-10
+//     relative
+//     border-r
+//     border-white/10
+//     shadow-[8px_0_30px_rgba(0,0,0,0.35)]
+//   "
+//                     style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
+//                 >
+//                     {/* RIGHT SIDE PREMIUM SHADOW + GLOW */}
+//                     <div className="
+//     pointer-events-none
+//     absolute top-0 right-0 h-full w-6
+//     bg-gradient-to-l
+//     from-black/30
+//     via-black/10
+//     to-transparent
+//   " />
+
+//                     {/* PROFILE IMAGE */}
+//                     <div className="w-50 h-50 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+//                         <Image
+//                             src="/images/about.png"
+//                             alt="Prayag Sahu"
+//                             width={1024}
+//                             height={980}
+//                             className="object-cover"
+//                         />
+//                     </div>
+
+//                     {/* PERSONAL INFO */}
+//                     <div className="mt-12 space-y-5 text-sm text-white w-full px-6">
+//                         <InfoItem icon={<RiUser3Line />} label="Name" value="Prayag Sahu" />
+//                         <InfoItem icon={<RiUserHeartLine />} label="Father" value="Prakash Chandra Sahu" />
+//                         <InfoItem icon={<RiUserHeartLine />} label="Mother" value="Maya Sahu" />
+//                         <InfoItem icon={<RiCalendarLine />} label="DOB" value="02 Oct 2005" />
+//                         <InfoItem icon={<RiMapPinLine />} label="Location" value="Jabalpur, MP" />
+//                     </div>
+//                 </aside>
+
+
+
+//                 {/* MAIN CONTENT */}
+//                 <div className="flex-1 px-6 lg:px-16 py-5">
+
+//                     {/* HEADING */}
+//                     {/* <h1 className="text-5xl font-extrabold tracking-widest">
+//                         ABOUT ME
+//                     </h1> */}
+//                     <div className="inline-block">
+//                         <h2 className="text-5xl font-extrabold tracking-widest">
+//                             ABOUT ME
+//                         </h2>
+//                         <div className="h-1 w-15 bg-[#6ea046] rounded-full mt-1" />
+//                     </div>
+
+//                     {/* DESCRIPTION */}
+//                     <p className="mt-6 max-w-4xl text-white/80 leading-relaxed">
+//                         I am <strong>Prayag Sahu</strong>, a Computer Science and Engineering
+//                         undergraduate and <strong>Freelance Full Stack Developer</strong> from
+//                         Jabalpur, Madhya Pradesh.
+//                         <br /><br />
+//                         I completed my higher secondary education under MPBSE with first
+//                         division and am currently pursuing B.Tech (CSE) from
+//                         <strong> Baderia Global Institute of Engineering & Management</strong>,
+//                         affiliated with <strong>RGPV University</strong>.
+//                     </p>
+
+//                     {/* TWO COLUMN AREA */}
+//                     <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+//                         {/* WHAT I DO – LEFT */}
+//                         <div>
+//                             <SectionTag title="I Can Do" />
+
+//                             <div className="mt-6 space-y-6">
+//                                 <VerticalSkill
+//                                     icon={<RiReactjsLine />}
+//                                     title="Frontend Development"
+//                                     desc="Building responsive, accessible user interfaces using HTML, CSS, JavaScript, React, Next.js, and Tailwind CSS."
+//                                 />
+
+//                                 <VerticalSkill
+//                                     icon={<RiNodejsLine />}
+//                                     title="Backend & API Development"
+//                                     desc="Developing scalable REST APIs with Node.js and Express, including authentication, authorization, and secure server logic."
+//                                 />
+
+//                                 <VerticalSkill
+//                                     icon={<RiDatabase2Line />}
+//                                     title="Database Management"
+//                                     desc="Designing and managing relational databases using PostgreSQL with proper schema design, relations, and optimized queries."
+//                                 />
+
+//                                 <VerticalSkill
+//                                     icon={<RiAndroidLine />}
+//                                     title="Android App Development"
+//                                     desc="Building Android applications using React Native with API integration and shared backend services."
+//                                 />
+//                             </div>
+
+//                         </div>
+
+//                         {/* FUN FACTS – RIGHT */}
+//                         <div>
+//                             <div className="mt-3 space-y-5">
+//                                 <SectionTag title="I Have" />
+
+//                                 <HighlightItem
+//                                     icon={<RiLightbulbFlashLine />}
+//                                     title="Core Strengths"
+//                                     text="Hardworking, self-motivated, quick learner with strong problem-solving and attention to detail."
+//                                 />
+
+//                                 <HighlightItem
+//                                     icon={<RiGraduationCapLine />}
+//                                     title="Technical Background"
+//                                     text="Computer Science student with experience in frontend development, C++, and currently learning Java."
+//                                 />
+
+//                                 <HighlightItem
+//                                     icon={<RiFocus3Line />}
+//                                     title="Career Goals"
+//                                     text="Short-term goal is to join a reputed company; long-term goal is to become a successful software engineer."
+//                                 />
+
+//                                 <HighlightItem
+//                                     icon={<RiRocketLine />}
+//                                     title="Learning Mindset"
+//                                     text="Always eager to learn new technologies and continuously improve skills."
+//                                 />
+
+//                             </div>
+
+
+//                         </div>
+
+//                     </div>
+//                 </div>
+//             </section>
+//         </ParallaxSection>
+//     );
+// }
+
+// /* ================= SUB COMPONENTS ================= */
+
+// function InfoItem({ icon, label, value }) {
+//     return (
+//         <div className="flex items-center gap-3">
+//             <span className="text-xl">{icon}</span>
+//             <span className="font-semibold">{label}:</span>
+//             <span className="opacity-90">{value}</span>
+//         </div>
+//     );
+// }
+
+// function SectionTag({ title }) {
+//     return (
+//         <div className="inline-block">
+//             <h2 className="font-semibold tracking-wide ">
+//                 {title}
+//             </h2>
+//             <div className="h-1 w-15 bg-[#6ea046] rounded-full mt-1" />
+//         </div>
+//     );
+// }
+
+
+
+
+// function VerticalSkill({ icon, title, desc }) {
+//     return (
+//         <div className="flex items-start gap-4">
+//             <div
+//                 className="w-10 h-10 rounded-full flex items-center justify-center text-black text-xl shrink-0"
+//                 style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
+//             >
+//                 {icon}
+//             </div>
+
+//             <div>
+//                 <h3 className="font-semibold text-white flex items-center gap-2">
+//                     {/* <RiCodeSSlashLine className="text-green-400" /> */}
+//                     {title}
+//                 </h3>
+
+//                 <p className="text-sm text-white/70 leading-relaxed mt-1">
+//                     {desc}
+//                 </p>
+//             </div>
+//         </div>
+//     );
+// }
+
+
+
+// function HighlightItem({ icon, title, text }) {
+//     return (
+//         <div className="flex items-start gap-4">
+//             <div
+//                 className="w-10 h-10 rounded-full flex items-center justify-center text-xl text-black shrink-0"
+//                 style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
+//             >
+//                 {icon}
+//             </div>
+
+//             <div className='gap-3'>
+//                 <h4 className="font-semibold mb-1 text-white">{title}</h4>
+//                 <p className="text-sm text-white/70 leading-relaxed">
+//                     {text}
+//                 </p>
+//             </div>
+//         </div>
+//     );
+// }
+
+
+
+
+
+
+
+
+
 'use client';
 
-import Image from 'next/image';
-import ParallaxSection from '@/components/ui/ParallaxSection';
-import {
-    RiUser3Line,
-    RiUserHeartLine,
-    RiCalendarLine,
-    RiMapPinLine,
-    RiCodeSSlashLine,
-    RiReactjsLine,
-    RiNodejsLine,
-    RiDatabase2Line,
-    RiAndroidLine,
-} from 'react-icons/ri';
-import {
-    RiTeamLine,
-    RiBookOpenLine,
-    RiHeadphoneLine,
-    RiCodeLine,
-    RiLightbulbFlashLine,
-    RiFocus3Line,
-    RiGraduationCapLine,
-    RiRocketLine,
-} from "react-icons/ri";
-
-
+import Image from "next/image";
+import ParallaxSection from "@/components/ui/ParallaxSection";
+import "../sections/About.css"
 
 export default function AboutPage() {
     return (
-        <ParallaxSection backgroundImage="/images/bg-1.png" height="100vh">
-            <section className="min-h-screen flex text-white">
+        <ParallaxSection backgroundImage="/images/bg.png" height="100vh">
 
-                {/* LEFT SIDEBAR */}
-                <aside
-                    className="
-    hidden lg:flex
-    flex-col items-center
-    w-80
-    py-10
-    relative
-    border-r
-    border-white/10
-    shadow-[8px_0_30px_rgba(0,0,0,0.35)]
-  "
-                    style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
-                >
-                    {/* RIGHT SIDE PREMIUM SHADOW + GLOW */}
-                    <div className="
-    pointer-events-none
-    absolute top-0 right-0 h-full w-6
-    bg-gradient-to-l
-    from-black/30
-    via-black/10
-    to-transparent
-  " />
 
-                    {/* PROFILE IMAGE */}
-                    <div className="w-50 h-50 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                <div className="about-container">
+
+                    {/* LEFT IMAGE AREA */}
+                    <div className="avatar-box">
+                        {/* <div className="avatar-label">AVATAR.JPG</div> */}
                         <Image
-                            src="/images/about.png"
+                            src="/images/hero3.png"
                             alt="Prayag Sahu"
-                            width={1024}
-                            height={980}
-                            className="object-cover"
+                            width={300}
+                            height={600}
+                            className="avatar-image"
                         />
                     </div>
 
-                    {/* PERSONAL INFO */}
-                    <div className="mt-12 space-y-5 text-sm text-white w-full px-6">
-                        <InfoItem icon={<RiUser3Line />} label="Name" value="Prayag Sahu" />
-                        <InfoItem icon={<RiUserHeartLine />} label="Father" value="Prakash Chandra Sahu" />
-                        <InfoItem icon={<RiUserHeartLine />} label="Mother" value="Maya Sahu" />
-                        <InfoItem icon={<RiCalendarLine />} label="DOB" value="02 Oct 2005" />
-                        <InfoItem icon={<RiMapPinLine />} label="Location" value="Jabalpur, MP" />
-                    </div>
-                </aside>
+                    {/* RIGHT CONTENT AREA */}
+                    <div className="about-content">
 
+                        <h1 className="about-title">WHO AM I?</h1>
 
+                        <p className="about-description">
+                            I am Prayag. A creative developer who believes the web has become
+                            too sanitized. I bring personality back to code.
+                        </p>
 
-                {/* MAIN CONTENT */}
-                <div className="flex-1 px-6 lg:px-16 py-5">
-
-                    {/* HEADING */}
-                    {/* <h1 className="text-5xl font-extrabold tracking-widest">
-                        ABOUT ME
-                    </h1> */}
-                    <div className="inline-block">
-                        <h2 className="text-5xl font-extrabold tracking-widest">
-                            ABOUT ME
-                        </h2>
-                        <div className="h-1 w-15 bg-[#6ea046] rounded-full mt-1" />
-                    </div>
-
-                    {/* DESCRIPTION */}
-                    <p className="mt-6 max-w-4xl text-white/80 leading-relaxed">
-                        I am <strong>Prayag Sahu</strong>, a Computer Science and Engineering
-                        undergraduate and <strong>Freelance Full Stack Developer</strong> from
-                        Jabalpur, Madhya Pradesh.
-                        <br /><br />
-                        I completed my higher secondary education under MPBSE with first
-                        division and am currently pursuing B.Tech (CSE) from
-                        <strong> Baderia Global Institute of Engineering & Management</strong>,
-                        affiliated with <strong>RGPV University</strong>.
-                    </p>
-
-                    {/* TWO COLUMN AREA */}
-                    <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
-
-                        {/* WHAT I DO – LEFT */}
-                        <div>
-                            <SectionTag title="I Can Do" />
-
-                            <div className="mt-6 space-y-6">
-                                <VerticalSkill
-                                    icon={<RiReactjsLine />}
-                                    title="Frontend Development"
-                                    desc="Building responsive, accessible user interfaces using HTML, CSS, JavaScript, React, Next.js, and Tailwind CSS."
-                                />
-
-                                <VerticalSkill
-                                    icon={<RiNodejsLine />}
-                                    title="Backend & API Development"
-                                    desc="Developing scalable REST APIs with Node.js and Express, including authentication, authorization, and secure server logic."
-                                />
-
-                                <VerticalSkill
-                                    icon={<RiDatabase2Line />}
-                                    title="Database Management"
-                                    desc="Designing and managing relational databases using PostgreSQL with proper schema design, relations, and optimized queries."
-                                />
-
-                                <VerticalSkill
-                                    icon={<RiAndroidLine />}
-                                    title="Android App Development"
-                                    desc="Building Android applications using React Native with API integration and shared backend services."
-                                />
-                            </div>
-
+                        <div className="about-points">
+                            <p>&gt; Specialized in Designing and Web Development.</p>
+                            <p>&gt; Obsessed with Perfection and AI.</p>
+                            <p>&gt; 3+ years of shipping code that works.</p>
                         </div>
 
-                        {/* FUN FACTS – RIGHT */}
-                        <div>
-                            <div className="mt-3 space-y-5">
-                                <SectionTag title="I Have" />
-
-                                <HighlightItem
-                                    icon={<RiLightbulbFlashLine />}
-                                    title="Core Strengths"
-                                    text="Hardworking, self-motivated, quick learner with strong problem-solving and attention to detail."
-                                />
-
-                                <HighlightItem
-                                    icon={<RiGraduationCapLine />}
-                                    title="Technical Background"
-                                    text="Computer Science student with experience in frontend development, C++, and currently learning Java."
-                                />
-
-                                <HighlightItem
-                                    icon={<RiFocus3Line />}
-                                    title="Career Goals"
-                                    text="Short-term goal is to join a reputed company; long-term goal is to become a successful software engineer."
-                                />
-
-                                <HighlightItem
-                                    icon={<RiRocketLine />}
-                                    title="Learning Mindset"
-                                    text="Always eager to learn new technologies and continuously improve skills."
-                                />
-
+                        <div className="about-status">
+                            <div className="location-btn">
+                                📍 LOCATION: JABALPUR, MP
                             </div>
 
-
+                            <div className="available-btn">
+                                <span className="green-dot"></span>
+                                STATUS: AVAILABLE
+                            </div>
                         </div>
 
                     </div>
+
                 </div>
-            </section>
+
+
+
         </ParallaxSection>
-    );
-}
-
-/* ================= SUB COMPONENTS ================= */
-
-function InfoItem({ icon, label, value }) {
-    return (
-        <div className="flex items-center gap-3">
-            <span className="text-xl">{icon}</span>
-            <span className="font-semibold">{label}:</span>
-            <span className="opacity-90">{value}</span>
-        </div>
-    );
-}
-
-function SectionTag({ title }) {
-    return (
-        <div className="inline-block">
-            <h2 className="font-semibold tracking-wide ">
-                {title}
-            </h2>
-            <div className="h-1 w-15 bg-[#6ea046] rounded-full mt-1" />
-        </div>
-    );
-}
-
-
-
-
-function VerticalSkill({ icon, title, desc }) {
-    return (
-        <div className="flex items-start gap-4">
-            <div
-                className="w-10 h-10 rounded-full flex items-center justify-center text-black text-xl shrink-0"
-                style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
-            >
-                {icon}
-            </div>
-
-            <div>
-                <h3 className="font-semibold text-white flex items-center gap-2">
-                    {/* <RiCodeSSlashLine className="text-green-400" /> */}
-                    {title}
-                </h3>
-
-                <p className="text-sm text-white/70 leading-relaxed mt-1">
-                    {desc}
-                </p>
-            </div>
-        </div>
-    );
-}
-
-
-
-function HighlightItem({ icon, title, text }) {
-    return (
-        <div className="flex items-start gap-4">
-            <div
-                className="w-10 h-10 rounded-full flex items-center justify-center text-xl text-black shrink-0"
-                style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
-            >
-                {icon}
-            </div>
-
-            <div className='gap-3'>
-                <h4 className="font-semibold mb-1 text-white">{title}</h4>
-                <p className="text-sm text-white/70 leading-relaxed">
-                    {text}
-                </p>
-            </div>
-        </div>
     );
 }
