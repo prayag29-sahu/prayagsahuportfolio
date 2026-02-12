@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 
 // export default function AchievementCard() {
 
@@ -289,6 +290,59 @@ export default function AchievementCard() {
         </ParallaxSection>
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* STAT CARD */
 function AchievementStat({ icon, value, label, desc, color }) {
