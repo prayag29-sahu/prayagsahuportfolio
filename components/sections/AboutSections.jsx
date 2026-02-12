@@ -645,9 +645,6 @@
 
 
 
-
-
-
 'use client';
 
 import Image from 'next/image';
@@ -747,11 +744,6 @@ export default function AboutSection() {
                                 className="object-cover"
                             />
                         </div>
-
-
-                        {/* INFO UNDER IMAGE */}
-
-
                     </div>
 
                     {/* RIGHT SIDE */}
