@@ -645,6 +645,7 @@
 
 
 
+
 'use client';
 
 import Image from 'next/image';
@@ -861,27 +862,6 @@ export default function AboutSection() {
         </ParallaxSection>
     );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ================= CARD ITEM ================= */
