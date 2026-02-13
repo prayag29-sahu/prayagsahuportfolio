@@ -756,7 +756,7 @@
 // //                             </div>
 // //                             {/* CERTIFICATIONS */}
 // //                             {/* <div className="bg-black/40 p-8 rounded-2xl border border-white/10 shadow-[0_18px_35px_rgba(110,160,70,0.35)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.55)] transition-shadow duration-300">
-                                
+
 // //                                 <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
 // //                                     <Award className="text-[#6ea046]" />
 // //                                     Certifications
@@ -922,17 +922,17 @@
 //             ],
 //             color: "bg-red-500"
 //         },
-        // {
-        //     title: "10TH GRADE (MPBSE)",
-        //     institute: "Sarvottam Higher Secondary School",
-        //     duration: "2020 – 2021",
-        //     points: [
-        //         "93.2%",
-        //         "School Topper",
-        //         "Built early interest in technology"
-        //     ],
-        //     color: "bg-green-400"
-        // }
+// {
+//     title: "10TH GRADE (MPBSE)",
+//     institute: "Sarvottam Higher Secondary School",
+//     duration: "2020 – 2021",
+//     points: [
+//         "93.2%",
+//         "School Topper",
+//         "Built early interest in technology"
+//     ],
+//     color: "bg-green-400"
+// }
 //     ];
 
 //     return (
@@ -1064,8 +1064,14 @@ export default function Education() {
             ],
             color: "bg-red-500",
             images: [
-                { src: "/images/edu/12_1.jpg", caption: "12th Result" },
-                { src: "/images/edu/12_2.jpg", caption: "School Award" }
+                { src: "/images/11_Class12th/01.jpg", caption: "Best Student Award" },
+                { src: "/images/11_Class12th/02.jpg", caption: "11th Top" },
+                { src: "/images/11_Class12th/03.jpg", caption: "Physics" },
+                { src: "/images/11_Class12th/04.jpg", caption: "Coaching" },
+                { src: "/images/11_Class12th/05.jpg", caption: "12th Result" },
+                { src: "/images/11_Class12th/06.jpg", caption: "Chemistry" },
+                { src: "/images/11_Class12th/07.jpg", caption: "Coaching" },
+                { src: "/images/11_Class12th/08.jpg", caption: "School Project" }
             ]
         },
         {
@@ -1137,7 +1143,7 @@ export default function Education() {
                                     <div className="relative flex-1 bg-black/70 backdrop-blur-md border border-white/20 p-10 rounded-xl shadow-[0_25px_50px_rgba(0,0,0,0.7)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.5)] transition-all duration-500">
 
                                         {/* Duration */}
-                                        <div className="absolute top-6 right-6 bg-white text-black px-4 py-1 text-sm font-semibold rounded">
+                                        <div className="absolute top-3 right-6 bg-white text-black px-4 py-1 text-sm font-semibold rounded">
                                             {item.duration}
                                         </div>
 
@@ -1172,7 +1178,7 @@ export default function Education() {
                                             </div>
 
                                             {/* RIGHT AUTO SLIDER */}
-                                            <div className="relative w-full h-48 overflow-hidden rounded-lg border border-white/10 shadow-[0_0_20px_rgba(110,160,70,0.4)] group">
+                                            <div className="relative w-full h-60 overflow-hidden rounded-lg border border-white/10 shadow-[0_0_20px_rgba(110,160,70,0.4)] group">
 
                                                 {item.images.map((img, imgIndex) => (
                                                     <img
@@ -1196,7 +1202,7 @@ export default function Education() {
 
                 {/* POPUP GALLERY */}
                 {activePopup !== null && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md">
+                    <div className="fixed inset-0 z-90 flex items-center justify-center bg-black/80 backdrop-blur-md">
 
                         {/* Modal Container */}
                         <div className=" relative w-full max-w-5xl max-h-[85vh] bg-[#0f0f0f] border border-[#6ea046] rounded-2xl shadow-[0_0_40px_rgba(110,160,70,0.4)] p-8 overflow-hidden flex flex-col
@@ -1212,7 +1218,7 @@ export default function Education() {
                             </button>
 
                             {/* Title */}
-                            <h3 className="text-2xl font-bold mt-6 mb-4 text-[#6ea046] tracking-wide">
+                            <h3 className="text-2xl font-bold mt-6 text-[#6ea046] tracking-wide">
                                 {educationData[activePopup].title} — Gallery
                             </h3>
 
@@ -1220,7 +1226,7 @@ export default function Education() {
                             <div className="
         overflow-y-auto
         pr-4
-        custom-scroll
+        custom-scroll mt-10
       ">
 
                                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1234,7 +1240,7 @@ export default function Education() {
                                             <img
                                                 src={img.src}
                                                 alt=""
-                                                className="w-full h-52 object-fit rounded-lg mb-3"
+                                                className="w-full h-60 object-fit rounded-lg mb-3"
                                             />
 
                                             <p className="text-white/70 text-sm">
