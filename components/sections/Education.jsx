@@ -1038,9 +1038,9 @@ export default function Education() {
             institute: "Baderia Global Institute of Engineering & Management (RGPV)",
             duration: "2023 – 2027",
             points: [
-                "Current SGPA: 8.81",
-                "College Rank: 2nd",
-                "Focused on Full Stack Development & System Design"
+                "Current SGPA: 8.2+",
+                // "College Rank: 2nd",
+                "Focused on Full Stack Development & Designing"
             ],
             color: "bg-yellow-400",
             images: [
@@ -1060,15 +1060,15 @@ export default function Education() {
             points: [
                 "88.6% with Maths & Biology",
                 "School Topper",
-                "Strong foundation in analytical subjects"
+                // "Top in each 5 year"
             ],
             color: "bg-red-500",
             images: [
                 { src: "/images/11_Class12th/01.jpg", caption: "Best Student Award" },
-                { src: "/images/11_Class12th/02.jpg", caption: "11th Top" },
+                { src: "/images/11_Class12th/02.jpg", caption: "Class - 11th Award" },
                 { src: "/images/11_Class12th/03.jpg", caption: "Physics" },
                 { src: "/images/11_Class12th/04.jpg", caption: "Coaching" },
-                { src: "/images/11_Class12th/05.jpg", caption: "12th Result" },
+                { src: "/images/11_Class12th/05.jpg", caption: "Class - 12th Result" },
                 { src: "/images/11_Class12th/06.jpg", caption: "Chemistry" },
                 { src: "/images/11_Class12th/07.jpg", caption: "Coaching" },
                 { src: "/images/11_Class12th/08.jpg", caption: "School Project" }
@@ -1081,14 +1081,43 @@ export default function Education() {
             points: [
                 "93.2%",
                 "School Topper",
-                "Built early interest in technology"
+                // "Top in each 3 year"
             ],
             color: "bg-green-400",
             images: [
-                { src: "/images/edu/12_1.jpg", caption: "12th Result" },
-                { src: "/images/edu/12_2.jpg", caption: "School Award" }
+                { src: "/images/10_Class10th/01.jpg", caption: "Republic Day" },
+                { src: "/images/10_Class10th/02.jpg", caption: "Class - 10th Result" },
+                { src: "/images/10_Class10th/03.jpg", caption: "Sports" },
+                { src: "/images/10_Class10th/04.jpg", caption: "Class - 9th Award" },
+                { src: "/images/10_Class10th/05.jpg", caption: "Class - 8th Award" }
+            ]
+        },
+        {
+            title: "BEYOND ACADEMICS",
+            institute: "Personal Development & Extracurricular Activities",
+            duration: "Ongoing",
+            points: [
+                "Actively participate in technical events",
+                "Continuous self-learning through online platforms",
+                "Connect with Art try to explore thought to an art"
+            ],
+            color: "bg-purple-500",
+            images: [
+                { src: "/images/14_OtherActivity/01.jpg", caption: "Gita Talent Examination" },
+                { src: "/images/14_OtherActivity/02.jpg", caption: "Government Online Quize" },
+                { src: "/images/14_OtherActivity/03.jpg", caption: "Sanskratik Gyan Exam 2015-16" },
+                { src: "/images/14_OtherActivity/04.jpg", caption: "Sanskratik Gyan Exam 2018-19" },
+                { src: "/images/14_OtherActivity/05.jpg", caption: "Sanskratik Gyan Exam 2022-23" },
+                { src: "/images/14_OtherActivity/06.jpg", caption: "Sketch using C graphics" },
+                { src: "/images/14_OtherActivity/07.jpg", caption: "Sketch using C graphics" },
+                { src: "/images/14_OtherActivity/08.jpg", caption: "Art work" },
+                { src: "/images/14_OtherActivity/09.jpg", caption: "Art work" },
+                { src: "/images/14_OtherActivity/10.jpg", caption: "School Project" },
+                { src: "/images/14_OtherActivity/11.jpg", caption: "Art work" },
+                { src: "/images/14_OtherActivity/12.jpg", caption: "City Design" },
             ]
         }
+
     ];
 
     const [activePopup, setActivePopup] = useState(null);
@@ -1143,7 +1172,7 @@ export default function Education() {
                                     <div className="relative flex-1 bg-black/70 backdrop-blur-md border border-white/20 p-10 rounded-xl shadow-[0_25px_50px_rgba(0,0,0,0.7)] hover:shadow-[0_25px_50px_rgba(110,160,70,0.5)] transition-all duration-500">
 
                                         {/* Duration */}
-                                        <div className="absolute top-3 right-6 bg-white text-black px-4 py-1 text-sm font-semibold rounded">
+                                        <div className="absolute top-1 right-6 bg-white text-black px-4 py-1 text-sm font-semibold rounded">
                                             {item.duration}
                                         </div>
 
@@ -1223,13 +1252,9 @@ export default function Education() {
                             </h3>
 
                             {/* Scrollable Content Area */}
-                            <div className="
-        overflow-y-auto
-        pr-4
-        custom-scroll mt-10
-      ">
+                            <div className="  overflow-y-auto  pr-4  custom-scroll ">
 
-                                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div className="ml-2 mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                                     {educationData[activePopup].images.map((img, i) => (
                                         <div
