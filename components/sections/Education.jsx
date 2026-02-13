@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // /* eslint-disable @next/next/no-img-element */
 // // 'use client';
 
@@ -1043,9 +1044,13 @@ export default function Education() {
             ],
             color: "bg-yellow-400",
             images: [
-                { src: "/images/edu/btech1.jpg", caption: "Campus View" },
-                { src: "/images/edu/btech2.jpg", caption: "Academic Certificate" },
-                { src: "/images/edu/btech3.jpg", caption: "Rank Achievement" }
+                { src: "/images/13_Btech/01.1.jpg", caption: "1st opportunity" },
+                { src: "/images/13_Btech/02.jpg", caption: "SIH Participation" },
+                { src: "/images/13_Btech/03.png", caption: "NPTEL Certifications" },
+                { src: "/images/13_Btech/04.jpg", caption: "Hackathon" },
+                { src: "/images/13_Btech/05.png", caption: "Vertual Internship" },
+                { src: "/images/13_Btech/07.png", caption: "Web Design Certificate" },
+                { src: "/images/13_Btech/06.png", caption: "Oracle Certification" }
             ]
         },
         {
@@ -1174,11 +1179,9 @@ export default function Education() {
                                                         key={imgIndex}
                                                         src={img.src}
                                                         alt=""
-                                                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${currentSlide[index] === imgIndex ? "opacity-100" : "opacity-0"}`}
+                                                        className={`absolute inset-0 w-full h-full object-fit transition-opacity duration-1000 ${currentSlide[index] === imgIndex ? "opacity-100" : "opacity-0"}`}
                                                     />
                                                 ))}
-
-                                                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
                                             </div>
 
                                         </div>
@@ -1193,40 +1196,60 @@ export default function Education() {
 
                 {/* POPUP GALLERY */}
                 {activePopup !== null && (
-                    <div className="fixed inset-0 bg-black/90 backdrop-blur-lg z-50 flex items-center justify-center p-10">
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md">
 
-                        <div className="relative w-full max-w-4xl">
+                        {/* Modal Container */}
+                        <div className=" relative w-full max-w-5xl max-h-[85vh] bg-[#0f0f0f] border border-[#6ea046] rounded-2xl shadow-[0_0_40px_rgba(110,160,70,0.4)] p-8 overflow-hidden flex flex-col
+    ">
 
+                            {/* Close Button */}
                             <button
                                 onClick={() => setActivePopup(null)}
-                                className="absolute -top-12 right-0 text-white hover:text-[#6ea046]"
+                                className=" absolute top-6 right-6 text-white hover:text-[#6ea046] transition
+        "
                             >
-                                <X size={30} />
+                                <X size={28} />
                             </button>
 
-                            <div className="grid md:grid-cols-2 gap-8">
+                            {/* Title */}
+                            <h3 className="text-2xl font-bold mt-6 mb-4 text-[#6ea046] tracking-wide">
+                                {educationData[activePopup].title} — Gallery
+                            </h3>
 
-                                {educationData[activePopup].images.map((img, i) => (
-                                    <div key={i} className="bg-black/60 p-4 rounded-lg border border-white/10 hover:scale-105 transition-transform duration-300">
+                            {/* Scrollable Content Area */}
+                            <div className="
+        overflow-y-auto
+        pr-4
+        custom-scroll
+      ">
 
-                                        <img
-                                            src={img.src}
-                                            alt=""
-                                            className="w-full h-60 object-cover rounded mb-4"
-                                        />
+                                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                                        <p className="text-white/70 text-sm">
-                                            {img.caption}
-                                        </p>
+                                    {educationData[activePopup].images.map((img, i) => (
+                                        <div
+                                            key={i}
+                                            className=" bg-black/60 border border-white/10 rounded-xl p-4 hover:scale-105 hover:border-[#6ea046] transition-all duration-300 cursor-pointer
+              "
+                                        >
+                                            <img
+                                                src={img.src}
+                                                alt=""
+                                                className="w-full h-52 object-fit rounded-lg mb-3"
+                                            />
 
-                                    </div>
-                                ))}
+                                            <p className="text-white/70 text-sm">
+                                                {img.caption}
+                                            </p>
+                                        </div>
+                                    ))}
 
+                                </div>
                             </div>
 
                         </div>
                     </div>
                 )}
+
 
             </section>
         </ParallaxSection>
