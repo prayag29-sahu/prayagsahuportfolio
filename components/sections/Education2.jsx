@@ -162,7 +162,7 @@ export default function Certifications() {
         {
             title: "NPTEL – DBMS (IIT Kharagpur)",
             subtitle: "Silver + Elite Certificate",
-            year: "2024",
+            year: "2025",
             description: "Completed IIT Kharagpur certified Database Management Systems course with Silver + Elite distinction.",
             images: [
                 { src: "/images/01_certificates/01_Major_06/NPTEL_DBMS.png", caption: "Certificate View" },
@@ -178,16 +178,50 @@ export default function Certifications() {
             ]
         },
         {
+            title: "Cisco",
+            subtitle: "Networking & Python",
+            year: "2026",
+            description: "Cisco certifications in Networking and Python programming for IT professionals.",
+            images: [
+                { src: "/images/15_Cisco/1 (3).png", caption: "Certificate" },
+                { src: "/images/15_Cisco/1 (2).png", caption: "Certificate" },
+                { src: "/images/15_Cisco/1 (1).png", caption: "Certificate" },
+                { src: "/images/15_Cisco/1 (4).png", caption: "Certificate" },
+                { src: "/images/15_Cisco/1 (5).png", caption: "Certificate" },
+                { src: "/images/15_Cisco/1 (6).png", caption: "Certificate" },
+                { src: "/images/15_Cisco/1 (7).png", caption: "Badges" },
+                { src: "/images/15_Cisco/1 (18).png", caption: "Badges" },
+                { src: "/images/15_Cisco/1 (23).png", caption: "Badges" },
+                { src: "/images/15_Cisco/1 (8).png", caption:  "Achivement" },
+                { src: "/images/15_Cisco/1 (9).png", caption:  "Achivement" },
+                { src: "/images/15_Cisco/1 (10).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (11).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (12).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (13).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (14).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (15).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (16).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (17).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (19).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (20).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (21).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (22).png", caption: "Achivement" },
+            ]
+        },
+        {
             title: "InterviewBit",
             subtitle: "DSA • Badges • Streak",
-            year: "2023",
+            year: "2024",
             description: "Solved DSA challenges and earned consistent streak badges with algorithm mastery.",
             images: [
                 { src: "/images/01_badges/01.png", caption: "Badge 1" },
                 { src: "/images/01_badges/02.png", caption: "Badge 2" },
+                { src: "/images/01_badges/03.png", caption: "Badge 3" },
+                { src: "/images/01_badges/01.png", caption: "Badge 1" },
+                { src: "/images/01_badges/02.png", caption: "Badge 2" },
                 { src: "/images/01_badges/03.png", caption: "Badge 3" }
             ]
-        }
+        },
     ];
 
     /* Individual auto sliders for each card */
@@ -378,6 +412,15 @@ export default function Certifications() {
                 .custom-scroll {
                     scrollbar-width: thin;
                     scrollbar-color: #6ea046 #111;
+                }
+
+                    .animate-scroll {
+                    animation: scroll 10s linear infinite;
+                }
+
+                @keyframes scroll {
+                    from { transform: translateX(0); }
+                    to { transform: translateX(-50%); }
                 }
             `}</style>
 

@@ -1231,41 +1231,37 @@ export default function Education() {
 
                 {/* POPUP GALLERY */}
                 {activePopup !== null && (
-                    <div className="fixed inset-0 z-90 flex items-center justify-center bg-black/80 backdrop-blur-md">
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md">
 
-                        {/* Modal Container */}
-                        <div className=" relative w-full max-w-5xl max-h-[85vh] bg-[#0f0f0f] border border-[#6ea046] rounded-2xl shadow-[0_0_40px_rgba(110,160,70,0.4)] p-8 overflow-hidden flex flex-col
-    ">
+                        <div className="relative w-full max-w-5xl max-h-[85vh] bg-[#0f0f0f] border border-[#6ea046] rounded-2xl shadow-[0_0_40px_rgba(110,160,70,0.4)] p-8 overflow-hidden flex flex-col">
 
                             {/* Close Button */}
                             <button
                                 onClick={() => setActivePopup(null)}
-                                className=" absolute top-6 right-6 text-white hover:text-[#6ea046] transition
-        "
+                                className="absolute top-6 right-6 text-white hover:text-[#6ea046] transition"
                             >
                                 <X size={28} />
                             </button>
 
                             {/* Title */}
-                            <h3 className="text-2xl font-bold mt-6 text-[#6ea046] tracking-wide">
+                            <h3 className="text-2xl font-bold text-[#6ea046] tracking-wide">
                                 {educationData[activePopup].title} — Gallery
                             </h3>
 
-                            {/* Scrollable Content Area */}
-                            <div className="  overflow-y-auto  pr-4  custom-scroll ">
+                            {/* Scrollable Area */}
+                            <div className="flex-1 overflow-y-auto pr-4 mt-6 custom-scroll">
 
-                                <div className="ml-2 mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                                     {educationData[activePopup].images.map((img, i) => (
                                         <div
                                             key={i}
-                                            className=" bg-black/60 border border-white/10 rounded-xl p-4 hover:scale-105 hover:border-[#6ea046] transition-all duration-300 cursor-pointer
-              "
+                                            className="bg-black/60 border border-white/10 rounded-xl p-4 hover:scale-105 hover:border-[#6ea046] transition-all duration-300 cursor-pointer"
                                         >
                                             <img
                                                 src={img.src}
                                                 alt=""
-                                                className="w-full h-60 object-fit rounded-lg mb-3"
+                                                className="w-full h-60 object-cover rounded-lg mb-3"
                                             />
 
                                             <p className="text-white/70 text-sm">
@@ -1275,6 +1271,7 @@ export default function Education() {
                                     ))}
 
                                 </div>
+
                             </div>
 
                         </div>
@@ -1282,7 +1279,36 @@ export default function Education() {
                 )}
 
 
+
             </section>
+            <style jsx>{`
+                .animate-scroll {
+                    animation: scroll 40s linear infinite;
+                }
+
+                @keyframes scroll {
+                    from { transform: translateX(0); }
+                    to { transform: translateX(-50%); }
+                }
+
+                .custom-scroll::-webkit-scrollbar {
+                    width: 8px;
+                }
+
+                .custom-scroll::-webkit-scrollbar-track {
+                    background: #111;
+                }
+
+                .custom-scroll::-webkit-scrollbar-thumb {
+                    background: #6ea046;
+                    border-radius: 20px;
+                }
+
+                .custom-scroll {
+                    scrollbar-width: thin;
+                    scrollbar-color: #6ea046 #111;
+                }
+            `}</style>
         </ParallaxSection>
     );
 }
