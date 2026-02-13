@@ -157,8 +157,29 @@ export default function Certifications() {
 
     const [activePopup, setActivePopup] = useState(null);
     const [currentSlides, setCurrentSlides] = useState({});
+    const [isPaused, setIsPaused] = useState(false);
+
 
     const certData = [
+        {
+            title: "InterviewBit",
+            subtitle: "DSA • Badges • Streak",
+            year: "2024",
+            description: "Solved DSA challenges and earned consistent streak badges with algorithm mastery.",
+            images: [
+                { src: "/images/01_badges/01.png", caption: "Badge" },
+                { src: "/images/01_badges/02.png", caption: "Badge" },
+                { src: "/images/01_badges/03.png", caption: "Badge" },
+                { src: "/images/01_badges/04.png", caption: "Badge" },
+                { src: "/images/01_badges/05.png", caption: "Badge" },
+                { src: "/images/01_badges/06.png", caption: "Badge" },
+                { src: "/images/01_badges/07.png", caption: "Badge" },
+                { src: "/images/01_badges/08.png", caption: "Badge" },
+                { src: "/images/01_badges/09.png", caption: "Badge" },
+                { src: "/images/01_badges/10.png", caption: "Badge" },
+                { src: "/images/01_badges/11.png", caption: "Badge" }
+            ]
+        },
         {
             title: "NPTEL – DBMS (IIT Kharagpur)",
             subtitle: "Silver + Elite Certificate",
@@ -192,8 +213,8 @@ export default function Certifications() {
                 { src: "/images/15_Cisco/1 (7).png", caption: "Badges" },
                 { src: "/images/15_Cisco/1 (18).png", caption: "Badges" },
                 { src: "/images/15_Cisco/1 (23).png", caption: "Badges" },
-                { src: "/images/15_Cisco/1 (8).png", caption:  "Achivement" },
-                { src: "/images/15_Cisco/1 (9).png", caption:  "Achivement" },
+                { src: "/images/15_Cisco/1 (8).png", caption: "Achivement" },
+                { src: "/images/15_Cisco/1 (9).png", caption: "Achivement" },
                 { src: "/images/15_Cisco/1 (10).png", caption: "Achivement" },
                 { src: "/images/15_Cisco/1 (11).png", caption: "Achivement" },
                 { src: "/images/15_Cisco/1 (12).png", caption: "Achivement" },
@@ -214,14 +235,21 @@ export default function Certifications() {
             year: "2024",
             description: "Solved DSA challenges and earned consistent streak badges with algorithm mastery.",
             images: [
-                { src: "/images/01_badges/01.png", caption: "Badge 1" },
-                { src: "/images/01_badges/02.png", caption: "Badge 2" },
-                { src: "/images/01_badges/03.png", caption: "Badge 3" },
-                { src: "/images/01_badges/01.png", caption: "Badge 1" },
-                { src: "/images/01_badges/02.png", caption: "Badge 2" },
-                { src: "/images/01_badges/03.png", caption: "Badge 3" }
+                { src: "/images/01_badges/01.png", caption: "Badge" },
+                { src: "/images/01_badges/02.png", caption: "Badge" },
+                { src: "/images/01_badges/03.png", caption: "Badge" },
+                { src: "/images/01_badges/04.png", caption: "Badge" },
+                { src: "/images/01_badges/05.png", caption: "Badge" },
+                { src: "/images/01_badges/06.png", caption: "Badge" },
+                { src: "/images/01_badges/07.png", caption: "Badge" },
+                { src: "/images/01_badges/08.png", caption: "Badge" },
+                { src: "/images/01_badges/09.png", caption: "Badge" },
+                { src: "/images/01_badges/10.png", caption: "Badge" },
+                { src: "/images/01_badges/11.png", caption: "Badge" }
             ]
         },
+        
+
     ];
 
     /* Individual auto sliders for each card */
@@ -262,9 +290,15 @@ export default function Certifications() {
                 </div>
 
                 {/* AUTO SCROLL ROW */}
-                <div className="relative">
+                <div className="relative  overflow-hidden">
 
-                    <div className="flex gap-12 animate-scroll hover:[animation-play-state:paused] w-50">
+                    <div
+                        className="flex gap-12 animate-scroll"
+                        style={{
+                            animationPlayState: isPaused ? "paused" : "running"
+                        }}
+                    >
+
 
                         {[...certData, ...certData].map((item, index) => {
 
@@ -274,6 +308,8 @@ export default function Certifications() {
                             return (
                                 <div
                                     key={index}
+                                    onMouseEnter={() => setIsPaused(true)}
+                                    onMouseLeave={() => setIsPaused(false)}
                                     className="min-w-[650px] bg-[#0f0f0f] border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.6)] hover:border-[#6ea046] transition-all duration-300"
                                 >
 
@@ -387,14 +423,21 @@ export default function Certifications() {
 
 
             <style jsx>{`
-                .animate-scroll {
-                    animation: scroll 40s linear infinite;
-                }
+               .animate-scroll {
+    display: flex;
+    width: 3000px;
+    will-change: transform;
 
-                @keyframes scroll {
-                    from { transform: translateX(0); }
-                    to { transform: translateX(-50%); }
-                }
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+
 
                 .custom-scroll::-webkit-scrollbar {
                     width: 8px;
@@ -414,14 +457,7 @@ export default function Certifications() {
                     scrollbar-color: #6ea046 #111;
                 }
 
-                    .animate-scroll {
-                    animation: scroll 10s linear infinite;
-                }
-
-                @keyframes scroll {
-                    from { transform: translateX(0); }
-                    to { transform: translateX(-50%); }
-                }
+                
             `}</style>
 
         </ParallaxSection>
