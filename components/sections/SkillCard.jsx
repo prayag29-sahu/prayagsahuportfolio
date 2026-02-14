@@ -457,31 +457,31 @@ const GITHUB_DATA = {
     label: "FULL STACK DEV",
     repositories: 25,
     commits: "4167+",
-    followers: 12,
+    followers: 1,
     joined: "2023",
     contributions: "4,167",
-    topLanguages: ["C++", "HTML", "Java", "JavaScript"],
+    topLanguages: ["C++", "HTML","CSS", "Java", "JavaScript","React"],
 };
 
 const SKILLS = {
     frontend: [
-        { name: "React.js", pct: 90 },
-        { name: "Next.js", pct: 85 },
-        { name: "HTML5 / CSS3", pct: 95 },
-        { name: "Tailwind CSS", pct: 92 },
-        { name: "JavaScript", pct: 88 },
+        { name: "React.js", pct: 85 },
+        { name: "Next.js", pct: 80 },
+        { name: "HTML5 / CSS3", pct: 90 },
+        { name: "Tailwind CSS", pct: 72 },
+        { name: "JavaScript", pct: 91 },
     ],
     backend: [
-        { name: "Node.js", pct: 85 },
+        { name: "Node.js", pct: 80 },
         { name: "Express.js", pct: 85 },
-        { name: "MongoDB", pct: 80 },
-        { name: "PostgreSQL", pct: 78 },
+        { name: "MongoDB", pct: 85 },
+        { name: "PostgreSQL", pct: 70 },
         { name: "Supabase", pct: 75 },
     ],
     tools: [
         { name: "C++", pct: 90 },
-        { name: "Java", pct: 88 },
-        { name: "Python", pct: 70 },
+        { name: "Java", pct: 80 },
+        { name: "Python", pct: 50 },
         { name: "Git / GitHub", pct: 93 },
         { name: "Figma / Canva", pct: 85 },
     ],
@@ -810,7 +810,7 @@ export default function DevStats() {
                                             className="text-2xl font-mono font-black text-[#00e5ff]"
                                             style={{ textShadow: "0 0 12px rgba(0,229,255,0.4)" }}
                                         >
-                                            <TypewriterText text="87%" speed={100} />
+                                            <TypewriterText text="83%" speed={100} />
                                         </div>
                                     </div>
                                 </div>
@@ -854,7 +854,7 @@ export default function DevStats() {
                                             <div key={tier.label} className="border border-[#1a2332] rounded p-2 text-center">
                                                 <div className="text-[8px] font-mono tracking-widest" style={{ color: tier.color }}>{tier.label}</div>
                                                 <div className="text-xl font-mono font-bold text-white my-1">{tier.count}</div>
-                                                <div className="text-[8px] font-mono text-[#30363d]">{tier.range}</div>
+                                                <div className="text-[8px] font-mono text-[#8b949e]">{tier.range}</div>
                                             </div>
                                         ))}
                                     </div>
