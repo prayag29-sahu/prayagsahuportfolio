@@ -327,6 +327,7 @@ import {
     Trophy, Award, GraduationCap, Star, Code, Medal,
     Zap, Target, Flame, Crown, BookOpen, Cpu, Globe, ChevronRight
 } from "lucide-react";
+import ParallaxSection from '@/components/ui/ParallaxSection';
 
 /* ─── Shared Primitives ──────────────────────────────────── */
 function ScanlineOverlay() {
@@ -656,8 +657,9 @@ export default function AchievementsPage() {
     }, []);
 
     return (
+        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
         <section className="relative py-28 overflow-hidden"
-            style={{ background: "#010409", fontFamily: "'Courier New', Courier, monospace" }}>
+            style={{ fontFamily: "'Courier New', Courier, monospace" }}>
 
             {/* BG grid */}
             <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
@@ -819,6 +821,7 @@ export default function AchievementsPage() {
           animation-play-state: paused;
         }
       `}</style>
-        </section>
+            </section>
+        </ParallaxSection>
     );
 }

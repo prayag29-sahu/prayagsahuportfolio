@@ -382,6 +382,7 @@
 import { useState, useRef, useEffect } from "react";
 import { X, Github, ExternalLink, ChevronLeft, ChevronRight, Play, Code2, Terminal } from "lucide-react";
 
+import ParallaxSection from '@/components/ui/ParallaxSection';
 /* ─── Shared Primitives ──────────────────────────────────── */
 function ScanlineOverlay() {
     return (
@@ -846,8 +847,9 @@ export default function ProjectsPage() {
     }, []);
 
     return (
+          <ParallaxSection backgroundImage="/images/bg.png" height="auto">
         <section className="relative min-h-screen py-28 overflow-hidden"
-            style={{ background: "#010409", fontFamily: "'Courier New', Courier, monospace" }}>
+            style={{  fontFamily: "'Courier New', Courier, monospace" }}>
             <CursorGlow />
 
             {/* BG grid */}
@@ -957,6 +959,7 @@ export default function ProjectsPage() {
         }
         .animate-fade-in { animation: fade-in 0.3s ease forwards; }
       `}</style>
-        </section>
+            </section>
+        </ParallaxSection>
     );
 }
