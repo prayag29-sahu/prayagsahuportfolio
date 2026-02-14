@@ -844,7 +844,7 @@ export default function HeroSection() {
                     style={{ background: "linear-gradient(to right, transparent, #39d353, transparent)" }} />
 
                 {/* Module tag */}
-                <div className="absolute top-14 left-6 flex items-center gap-2 z-10">
+                <div className="absolute top-14 left-20 ml-20 flex items-center gap-2 z-10">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
                     <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">SYSTEM_MODULE / HERO</span>
                 </div>

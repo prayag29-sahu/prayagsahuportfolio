@@ -995,14 +995,14 @@ function AccordionItem({ icon, title, desc, isOpen, onToggle, accent = "#39d353"
                     </span>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
-                    <span className="font-mono text-[8px] tracking-widest" style={{ color: isOpen ? accent : "#30363d" }}>
+                    <span className="font-mono text-[8px] tracking-widest" style={{ color: isOpen ? accent : "#8b949e" }}>
                         {isOpen ? "CLOSE" : "OPEN"}
                     </span>
                     <ChevronDown
                         size={14}
                         className="transition-transform duration-300"
                         style={{
-                            color: isOpen ? accent : "#30363d",
+                            color: isOpen ? accent : "#8b949e",
                             transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
                         }}
                     />
@@ -1071,11 +1071,11 @@ export default function AboutSection() {
             <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-[#39d353] opacity-[0.025] rounded-full blur-[160px] pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[140px] pointer-events-none" />
 
-            <div className="relative z-10 max-w-6xl mx-auto px-6">
+            <div className="relative z-10 max-w-7xl mx-auto px-6">
 
                 {/* ── PAGE HEADER ── */}
                 <div className="mb-14">
-                    <div className="flex items-center gap-3 mb-6">
+                    <div className="flex ml-5 items-center gap-3 mb-6">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
                         <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">
                             SYSTEM_MODULE / ABOUT
