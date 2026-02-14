@@ -619,7 +619,7 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
 
     return (
 
-        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
+
             <div
                 className="min-w-[620px] border border-[#1a2332] relative overflow-hidden flex flex-col group transition-all duration-300 hover:border-[#39d353] hover:shadow-[0_0_24px_rgba(57,211,83,0.08)]"
                 onMouseEnter={() => setIsPaused(true)}
@@ -736,7 +736,6 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
                     </div>
                 </div>
             </div>
-        </ParallaxSection>
     );
 }
 
@@ -748,7 +747,7 @@ function PopupGallery({ item, onClose }) {
     const accentColor = item.tagColor;
 
     return (
-                <ParallaxSection backgroundImage="/images/bg.png" height="auto">
+
         <div className="fixed inset-0 z-50 bg-[#010409]/97 backdrop-blur-xl flex items-center justify-center">
             <div
                 className="relative bg-[#0d1117] border w-[92%] max-w-5xl h-[88vh] flex flex-col overflow-hidden"
@@ -881,8 +880,7 @@ function PopupGallery({ item, onClose }) {
         .custom-gallery-scroll::-webkit-scrollbar-thumb { background: #39d353; border-radius: 2px; }
         .custom-gallery-scroll { scrollbar-width: thin; scrollbar-color: #39d353 #010409; }
       `}</style>
-            </div>
-        </ParallaxSection>
+        </div>
     );
 }
 
@@ -901,157 +899,157 @@ export default function Certifications() {
     }, []);
 
     return (
-         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-        <section
-            className="relative py-28 overflow-hidden"
-            style={{
-                // background: "#010409",
-                fontFamily: "'Courier New', Courier, monospace",
-            }}
-        >
-            {/* Background grid */}
-            <div
-                className="absolute inset-0 opacity-[0.025] pointer-events-none"
+        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
+            <section
+                className="relative py-28 pt-0 overflow-hidden"
                 style={{
-                    // backgroundImage: `linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)`,
-                    backgroundSize: "40px 40px",
+                    // background: "#010409",
+                    fontFamily: "'Courier New', Courier, monospace",
                 }}
-            />
-            {/* Ambient glow */}
-            <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-[#39d353] opacity-[0.025] rounded-full blur-[160px] pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[140px] pointer-events-none" />
-
-            <div className="relative z-10">
-
-                {/* ── HEADER ── */}
-                <div className="max-w-6xl mx-auto px-6 mb-14">
-                    <div className="flex items-center gap-3 mb-6">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
-                        <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">
-                            SYSTEM_MODULE / CERTIFICATIONS
-                        </span>
-                    </div>
-
-                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-                        <ScanlineOverlay />
-                        <CornerAccent color="#39d353" />
-
-                        {/* Window chrome */}
-                        <div className="flex items-center justify-between px-5 py-3 border-b border-[#1a2332]">
-                            <div className="flex items-center gap-3">
-                                <div className="flex gap-1.5">
-                                    <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
-                                    <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
-                                    <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
-                                </div>
-                                <span className="font-mono text-[11px] tracking-[0.2em] text-[#8b949e]">
-                                    MY_CERTIFICATIONS.txt
-                                </span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
-                                <span className="font-mono text-[9px] tracking-[0.2em] text-[#39d353] border border-[#39d353] px-2 py-0.5">
-                                    LIVE_FEED
-                                </span>
-                            </div>
-                        </div>
-
-                        {/* Title */}
-                        <div className="px-8 py-6">
-                            <h2
-                                className={`font-mono font-black text-3xl md:text-4xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"
-                                    }`}
-                                style={{ textShadow: "0 0 24px rgba(57,211,83,0.25)" }}
-                            >
-                                CERTIFICATIONS_<span className="text-[#39d353]">ARCHIVE</span>
-                                <Cursor />
-                            </h2>
-                            <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider max-w-xl">
-                                $ cat ./certifications/* — Loaded {certData.length} records from achievement database.
-                            </p>
-
-                            {/* Stats row */}
-                            <div className="flex gap-6 mt-5">
-                                {[
-                                    { label: "TOTAL_CERTS", value: "07+" },
-                                    { label: "BADGES", value: "20+" },
-                                    { label: "PLATFORMS", value: "04" },
-                                    { label: "YEAR_RANGE", value: "2023–26" },
-                                ].map((s) => (
-                                    <div key={s.label} className="border border-[#1a2332] bg-[#010409] px-4 py-2">
-                                        <div className="font-mono text-[8px] text-[#39d353] tracking-[0.2em] uppercase">{s.label}</div>
-                                        <div className="font-mono text-lg font-bold text-white">{s.value}</div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* ── SCROLLING CARDS TRACK ── */}
-                <div className="relative overflow-hidden">
-                    {/* Left fade */}
-                    <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                        style={{ background: "linear-gradient(to right, #010409, transparent)" }} />
-                    {/* Right fade */}
-                    <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                        style={{ background: "linear-gradient(to left, #010409, transparent)" }} />
-
-                    <div
-                        className="flex gap-6 px-6"
-                        style={{
-                            animation: `cert-scroll 32s linear infinite`,
-                            animationPlayState: isPaused ? "paused" : "running",
-                            width: "max-content",
-                        }}
-                    >
-                        {[...certData, ...certData].map((item, index) => (
-                            <CertCard
-                                key={index}
-                                item={item}
-                                index={index % certData.length}
-                                onExplore={(i) => setActivePopup(i % certData.length)}
-                                isPaused={isPaused}
-                                setIsPaused={setIsPaused}
-                            />
-                        ))}
-                    </div>
-                </div>
-
-                {/* ── FOOTER ROW ── */}
-                <div className="max-w-6xl mx-auto px-6 mt-10 flex items-center justify-between">
-                    <div className="font-mono text-[10px] text-[#30363d] tracking-widest">
-                        $ certifications --list --all _
-                    </div>
-                    <div className="flex items-center gap-4">
-                        {certData.map((c, i) => (
-                            <button
-                                key={i}
-                                onClick={() => setActivePopup(i)}
-                                className="font-mono text-[9px] tracking-[0.15em] px-3 py-1.5 border border-[#1a2332] text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200 uppercase"
-                            >
-                                {c.id}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* ── POPUP ── */}
-            {activePopup !== null && (
-                <PopupGallery
-                    item={certData[activePopup]}
-                    onClose={() => setActivePopup(null)}
+            >
+                {/* Background grid */}
+                <div
+                    className="absolute inset-0 opacity-[0.025] pointer-events-none"
+                    style={{
+                        // backgroundImage: `linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)`,
+                        backgroundSize: "40px 40px",
+                    }}
                 />
-            )}
+                {/* Ambient glow */}
+                <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-[#39d353] opacity-[0.025] rounded-full blur-[160px] pointer-events-none" />
+                <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[140px] pointer-events-none" />
 
-            <style jsx>{`
+                <div className="relative z-10">
+
+                    {/* ── HEADER ── */}
+                    <div className="max-w-6xl mx-auto px-6 mb-14">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
+                            <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">
+                                SYSTEM_MODULE / CERTIFICATIONS
+                            </span>
+                        </div>
+
+                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+                            <ScanlineOverlay />
+                            <CornerAccent color="#39d353" />
+
+                            {/* Window chrome */}
+                            <div className="flex items-center justify-between px-5 py-3 border-b border-[#1a2332]">
+                                <div className="flex items-center gap-3">
+                                    <div className="flex gap-1.5">
+                                        <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                                        <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                                        <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+                                    </div>
+                                    <span className="font-mono text-[11px] tracking-[0.2em] text-[#8b949e]">
+                                        MY_CERTIFICATIONS.txt
+                                    </span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
+                                    <span className="font-mono text-[9px] tracking-[0.2em] text-[#39d353] border border-[#39d353] px-2 py-0.5">
+                                        LIVE_FEED
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Title */}
+                            <div className="px-8 py-6">
+                                <h2
+                                    className={`font-mono font-black text-3xl md:text-4xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"
+                                        }`}
+                                    style={{ textShadow: "0 0 24px rgba(57,211,83,0.25)" }}
+                                >
+                                    CERTIFICATIONS_<span className="text-[#39d353]">ARCHIVE</span>
+                                    <Cursor />
+                                </h2>
+                                <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider max-w-xl">
+                                    $ cat ./certifications/* — Loaded {certData.length} records from achievement database.
+                                </p>
+
+                                {/* Stats row */}
+                                <div className="flex gap-6 mt-5">
+                                    {[
+                                        { label: "TOTAL_CERTS", value: "07+" },
+                                        { label: "BADGES", value: "20+" },
+                                        { label: "PLATFORMS", value: "04" },
+                                        { label: "YEAR_RANGE", value: "2023–26" },
+                                    ].map((s) => (
+                                        <div key={s.label} className="border border-[#1a2332] bg-[#010409] px-4 py-2">
+                                            <div className="font-mono text-[8px] text-[#39d353] tracking-[0.2em] uppercase">{s.label}</div>
+                                            <div className="font-mono text-lg font-bold text-white">{s.value}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ── SCROLLING CARDS TRACK ── */}
+                    <div className="relative overflow-hidden">
+                        {/* Left fade */}
+                        <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+                            style={{ background: "linear-gradient(to right, #010409, transparent)" }} />
+                        {/* Right fade */}
+                        <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+                            style={{ background: "linear-gradient(to left, #010409, transparent)" }} />
+
+                        <div
+                            className="flex gap-6 px-6"
+                            style={{
+                                animation: `cert-scroll 32s linear infinite`,
+                                animationPlayState: isPaused ? "paused" : "running",
+                                width: "max-content",
+                            }}
+                        >
+                            {[...certData, ...certData].map((item, index) => (
+                                <CertCard
+                                    key={index}
+                                    item={item}
+                                    index={index % certData.length}
+                                    onExplore={(i) => setActivePopup(i % certData.length)}
+                                    isPaused={isPaused}
+                                    setIsPaused={setIsPaused}
+                                />
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* ── FOOTER ROW ── */}
+                    <div className="max-w-6xl mx-auto px-6 mt-10 flex items-center justify-between">
+                        <div className="font-mono text-[10px] text-[#30363d] tracking-widest">
+                            $ certifications --list --all _
+                        </div>
+                        <div className="flex items-center gap-4">
+                            {certData.map((c, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setActivePopup(i)}
+                                    className="font-mono text-[9px] tracking-[0.15em] px-3 py-1.5 border border-[#1a2332] text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200 uppercase"
+                                >
+                                    {c.id}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* ── POPUP ── */}
+                {activePopup !== null && (
+                    <PopupGallery
+                        item={certData[activePopup]}
+                        onClose={() => setActivePopup(null)}
+                    />
+                )}
+
+                <style jsx>{`
         @keyframes cert-scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
       `}</style>
-        </section>
+            </section>
         </ParallaxSection>
     );
 }

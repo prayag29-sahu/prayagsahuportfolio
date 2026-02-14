@@ -889,7 +889,7 @@ import {
     RiLightbulbFlashLine, RiGraduationCapLine, RiFocus3Line, RiRocketLine,
 } from "react-icons/ri";
 import { MapPin, GraduationCap, Briefcase, Rocket, ChevronDown } from "lucide-react";
-
+import ParallaxSection from '@/components/ui/ParallaxSection';
 /* ─── Shared primitives ──────────────────────────────────── */
 function ScanlineOverlay() {
     return (
@@ -1053,9 +1053,10 @@ export default function AboutSection() {
     }, []);
 
     return (
+        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
         <section
-            className="relative py-28 overflow-hidden"
-            style={{ background: "#010409", fontFamily: "'Courier New', Courier, monospace" }}
+            className="relative py-28 pt-0 overflow-hidden"
+            style={{ fontFamily: "'Courier New', Courier, monospace" }}
         >
             {/* BG grid */}
             <div
@@ -1306,6 +1307,7 @@ export default function AboutSection() {
                     </div>
                 </div>
             </div>
-        </section>
+            </section>
+        </ParallaxSection>
     );
 }

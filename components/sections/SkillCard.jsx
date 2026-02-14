@@ -631,264 +631,264 @@ export default function DevStats() {
 
     return (
 
-<ParallaxSection backgroundImage="/images/bg.png" height="auto">
-        <div
-            className="min-h-screen  text-white relative overflow-hidden flex items-center justify-center p-4 md:p-8"
-            style={{ fontFamily: "'Courier New', Courier, monospace" }}
-        >
-            {/* Background grid */}
+        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
             <div
-                className="absolute inset-0 opacity-[0.03]"
-                style={{
-                    backgroundImage: `linear-gradient(rgba(57,211,83,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(57,211,83,0.5) 1px, transparent 1px)`,
-                    backgroundSize: "40px 40px",
-                }}
-            />
-            {/* Glow orbs */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#39d353] opacity-[0.03] rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#00e5ff] opacity-[0.03] rounded-full blur-[120px] pointer-events-none" />
+                className="min-h-screen  text-white relative overflow-hidden flex items-center justify-center p-4 md:p-8"
+                style={{ fontFamily: "'Courier New', Courier, monospace" }}
+            >
+                {/* Background grid */}
+                <div
+                    className="absolute inset-0 opacity-[0.03]"
+                    style={{
+                        backgroundImage: `linear-gradient(rgba(57,211,83,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(57,211,83,0.5) 1px, transparent 1px)`,
+                        backgroundSize: "40px 40px",
+                    }}
+                />
+                {/* Glow orbs */}
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#39d353] opacity-[0.03] rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#00e5ff] opacity-[0.03] rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="relative z-10 w-full max-w-[1300px]">
-                {/* Top Header */}
-                <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
-                        <h1
-                            className={`text-3xl md:text-4xl font-black tracking-[0.1em] uppercase ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"} transition-all duration-75`}
-                            style={{ textShadow: "0 0 20px rgba(57,211,83,0.3)" }}
-                        >
-                            DEV_<span className="text-[#39d353]">STATS</span>
-                        </h1>
-                    </div>
-                    <div className="flex items-center gap-2 text-[10px] font-mono text-[#39d353] tracking-[0.2em]">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
-                        LIVE
-                    </div>
-                </div>
-
-                <div className="border-b border-[#1a2332] mb-8" />
-
-                {/* Main Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-                    {/* ===== LEFT: GITHUB PANEL ===== */}
-                    <div className="border border-[#1a2332] rounded-lg bg-[#0d1117] relative overflow-hidden">
-                        <ScanlineOverlay />
-                        {/* Panel header */}
-                        <div className="flex items-center justify-between px-5 py-4 border-b border-[#1a2332]">
-                            <div className="flex items-center gap-3">
-                                <div className="w-5 h-5 rounded bg-[#39d353] flex items-center justify-center">
-                                    <svg viewBox="0 0 16 16" className="w-3 h-3 fill-[#010409]">
-                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-                                    </svg>
-                                </div>
-                                <span className="text-[11px] font-mono text-[#8b949e] tracking-[0.2em] uppercase">GITHUB</span>
-                            </div>
-                            <span className="text-[#39d353] font-mono font-bold text-lg">{GITHUB_DATA.commits}</span>
+                <div className="relative z-10 w-full max-w-[1300px]">
+                    {/* Top Header */}
+                    <div className="flex items-center justify-between mb-6">
+                        <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
+                            <h1
+                                className={`text-3xl md:text-4xl font-black tracking-[0.1em] uppercase ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"} transition-all duration-75`}
+                                style={{ textShadow: "0 0 20px rgba(57,211,83,0.3)" }}
+                            >
+                                DEV_<span className="text-[#39d353]">STATS</span>
+                            </h1>
                         </div>
+                        <div className="flex items-center gap-2 text-[10px] font-mono text-[#39d353] tracking-[0.2em]">
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
+                            LIVE
+                        </div>
+                    </div>
 
-                        <div className="p-5 relative z-10">
-                            {/* Profile row */}
-                            <div className="flex items-center justify-between mb-5">
-                                <div>
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <div className="w-6 h-6 rounded-full bg-[#39d353] flex items-center justify-center">
-                                            <svg viewBox="0 0 16 16" className="w-4 h-4 fill-[#010409]">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-                                            </svg>
+                    <div className="border-b border-[#1a2332] mb-8" />
+
+                    {/* Main Grid */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                        {/* ===== LEFT: GITHUB PANEL ===== */}
+                        <div className="border border-[#1a2332] rounded-lg bg-[#0d1117] relative overflow-hidden">
+                            <ScanlineOverlay />
+                            {/* Panel header */}
+                            <div className="flex items-center justify-between px-5 py-4 border-b border-[#1a2332]">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-5 h-5 rounded bg-[#39d353] flex items-center justify-center">
+                                        <svg viewBox="0 0 16 16" className="w-3 h-3 fill-[#010409]">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                                        </svg>
+                                    </div>
+                                    <span className="text-[11px] font-mono text-[#8b949e] tracking-[0.2em] uppercase">GITHUB</span>
+                                </div>
+                                <span className="text-[#39d353] font-mono font-bold text-lg">{GITHUB_DATA.commits}</span>
+                            </div>
+
+                            <div className="p-5 relative z-10">
+                                {/* Profile row */}
+                                <div className="flex items-center justify-between mb-5">
+                                    <div>
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <div className="w-6 h-6 rounded-full bg-[#39d353] flex items-center justify-center">
+                                                <svg viewBox="0 0 16 16" className="w-4 h-4 fill-[#010409]">
+                                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                                                </svg>
+                                            </div>
+                                            <span className="font-mono font-bold text-white text-base">{GITHUB_DATA.username}</span>
                                         </div>
-                                        <span className="font-mono font-bold text-white text-base">{GITHUB_DATA.username}</span>
+                                        <div className="text-[9px] font-mono tracking-[0.25em] text-[#39d353] ml-8">{GITHUB_DATA.label}</div>
                                     </div>
-                                    <div className="text-[9px] font-mono tracking-[0.25em] text-[#39d353] ml-8">{GITHUB_DATA.label}</div>
-                                </div>
-                                <div className="text-right">
-                                    <div className="text-[9px] font-mono text-[#8b949e] tracking-widest uppercase">CONTRIBUTIONS</div>
-                                    <div
-                                        className="text-2xl font-mono font-black text-[#39d353]"
-                                        style={{ textShadow: "0 0 12px rgba(57,211,83,0.5)" }}
-                                    >
-                                        <TypewriterText text={GITHUB_DATA.contributions} speed={80} />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Stat boxes */}
-                            <div className="grid grid-cols-2 gap-2 mb-5">
-                                <StatBox label="REPOSITORIES" value={GITHUB_DATA.repositories} />
-                                <StatBox label="FOLLOWERS" value={GITHUB_DATA.followers} />
-                                <StatBox label="COMMITS" value={GITHUB_DATA.commits} glow />
-                                <StatBox label="SINCE" value={GITHUB_DATA.joined} />
-                            </div>
-
-                            {/* Languages */}
-                            <div className="mb-5">
-                                <div className="text-[9px] font-mono text-[#8b949e] tracking-[0.2em] uppercase mb-2">TOP_LANGUAGES</div>
-                                <div className="flex gap-2 flex-wrap">
-                                    {GITHUB_DATA.topLanguages.map((lang) => (
-                                        <span
-                                            key={lang}
-                                            className="text-[10px] font-mono px-2 py-1 border border-[#39d353] text-[#39d353] rounded hover:bg-[#39d353] hover:text-[#010409] transition-colors duration-200 cursor-default"
+                                    <div className="text-right">
+                                        <div className="text-[9px] font-mono text-[#8b949e] tracking-widest uppercase">CONTRIBUTIONS</div>
+                                        <div
+                                            className="text-2xl font-mono font-black text-[#39d353]"
+                                            style={{ textShadow: "0 0 12px rgba(57,211,83,0.5)" }}
                                         >
-                                            {lang}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Heatmap */}
-                            <div className="border border-[#1a2332] rounded bg-[#010409] p-3 mb-5">
-                                <div className="text-[9px] font-mono text-[#39d353] tracking-[0.2em] mb-2 flex items-center gap-1">
-                                    <span>MATRIX_OUTPUT</span>
-                                    <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
-                                </div>
-                                {/* Month labels */}
-                                <div className="flex gap-[2px] mb-1 ml-0 overflow-hidden">
-                                    {months.map((m, i) => (
-                                        <div key={i} className="text-[8px] font-mono text-[#30363d] w-[40px] shrink-0">{m}</div>
-                                    ))}
-                                </div>
-                                {/* Heatmap grid */}
-                                <div className="flex gap-[3px] overflow-hidden">
-                                    {heatmapData.map((week, wi) => (
-                                        <div key={wi} className="flex flex-col gap-[3px]">
-                                            {week.map((level, di) => (
-                                                <HeatmapCell key={di} level={level} />
-                                            ))}
+                                            <TypewriterText text={GITHUB_DATA.contributions} speed={80} />
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Bottom bar */}
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-2 text-[10px] font-mono text-[#30363d]">
-                                    <span>$</span>
-                                    <span className="text-[#8b949e]">gh --stats _</span>
-                                </div>
-                                <a
-                                    href={`https://github.com/${GITHUB_DATA.username}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group flex items-center gap-2 border border-[#39d353] text-[#39d353] text-[10px] font-mono font-bold px-4 py-2 rounded hover:bg-[#39d353] hover:text-[#010409] transition-all duration-200 tracking-widest uppercase"
-                                >
-                                    VIEW_GH
-                                    <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* ===== RIGHT: SKILLS PANEL ===== */}
-                    <div className="border border-[#1a2332] rounded-lg bg-[#0d1117] relative overflow-hidden">
-                        <ScanlineOverlay />
-                        {/* Panel header */}
-                        <div className="flex items-center justify-between px-5 py-4 border-b border-[#1a2332]">
-                            <div className="flex items-center gap-3">
-                                <div className="w-5 h-5 rounded bg-[#00e5ff] flex items-center justify-center">
-                                    <svg viewBox="0 0 16 16" className="w-3 h-3 fill-[#010409]">
-                                        <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5z" />
-                                    </svg>
-                                </div>
-                                <span className="text-[11px] font-mono text-[#8b949e] tracking-[0.2em] uppercase">SKILLS_MATRIX</span>
-                            </div>
-                            <span className="text-[#00e5ff] font-mono font-bold text-[10px] tracking-widest">#PROFICIENCY</span>
-                        </div>
-
-                        <div className="p-5 relative z-10">
-                            {/* Profile row */}
-                            <div className="flex items-center justify-between mb-5">
-                                <div>
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <div className="w-6 h-6 rounded-full bg-[#161b22] border border-[#39d353] flex items-center justify-center text-[10px] text-[#39d353] font-bold">PS</div>
-                                        <span className="font-mono font-bold text-white text-base">Prayag Sahu</span>
                                     </div>
-                                    <div className="text-[9px] font-mono tracking-[0.25em] text-[#00e5ff] ml-8">FULL STACK ENGINEER</div>
                                 </div>
-                                <div className="text-right">
-                                    <div className="text-[9px] font-mono text-[#8b949e] tracking-widest uppercase">OVERALL</div>
-                                    <div
-                                        className="text-2xl font-mono font-black text-[#00e5ff]"
-                                        style={{ textShadow: "0 0 12px rgba(0,229,255,0.4)" }}
+
+                                {/* Stat boxes */}
+                                <div className="grid grid-cols-2 gap-2 mb-5">
+                                    <StatBox label="REPOSITORIES" value={GITHUB_DATA.repositories} />
+                                    <StatBox label="FOLLOWERS" value={GITHUB_DATA.followers} />
+                                    <StatBox label="COMMITS" value={GITHUB_DATA.commits} glow />
+                                    <StatBox label="SINCE" value={GITHUB_DATA.joined} />
+                                </div>
+
+                                {/* Languages */}
+                                <div className="mb-5">
+                                    <div className="text-[9px] font-mono text-[#8b949e] tracking-[0.2em] uppercase mb-2">TOP_LANGUAGES</div>
+                                    <div className="flex gap-2 flex-wrap">
+                                        {GITHUB_DATA.topLanguages.map((lang) => (
+                                            <span
+                                                key={lang}
+                                                className="text-[10px] font-mono px-2 py-1 border border-[#39d353] text-[#39d353] rounded hover:bg-[#39d353] hover:text-[#010409] transition-colors duration-200 cursor-default"
+                                            >
+                                                {lang}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Heatmap */}
+                                <div className="border border-[#1a2332] rounded bg-[#010409] p-3 mb-5">
+                                    <div className="text-[9px] font-mono text-[#39d353] tracking-[0.2em] mb-2 flex items-center gap-1">
+                                        <span>MATRIX_OUTPUT</span>
+                                        <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
+                                    </div>
+                                    {/* Month labels */}
+                                    <div className="flex gap-[2px] mb-1 ml-0 overflow-hidden">
+                                        {months.map((m, i) => (
+                                            <div key={i} className="text-[8px] font-mono text-[#30363d] w-[40px] shrink-0">{m}</div>
+                                        ))}
+                                    </div>
+                                    {/* Heatmap grid */}
+                                    <div className="flex gap-[3px] overflow-hidden">
+                                        {heatmapData.map((week, wi) => (
+                                            <div key={wi} className="flex flex-col gap-[3px]">
+                                                {week.map((level, di) => (
+                                                    <HeatmapCell key={di} level={level} />
+                                                ))}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Bottom bar */}
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-2 text-[10px] font-mono text-[#30363d]">
+                                        <span>$</span>
+                                        <span className="text-[#8b949e]">gh --stats _</span>
+                                    </div>
+                                    <a
+                                        href={`https://github.com/${GITHUB_DATA.username}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group flex items-center gap-2 border border-[#39d353] text-[#39d353] text-[10px] font-mono font-bold px-4 py-2 rounded hover:bg-[#39d353] hover:text-[#010409] transition-all duration-200 tracking-widest uppercase"
                                     >
-                                        <TypewriterText text="87%" speed={100} />
-                                    </div>
+                                        VIEW_GH
+                                        <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                                    </a>
                                 </div>
                             </div>
+                        </div>
 
-                            {/* Skill Tabs */}
-                            <div className="flex gap-1 mb-4 border border-[#1a2332] rounded p-1 bg-[#010409]">
-                                {skillTabs.map((tab) => (
-                                    <button
-                                        key={tab.key}
-                                        onClick={() => setActiveSkill(tab.key)}
-                                        className={`flex-1 text-[9px] font-mono tracking-[0.15em] uppercase py-2 px-2 rounded transition-all duration-200 ${activeSkill === tab.key
+                        {/* ===== RIGHT: SKILLS PANEL ===== */}
+                        <div className="border border-[#1a2332] rounded-lg bg-[#0d1117] relative overflow-hidden">
+                            <ScanlineOverlay />
+                            {/* Panel header */}
+                            <div className="flex items-center justify-between px-5 py-4 border-b border-[#1a2332]">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-5 h-5 rounded bg-[#00e5ff] flex items-center justify-center">
+                                        <svg viewBox="0 0 16 16" className="w-3 h-3 fill-[#010409]">
+                                            <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5z" />
+                                        </svg>
+                                    </div>
+                                    <span className="text-[11px] font-mono text-[#8b949e] tracking-[0.2em] uppercase">SKILLS_MATRIX</span>
+                                </div>
+                                <span className="text-[#00e5ff] font-mono font-bold text-[10px] tracking-widest">#PROFICIENCY</span>
+                            </div>
+
+                            <div className="p-5 relative z-10">
+                                {/* Profile row */}
+                                <div className="flex items-center justify-between mb-5">
+                                    <div>
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <div className="w-6 h-6 rounded-full bg-[#161b22] border border-[#39d353] flex items-center justify-center text-[10px] text-[#39d353] font-bold">PS</div>
+                                            <span className="font-mono font-bold text-white text-base">Prayag Sahu</span>
+                                        </div>
+                                        <div className="text-[9px] font-mono tracking-[0.25em] text-[#00e5ff] ml-8">FULL STACK ENGINEER</div>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-[9px] font-mono text-[#8b949e] tracking-widest uppercase">OVERALL</div>
+                                        <div
+                                            className="text-2xl font-mono font-black text-[#00e5ff]"
+                                            style={{ textShadow: "0 0 12px rgba(0,229,255,0.4)" }}
+                                        >
+                                            <TypewriterText text="87%" speed={100} />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Skill Tabs */}
+                                <div className="flex gap-1 mb-4 border border-[#1a2332] rounded p-1 bg-[#010409]">
+                                    {skillTabs.map((tab) => (
+                                        <button
+                                            key={tab.key}
+                                            onClick={() => setActiveSkill(tab.key)}
+                                            className={`flex-1 text-[9px] font-mono tracking-[0.15em] uppercase py-2 px-2 rounded transition-all duration-200 ${activeSkill === tab.key
                                                 ? "bg-[#39d353] text-[#010409] font-bold shadow-[0_0_10px_rgba(57,211,83,0.3)]"
                                                 : "text-[#8b949e] hover:text-white hover:bg-[#1a2332]"
-                                            }`}
-                                    >
-                                        {tab.label}
-                                    </button>
-                                ))}
-                            </div>
-
-                            {/* Skills list */}
-                            <div className="mb-5 min-h-[185px]">
-                                <div className="text-[9px] font-mono text-[#39d353] tracking-[0.2em] mb-3 flex items-center gap-1">
-                                    <span>SKILL_LEVELS</span>
-                                    <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
-                                </div>
-                                {activeSkills.map((skill, i) => (
-                                    <SkillBar key={skill.name} name={skill.name} pct={skill.pct} delay={i * 80} />
-                                ))}
-                            </div>
-
-                            {/* Proficiency breakdown */}
-                            <div className="border border-[#1a2332] rounded bg-[#010409] p-3 mb-5">
-                                <div className="text-[9px] font-mono text-[#8b949e] tracking-[0.2em] uppercase mb-3">SKILL_DISTRIBUTION</div>
-                                <div className="grid grid-cols-3 gap-2">
-                                    {[
-                                        { label: "EXPERT", range: "90–100%", count: activeSkills.filter(s => s.pct >= 90).length, color: "#39d353" },
-                                        { label: "ADVANCED", range: "75–89%", count: activeSkills.filter(s => s.pct >= 75 && s.pct < 90).length, color: "#00e5ff" },
-                                        { label: "INTERMEDIATE", range: "<75%", count: activeSkills.filter(s => s.pct < 75).length, color: "#f59e0b" },
-                                    ].map((tier) => (
-                                        <div key={tier.label} className="border border-[#1a2332] rounded p-2 text-center">
-                                            <div className="text-[8px] font-mono tracking-widest" style={{ color: tier.color }}>{tier.label}</div>
-                                            <div className="text-xl font-mono font-bold text-white my-1">{tier.count}</div>
-                                            <div className="text-[8px] font-mono text-[#30363d]">{tier.range}</div>
-                                        </div>
+                                                }`}
+                                        >
+                                            {tab.label}
+                                        </button>
                                     ))}
                                 </div>
-                            </div>
 
-                            {/* Portfolio link */}
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-2 text-[10px] font-mono text-[#30363d]">
-                                    <span>$</span>
-                                    <span className="text-[#8b949e]">skills --list _</span>
+                                {/* Skills list */}
+                                <div className="mb-5 min-h-[185px]">
+                                    <div className="text-[9px] font-mono text-[#39d353] tracking-[0.2em] mb-3 flex items-center gap-1">
+                                        <span>SKILL_LEVELS</span>
+                                        <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
+                                    </div>
+                                    {activeSkills.map((skill, i) => (
+                                        <SkillBar key={skill.name} name={skill.name} pct={skill.pct} delay={i * 80} />
+                                    ))}
                                 </div>
-                                <a
-                                    href="http://prayagsahuportfolio.netlify.app"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group flex items-center gap-2 border border-[#00e5ff] text-[#00e5ff] text-[10px] font-mono font-bold px-4 py-2 rounded hover:bg-[#00e5ff] hover:text-[#010409] transition-all duration-200 tracking-widest uppercase"
-                                >
-                                    PORTFOLIO
-                                    <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
-                                </a>
+
+                                {/* Proficiency breakdown */}
+                                <div className="border border-[#1a2332] rounded bg-[#010409] p-3 mb-5">
+                                    <div className="text-[9px] font-mono text-[#8b949e] tracking-[0.2em] uppercase mb-3">SKILL_DISTRIBUTION</div>
+                                    <div className="grid grid-cols-3 gap-2">
+                                        {[
+                                            { label: "EXPERT", range: "90–100%", count: activeSkills.filter(s => s.pct >= 90).length, color: "#39d353" },
+                                            { label: "ADVANCED", range: "75–89%", count: activeSkills.filter(s => s.pct >= 75 && s.pct < 90).length, color: "#00e5ff" },
+                                            { label: "INTERMEDIATE", range: "<75%", count: activeSkills.filter(s => s.pct < 75).length, color: "#f59e0b" },
+                                        ].map((tier) => (
+                                            <div key={tier.label} className="border border-[#1a2332] rounded p-2 text-center">
+                                                <div className="text-[8px] font-mono tracking-widest" style={{ color: tier.color }}>{tier.label}</div>
+                                                <div className="text-xl font-mono font-bold text-white my-1">{tier.count}</div>
+                                                <div className="text-[8px] font-mono text-[#30363d]">{tier.range}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Portfolio link */}
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-2 text-[10px] font-mono text-[#30363d]">
+                                        <span>$</span>
+                                        <span className="text-[#8b949e]">skills --list _</span>
+                                    </div>
+                                    <a
+                                        href="http://prayagsahuportfolio.netlify.app"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group flex items-center gap-2 border border-[#00e5ff] text-[#00e5ff] text-[10px] font-mono font-bold px-4 py-2 rounded hover:bg-[#00e5ff] hover:text-[#010409] transition-all duration-200 tracking-widest uppercase"
+                                    >
+                                        PORTFOLIO
+                                        <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                {/* Footer */}
-                <div className="mt-6 flex items-center justify-between text-[9px] font-mono text-[#30363d] tracking-widest">
-                    <span>© 2026 PRAYAG_SAHU.DEV</span>
-                    <span className="flex items-center gap-2">
-                        <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
-                        ALL SYSTEMS OPERATIONAL
-                    </span>
+                    {/* Footer */}
+                    <div className="mt-6 flex items-center justify-between text-[9px] font-mono text-[#30363d] tracking-widest">
+                        <span>© 2026 PRAYAG_SAHU.DEV</span>
+                        <span className="flex items-center gap-2">
+                            <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
+                            ALL SYSTEMS OPERATIONAL
+                        </span>
+                    </div>
                 </div>
-            </div>
             </div>
         </ParallaxSection>
     );
