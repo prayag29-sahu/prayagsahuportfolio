@@ -402,6 +402,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, CheckCircle, XCircle, Terminal, Loader } from "lucide-react";
 import emailjs from '@emailjs/browser';
+import ParallaxSection from '@/components/ui/ParallaxSection';
 
 /* ─── EMAILJS CONFIG — apne credentials dalo ─────────────── */
 const EMAILJS_SERVICE_ID = "service_c1lcmym";   // 👈 apna service ID
@@ -640,206 +641,208 @@ export default function Contact() {
     const resetForm = () => setSubmitted(null);
 
     return (
-        <section className="relative py-28 overflow-hidden"
-            style={{ background: "#010409", fontFamily: "'Courier New', Courier, monospace" }}>
+        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
+            <section className="relative py-28 overflow-hidden"
+                style={{ fontFamily: "'Courier New', Courier, monospace" }}>
 
-            {/* BG grid */}
-            <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
-                style={{
-                    backgroundImage: "linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)",
-                    backgroundSize: "40px 40px",
-                }} />
-            {/* Glows */}
-            <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#39d353] opacity-[0.02] rounded-full blur-[180px] pointer-events-none" />
-            <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[160px] pointer-events-none" />
+                {/* BG grid */}
+                <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
+                    style={{
+                        backgroundImage: "linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)",
+                        backgroundSize: "40px 40px",
+                    }} />
+                {/* Glows */}
+                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#39d353] opacity-[0.02] rounded-full blur-[180px] pointer-events-none" />
+                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[160px] pointer-events-none" />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-6">
+                <div className="relative z-10 max-w-7xl mx-auto px-6">
 
-                {/* ── HEADER ── */}
-                <div className="mb-12">
-                    <div className="flex items-center gap-3 mb-6">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
-                        <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">SYSTEM_MODULE / CONTACT</span>
-                    </div>
-                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-                        <ScanlineOverlay />
-                        <CornerAccent color="#39d353" />
-                        <WindowChrome filename="CONTACT_ME.exe" />
-                        <div className="px-8 py-6">
-                            <GlitchTitle glitch={glitch} />
-                            <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider max-w-2xl">
-                                $ init --connection — Open to job opportunities, freelance projects & long-term collaborations.
-                            </p>
-                            {/* Status pills */}
-                            <div className="flex flex-wrap gap-3 mt-5">
-                                {[
-                                    { label: "STATUS", value: "AVAILABLE", color: "#39d353" },
-                                    { label: "RESPONSE", value: "< 24 HRS", color: "#00e5ff" },
-                                    { label: "MODE", value: "OPEN TO WORK", color: "#f59e0b" },
-                                    { label: "LOCATION", value: "JABALPUR, MP", color: "#a855f7" },
-                                ].map(p => (
-                                    <div key={p.label} className="border border-[#1a2332] bg-[#010409] px-3 py-1.5">
-                                        <div className="font-mono text-[7px] tracking-[0.2em]" style={{ color: p.color }}>{p.label}</div>
-                                        <div className="font-mono text-[11px] font-bold text-white">{p.value}</div>
-                                    </div>
-                                ))}
-                            </div>
+                    {/* ── HEADER ── */}
+                    <div className="mb-12">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
+                            <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">SYSTEM_MODULE / CONTACT</span>
                         </div>
-                    </div>
-                </div>
-
-                {/* ── MAIN GRID ── */}
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-6">
-
-                    {/* ── LEFT: Contact info + image + socials ── */}
-                    <div className="flex flex-col gap-4">
-
-                        {/* Contact info panel */}
                         <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
                             <ScanlineOverlay />
                             <CornerAccent color="#39d353" />
-                            <WindowChrome filename="CONTACT_INFO.log" status="ONLINE" statusColor="#39d353" />
-                            <div className="p-5 space-y-2 relative z-10">
-                                <div className="font-mono text-[9px] text-[#39d353] tracking-[0.2em] mb-3">$ cat ./contact/info.txt</div>
-                                <ContactItem icon={<Mail size={15} />} label="EMAIL" value="sahuprayag145@gmail.com" href="mailto:sahuprayag145@gmail.com" color="#39d353" />
-                                <ContactItem icon={<Phone size={15} />} label="PHONE" value="+91 79999 26855" href="tel:+917999926855" color="#00e5ff" />
-                                <ContactItem icon={<MapPin size={15} />} label="LOCATION" value="Jabalpur, Madhya Pradesh, India" color="#f59e0b" />
-                            </div>
-                        </div>
-
-                        {/* Image panel */}
-                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden group flex-1">
-                            <ScanlineOverlay />
-                            <CornerAccent color="#a855f7" />
-                            <WindowChrome filename="CONNECT.png" status="READY" statusColor="#a855f7" />
-                            <div className="p-4 relative z-10">
-                                <div className="relative border border-[#1a2332] overflow-hidden">
-                                    <CornerAccent color="#a855f7" />
-                                    <img src="/images/contact.png" alt="Contact"
-                                        className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
-                                        style={{ filter: "grayscale(15%)" }} />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#010409]/70 via-transparent to-transparent" />
-                                    <div className="absolute bottom-3 left-3">
-                                        <div className="font-mono text-[8px] text-[#8b949e] tracking-widest">LETS_BUILD_SOMETHING</div>
-                                        <div className="font-mono text-[10px] text-[#a855f7]">GREAT_TOGETHER.exe</div>
-                                    </div>
+                            <WindowChrome filename="CONTACT_ME.exe" />
+                            <div className="px-8 py-6">
+                                <GlitchTitle glitch={glitch} />
+                                <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider max-w-2xl">
+                                    $ init --connection — Open to job opportunities, freelance projects & long-term collaborations.
+                                </p>
+                                {/* Status pills */}
+                                <div className="flex flex-wrap gap-3 mt-5">
+                                    {[
+                                        { label: "STATUS", value: "AVAILABLE", color: "#39d353" },
+                                        { label: "RESPONSE", value: "< 24 HRS", color: "#00e5ff" },
+                                        { label: "MODE", value: "OPEN TO WORK", color: "#f59e0b" },
+                                        { label: "LOCATION", value: "JABALPUR, MP", color: "#a855f7" },
+                                    ].map(p => (
+                                        <div key={p.label} className="border border-[#1a2332] bg-[#010409] px-3 py-1.5">
+                                            <div className="font-mono text-[7px] tracking-[0.2em]" style={{ color: p.color }}>{p.label}</div>
+                                            <div className="font-mono text-[11px] font-bold text-white">{p.value}</div>
+                                        </div>
+                                    ))}
                                 </div>
-                            </div>
-                        </div>
-
-                        {/* Social links */}
-                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-                            <ScanlineOverlay />
-                            <CornerAccent color="#00e5ff" />
-                            <WindowChrome filename="SOCIAL_LINKS.sh" status="ACTIVE" statusColor="#00e5ff" />
-                            <div className="p-4 relative z-10">
-                                <div className="font-mono text-[9px] text-[#00e5ff] tracking-[0.2em] mb-3">$ open --social-profiles</div>
-                                <div className="flex gap-2">
-                                    <SocialBtn icon={<Github size={13} />} href="https://github.com/prayag29-sahu" label="GITHUB" color="#39d353" />
-                                    <SocialBtn icon={<Linkedin size={13} />} href="https://linkedin.com" label="LINKEDIN" color="#00e5ff" />
-                                    <SocialBtn icon={<Twitter size={13} />} href="https://twitter.com" label="TWITTER" color="#a855f7" />
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Quick message prompt */}
-                        <div className="border border-[#1a2332] bg-[#010409] p-4 relative overflow-hidden">
-                            <CornerAccent color="#1a2332" />
-                            <div className="font-mono text-[9px] text-[#30363d] space-y-1">
-                                <div><span className="text-[#39d353]">$</span> ping prayag-sahu.dev</div>
-                                <div><span className="text-[#8b949e]">PONG:</span> <span className="text-[#39d353]">I am here! Ready to collaborate.</span></div>
-                                <div><span className="text-[#39d353]">$</span> status --availability<span className="animate-pulse">█</span></div>
-                                <div><span className="text-[#8b949e]">→</span> <span className="text-[#f59e0b]">OPEN_TO_WORK: TRUE</span></div>
                             </div>
                         </div>
                     </div>
 
-                    {/* ── RIGHT: Contact form ── */}
-                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden"
-                        style={{ borderTopWidth: 3, borderTopColor: "#39d353", borderTopStyle: "solid" }}>
+                    {/* ── MAIN GRID ── */}
+                    <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-6">
+
+                        {/* ── LEFT: Contact info + image + socials ── */}
+                        <div className="flex flex-col gap-4">
+
+                            {/* Contact info panel */}
+                            <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+                                <ScanlineOverlay />
+                                <CornerAccent color="#39d353" />
+                                <WindowChrome filename="CONTACT_INFO.log" status="ONLINE" statusColor="#39d353" />
+                                <div className="p-5 space-y-2 relative z-10">
+                                    <div className="font-mono text-[9px] text-[#39d353] tracking-[0.2em] mb-3">$ cat ./contact/info.txt</div>
+                                    <ContactItem icon={<Mail size={15} />} label="EMAIL" value="sahuprayag145@gmail.com" href="mailto:sahuprayag145@gmail.com" color="#39d353" />
+                                    <ContactItem icon={<Phone size={15} />} label="PHONE" value="+91 79999 26855" href="tel:+917999926855" color="#00e5ff" />
+                                    <ContactItem icon={<MapPin size={15} />} label="LOCATION" value="Jabalpur, Madhya Pradesh, India" color="#f59e0b" />
+                                </div>
+                            </div>
+
+                            {/* Image panel */}
+                            <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden group flex-1">
+                                <ScanlineOverlay />
+                                <CornerAccent color="#a855f7" />
+                                <WindowChrome filename="CONNECT.png" status="READY" statusColor="#a855f7" />
+                                <div className="p-4 relative z-10">
+                                    <div className="relative border border-[#1a2332] overflow-hidden">
+                                        <CornerAccent color="#a855f7" />
+                                        <img src="/images/contact.png" alt="Contact"
+                                            className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
+                                            style={{ filter: "grayscale(15%)" }} />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#010409]/70 via-transparent to-transparent" />
+                                        <div className="absolute bottom-3 left-3">
+                                            <div className="font-mono text-[8px] text-[#8b949e] tracking-widest">LETS_BUILD_SOMETHING</div>
+                                            <div className="font-mono text-[10px] text-[#a855f7]">GREAT_TOGETHER.exe</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Social links */}
+                            <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+                                <ScanlineOverlay />
+                                <CornerAccent color="#00e5ff" />
+                                <WindowChrome filename="SOCIAL_LINKS.sh" status="ACTIVE" statusColor="#00e5ff" />
+                                <div className="p-4 relative z-10">
+                                    <div className="font-mono text-[9px] text-[#00e5ff] tracking-[0.2em] mb-3">$ open --social-profiles</div>
+                                    <div className="flex gap-2">
+                                        <SocialBtn icon={<Github size={13} />} href="https://github.com/prayag29-sahu" label="GITHUB" color="#39d353" />
+                                        <SocialBtn icon={<Linkedin size={13} />} href="https://linkedin.com" label="LINKEDIN" color="#00e5ff" />
+                                        <SocialBtn icon={<Twitter size={13} />} href="https://twitter.com" label="TWITTER" color="#a855f7" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Quick message prompt */}
+                            <div className="border border-[#1a2332] bg-[#010409] p-4 relative overflow-hidden">
+                                <CornerAccent color="#1a2332" />
+                                <div className="font-mono text-[9px] text-[#30363d] space-y-1">
+                                    <div><span className="text-[#39d353]">$</span> ping prayag-sahu.dev</div>
+                                    <div><span className="text-[#8b949e]">PONG:</span> <span className="text-[#39d353]">I am here! Ready to collaborate.</span></div>
+                                    <div><span className="text-[#39d353]">$</span> status --availability<span className="animate-pulse">█</span></div>
+                                    <div><span className="text-[#8b949e]">→</span> <span className="text-[#f59e0b]">OPEN_TO_WORK: TRUE</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* ── RIGHT: Contact form ── */}
+                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden"
+                            style={{ borderTopWidth: 3, borderTopColor: "#39d353", borderTopStyle: "solid" }}>
+                            <ScanlineOverlay />
+                            <CornerAccent color="#39d353" />
+                            <WindowChrome filename="SEND_MESSAGE.sh" status="READY" statusColor="#39d353" />
+
+                            <div className="relative">
+                                {/* Status overlay */}
+                                {submitted && <StatusOverlay status={submitted} onReset={resetForm} />}
+
+                                <div className="p-6 relative z-10">
+                                    <div className="flex items-center justify-between mb-5">
+                                        <div>
+                                            <div className="font-mono text-[9px] text-[#39d353] tracking-[0.2em] mb-1">$ compose --new-message</div>
+                                            <h3 className="font-mono font-black text-base text-white tracking-[0.1em] uppercase">SEND_A_MESSAGE</h3>
+                                        </div>
+                                        <div className="flex items-center gap-1.5 border border-[#1a2332] px-3 py-1.5">
+                                            <Terminal size={11} className="text-[#39d353]" />
+                                            <span className="font-mono text-[8px] text-[#39d353] tracking-widest">SECURE_CHANNEL</span>
+                                        </div>
+                                    </div>
+
+                                    <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <TerminalInput label="Full Name" name="name" placeholder="Your full name"
+                                                value={form.name} onChange={handleChange} required accentColor="#39d353" />
+                                            <TerminalInput label="Email Address" name="email" type="email" placeholder="your@email.com"
+                                                value={form.email} onChange={handleChange} required accentColor="#00e5ff" />
+                                        </div>
+
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <TerminalInput label="Phone (Optional)" name="phone" type="tel" placeholder="+91 XXXXX XXXXX"
+                                                value={form.phone} onChange={handleChange} accentColor="#f59e0b" />
+                                            <TerminalInput label="Subject" name="subject" placeholder="Job / Freelance / Collab"
+                                                value={form.subject} onChange={handleChange} required accentColor="#a855f7" />
+                                        </div>
+
+                                        <TerminalTextarea label="Message" name="message"
+                                            value={form.message} onChange={handleChange} required accentColor="#39d353" />
+
+                                        {/* Privacy note */}
+                                        <div className="border border-[#1a2332] bg-[#010409] px-4 py-2.5 flex items-center gap-2">
+                                            <div className="w-1 h-1 rounded-full bg-[#39d353] shrink-0" />
+                                            <p className="font-mono text-[9px] text-[#30363d] tracking-wide">
+                                                Your information is encrypted and will never be shared with third parties.
+                                            </p>
+                                        </div>
+
+                                        {/* Submit button */}
+                                        <button type="submit" disabled={sending}
+                                            className="w-full flex items-center justify-center gap-3 border font-mono text-[11px] tracking-[0.2em] uppercase py-4 transition-all duration-200 relative overflow-hidden group/btn"
+                                            style={{ borderColor: "#39d353", color: sending ? "#30363d" : "#39d353", borderWidth: 1 }}
+                                            onMouseEnter={e => { if (!sending) { e.currentTarget.style.background = "#39d353"; e.currentTarget.style.color = "#010409"; } }}
+                                            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = sending ? "#30363d" : "#39d353"; }}>
+                                            {/* Animated scan on hover */}
+                                            <div className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity pointer-events-none"
+                                                style={{ background: "linear-gradient(90deg, transparent 0%, rgba(57,211,83,0.08) 50%, transparent 100%)" }} />
+                                            {sending
+                                                ? <><Loader size={14} className="animate-spin" /> TRANSMITTING...</>
+                                                : <><Send size={14} /> $ SEND_MESSAGE.exe →</>
+                                            }
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ── FOOTER ── */}
+                    <div className="mt-12 border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
                         <ScanlineOverlay />
-                        <CornerAccent color="#39d353" />
-                        <WindowChrome filename="SEND_MESSAGE.sh" status="READY" statusColor="#39d353" />
-
-                        <div className="relative">
-                            {/* Status overlay */}
-                            {submitted && <StatusOverlay status={submitted} onReset={resetForm} />}
-
-                            <div className="p-6 relative z-10">
-                                <div className="flex items-center justify-between mb-5">
-                                    <div>
-                                        <div className="font-mono text-[9px] text-[#39d353] tracking-[0.2em] mb-1">$ compose --new-message</div>
-                                        <h3 className="font-mono font-black text-base text-white tracking-[0.1em] uppercase">SEND_A_MESSAGE</h3>
-                                    </div>
-                                    <div className="flex items-center gap-1.5 border border-[#1a2332] px-3 py-1.5">
-                                        <Terminal size={11} className="text-[#39d353]" />
-                                        <span className="font-mono text-[8px] text-[#39d353] tracking-widest">SECURE_CHANNEL</span>
-                                    </div>
-                                </div>
-
-                                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <TerminalInput label="Full Name" name="name" placeholder="Your full name"
-                                            value={form.name} onChange={handleChange} required accentColor="#39d353" />
-                                        <TerminalInput label="Email Address" name="email" type="email" placeholder="your@email.com"
-                                            value={form.email} onChange={handleChange} required accentColor="#00e5ff" />
-                                    </div>
-
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <TerminalInput label="Phone (Optional)" name="phone" type="tel" placeholder="+91 XXXXX XXXXX"
-                                            value={form.phone} onChange={handleChange} accentColor="#f59e0b" />
-                                        <TerminalInput label="Subject" name="subject" placeholder="Job / Freelance / Collab"
-                                            value={form.subject} onChange={handleChange} required accentColor="#a855f7" />
-                                    </div>
-
-                                    <TerminalTextarea label="Message" name="message"
-                                        value={form.message} onChange={handleChange} required accentColor="#39d353" />
-
-                                    {/* Privacy note */}
-                                    <div className="border border-[#1a2332] bg-[#010409] px-4 py-2.5 flex items-center gap-2">
-                                        <div className="w-1 h-1 rounded-full bg-[#39d353] shrink-0" />
-                                        <p className="font-mono text-[9px] text-[#30363d] tracking-wide">
-                                            Your information is encrypted and will never be shared with third parties.
-                                        </p>
-                                    </div>
-
-                                    {/* Submit button */}
-                                    <button type="submit" disabled={sending}
-                                        className="w-full flex items-center justify-center gap-3 border font-mono text-[11px] tracking-[0.2em] uppercase py-4 transition-all duration-200 relative overflow-hidden group/btn"
-                                        style={{ borderColor: "#39d353", color: sending ? "#30363d" : "#39d353", borderWidth: 1 }}
-                                        onMouseEnter={e => { if (!sending) { e.currentTarget.style.background = "#39d353"; e.currentTarget.style.color = "#010409"; } }}
-                                        onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = sending ? "#30363d" : "#39d353"; }}>
-                                        {/* Animated scan on hover */}
-                                        <div className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity pointer-events-none"
-                                            style={{ background: "linear-gradient(90deg, transparent 0%, rgba(57,211,83,0.08) 50%, transparent 100%)" }} />
-                                        {sending
-                                            ? <><Loader size={14} className="animate-spin" /> TRANSMITTING...</>
-                                            : <><Send size={14} /> $ SEND_MESSAGE.exe →</>
-                                        }
-                                    </button>
-                                </form>
+                        <div className="px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
+                            <div className="flex items-center gap-3">
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
+                                <span className="font-mono text-[10px] text-[#39d353] tracking-[0.2em]">ALL_SYSTEMS_ONLINE</span>
+                            </div>
+                            <div className="font-mono text-[10px] text-[#30363d] tracking-widest text-center">
+                                © 2026 PRAYAG_SAHU — FULL_STACK_DEVELOPER & FREELANCER
+                            </div>
+                            <div className="font-mono text-[9px] text-[#30363d] tracking-widest">
+                                $ contact --version 1.0.0 _
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* ── FOOTER ── */}
-                <div className="mt-12 border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-                    <ScanlineOverlay />
-                    <div className="px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
-                        <div className="flex items-center gap-3">
-                            <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
-                            <span className="font-mono text-[10px] text-[#39d353] tracking-[0.2em]">ALL_SYSTEMS_ONLINE</span>
-                        </div>
-                        <div className="font-mono text-[10px] text-[#30363d] tracking-widest text-center">
-                            © 2026 PRAYAG_SAHU — FULL_STACK_DEVELOPER & FREELANCER
-                        </div>
-                        <div className="font-mono text-[9px] text-[#30363d] tracking-widest">
-                            $ contact --version 1.0.0 _
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </ParallaxSection>
     );
 }

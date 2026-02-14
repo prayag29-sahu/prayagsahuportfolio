@@ -261,148 +261,425 @@
 
 
 
+// 'use client';
+
+// import { useState } from 'react';
+// import { Menu, X } from 'lucide-react';
+// import Image from 'next/image';
+
+
+// export default function Navbar() {
+//     const [open, setOpen] = useState(false);
+
+//     const closeMenu = () => setOpen(false);
+
+//     return (
+//         <>
+//             {/* DESKTOP NAVBAR */}
+//             <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+//                 <nav
+//                     className="hidden md:flex items-center gap-8 px-5 py-2 rounded-full
+//     bg-black/80 backdrop-blur-xl border border-white/10 shadow-lg"
+//                     style={{
+//                         borderBottom: '2px solid rgba(110, 160, 70, 0.9)',
+//                         boxShadow: '0 6px 14px rgba(124, 255, 0, 0.25)',
+//                     }}
+//                 >
+//                     <Image
+//                         src="/images/hero3.png"
+//                         alt="avatar"
+//                         width={100}
+//                         height={100}
+//                         className="w-12 h-12 rounded-full object-cover"
+//                         style={{
+//                             border: '2px solid rgba(110, 160, 70, 0.9)',
+//                             boxShadow: '0 0 8px rgba(110, 160, 70, 0.6)',
+//                         }}
+//                     />
+
+
+//                     <NavLink label="Home" />
+//                     <NavLink label="About" />
+//                     <NavLink label="Projects" />
+//                     <NavLink label="Blogs" />
+
+//                     <a
+//                         href="#contact"
+//                         className="ml-2 px-5 py-2 rounded-full bg-white text-black
+//             font-medium hover:scale-105 transition"
+//                     >
+//                         Contact
+//                     </a>
+//                 </nav>
+
+//                 {/* MOBILE BAR */}
+//                 <div className="md:hidden w-[80vw] max-w-md mx-auto">
+//                     <div
+//                         className="flex items-center gap-3 px-6 py-2 rounded-full
+//             bg-black/80 backdrop-blur-xl border border-white/10"
+//                     >
+//                         <img
+//                             src="/images/2.png"
+//                             alt="avatar"
+//                             className="w-9 h-9 rounded-full"
+//                         />
+
+//                         <span className="text-white text-lg whitespace-nowrap">
+//                             Available for work
+//                         </span>
+
+//                         <span className="status-dot" />
+
+//                         <button
+//                             onClick={() => setOpen(!open)}
+//                             className="ml-auto w-10 h-10 rounded-full bg-lime-300
+//               flex items-center justify-center text-black transition"
+//                         >
+//                             {open ? <X size={18} /> : <Menu size={18} />}
+//                         </button>
+//                     </div>
+
+//                     {/* INLINE DROPDOWN */}
+//                     <div
+//                         className={`mt-3 overflow-hidden rounded-3xl
+//             bg-black/90 backdrop-blur-xl border border-white/10
+//             transition-all duration-500 ease-in-out
+//             ${open ? 'max-h-[420px] opacity-100' : 'max-h-0 opacity-0'}`}
+//                     >
+//                         <ul className="flex flex-col gap-6 text-center text-lg text-white py-6">
+//                             <MobileLink label="Home" onClick={closeMenu} />
+//                             <MobileLink label="About" onClick={closeMenu} />
+//                             <MobileLink label="Projects" onClick={closeMenu} />
+//                             <MobileLink label="Blogs" onClick={closeMenu} />
+//                         </ul>
+
+//                         <a
+//                             href="#contact"
+//                             onClick={closeMenu}
+//                             className="block mx-6 mb-6 py-3 rounded-full bg-lime-300
+//               text-black text-center font-medium"
+//                         >
+//                             Contact
+//                         </a>
+//                     </div>
+//                 </div>
+//             </header>
+//         </>
+//     );
+// }
+
+// /* ================= SUB COMPONENTS ================= */
+
+// function NavLink({ label }) {
+//     return (
+//         <a
+//             href={`#${label.toLowerCase()}`}
+//             className="group text-white/80 hover:text-lime-300 transition font-medium"
+//         >
+//             <span className="text-rotate">
+//                 <span className="text-rotate-inner">
+//                     <span>{label}</span>
+//                     <span>{label}</span>
+//                 </span>
+//             </span>
+//         </a>
+//     );
+// }
+
+// function MobileLink({ label, onClick }) {
+//     return (
+//         <a
+//             href={`#${label.toLowerCase()}`}
+//             onClick={onClick}
+//             className="group hover:text-lime-300 transition"
+//         >
+//             <span className="text-rotate">
+//                 <span className="text-rotate-inner">
+//                     <span>{label}</span>
+//                     <span>{label}</span>
+//                 </span>
+//             </span>
+//         </a>
+//     );
+// }
+
+
+
+
+
 'use client';
 
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Menu, X, Terminal, Zap } from 'lucide-react';
 import Image from 'next/image';
 
+const navLinks = [
+    { label: "HOME", href: "#home" },
+    { label: "ABOUT", href: "#about" },
+    { label: "PROJECTS", href: "#projects" },
+    { label: "EDUCATION", href: "#education" },
+    { label: "ACHIEVEMENTS", href: "#achievements" },
+    { label: "BLOGS", href: "#blogs" },
+];
 
+/* ─── Blinking cursor ────────────────────────────────────── */
+function Cursor() {
+    return <span className="inline-block w-[6px] h-[11px] bg-[#39d353] animate-pulse ml-0.5 align-middle" />;
+}
+
+/* ─── Active section tracker ─────────────────────────────── */
+function useActiveSection() {
+    const [active, setActive] = useState("home");
+    useEffect(() => {
+        const ids = navLinks.map(l => l.href.replace("#", ""));
+        const obs = new IntersectionObserver(
+            entries => {
+                entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+            },
+            { threshold: 0.3 }
+        );
+        ids.forEach(id => { const el = document.getElementById(id); if (el) obs.observe(el); });
+        return () => obs.disconnect();
+    }, []);
+    return active;
+}
+
+/* ─── Desktop NavLink ────────────────────────────────────── */
+function NavLink({ label, href, active }) {
+    const isActive = active === href.replace("#", "");
+    return (
+        <a href={href}
+            className="group relative font-mono text-[10px] tracking-[0.2em] uppercase transition-all duration-200"
+            style={{ color: isActive ? "#39d353" : "#8b949e" }}
+            onMouseEnter={e => { if (!isActive) e.currentTarget.style.color = "#c9d1d9"; }}
+            onMouseLeave={e => { if (!isActive) e.currentTarget.style.color = "#8b949e"; }}
+        >
+            {isActive && <span className="absolute -left-3 top-1/2 -translate-y-1/2 font-mono text-[#39d353] text-[10px]">▸</span>}
+            {label}
+            {/* underline */}
+            <div className="absolute -bottom-1 left-0 h-[1px] w-0 group-hover:w-full transition-all duration-300"
+                style={{ background: isActive ? "#39d353" : "#30363d" }} />
+        </a>
+    );
+}
+
+/* ─── Mobile NavLink ─────────────────────────────────────── */
+function MobileLink({ label, href, active, onClick }) {
+    const isActive = active === href.replace("#", "");
+    return (
+        <a href={href} onClick={onClick}
+            className="flex items-center gap-3 px-5 py-2.5 border-b border-[#1a2332] group transition-all duration-200"
+            style={{ borderLeftWidth: 2, borderLeftColor: isActive ? "#39d353" : "transparent" }}>
+            <span className="font-mono text-[9px]" style={{ color: isActive ? "#39d353" : "#30363d" }}>
+                {isActive ? "▸" : "$"}
+            </span>
+            <span className="font-mono text-[11px] tracking-[0.2em] uppercase transition-colors duration-200"
+                style={{ color: isActive ? "#39d353" : "#8b949e" }}>
+                {label}
+            </span>
+            {isActive && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />}
+        </a>
+    );
+}
+
+/* ─── Main Navbar ────────────────────────────────────────── */
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const [glitch, setGlitch] = useState(false);
+    const active = useActiveSection();
+
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 20);
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
+    useEffect(() => {
+        const t = setInterval(() => { setGlitch(true); setTimeout(() => setGlitch(false), 100); }, 8000);
+        return () => clearInterval(t);
+    }, []);
 
     const closeMenu = () => setOpen(false);
 
     return (
         <>
-            {/* DESKTOP NAVBAR */}
-            <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
-                <nav
-                    className="hidden md:flex items-center gap-8 px-5 py-2 rounded-full
-    bg-black/80 backdrop-blur-xl border border-white/10 shadow-lg"
-                    style={{
-                        borderBottom: '2px solid rgba(110, 160, 70, 0.9)',
-                        boxShadow: '0 6px 14px rgba(124, 255, 0, 0.25)',
-                    }}
-                >
-                    <Image
-                        src="/images/hero3.png"
-                        alt="avatar"
-                        width={100}
-                        height={100}
-                        className="w-12 h-12 rounded-full object-cover"
-                        style={{
-                            border: '2px solid rgba(110, 160, 70, 0.9)',
-                            boxShadow: '0 0 8px rgba(110, 160, 70, 0.6)',
-                        }}
-                    />
+            {/* ─── DESKTOP NAVBAR ─────────────────────────────────── */}
+            <header
+                className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 hidden md:block"
+                style={{
+                    background: scrolled ? "rgba(1,4,9,0.97)" : "rgba(1,4,9,0.85)",
+                    backdropFilter: "blur(16px)",
+                    borderBottom: `1px solid ${scrolled ? "#1a2332" : "transparent"}`,
+                    boxShadow: scrolled ? "0 0 30px rgba(57,211,83,0.04)" : "none",
+                    fontFamily: "'Courier New', Courier, monospace",
+                }}
+            >
+                {/* Thin green top bar */}
+                <div className="h-[2px] w-full"
+                    style={{ background: "linear-gradient(to right, transparent, #39d353, transparent)" }} />
 
+                <div className="max-w-7xl mx-auto px-6">
+                    <nav className="flex items-center justify-between h-14">
 
-                    <NavLink label="Home" />
-                    <NavLink label="About" />
-                    <NavLink label="Projects" />
-                    <NavLink label="Blogs" />
+                        {/* LEFT: Logo + avatar */}
+                        <div className="flex items-center gap-3">
+                            {/* Avatar with green ring */}
+                            <div className="relative w-8 h-8 shrink-0">
+                                <div className="absolute inset-0 border-2 border-[#39d353] rounded-full"
+                                    style={{ boxShadow: "0 0 10px rgba(57,211,83,0.4)" }} />
+                                <Image src="/images/hero3.png" alt="Prayag" width={32} height={32}
+                                    className="w-full h-full rounded-full object-cover" />
+                            </div>
 
-                    <a
-                        href="#contact"
-                        className="ml-2 px-5 py-2 rounded-full bg-white text-black
-            font-medium hover:scale-105 transition"
-                    >
-                        Contact
-                    </a>
-                </nav>
+                            {/* Logo text */}
+                            <div>
+                                <div className={`font-mono font-black text-[13px] tracking-[0.1em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[1px]" : "text-white"}`}
+                                    style={{ textShadow: "0 0 12px rgba(57,211,83,0.3)" }}>
+                                    PRAYAG_<span className="text-[#39d353]">SAHU</span>
+                                    <Cursor />
+                                </div>
+                                <div className="font-mono text-[7px] text-[#30363d] tracking-[0.25em] uppercase">
+                                    FULL_STACK_DEVELOPER
+                                </div>
+                            </div>
+                        </div>
 
-                {/* MOBILE BAR */}
-                <div className="md:hidden w-[80vw] max-w-md mx-auto">
-                    <div
-                        className="flex items-center gap-3 px-6 py-2 rounded-full
-            bg-black/80 backdrop-blur-xl border border-white/10"
-                    >
-                        <img
-                            src="/images/2.png"
-                            alt="avatar"
-                            className="w-9 h-9 rounded-full"
-                        />
+                        {/* CENTER: Nav links inside terminal-style container */}
+                        <div className="flex items-center">
+                            {/* Terminal border wrapper */}
+                            <div className="border border-[#1a2332] bg-[#010409]/60 px-6 py-2 flex items-center gap-6 relative">
+                                {/* Corner accents */}
+                                <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#39d353]" />
+                                <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#39d353]" />
+                                <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#39d353]" />
+                                <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#39d353]" />
 
-                        <span className="text-white text-lg whitespace-nowrap">
-                            Available for work
-                        </span>
+                                {navLinks.map(l => (
+                                    <NavLink key={l.label} label={l.label} href={l.href} active={active} />
+                                ))}
+                            </div>
+                        </div>
 
-                        <span className="status-dot" />
+                        {/* RIGHT: Status + CTA */}
+                        <div className="flex items-center gap-3">
+                            {/* Live status */}
+                            <div className="flex items-center gap-1.5 border border-[#1a2332] px-2.5 py-1">
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
+                                <span className="font-mono text-[8px] text-[#39d353] tracking-[0.2em]">AVAILABLE</span>
+                            </div>
 
-                        <button
-                            onClick={() => setOpen(!open)}
-                            className="ml-auto w-10 h-10 rounded-full bg-lime-300
-              flex items-center justify-center text-black transition"
-                        >
-                            {open ? <X size={18} /> : <Menu size={18} />}
-                        </button>
+                            {/* Contact button */}
+                            <a href="#contact"
+                                className="group flex items-center gap-2 border border-[#39d353] font-mono text-[9px] tracking-[0.2em] uppercase px-4 py-2 text-[#39d353] transition-all duration-200 hover:bg-[#39d353] hover:text-[#010409] relative overflow-hidden">
+                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                                    style={{ background: "linear-gradient(90deg,transparent,rgba(57,211,83,0.1),transparent)" }} />
+                                <Terminal size={11} />
+                                CONTACT →
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+
+                {/* Scan line bottom */}
+                <div className="h-[1px]"
+                    style={{ background: "linear-gradient(to right, transparent, #1a2332, transparent)" }} />
+            </header>
+
+            {/* ─── MOBILE NAVBAR ──────────────────────────────────── */}
+            <header
+                className="fixed top-0 left-0 right-0 z-50 md:hidden"
+                style={{
+                    background: "rgba(1,4,9,0.97)",
+                    backdropFilter: "blur(16px)",
+                    borderBottom: "1px solid #1a2332",
+                    fontFamily: "'Courier New', Courier, monospace",
+                }}
+            >
+                {/* Green top bar */}
+                <div className="h-[2px]"
+                    style={{ background: "linear-gradient(to right, transparent, #39d353, transparent)" }} />
+
+                {/* Mobile top row */}
+                <div className="flex items-center justify-between px-4 py-3">
+
+                    {/* Left: avatar + name */}
+                    <div className="flex items-center gap-2">
+                        <div className="relative w-7 h-7 shrink-0">
+                            <div className="absolute inset-0 border border-[#39d353] rounded-full"
+                                style={{ boxShadow: "0 0 8px rgba(57,211,83,0.35)" }} />
+                            <Image src="/images/hero3.png" alt="Prayag" width={28} height={28}
+                                className="w-full h-full rounded-full object-cover" />
+                        </div>
+                        <div>
+                            <div className="font-mono font-black text-[11px] text-white tracking-widest">
+                                PRAYAG_<span className="text-[#39d353]">SAHU</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                                <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
+                                <span className="font-mono text-[7px] text-[#39d353] tracking-[0.2em]">AVAILABLE</span>
+                            </div>
+                        </div>
                     </div>
 
-                    {/* INLINE DROPDOWN */}
-                    <div
-                        className={`mt-3 overflow-hidden rounded-3xl
-            bg-black/90 backdrop-blur-xl border border-white/10
-            transition-all duration-500 ease-in-out
-            ${open ? 'max-h-[420px] opacity-100' : 'max-h-0 opacity-0'}`}
-                    >
-                        <ul className="flex flex-col gap-6 text-center text-lg text-white py-6">
-                            <MobileLink label="Home" onClick={closeMenu} />
-                            <MobileLink label="About" onClick={closeMenu} />
-                            <MobileLink label="Projects" onClick={closeMenu} />
-                            <MobileLink label="Blogs" onClick={closeMenu} />
-                        </ul>
+                    {/* Right: menu toggle */}
+                    <button onClick={() => setOpen(!open)}
+                        className="border border-[#1a2332] p-2 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200 relative"
+                        style={{ borderColor: open ? "#39d353" : "#1a2332", color: open ? "#39d353" : "#8b949e" }}>
+                        {/* Corner dots */}
+                        <div className="absolute top-0 left-0 w-1.5 h-1.5 border-t border-l" style={{ borderColor: open ? "#39d353" : "#30363d" }} />
+                        <div className="absolute top-0 right-0 w-1.5 h-1.5 border-t border-r" style={{ borderColor: open ? "#39d353" : "#30363d" }} />
+                        <div className="absolute bottom-0 left-0 w-1.5 h-1.5 border-b border-l" style={{ borderColor: open ? "#39d353" : "#30363d" }} />
+                        <div className="absolute bottom-0 right-0 w-1.5 h-1.5 border-b border-r" style={{ borderColor: open ? "#39d353" : "#30363d" }} />
+                        {open ? <X size={16} /> : <Menu size={16} />}
+                    </button>
+                </div>
 
-                        <a
-                            href="#contact"
-                            onClick={closeMenu}
-                            className="block mx-6 mb-6 py-3 rounded-full bg-lime-300
-              text-black text-center font-medium"
-                        >
-                            Contact
-                        </a>
+                {/* Mobile dropdown */}
+                <div className="overflow-hidden transition-all duration-400 ease-in-out"
+                    style={{ maxHeight: open ? "420px" : "0", opacity: open ? 1 : 0 }}>
+
+                    <div className="border-t border-[#1a2332] bg-[#0d1117]">
+                        {/* Terminal header */}
+                        <div className="flex items-center gap-2 px-5 py-2 border-b border-[#1a2332]">
+                            <div className="flex gap-1">
+                                <span className="w-2 h-2 rounded-full bg-[#ff5f56]" />
+                                <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
+                                <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                            </div>
+                            <span className="font-mono text-[8px] text-[#8b949e] tracking-[0.2em]">NAVIGATION.sh</span>
+                            <div className="ml-auto flex items-center gap-1">
+                                <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
+                                <span className="font-mono text-[7px] text-[#39d353] tracking-widest">OPEN</span>
+                            </div>
+                        </div>
+
+                        {/* Nav links */}
+                        <div className="flex flex-col">
+                            {navLinks.map(l => (
+                                <MobileLink key={l.label} label={l.label} href={l.href} active={active} onClick={closeMenu} />
+                            ))}
+                        </div>
+
+                        {/* Contact CTA */}
+                        <div className="p-4 border-t border-[#1a2332]">
+                            <a href="#contact" onClick={closeMenu}
+                                className="flex items-center justify-center gap-2 w-full border border-[#39d353] font-mono text-[10px] tracking-[0.2em] uppercase py-3 text-[#39d353] hover:bg-[#39d353] hover:text-[#010409] transition-all duration-200">
+                                <Terminal size={12} />
+                                $ CONTACT_ME →
+                            </a>
+                        </div>
+
+                        {/* Terminal footer */}
+                        <div className="px-5 pb-3 font-mono text-[8px] text-[#30363d] tracking-widest">
+                            $ nav --open _ <span className="animate-pulse text-[#39d353]">█</span>
+                        </div>
                     </div>
                 </div>
             </header>
+
+            {/* Spacer so content doesn't hide under fixed navbar */}
+            <div className="h-14" />
         </>
     );
 }
-
-/* ================= SUB COMPONENTS ================= */
-
-function NavLink({ label }) {
-    return (
-        <a
-            href={`#${label.toLowerCase()}`}
-            className="group text-white/80 hover:text-lime-300 transition font-medium"
-        >
-            <span className="text-rotate">
-                <span className="text-rotate-inner">
-                    <span>{label}</span>
-                    <span>{label}</span>
-                </span>
-            </span>
-        </a>
-    );
-}
-
-function MobileLink({ label, onClick }) {
-    return (
-        <a
-            href={`#${label.toLowerCase()}`}
-            onClick={onClick}
-            className="group hover:text-lime-300 transition"
-        >
-            <span className="text-rotate">
-                <span className="text-rotate-inner">
-                    <span>{label}</span>
-                    <span>{label}</span>
-                </span>
-            </span>
-        </a>
-    );
-}
-
-
-
-
