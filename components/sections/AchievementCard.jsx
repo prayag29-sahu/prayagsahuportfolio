@@ -658,7 +658,8 @@ export default function AchievementsPage() {
 
     return (
         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-        <section className="relative py-28 overflow-hidden"
+            <section className="relative py-28 overflow-hidden"
+                id='achievements'
             style={{ fontFamily: "'Courier New', Courier, monospace" }}>
 
             {/* BG grid */}

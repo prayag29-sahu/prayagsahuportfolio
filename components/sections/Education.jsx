@@ -1793,7 +1793,8 @@ export default function Education() {
     return (
         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
         <section
-            className="relative py-28 pt-0 overflow-hidden"
+                className="relative py-28 pt-0 overflow-hidden"
+                id='education'
             style={{  fontFamily: "'Courier New', Courier, monospace" }}
         >
             {/* Background grid */}

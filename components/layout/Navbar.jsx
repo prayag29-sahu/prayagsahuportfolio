@@ -416,10 +416,11 @@ import Image from 'next/image';
 const navLinks = [
     { label: "HOME", href: "#home" },
     { label: "ABOUT", href: "#about" },
-    { label: "PROJECTS", href: "#projects" },
     { label: "EDUCATION", href: "#education" },
+    { label: "PROJECTS", href: "#projects" },
     { label: "ACHIEVEMENTS", href: "#achievements" },
     { label: "BLOGS", href: "#blogs" },
+    { label: "CONTACT", href: "#contact" },
 ];
 
 /* ─── Blinking cursor ────────────────────────────────────── */
@@ -449,12 +450,12 @@ function NavLink({ label, href, active }) {
     const isActive = active === href.replace("#", "");
     return (
         <a href={href}
-            className="group relative font-mono text-[10px] tracking-[0.2em] uppercase transition-all duration-200"
+            className="group relative font-mono text-[12px] tracking-[0.2em] uppercase transition-all duration-200"
             style={{ color: isActive ? "#39d353" : "#8b949e" }}
             onMouseEnter={e => { if (!isActive) e.currentTarget.style.color = "#c9d1d9"; }}
             onMouseLeave={e => { if (!isActive) e.currentTarget.style.color = "#8b949e"; }}
         >
-            {isActive && <span className="absolute -left-3 top-1/2 -translate-y-1/2 font-mono text-[#39d353] text-[10px]">▸</span>}
+            {isActive && <span className="absolute -left-3 top-1/2 -translate-y-1/2 font-mono text-[#39d353] text-[12px]">▸</span>}
             {label}
             {/* underline */}
             <div className="absolute -bottom-1 left-0 h-[1px] w-0 group-hover:w-full transition-all duration-300"
@@ -470,7 +471,7 @@ function MobileLink({ label, href, active, onClick }) {
         <a href={href} onClick={onClick}
             className="flex items-center gap-3 px-5 py-2.5 border-b border-[#1a2332] group transition-all duration-200"
             style={{ borderLeftWidth: 2, borderLeftColor: isActive ? "#39d353" : "transparent" }}>
-            <span className="font-mono text-[9px]" style={{ color: isActive ? "#39d353" : "#30363d" }}>
+            <span className="font-mono text-[11px]" style={{ color: isActive ? "#39d353" : "#30363d" }}>
                 {isActive ? "▸" : "$"}
             </span>
             <span className="font-mono text-[11px] tracking-[0.2em] uppercase transition-colors duration-200"
@@ -525,21 +526,30 @@ export default function Navbar() {
                         {/* LEFT: Logo + avatar */}
                         <div className="flex items-center gap-3">
                             {/* Avatar with green ring */}
-                            <div className="relative w-8 h-8 shrink-0">
-                                <div className="absolute inset-0 border-2 border-[#39d353] rounded-full"
-                                    style={{ boxShadow: "0 0 10px rgba(57,211,83,0.4)" }} />
-                                <Image src="/images/hero3.png" alt="Prayag" width={32} height={32}
-                                    className="w-full h-full rounded-full object-cover" />
+                            <div className="relative w-9 h-9 shrink-0">
+                                <div
+                                    className="absolute inset-0 rounded-full border-2 border-[#39d353]"
+                                    style={{ boxShadow: "0 0 12px rgba(57,211,83,0.4)" }}
+                                />
+                                <Image
+                                    src="/images/hero3.png"
+                                    alt="Prayag Sahu"
+                                    fill
+                                    sizes="36px"
+                                    priority
+                                    className="rounded-full object-cover"
+                                />
                             </div>
+
 
                             {/* Logo text */}
                             <div>
-                                <div className={`font-mono font-black text-[13px] tracking-[0.1em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[1px]" : "text-white"}`}
+                                <div className={`font-mono font-black text-[15px] md:text-[16px] tracking-[0.1em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[1px]" : "text-white"}`}
                                     style={{ textShadow: "0 0 12px rgba(57,211,83,0.3)" }}>
                                     PRAYAG_<span className="text-[#39d353]">SAHU</span>
                                     <Cursor />
                                 </div>
-                                <div className="font-mono text-[7px] text-[#30363d] tracking-[0.25em] uppercase">
+                                <div className="font-mono text-[11px] text-[#39d353] tracking-[0.25em] uppercase">
                                     FULL_STACK_DEVELOPER
                                 </div>
                             </div>
@@ -566,12 +576,12 @@ export default function Navbar() {
                             {/* Live status */}
                             <div className="flex items-center gap-1.5 border border-[#1a2332] px-2.5 py-1">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
-                                <span className="font-mono text-[8px] text-[#39d353] tracking-[0.2em]">AVAILABLE</span>
+                                <span className="font-mono text-[10px] text-[#39d353] tracking-[0.2em]">AVAILABLE</span>
                             </div>
 
                             {/* Contact button */}
                             <a href="#contact"
-                                className="group flex items-center gap-2 border border-[#39d353] font-mono text-[9px] tracking-[0.2em] uppercase px-4 py-2 text-[#39d353] transition-all duration-200 hover:bg-[#39d353] hover:text-[#010409] relative overflow-hidden">
+                                className="group flex items-center gap-2 border border-[#39d353] font-mono text-[11px] tracking-[0.2em] uppercase px-4 py-2 text-[#39d353] transition-all duration-200 hover:bg-[#39d353] hover:text-[#010409] relative overflow-hidden">
                                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
                                     style={{ background: "linear-gradient(90deg,transparent,rgba(57,211,83,0.1),transparent)" }} />
                                 <Terminal size={11} />
@@ -617,7 +627,7 @@ export default function Navbar() {
                             </div>
                             <div className="flex items-center gap-1">
                                 <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
-                                <span className="font-mono text-[7px] text-[#39d353] tracking-[0.2em]">AVAILABLE</span>
+                                <span className="font-mono text-[11px] text-[#39d353] tracking-[0.2em]">AVAILABLE</span>
                             </div>
                         </div>
                     </div>
@@ -647,10 +657,10 @@ export default function Navbar() {
                                 <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
                                 <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
                             </div>
-                            <span className="font-mono text-[8px] text-[#8b949e] tracking-[0.2em]">NAVIGATION.sh</span>
+                            <span className="font-mono text-[10px] text-[#8b949e] tracking-[0.2em]">NAVIGATION.sh</span>
                             <div className="ml-auto flex items-center gap-1">
                                 <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
-                                <span className="font-mono text-[7px] text-[#39d353] tracking-widest">OPEN</span>
+                                <span className="font-mono text-[11px] text-[#39d353] tracking-widest">OPEN</span>
                             </div>
                         </div>
 
@@ -664,14 +674,14 @@ export default function Navbar() {
                         {/* Contact CTA */}
                         <div className="p-4 border-t border-[#1a2332]">
                             <a href="#contact" onClick={closeMenu}
-                                className="flex items-center justify-center gap-2 w-full border border-[#39d353] font-mono text-[10px] tracking-[0.2em] uppercase py-3 text-[#39d353] hover:bg-[#39d353] hover:text-[#010409] transition-all duration-200">
+                                className="flex items-center justify-center gap-2 w-full border border-[#39d353] font-mono text-[12px] tracking-[0.2em] uppercase py-3 text-[#39d353] hover:bg-[#39d353] hover:text-[#010409] transition-all duration-200">
                                 <Terminal size={12} />
                                 $ CONTACT_ME →
                             </a>
                         </div>
 
                         {/* Terminal footer */}
-                        <div className="px-5 pb-3 font-mono text-[8px] text-[#30363d] tracking-widest">
+                        <div className="px-5 pb-3 font-mono text-[10px] text-[#30363d] tracking-widest">
                             $ nav --open _ <span className="animate-pulse text-[#39d353]">█</span>
                         </div>
                     </div>

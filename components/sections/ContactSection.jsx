@@ -643,6 +643,7 @@ export default function Contact() {
     return (
         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
             <section className="relative py-28 overflow-hidden"
+                id='contact'
                 style={{ fontFamily: "'Courier New', Courier, monospace" }}>
 
                 {/* BG grid */}

@@ -848,7 +848,8 @@ export default function ProjectsPage() {
 
     return (
           <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-        <section className="relative min-h-screen py-28 overflow-hidden"
+            <section className="relative  min-h-screen py-28 overflow-hidden"
+                id='projects'
             style={{  fontFamily: "'Courier New', Courier, monospace" }}>
             <CursorGlow />
 

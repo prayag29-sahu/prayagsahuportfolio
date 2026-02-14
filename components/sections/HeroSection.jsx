@@ -537,8 +537,18 @@ import {
     useMotionValue, useVelocity, useAnimationFrame,
 } from 'motion/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJava, faNodeJs, faReact, faFigma,  } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faCss3Alt, faGitAlt } from '@fortawesome/free-solid-svg-icons';
+
+import {
+    faJava,
+    faNodeJs,
+    faReact,
+    faFigma,
+    faCss3Alt,
+    faGitAlt
+} from '@fortawesome/free-brands-svg-icons';
+
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
+
 import {
     RiLinkedinLine, RiGithubLine, RiTwitterXLine, RiPhoneLine, RiAddLine,
 } from 'react-icons/ri';
@@ -856,238 +866,220 @@ export default function HeroSection() {
     }, [charIdx, deleting, roleIdx]);
 
     return (
-            <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-        <section
-            id="home"
-            className="relative min-h-screen flex flex-col justify-center overflow-hidden"
-            style={{ fontFamily: "'Courier New', Courier, monospace" }}
-        >
-            {/* BG grid */}
-            <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
-                style={{
-                    backgroundImage: "linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)",
-                    backgroundSize: "40px 40px",
-                }} />
-            {/* Ambient glows */}
-            <div className="absolute top-1/3 left-0 w-[700px] h-[700px] bg-[#39d353] opacity-[0.03] rounded-full blur-[200px] pointer-events-none" />
-            <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[#00e5ff] opacity-[0.025] rounded-full blur-[180px] pointer-events-none" />
+        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
+            <section
+                id="home"
+                className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+                style={{ fontFamily: "'Courier New', Courier, monospace" }}
+            >
+                {/* BG grid */}
+                <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
+                    style={{
+                        backgroundImage: "linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)",
+                        backgroundSize: "40px 40px",
+                    }} />
+                {/* Ambient glows */}
+                <div className="absolute top-1/3 left-0 w-[700px] h-[700px] bg-[#39d353] opacity-[0.03] rounded-full blur-[200px] pointer-events-none" />
+                <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[#00e5ff] opacity-[0.025] rounded-full blur-[180px] pointer-events-none" />
 
-            {/* Top green line */}
-            <div className="absolute top-0 left-0 right-0 h-[2px]"
-                style={{ background: "linear-gradient(to right, transparent, #39d353, transparent)" }} />
+                {/* Top green line */}
+                <div className="absolute top-0 left-0 right-0 h-[2px]"
+                    style={{ background: "linear-gradient(to right, transparent, #39d353, transparent)" }} />
 
-            {/* Module tag */}
-            <div className="absolute top-20 left-6 flex items-center gap-2 z-10">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
-                <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">SYSTEM_MODULE / HERO</span>
-            </div>
+                {/* Module tag */}
+                <div className="absolute top-20 left-6 flex items-center gap-2 z-10">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
+                    <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">SYSTEM_MODULE / HERO</span>
+                </div>
 
-            {/* ── MAIN GRID ── */}
-            <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-24 pb-16">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+                {/* ── MAIN GRID ── */}
+                <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-24 pb-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
-                    {/* ═══ LEFT PANEL ═══ */}
-                    <div className="flex flex-col gap-6">
+                        {/* ═══ LEFT PANEL ═══ */}
+                        <div className="flex flex-col gap-6">
 
-                        {/* Header terminal box */}
-                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden"
-                            style={{ borderLeftWidth: 3, borderLeftColor: "#39d353" }}>
-                            <ScanlineOverlay />
-                            <CornerAccent color="#39d353" />
-                            <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#1a2332]">
-                                <div className="flex gap-1.5">
-                                    <span className="w-2 h-2 rounded-full bg-[#ff5f56]" />
-                                    <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
-                                    <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                            {/* Header terminal box */}
+                            <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden"
+                                style={{ borderLeftWidth: 3, borderLeftColor: "#39d353" }}>
+                                <ScanlineOverlay />
+                                <CornerAccent color="#39d353" />
+                                <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#1a2332]">
+                                    <div className="flex gap-1.5">
+                                        <span className="w-2 h-2 rounded-full bg-[#ff5f56]" />
+                                        <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
+                                        <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                                    </div>
+                                    <span className="font-mono text-[9px] tracking-[0.2em] text-[#8b949e]">INTRO.txt</span>
                                 </div>
-                                <span className="font-mono text-[9px] tracking-[0.2em] text-[#8b949e]">INTRO.txt</span>
-                            </div>
-                            <div className="p-5 relative z-10">
-                                <div className="font-mono text-[10px] text-[#39d353] tracking-[0.2em] mb-3">$ whoami</div>
-                                <div className="font-mono text-[12px] text-[#8b949e] space-y-1">
-                                    <div><span className="text-[#30363d]">→</span> <span className="text-white">Prayag Sahu</span></div>
-                                    <div><span className="text-[#30363d]">→</span> <span className="text-[#39d353]">Full Stack Dev & Freelancer</span></div>
-                                    <div><span className="text-[#30363d]">→</span> Jabalpur, MP, India</div>
+                                <div className="p-5 relative z-10">
+                                    <div className="font-mono text-[10px] text-[#39d353] tracking-[0.2em] mb-3">$ whoami</div>
+                                    <div className="font-mono text-[12px] text-[#8b949e] space-y-1">
+                                        <div><span className="text-[#30363d]">→</span> <span className="text-white">Prayag Sahu</span></div>
+                                        <div><span className="text-[#30363d]">→</span> <span className="text-[#39d353]">Full Stack Dev & Freelancer</span></div>
+                                        <div><span className="text-[#30363d]">→</span> Jabalpur, MP, India</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* BIG TITLE — FULL STACK */}
-                        <div className="relative">
-                            <div className={`font-mono font-black leading-none transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[3px]" : "text-white"}`}
-                                style={{
-                                    fontSize: "clamp(3rem, 7vw, 5.5rem)",
-                                    letterSpacing: "0.04em",
-                                    textShadow: "0 0 40px rgba(57,211,83,0.2)",
-                                }}>
-                                FULL
-                            </div>
-                            <div className={`font-mono font-black leading-none text-[#39d353] transition-all duration-75 ${glitch ? "translate-x-[-3px]" : ""}`}
-                                style={{
-                                    fontSize: "clamp(3rem, 7vw, 5.5rem)",
-                                    letterSpacing: "0.04em",
-                                    textShadow: "0 0 40px rgba(57,211,83,0.4)",
-                                }}>
-                                STACK
-                                <Cursor />
-                            </div>
-                        </div>
-
-                        {/* Typewriter role */}
-                        <div className="border border-[#1a2332] bg-[#010409] px-4 py-3 relative overflow-hidden">
-                            <CornerAccent color="#1a2332" />
-                            <div className="font-mono text-[11px] text-[#30363d] mb-1">$ role --current</div>
-                            <div className="font-mono text-[13px] text-[#39d353] tracking-wider min-h-[22px]">
-                                {typed}<span className="animate-pulse">█</span>
-                            </div>
-                        </div>
-
-                        {/* Quick stats */}
-                        <div className="grid grid-cols-3 gap-2">
-                            {[
-                                { v: "4+", l: "PROJECTS", c: "#39d353" },
-                                { v: "2+", l: "CLIENTS", c: "#00e5ff" },
-                                { v: "4K+", l: "COMMITS", c: "#f59e0b" },
-                            ].map(s => (
-                                <div key={s.l} className="border border-[#1a2332] bg-[#0d1117] py-3 text-center relative overflow-hidden group hover:border-[#39d353] transition-colors duration-200">
-                                    <div className="font-mono font-black text-[22px] transition-colors duration-200" style={{ color: s.c }}>{s.v}</div>
-                                    <div className="font-mono text-[8px] text-[#30363d] tracking-[0.2em]">{s.l}</div>
-                                    <div className="absolute bottom-0 left-0 right-0 h-[1px] w-0 group-hover:w-full transition-all duration-500" style={{ background: s.c }} />
+                            {/* BIG TITLE — FULL STACK */}
+                            <div className="relative">
+                                <div className={`font-mono font-black leading-none transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[3px]" : "text-white"}`}
+                                    style={{
+                                        fontSize: "clamp(3rem, 7vw, 5.5rem)",
+                                        letterSpacing: "0.04em",
+                                        textShadow: "0 0 40px rgba(57,211,83,0.2)",
+                                    }}>
+                                    FULL
                                 </div>
-                            ))}
-                        </div>
-
-                        {/* Download CV + Contact */}
-                        <div className="flex gap-3">
-                            <a href="/resume.pdf" download
-                                className="flex-1 flex items-center justify-center gap-2 bg-[#39d353] text-[#010409] font-mono font-bold text-[11px] tracking-[0.2em] uppercase py-3.5 hover:bg-[#27c93f] transition-all duration-200 hover:shadow-[0_0_20px_rgba(57,211,83,0.4)]">
-                                <Download size={13} /> DOWNLOAD_CV →
-                            </a>
-                            <a href="#contact"
-                                className="flex items-center gap-2 border border-[#1a2332] font-mono text-[11px] tracking-[0.15em] uppercase px-4 py-3.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200">
-                                <Terminal size={13} />
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* ═══ CENTER — Profile Card ═══ */}
-                    <div className="flex justify-center">
-                        <ProfileCard imageSrc="/images/hero1.png" name="Prayag Sahu" role="Full Stack Developer · Freelancer" />
-                    </div>
-
-                    {/* ═══ RIGHT PANEL ═══ */}
-                    <div className="flex flex-col gap-5">
-
-                        {/* Icon scroll strip */}
-                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-                            <ScanlineOverlay />
-                            <CornerAccent color="#00e5ff" />
-                            <div className="flex items-center gap-2 px-4 py-2 border-b border-[#1a2332]">
-                                <div className="w-1.5 h-1.5 rounded-full bg-[#00e5ff] animate-pulse" />
-                                <span className="font-mono text-[9px] tracking-[0.2em] text-[#8b949e]">TECH_STACK.live</span>
+                                <div className={`font-mono font-black leading-none text-[#39d353] transition-all duration-75 ${glitch ? "translate-x-[-3px]" : ""}`}
+                                    style={{
+                                        fontSize: "clamp(3rem, 7vw, 5.5rem)",
+                                        letterSpacing: "0.04em",
+                                        textShadow: "0 0 40px rgba(57,211,83,0.4)",
+                                    }}>
+                                    STACK
+                                    <Cursor />
+                                </div>
                             </div>
-                            <div className="py-3 relative z-10">
-                                <IconScrollVelocity velocity={90} icons={techIcons} numCopies={6} />
+
+                            {/* Typewriter role */}
+                            <div className="border border-[#1a2332] bg-[#010409] px-4 py-3 relative overflow-hidden">
+                                <CornerAccent color="#1a2332" />
+                                <div className="font-mono text-[11px] text-[#30363d] mb-1">$ role --current</div>
+                                <div className="font-mono text-[13px] text-[#39d353] tracking-wider min-h-[22px]">
+                                    {typed}<span className="animate-pulse">█</span>
+                                </div>
+                            </div>
+
+                            {/* Quick stats */}
+                            <div className="grid grid-cols-3 gap-2">
+                                {[
+                                    { v: "4+", l: "PROJECTS", c: "#39d353" },
+                                    { v: "2+", l: "CLIENTS", c: "#00e5ff" },
+                                    { v: "4K+", l: "COMMITS", c: "#f59e0b" },
+                                ].map(s => (
+                                    <div key={s.l} className="border border-[#1a2332] bg-[#0d1117] py-3 text-center relative overflow-hidden group hover:border-[#39d353] transition-colors duration-200">
+                                        <div className="font-mono font-black text-[22px] transition-colors duration-200" style={{ color: s.c }}>{s.v}</div>
+                                        <div className="font-mono text-[8px] text-[#30363d] tracking-[0.2em]">{s.l}</div>
+                                        <div className="absolute bottom-0 left-0 right-0 h-[1px] w-0 group-hover:w-full transition-all duration-500" style={{ background: s.c }} />
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Download CV + Contact */}
+                            <div className="flex gap-3">
+                                <a href="/resume.pdf" download
+                                    className="flex-1 flex items-center justify-center gap-2 bg-[#39d353] text-[#010409] font-mono font-bold text-[11px] tracking-[0.2em] uppercase py-3.5 hover:bg-[#27c93f] transition-all duration-200 hover:shadow-[0_0_20px_rgba(57,211,83,0.4)]">
+                                    <Download size={13} /> DOWNLOAD_CV →
+                                </a>
+                                <a href="#contact"
+                                    className="flex items-center gap-2 border border-[#1a2332] font-mono text-[11px] tracking-[0.15em] uppercase px-4 py-3.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200">
+                                    <Terminal size={13} />
+                                </a>
                             </div>
                         </div>
 
-                        {/* DEVELOPER big text */}
-                        <div className="relative">
-                            <BlurText
-                                text="DEVELOPER"
-                                delay={180}
-                                animateBy="words"
-                                direction="top"
-                                className="font-mono font-black text-right leading-none"
-                                stepDuration={0.5}
-                            />
-                            <div className="absolute inset-0 pointer-events-none flex items-center justify-end"
-                                style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)", letterSpacing: "0.04em" }}>
-                                <span className="font-mono font-black text-white opacity-0"
-                                    style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)", letterSpacing: "0.04em" }}>
+                        {/* ═══ CENTER — Profile Card ═══ */}
+                        <div className="flex justify-center">
+                            <ProfileCard imageSrc="/images/hero1.png" name="Prayag Sahu" role="Full Stack Developer · Freelancer" />
+                        </div>
+
+                        {/* ═══ RIGHT PANEL ═══ */}
+                        <div className="flex flex-col gap-5">
+
+                            {/* Icon scroll strip */}
+                            <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+                                <ScanlineOverlay />
+                                <CornerAccent color="#00e5ff" />
+                                <div className="flex items-center gap-2 px-4 py-2 border-b border-[#1a2332]">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-[#00e5ff] animate-pulse" />
+                                    <span className="font-mono text-[9px] tracking-[0.2em] text-[#8b949e]">TECH_STACK.live</span>
+                                </div>
+                                <div className="py-3 relative z-10">
+                                    <IconScrollVelocity velocity={90} icons={techIcons} numCopies={6} />
+                                </div>
+                            </div>
+
+
+                            {/* Bio panel */}
+                            <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+                                <ScanlineOverlay />
+                                <CornerAccent color="#f59e0b" />
+                                <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#1a2332]">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse" />
+                                    <span className="font-mono text-[9px] tracking-[0.2em] text-[#8b949e]">README.md</span>
+                                </div>
+                                <div className="p-4 relative z-10">
+                                    <p className="font-mono text-[12px] text-[#8b949e] leading-[1.85] tracking-wide">
+                                        Full Stack Developer specializing in{" "}
+                                        <span className="text-[#39d353]">scalable web applications</span>,
+                                        backend systems and modern UI/UX. Building
+                                        <span className="text-[#00e5ff]"> production-ready solutions</span>{" "}
+                                        for startups, businesses and real clients.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Rendered large DEVELOPER */}
+                            <div className="text-right -mt-2">
+                                <span className={`font-mono font-black transition-all duration-75 ${glitch ? "text-[#39d353]" : "text-white"}`}
+                                    style={{
+                                        fontSize: "clamp(2.8rem, 6vw, 5rem)",
+                                        letterSpacing: "0.04em",
+                                        textShadow: "0 0 30px rgba(255,255,255,0.08)",
+                                    }}>
                                     DEVELOPER
                                 </span>
                             </div>
-                            {/* Actual rendered via BlurText but we need the size properly */}
-                        </div>
-                        {/* Rendered large DEVELOPER */}
-                        <div className="text-right -mt-2">
-                            <span className={`font-mono font-black transition-all duration-75 ${glitch ? "text-[#39d353]" : "text-white"}`}
-                                style={{
-                                    fontSize: "clamp(2.8rem, 6vw, 5rem)",
-                                    letterSpacing: "0.04em",
-                                    textShadow: "0 0 30px rgba(255,255,255,0.08)",
-                                }}>
-                                DEVELOPER
-                            </span>
-                        </div>
 
-                        {/* Bio panel */}
-                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-                            <ScanlineOverlay />
-                            <CornerAccent color="#f59e0b" />
-                            <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#1a2332]">
-                                <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse" />
-                                <span className="font-mono text-[9px] tracking-[0.2em] text-[#8b949e]">README.md</span>
-                            </div>
-                            <div className="p-4 relative z-10">
-                                <p className="font-mono text-[12px] text-[#8b949e] leading-[1.85] tracking-wide">
-                                    Full Stack Developer specializing in{" "}
-                                    <span className="text-[#39d353]">scalable web applications</span>,
-                                    backend systems and modern UI/UX. Building
-                                    <span className="text-[#00e5ff]"> production-ready solutions</span>{" "}
-                                    for startups, businesses and real clients.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Key skills chips */}
-                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-                            <ScanlineOverlay />
-                            <CornerAccent color="#a855f7" />
-                            <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#1a2332]">
-                                <Code2 size={11} className="text-[#a855f7]" />
-                                <span className="font-mono text-[9px] tracking-[0.2em] text-[#8b949e]">CORE_SKILLS.sh</span>
-                            </div>
-                            <div className="p-4 flex flex-wrap gap-2 relative z-10">
-                                {["React", "Next.js", "Node.js", "PostgreSQL", "Tailwind", "Java", "C++", "Figma"].map(s => (
-                                    <span key={s} className="font-mono text-[10px] border border-[#1a2332] bg-[#010409] px-2.5 py-1 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200 cursor-default">
-                                        {s}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Availability */}
-                        <div className="border border-[#39d353] bg-[#39d35310] relative overflow-hidden"
-                            style={{ boxShadow: "0 0 20px rgba(57,211,83,0.06)" }}>
-                            <CornerAccent color="#39d353" />
-                            <div className="flex items-center justify-between px-4 py-3 relative z-10">
-                                <div className="flex items-center gap-2">
-                                    <div className="w-2 h-2 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_6px_#39d353]" />
-                                    <span className="font-mono text-[11px] font-bold text-[#39d353] tracking-[0.15em]">OPEN_TO_WORK</span>
+                            {/* Key skills chips */}
+                            <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+                                <ScanlineOverlay />
+                                <CornerAccent color="#a855f7" />
+                                <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#1a2332]">
+                                    <Code2 size={11} className="text-[#a855f7]" />
+                                    <span className="font-mono text-[9px] tracking-[0.2em] text-[#8b949e]">CORE_SKILLS.sh</span>
                                 </div>
-                                <div className="flex items-center gap-1">
-                                    <Zap size={11} className="text-[#f59e0b]" />
-                                    <span className="font-mono text-[10px] text-[#f59e0b] tracking-widest">RESPONSE &lt;24H</span>
+                                <div className="p-4 flex flex-wrap gap-2 relative z-10">
+                                    {["React", "Next.js", "Node.js", "PostgreSQL", "Tailwind", "Java", "C++", "Figma"].map(s => (
+                                        <span key={s} className="font-mono text-[10px] border border-[#1a2332] bg-[#010409] px-2.5 py-1 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200 cursor-default">
+                                            {s}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Availability */}
+                            <div className="border border-[#39d353] bg-[#39d35310] relative overflow-hidden"
+                                style={{ boxShadow: "0 0 20px rgba(57,211,83,0.06)" }}>
+                                <CornerAccent color="#39d353" />
+                                <div className="flex items-center justify-between px-4 py-3 relative z-10">
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_6px_#39d353]" />
+                                        <span className="font-mono text-[11px] font-bold text-[#39d353] tracking-[0.15em]">OPEN_TO_WORK</span>
+                                    </div>
+                                    <div className="flex items-center gap-1">
+                                        <Zap size={11} className="text-[#f59e0b]" />
+                                        <span className="font-mono text-[10px] text-[#f59e0b] tracking-widest">RESPONSE &lt;24H</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {/* SCROLL INDICATOR */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-                <div className="font-mono text-[8px] text-[#30363d] tracking-[0.3em]">SCROLL_DOWN</div>
-                <div className="w-6 h-10 border border-[#1a2332] rounded-full flex justify-center pt-2 hover:border-[#39d353] transition-colors duration-300"
-                    style={{ animation: "bounce 2s infinite" }}>
-                    <div className="w-1.5 h-2.5 bg-[#39d353] rounded-full" style={{ animation: "scroll-dot 2s infinite" }} />
+                {/* SCROLL INDICATOR */}
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
+                    <div className="font-mono text-[8px] text-[#30363d] tracking-[0.3em]">SCROLL_DOWN</div>
+                    <div className="w-6 h-10 border border-[#1a2332] rounded-full flex justify-center pt-2 hover:border-[#39d353] transition-colors duration-300"
+                        style={{ animation: "bounce 2s infinite" }}>
+                        <div className="w-1.5 h-2.5 bg-[#39d353] rounded-full" style={{ animation: "scroll-dot 2s infinite" }} />
+                    </div>
+                    <ArrowDown size={12} className="text-[#30363d]" style={{ animation: "bounce 2s infinite 0.3s" }} />
                 </div>
-                <ArrowDown size={12} className="text-[#30363d]" style={{ animation: "bounce 2s infinite 0.3s" }} />
-            </div>
 
-            <style jsx>{`
+                <style jsx>{`
         @keyframes scan-line {
           0% { top: -5%; }
           100% { top: 105%; }

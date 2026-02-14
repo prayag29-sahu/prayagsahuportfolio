@@ -1055,7 +1055,8 @@ export default function AboutSection() {
     return (
         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
         <section
-            className="relative py-28 pt-0 overflow-hidden"
+                className="relative py-28 pt-0 overflow-hidden"
+                id='about'
             style={{ fontFamily: "'Courier New', Courier, monospace" }}
         >
             {/* BG grid */}
