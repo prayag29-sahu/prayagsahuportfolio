@@ -550,7 +550,7 @@ import {
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 import {
-    RiLinkedinLine, RiGithubLine, RiTwitterXLine, RiPhoneLine, RiAddLine,
+    RiLinkedinLine, RiGithubLine, RiTwitterXLine, RiPhoneLine, RiAddLine, RiCodeSSlashLine
 } from 'react-icons/ri';
 import { Terminal, Download, ArrowDown, Zap, Code2, Globe } from 'lucide-react';
 
@@ -578,56 +578,6 @@ function Cursor() {
 /* ══════════════════════════════════════════
    BLUR TEXT (inlined)
 ══════════════════════════════════════════ */
-function buildKeyframes(from, steps) {
-    const keys = new Set([...Object.keys(from), ...steps.flatMap(s => Object.keys(s))]);
-    const keyframes = {};
-    keys.forEach(k => { keyframes[k] = [from[k], ...steps.map(s => s[k])]; });
-    return keyframes;
-}
-
-function BlurText({ text = '', delay = 200, className = '', animateBy = 'words', direction = 'top', stepDuration = 0.55, onAnimationComplete }) {
-    const elements = animateBy === 'words' ? text.split(' ') : text.split('');
-    const [inView, setInView] = useState(false);
-    const ref = useRef(null);
-
-    useEffect(() => {
-        if (!ref.current) return;
-        const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setInView(true); obs.disconnect(); } }, { threshold: 0.1 });
-        obs.observe(ref.current);
-        return () => obs.disconnect();
-    }, []);
-
-    const fromSnapshot = direction === 'top'
-        ? { filter: 'blur(12px)', opacity: 0, y: -60 }
-        : { filter: 'blur(12px)', opacity: 0, y: 60 };
-
-    const toSnapshots = [
-        { filter: 'blur(6px)', opacity: 0.5, y: direction === 'top' ? 8 : -8 },
-        { filter: 'blur(0px)', opacity: 1, y: 0 }
-    ];
-
-    const stepCount = toSnapshots.length + 1;
-    const totalDuration = stepDuration * (stepCount - 1);
-    const times = Array.from({ length: stepCount }, (_, i) => i / (stepCount - 1));
-
-    return (
-        <p ref={ref} className={`flex flex-wrap ${className}`}>
-            {elements.map((seg, i) => (
-                <motion.span key={i}
-                    className="inline-block will-change-[transform,filter,opacity]"
-                    initial={fromSnapshot}
-                    animate={inView ? buildKeyframes(fromSnapshot, toSnapshots) : fromSnapshot}
-                    transition={{ duration: totalDuration, times, delay: (i * delay) / 1000 }}
-                    onAnimationComplete={i === elements.length - 1 ? onAnimationComplete : undefined}
-                >
-                    {seg === ' ' ? '\u00A0' : seg}
-                    {animateBy === 'words' && i < elements.length - 1 && '\u00A0'}
-                </motion.span>
-            ))}
-        </p>
-    );
-}
-
 /* ══════════════════════════════════════════
    ICON SCROLL VELOCITY (inlined)
 ══════════════════════════════════════════ */
@@ -739,7 +689,7 @@ function ProfileCard({ imageSrc, name, role }) {
 
                     {/* Photo */}
                     <div className="relative h-60 overflow-hidden border-b border-[#1a2332]">
-                        <Image src={imageSrc} alt={name} fill className="object-cover" style={{ filter: "brightness(0.9)" }} />
+                        <Image src={imageSrc} alt={name} fill className="object-cover" style={{ filter: "brightness(0.7)" }} />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-transparent to-transparent" />
                         {/* Scan line sweep */}
                         <div className="absolute left-0 right-0 h-[1px] pointer-events-none animate-scan-line"
@@ -760,7 +710,7 @@ function ProfileCard({ imageSrc, name, role }) {
                             ].map(s => (
                                 <div key={s.l} className="border border-[#1a2332] bg-[#010409] py-2 text-center">
                                     <div className="font-mono font-black text-[14px] text-[#39d353]">{s.v}</div>
-                                    <div className="font-mono text-[8px] text-[#30363d] tracking-widest">{s.l}</div>
+                                    <div className="font-mono text-[8px] text-[#8b949e] tracking-widest">{s.l}</div>
                                 </div>
                             ))}
                         </div>
@@ -782,7 +732,14 @@ function ProfileCard({ imageSrc, name, role }) {
                                         {[
                                             { href: "https://linkedin.com/in/prayag-sahu29", icon: <RiLinkedinLine size={14} />, color: "#00e5ff" },
                                             { href: "https://github.com/prayag29-sahu", icon: <RiGithubLine size={14} />, color: "#39d353" },
+                                            {
+                                                href: "https://www.interviewbit.com/profile/prayag-sahu_620/",
+                                                icon: <RiCodeSSlashLine size={14} />,
+                                                color: "#f59e0b",
+                                                label: "InterviewBit"
+                                            },
                                             { href: "https://twitter.com", icon: <RiTwitterXLine size={14} />, color: "#a855f7" },
+
                                         ].map((s, i) => (
                                             <a key={i} href={s.href} target="_blank" rel="noopener noreferrer"
                                                 className="w-7 h-7 border border-[#1a2332] flex items-center justify-center transition-all duration-200 hover:scale-110"
@@ -887,7 +844,7 @@ export default function HeroSection() {
                     style={{ background: "linear-gradient(to right, transparent, #39d353, transparent)" }} />
 
                 {/* Module tag */}
-                <div className="absolute top-20 left-6 flex items-center gap-2 z-10">
+                <div className="absolute top-14 left-6 flex items-center gap-2 z-10">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
                     <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">SYSTEM_MODULE / HERO</span>
                 </div>
@@ -1070,9 +1027,9 @@ export default function HeroSection() {
                 </div>
 
                 {/* SCROLL INDICATOR */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
                     <div className="font-mono text-[8px] text-[#30363d] tracking-[0.3em]">SCROLL_DOWN</div>
-                    <div className="w-6 h-10 border border-[#1a2332] rounded-full flex justify-center pt-2 hover:border-[#39d353] transition-colors duration-300"
+                    <div className="w-6 h-10 border border-[#1a2332] rounded-full flex justify-center pt-2 border-[#39d353] transition-colors duration-300"
                         style={{ animation: "bounce 2s infinite" }}>
                         <div className="w-1.5 h-2.5 bg-[#39d353] rounded-full" style={{ animation: "scroll-dot 2s infinite" }} />
                     </div>
