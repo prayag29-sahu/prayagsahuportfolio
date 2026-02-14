@@ -946,7 +946,7 @@ export default function HeroSection() {
                             {/* Typewriter role */}
                             <div className="border border-[#1a2332] bg-[#010409] px-4 py-3 relative overflow-hidden">
                                 <CornerAccent color="#1a2332" />
-                                <div className="font-mono text-[11px] text-[#30363d] mb-1">$ role --current</div>
+                                <div className="font-mono text-[11px] text-[#8b949e] mb-1">$ role --current</div>
                                 <div className="font-mono text-[13px] text-[#39d353] tracking-wider min-h-[22px]">
                                     {typed}<span className="animate-pulse">█</span>
                                 </div>
@@ -961,7 +961,7 @@ export default function HeroSection() {
                                 ].map(s => (
                                     <div key={s.l} className="border border-[#1a2332] bg-[#0d1117] py-3 text-center relative overflow-hidden group hover:border-[#39d353] transition-colors duration-200">
                                         <div className="font-mono font-black text-[22px] transition-colors duration-200" style={{ color: s.c }}>{s.v}</div>
-                                        <div className="font-mono text-[8px] text-[#30363d] tracking-[0.2em]">{s.l}</div>
+                                        <div className="font-mono text-[8px] text-[#8b949e] tracking-[0.2em]">{s.l}</div>
                                         <div className="absolute bottom-0 left-0 right-0 h-[1px] w-0 group-hover:w-full transition-all duration-500" style={{ background: s.c }} />
                                     </div>
                                 ))}
