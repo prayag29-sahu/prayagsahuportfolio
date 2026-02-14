@@ -730,7 +730,7 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
                             </div>
                         )}
                         {/* Slide counter */}
-                        <div className="absolute top-2 right-2 font-mono text-[8px] text-[#30363d] bg-[#010409]/80 px-1.5 py-0.5 border border-[#1a2332]">
+                        <div className="absolute top-2 right-2 font-mono text-[8px] text-[#8b949e] bg-[#010409]/80 px-1.5 py-0.5 border border-[#1a2332]">
                             {slide + 1}/{item.images.length}
                         </div>
                     </div>
@@ -748,7 +748,7 @@ function PopupGallery({ item, onClose }) {
 
     return (
 
-        <div className="fixed inset-0 z-50 bg-[#010409]/97 backdrop-blur-xl flex items-center justify-center">
+        <div className="fixed mt-10 inset-0 z-50 bg-[#010409]/97 backdrop-blur-xl flex items-center justify-center">
             <div
                 className="relative bg-[#0d1117] border w-[92%] max-w-5xl h-[88vh] flex flex-col overflow-hidden"
                 style={{ borderColor: accentColor }}
@@ -811,7 +811,7 @@ function PopupGallery({ item, onClose }) {
                                         className="w-full h-52 object-cover group-hover/card:scale-105 transition-transform duration-300"
                                     />
                                     <div className="absolute inset-0 bg-[#010409]/0 group-hover/card:bg-[#010409]/20 transition-all duration-200" />
-                                    <div className="absolute top-2 right-2 font-mono text-[8px] bg-[#010409]/90 border border-[#1a2332] px-1.5 py-0.5 text-[#30363d]">
+                                    <div className="absolute top-2 right-2 font-mono text-[8px] bg-[#010409]/90 border border-[#1a2332] px-1.5 py-0.5 text-[#8b949e]">
                                         {String(i + 1).padStart(2, "0")}
                                     </div>
                                 </div>
@@ -922,7 +922,7 @@ export default function Certifications() {
                 <div className="relative z-10">
 
                     {/* ── HEADER ── */}
-                    <div className="max-w-6xl mx-auto px-6 mb-14">
+                    <div className="max-w-7xl mx-auto px-6 mb-14">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
                             <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">

@@ -1474,7 +1474,7 @@ function PopupGallery({ item, onClose }) {
     const ac = item.accentColor;
 
     return (
-        <div className="fixed inset-0 z-50 bg-[#010409]/97 backdrop-blur-xl flex items-center justify-center">
+        <div className="fixed inset-0 z-50 mt-10 bg-[#010409]/97 backdrop-blur-xl flex items-center justify-center">
             <div
                 className="relative bg-[#0d1117] border w-[92%] max-w-5xl h-[88vh] flex flex-col overflow-hidden"
                 style={{ borderColor: ac, fontFamily: "'Courier New', Courier, monospace" }}
@@ -1486,7 +1486,7 @@ function PopupGallery({ item, onClose }) {
                 {/* Close */}
                 <button
                     onClick={onClose}
-                    className="absolute top-5 right-5 z-20 border border-[#1a2332] p-1.5 text-[#8b949e] hover:border-[#ff5f56] hover:text-[#ff5f56] transition-colors duration-200"
+                    className="absolute top-2 right-2 z-20 border border-[#1a2332] p-1.5 text-[#8b949e] hover:border-[#ff5f56] hover:text-[#ff5f56] transition-colors duration-200"
                 >
                     <X size={18} />
                 </button>
@@ -1536,7 +1536,7 @@ function PopupGallery({ item, onClose }) {
                                         alt={img.caption}
                                         className="w-full h-48 object-cover group-hover/card:scale-105 transition-transform duration-300"
                                     />
-                                    <div className="absolute top-2 right-2 font-mono text-[8px] bg-[#010409]/90 border border-[#1a2332] px-1.5 py-0.5 text-[#30363d]">
+                                    <div className="absolute top-2 right-2 font-mono text-[8px] bg-[#010409]/90 border border-[#1a2332] px-1.5 py-0.5 text-[#8b949e] rounded">
                                         {String(i + 1).padStart(2, "0")}
                                     </div>
                                 </div>
@@ -1634,7 +1634,7 @@ function EduCard({ item, index, onExplore }) {
                     <CornerAccent color={ac} />
                 </div>
                 {/* Vertical connector (not on last) */}
-                {index < educationData.length - 1 && (
+                {index < educationData.length && (
                     <div
                         className="w-[2px] flex-1 mt-1"
                         style={{
@@ -1738,7 +1738,7 @@ function EduCard({ item, index, onExplore }) {
                             />
                         ))}
                         {/* Slide counter */}
-                        <div className="absolute top-2 right-2 font-mono text-[8px] bg-[#010409]/90 border border-[#1a2332] px-1.5 py-0.5 text-[#30363d] z-10">
+                        <div className="absolute top-2 right-2 font-mono text-[8px] bg-[#010409]/90 border border-[#1a2332] px-1.5 py-0.5 text-[#8b949e] z-10">
                             {slide + 1}/{item.images.length}
                         </div>
                         {/* Caption strip */}
@@ -1809,7 +1809,7 @@ export default function Education() {
             <div className="absolute top-0 left-1/3 w-[500px] h-[500px] bg-[#39d353] opacity-[0.025] rounded-full blur-[160px] pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[140px] pointer-events-none" />
 
-            <div className="relative z-10 max-w-5xl mx-auto px-6">
+            <div className="relative z-10 max-w-7xl mx-auto px-6">
 
                 {/* ── HEADER ── */}
                 <div className="mb-14">

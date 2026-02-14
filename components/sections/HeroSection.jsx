@@ -550,7 +550,7 @@ import {
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 import {
-    RiLinkedinLine, RiGithubLine, RiTwitterXLine, RiPhoneLine, RiAddLine, RiCodeSSlashLine
+    RiLinkedinLine, RiGithubLine, RiTwitterXLine, RiPhoneLine, RiAddLine, RiCodeSSlashLine, RiGlobalLine
 } from 'react-icons/ri';
 import { Terminal, Download, ArrowDown, Zap, Code2, Globe } from 'lucide-react';
 
@@ -738,6 +738,12 @@ function ProfileCard({ imageSrc, name, role }) {
                                                 color: "#f59e0b",
                                                 label: "InterviewBit"
                                             },
+                                            {
+                                                href: "https://www.netacad.com/profile?tab=badges",
+                                                icon: <RiGlobalLine size={14} />,
+                                                color: "#1ba0d7"
+                                            },
+
                                             { href: "https://twitter.com", icon: <RiTwitterXLine size={14} />, color: "#a855f7" },
 
                                         ].map((s, i) => (
