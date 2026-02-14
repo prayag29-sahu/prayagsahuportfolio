@@ -1426,7 +1426,7 @@ const educationData = [
         accentColor: "#f59e0b",
         points: [
             "93.2% — School Topper",
-            "Republic Day Participant",
+            "Republic Day Participant And Sports Leadership",
             "Consistent Academic Excellence",
         ],
         images: [

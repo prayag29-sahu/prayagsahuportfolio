@@ -517,7 +517,7 @@ const certData = [
         id: "CERT_01",
         title: "InterviewBit",
         subtitle: "DSA • Badges • Streak",
-        year: "2024",
+        year: "Ongoing",
         tag: "DSA",
         tagColor: "#39d353",
         count: "11 Badges",
@@ -542,7 +542,7 @@ const certData = [
         title: "NPTEL – DBMS",
         subtitle: "IIT Kharagpur",
         year: "2025",
-        tag: "ELITE",
+        tag: "Silver + ELITE",
         tagColor: "#00e5ff",
         count: "Silver + Elite",
         description:
@@ -650,7 +650,7 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
                         >
                             {item.tag}
                         </span>
-                        <span className="font-mono text-[10px] text-[#30363d]">{item.year}.txt</span>
+                        <span className="font-mono text-[10px] text-[#8b949e]">{item.year}.txt</span>
                     </div>
                 </div>
 
@@ -674,12 +674,12 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
 
                         <div className="flex items-center gap-3 pt-1">
                             <div className="border border-[#1a2332] px-3 py-1 bg-[#010409]">
-                                <span className="font-mono text-[9px] text-[#30363d] tracking-widest uppercase">FILES </span>
+                                <span className="font-mono text-[9px] text-[#8b949e] tracking-widest uppercase">FILES </span>
                                 <span className="font-mono text-[11px] font-bold" style={{ color: accentColor }}>
                                     {item.count}
                                 </span>
                             </div>
-                            <div className="flex items-center gap-1 font-mono text-[9px] text-[#30363d]">
+                            <div className="flex items-center gap-1 font-mono text-[9px] text-[#8b949e]">
                                 <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
                                 LOADED
                             </div>
@@ -760,7 +760,7 @@ function PopupGallery({ item, onClose }) {
                 {/* Close */}
                 <button
                     onClick={onClose}
-                    className="absolute top-5 right-5 z-20 border border-[#1a2332] p-1.5 hover:border-[#ff5f56] hover:text-[#ff5f56] transition-colors duration-200 text-[#8b949e]"
+                    className="absolute top-2 right-2 z-20 border border-[#1a2332] p-1.5 hover:border-[#ff5f56] hover:text-[#ff5f56] transition-colors duration-200 text-[#8b949e]"
                 >
                     <X size={18} />
                 </button>

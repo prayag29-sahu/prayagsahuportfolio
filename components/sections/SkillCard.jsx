@@ -648,7 +648,7 @@ export default function DevStats() {
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#39d353] opacity-[0.03] rounded-full blur-[120px] pointer-events-none" />
                 <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#00e5ff] opacity-[0.03] rounded-full blur-[120px] pointer-events-none" />
 
-                <div className="relative z-10 w-full max-w-[1300px]">
+                <div className="relative z-10 w-full max-w-[1250px]">
                     {/* Top Header */}
                     <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-3">
