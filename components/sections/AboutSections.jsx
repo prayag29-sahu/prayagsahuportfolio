@@ -1100,6 +1100,7 @@ export default function AboutSection() {
                     </div>
                 </div>
 
+                    
                 {/* ── TOP SECTION: IMAGE + BIO ── */}
                 <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-6 mb-6">
 
