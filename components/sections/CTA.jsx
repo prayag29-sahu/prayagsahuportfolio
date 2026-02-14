@@ -503,7 +503,7 @@ export default function CTA() {
 
     return (
         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-            <section className="relative py-28 overflow-hidden"
+            <section className="relative py-28 pt-0 overflow-hidden"
                 id='blogs'
             style={{  fontFamily: "'Courier New', Courier, monospace" }}>
 
