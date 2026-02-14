@@ -646,237 +646,666 @@
 
 
 
-'use client';
+// 'use client';
 
-import Image from 'next/image';
-import ParallaxSection from '@/components/ui/ParallaxSection';
-import {
-    RiReactjsLine,
-    RiNodejsLine,
-    RiDatabase2Line,
-    RiAndroidLine,
-    RiLightbulbFlashLine,
-    RiGraduationCapLine,
-    RiFocus3Line,
-    RiRocketLine,
-} from "react-icons/ri";
-import { MapPin, GraduationCap, Briefcase, Rocket } from "lucide-react";
-import "./About.css"
-import { useState } from "react";
+// import Image from 'next/image';
+// import ParallaxSection from '@/components/ui/ParallaxSection';
+// import {
+//     RiReactjsLine,
+//     RiNodejsLine,
+//     RiDatabase2Line,
+//     RiAndroidLine,
+//     RiLightbulbFlashLine,
+//     RiGraduationCapLine,
+//     RiFocus3Line,
+//     RiRocketLine,
+// } from "react-icons/ri";
+// import { MapPin, GraduationCap, Briefcase, Rocket } from "lucide-react";
+// import "./About.css"
+// import { useState } from "react";
 
-import { ChevronDown } from "lucide-react";
-
-
-export default function AboutSection() {
-    const [activeIndex, setActiveIndex] = useState(null);
-
-    const toggleItem = (index) => {
-        setActiveIndex(activeIndex === index ? null : index);
-    };
-
-    const skills = [
-        {
-            icon: <RiReactjsLine />,
-            title: "Frontend Engineering",
-            desc: "Building responsive, accessible user interfaces using HTML, CSS, JavaScript, React, Next.js and Tailwind CSS with performance-first architecture."
-        },
-        {
-            icon: <RiNodejsLine />,
-            title: "Backend & API Systems",
-            desc: "Developing scalable REST APIs using Node.js and Express including authentication, authorization and secure server logic."
-        },
-        {
-            icon: <RiDatabase2Line />,
-            title: "Database Architecture",
-            desc: "Designing optimized relational schemas using PostgreSQL with efficient queries, indexing strategies and clean data modeling."
-        },
-        {
-            icon: <RiAndroidLine />,
-            title: "Mobile Application Development",
-            desc: "Building cross-platform mobile applications using React Native integrated with backend services and APIs."
-        }
-    ];
-    const [activeIndex1, setActiveIndex1] = useState(null);
-
-    const toggleItem1 = (index) => {
-        setActiveIndex1(activeIndex1 === index ? null : index);
-    };
-
-    const traits = [
-        {
-            icon: <RiLightbulbFlashLine />,
-            title: "Core Strengths",
-            desc: "Hardworking, self-motivated and detail-oriented developer with strong analytical thinking and problem-solving ability."
-        },
-        {
-            icon: <RiGraduationCapLine />,
-            title: "Technical Foundation",
-            desc: "Computer Science student with solid fundamentals in programming, data structures and modern web development."
-        },
-        {
-            icon: <RiFocus3Line />,
-            title: "Career Vision",
-            desc: "Focused on building a long-term career as a software engineer by continuously improving technical depth and system design understanding."
-        },
-        {
-            icon: <RiRocketLine />,
-            title: "Growth Mindset",
-            desc: "Actively learning new technologies and frameworks to stay aligned with evolving industry standards."
-        }
-    ];
-
-    return (
-        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-
-            <section className="about-wrapper">
-
-                {/* ===================== TOP CONTAINER ===================== */}
-                <div className="about-top">
-
-                    {/* LEFT SIDE */}
-                    <div className="about-left">
-
-                        <div className="about-image">
-                            <Image
-                                src="/images/hero3.png"
-                                alt="Prayag Sahu"
-                                width={400}
-                                height={500}
-                                className="object-cover"
-                            />
-                        </div>
-                    </div>
-
-                    {/* RIGHT SIDE */}
-                    <div className="about-text">
-
-                        <p className="about-desc">
-                            I am <span className="highlight">Prayag Sahu</span>, a Computer Science
-                            Engineer undergraduate and Freelance Full Stack Developer
-                            from Jabalpur, Madhya Pradesh.
-                            <br /><br />
-                            I completed my Higher Secondary Education under MPBSE with
-                            First Division and I am currently pursuing
-                            <strong> B.Tech (CSE)</strong> from
-                            <strong> Baderia Global Institute of Engineering & Management</strong>,
-                            affiliated with <strong>RGPV University</strong>.
-                            <br />
-                            I focus on building modern, scalable and performance-driven web
-                            applications using clean architecture and practical problem solving.
-                        </p>
-                        <div className="info-item mt-7">
-                            <MapPin size={18} />
-                            <span>Jabalpur, Madhya Pradesh</span>
-                            <GraduationCap size={18} />
-                            <span>B.Tech (CSE) BGIEM – RGPV</span>
-                        </div>
-
-                        <div className="info-item mt-2">
-                            <Briefcase size={18} />
-                            <span>Freelance Full Stack Developer</span>
-                            <Rocket size={18} />
-                            <span>Open to Opportunities</span>
-                        </div>
-
-                    </div>
+// import { ChevronDown } from "lucide-react";
 
 
-                </div>
+// export default function AboutSection() {
+//     const [activeIndex, setActiveIndex] = useState(null);
 
+//     const toggleItem = (index) => {
+//         setActiveIndex(activeIndex === index ? null : index);
+//     };
 
-                {/* ===================== BOTTOM GRID ===================== */}
-                <div className="about-bottom">
+//     const skills = [
+//         {
+//             icon: <RiReactjsLine />,
+//             title: "Frontend Engineering",
+//             desc: "Building responsive, accessible user interfaces using HTML, CSS, JavaScript, React, Next.js and Tailwind CSS with performance-first architecture."
+//         },
+//         {
+//             icon: <RiNodejsLine />,
+//             title: "Backend & API Systems",
+//             desc: "Developing scalable REST APIs using Node.js and Express including authentication, authorization and secure server logic."
+//         },
+//         {
+//             icon: <RiDatabase2Line />,
+//             title: "Database Architecture",
+//             desc: "Designing optimized relational schemas using PostgreSQL with efficient queries, indexing strategies and clean data modeling."
+//         },
+//         {
+//             icon: <RiAndroidLine />,
+//             title: "Mobile Application Development",
+//             desc: "Building cross-platform mobile applications using React Native integrated with backend services and APIs."
+//         }
+//     ];
+//     const [activeIndex1, setActiveIndex1] = useState(null);
 
-                    {/* I CAN DO */}
-                    <div className="about-card">
-                        <h2 className="card-title">CORE EXPERTISE</h2>
+//     const toggleItem1 = (index) => {
+//         setActiveIndex1(activeIndex1 === index ? null : index);
+//     };
 
-                        <div className="card-list">
-                            {skills.map((skill, index) => (
-                                <div key={index} className="accordion-item">
+//     const traits = [
+//         {
+//             icon: <RiLightbulbFlashLine />,
+//             title: "Core Strengths",
+//             desc: "Hardworking, self-motivated and detail-oriented developer with strong analytical thinking and problem-solving ability."
+//         },
+//         {
+//             icon: <RiGraduationCapLine />,
+//             title: "Technical Foundation",
+//             desc: "Computer Science student with solid fundamentals in programming, data structures and modern web development."
+//         },
+//         {
+//             icon: <RiFocus3Line />,
+//             title: "Career Vision",
+//             desc: "Focused on building a long-term career as a software engineer by continuously improving technical depth and system design understanding."
+//         },
+//         {
+//             icon: <RiRocketLine />,
+//             title: "Growth Mindset",
+//             desc: "Actively learning new technologies and frameworks to stay aligned with evolving industry standards."
+//         }
+//     ];
 
-                                    <div
-                                        className="accordion-header"
-                                        onClick={() => toggleItem(index)}
-                                    >
-                                        <div className="left">
-                                            <span className="card-icon">{skill.icon}</span>
-                                            <span>{skill.title}</span>
-                                        </div>
-
-                                        <ChevronDown
-                                            size={18}
-                                            className={`arrow ${activeIndex === index ? "rotate" : ""}`}
-                                        />
-                                    </div>
-
-                                    {activeIndex === index && (
-                                        <div className="accordion-content">
-                                            {skill.desc}
-                                        </div>
-                                    )}
-
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* I HAVE */}
-                    <div className="about-card">
-                        <h2 className="card-title">CORE QUALITIES</h2>
-
-                        <div className="card-list">
-                            {traits.map((trait, index) => (
-                                <div key={index} className="accordion-item">
-
-                                    <div
-                                        className="accordion-header"
-                                        onClick={() => toggleItem1(index)}
-                                    >
-                                        <div className="left">
-                                            <span className="card-icon">{trait.icon}</span>
-                                            <span>{trait.title}</span>
-                                        </div>
-
-                                        <ChevronDown
-                                            size={18}
-                                            className={`arrow ${activeIndex1 === index ? "rotate" : ""}`}
-                                        />
-                                    </div>
-
-                                    {activeIndex1 === index && (
-                                        <div className="accordion-content">
-                                            {trait.desc}
-                                        </div>
-                                    )}
-
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-        </ParallaxSection>
-    );
-}
-
-
-/* ================= CARD ITEM ================= */
-
-// function CardItem({ icon, text }) {
 //     return (
-//         <div className="card-item">
-//             <span className="card-icon">{icon}</span>
-//             <span>{text}</span>
-//         </div>
+//         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
+
+//             <section className="about-wrapper">
+
+//                 {/* ===================== TOP CONTAINER ===================== */}
+//                 <div className="about-top">
+
+//                     {/* LEFT SIDE */}
+//                     <div className="about-left">
+
+//                         <div className="about-image">
+//                             <Image
+//                                 src="/images/hero3.png"
+//                                 alt="Prayag Sahu"
+//                                 width={400}
+//                                 height={500}
+//                                 className="object-cover"
+//                             />
+//                         </div>
+//                     </div>
+
+//                     {/* RIGHT SIDE */}
+//                     <div className="about-text">
+
+//                         <p className="about-desc">
+//                             I am <span className="highlight">Prayag Sahu</span>, a Computer Science
+//                             Engineer undergraduate and Freelance Full Stack Developer
+//                             from Jabalpur, Madhya Pradesh.
+//                             <br /><br />
+//                             I completed my Higher Secondary Education under MPBSE with
+//                             First Division and I am currently pursuing
+//                             <strong> B.Tech (CSE)</strong> from
+//                             <strong> Baderia Global Institute of Engineering & Management</strong>,
+//                             affiliated with <strong>RGPV University</strong>.
+//                             <br />
+//                             I focus on building modern, scalable and performance-driven web
+//                             applications using clean architecture and practical problem solving.
+//                         </p>
+//                         <div className="info-item mt-7">
+//                             <MapPin size={18} />
+//                             <span>Jabalpur, Madhya Pradesh</span>
+//                             <GraduationCap size={18} />
+//                             <span>B.Tech (CSE) BGIEM – RGPV</span>
+//                         </div>
+
+//                         <div className="info-item mt-2">
+//                             <Briefcase size={18} />
+//                             <span>Freelance Full Stack Developer</span>
+//                             <Rocket size={18} />
+//                             <span>Open to Opportunities</span>
+//                         </div>
+
+//                     </div>
+
+
+//                 </div>
+
+
+//                 {/* ===================== BOTTOM GRID ===================== */}
+//                 <div className="about-bottom">
+
+//                     {/* I CAN DO */}
+//                     <div className="about-card">
+//                         <h2 className="card-title">CORE EXPERTISE</h2>
+
+//                         <div className="card-list">
+//                             {skills.map((skill, index) => (
+//                                 <div key={index} className="accordion-item">
+
+//                                     <div
+//                                         className="accordion-header"
+//                                         onClick={() => toggleItem(index)}
+//                                     >
+//                                         <div className="left">
+//                                             <span className="card-icon">{skill.icon}</span>
+//                                             <span>{skill.title}</span>
+//                                         </div>
+
+//                                         <ChevronDown
+//                                             size={18}
+//                                             className={`arrow ${activeIndex === index ? "rotate" : ""}`}
+//                                         />
+//                                     </div>
+
+//                                     {activeIndex === index && (
+//                                         <div className="accordion-content">
+//                                             {skill.desc}
+//                                         </div>
+//                                     )}
+
+//                                 </div>
+//                             ))}
+//                         </div>
+//                     </div>
+
+//                     {/* I HAVE */}
+//                     <div className="about-card">
+//                         <h2 className="card-title">CORE QUALITIES</h2>
+
+//                         <div className="card-list">
+//                             {traits.map((trait, index) => (
+//                                 <div key={index} className="accordion-item">
+
+//                                     <div
+//                                         className="accordion-header"
+//                                         onClick={() => toggleItem1(index)}
+//                                     >
+//                                         <div className="left">
+//                                             <span className="card-icon">{trait.icon}</span>
+//                                             <span>{trait.title}</span>
+//                                         </div>
+
+//                                         <ChevronDown
+//                                             size={18}
+//                                             className={`arrow ${activeIndex1 === index ? "rotate" : ""}`}
+//                                         />
+//                                     </div>
+
+//                                     {activeIndex1 === index && (
+//                                         <div className="accordion-content">
+//                                             {trait.desc}
+//                                         </div>
+//                                     )}
+
+//                                 </div>
+//                             ))}
+//                         </div>
+//                     </div>
+
+//                 </div>
+
+//             </section>
+
+//         </ParallaxSection>
 //     );
 // }
 
 
+// /* ================= CARD ITEM ================= */
+
+// // function CardItem({ icon, text }) {
+// //     return (
+// //         <div className="card-item">
+// //             <span className="card-icon">{icon}</span>
+// //             <span>{text}</span>
+// //         </div>
+// //     );
+// // }
 
 
 
 
+
+
+'use client';
+
+import Image from 'next/image';
+import { useState, useEffect } from "react";
+import {
+    RiReactjsLine, RiNodejsLine, RiDatabase2Line, RiAndroidLine,
+    RiLightbulbFlashLine, RiGraduationCapLine, RiFocus3Line, RiRocketLine,
+} from "react-icons/ri";
+import { MapPin, GraduationCap, Briefcase, Rocket, ChevronDown } from "lucide-react";
+
+/* ─── Shared primitives ──────────────────────────────────── */
+function ScanlineOverlay() {
+    return (
+        <div
+            className="pointer-events-none absolute inset-0 z-0"
+            style={{
+                background: "repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px)",
+            }}
+        />
+    );
+}
+
+function CornerAccent({ color = "#39d353" }) {
+    return (
+        <>
+            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2" style={{ borderColor: color }} />
+            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2" style={{ borderColor: color }} />
+            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2" style={{ borderColor: color }} />
+            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2" style={{ borderColor: color }} />
+        </>
+    );
+}
+
+function Cursor() {
+    return <span className="inline-block w-[8px] h-[14px] bg-[#39d353] animate-pulse ml-1 align-middle" />;
+}
+
+function WindowChrome({ filename, status = "LIVE", statusColor = "#39d353" }) {
+    return (
+        <div className="flex items-center justify-between px-5 py-3 border-b border-[#1a2332]">
+            <div className="flex items-center gap-3">
+                <div className="flex gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+                </div>
+                <span className="font-mono text-[11px] tracking-[0.2em] text-[#8b949e]">{filename}</span>
+            </div>
+            <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: statusColor }} />
+                <span
+                    className="font-mono text-[9px] tracking-[0.2em] border px-2 py-0.5"
+                    style={{ color: statusColor, borderColor: statusColor }}
+                >
+                    {status}
+                </span>
+            </div>
+        </div>
+    );
+}
+
+/* ─── Typewriter ─────────────────────────────────────────── */
+function TypewriterText({ text, speed = 55 }) {
+    const [out, setOut] = useState("");
+    const [done, setDone] = useState(false);
+    useEffect(() => {
+        let i = 0;
+        const t = setInterval(() => {
+            if (i < text.length) { setOut(text.slice(0, ++i)); }
+            else { setDone(true); clearInterval(t); }
+        }, speed);
+        return () => clearInterval(t);
+    }, [text, speed]);
+    return <>{out}{!done && <span className="animate-pulse text-[#39d353]">█</span>}</>;
+}
+
+/* ─── Info pill ──────────────────────────────────────────── */
+function InfoPill({ icon, text, accent = "#39d353" }) {
+    return (
+        <div className="flex items-center gap-2 border border-[#1a2332] bg-[#010409] px-4 py-2.5 group hover:border-[#39d353] transition-colors duration-200">
+            <span style={{ color: accent }} className="shrink-0">{icon}</span>
+            <span className="font-mono text-[11px] text-[#8b949e] tracking-wider group-hover:text-white transition-colors duration-200 whitespace-nowrap">{text}</span>
+        </div>
+    );
+}
+
+/* ─── Accordion item ─────────────────────────────────────── */
+function AccordionItem({ icon, title, desc, isOpen, onToggle, accent = "#39d353", index }) {
+    return (
+        <div
+            className="border border-[#1a2332] bg-[#010409] relative overflow-hidden transition-all duration-200 hover:border-[#39d353] group"
+            style={isOpen ? { borderColor: accent } : {}}
+        >
+            <CornerAccent color={isOpen ? accent : "#1a2332"} />
+            <button
+                className="w-full flex items-center justify-between px-4 py-3.5 relative z-10"
+                onClick={onToggle}
+            >
+                <div className="flex items-center gap-3">
+                    <div
+                        className="w-7 h-7 border flex items-center justify-center text-sm transition-all duration-200"
+                        style={{
+                            borderColor: isOpen ? accent : "#1a2332",
+                            color: isOpen ? accent : "#8b949e",
+                            background: isOpen ? `${accent}15` : "transparent",
+                        }}
+                    >
+                        {icon}
+                    </div>
+                    <span className="font-mono text-[11px] tracking-[0.15em] uppercase text-left"
+                        style={{ color: isOpen ? accent : "#c9d1d9" }}>
+                        {title}
+                    </span>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                    <span className="font-mono text-[8px] tracking-widest" style={{ color: isOpen ? accent : "#30363d" }}>
+                        {isOpen ? "CLOSE" : "OPEN"}
+                    </span>
+                    <ChevronDown
+                        size={14}
+                        className="transition-transform duration-300"
+                        style={{
+                            color: isOpen ? accent : "#30363d",
+                            transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                        }}
+                    />
+                </div>
+            </button>
+            <div
+                className="overflow-hidden transition-all duration-300"
+                style={{ maxHeight: isOpen ? "200px" : "0" }}
+            >
+                <div className="px-4 pb-4 relative z-10 border-t border-[#1a2332]">
+                    <div className="flex items-start gap-2 pt-3">
+                        <span className="font-mono text-[#39d353] text-[10px] mt-0.5 shrink-0">▸</span>
+                        <p className="font-mono text-[11px] text-[#8b949e] leading-relaxed tracking-wide">{desc}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+/* ─── Data ───────────────────────────────────────────────── */
+const skills = [
+    { icon: <RiReactjsLine />, title: "Frontend Engineering", desc: "Building responsive, accessible user interfaces using HTML, CSS, JavaScript, React, Next.js and Tailwind CSS with performance-first architecture." },
+    { icon: <RiNodejsLine />, title: "Backend & API Systems", desc: "Developing scalable REST APIs using Node.js and Express including authentication, authorization and secure server logic." },
+    { icon: <RiDatabase2Line />, title: "Database Architecture", desc: "Designing optimized relational schemas using PostgreSQL with efficient queries, indexing strategies and clean data modeling." },
+    { icon: <RiAndroidLine />, title: "Mobile Development", desc: "Building cross-platform mobile applications using React Native integrated with backend services and APIs." },
+];
+
+const traits = [
+    { icon: <RiLightbulbFlashLine />, title: "Core Strengths", desc: "Hardworking, self-motivated and detail-oriented developer with strong analytical thinking and problem-solving ability." },
+    { icon: <RiGraduationCapLine />, title: "Technical Foundation", desc: "Computer Science student with solid fundamentals in programming, data structures and modern web development." },
+    { icon: <RiFocus3Line />, title: "Career Vision", desc: "Focused on building a long-term career as a software engineer by continuously improving technical depth and system design understanding." },
+    { icon: <RiRocketLine />, title: "Growth Mindset", desc: "Actively learning new technologies and frameworks to stay aligned with evolving industry standards." },
+];
+
+/* ─── Main export ────────────────────────────────────────── */
+export default function AboutSection() {
+    const [activeSkill, setActiveSkill] = useState(null);
+    const [activeTrait, setActiveTrait] = useState(null);
+    const [glitch, setGlitch] = useState(false);
+
+    useEffect(() => {
+        const t = setInterval(() => {
+            setGlitch(true);
+            setTimeout(() => setGlitch(false), 120);
+        }, 6500);
+        return () => clearInterval(t);
+    }, []);
+
+    return (
+        <section
+            className="relative py-28 overflow-hidden"
+            style={{ background: "#010409", fontFamily: "'Courier New', Courier, monospace" }}
+        >
+            {/* BG grid */}
+            <div
+                className="absolute inset-0 opacity-[0.025] pointer-events-none"
+                style={{
+                    backgroundImage: `linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)`,
+                    backgroundSize: "40px 40px",
+                }}
+            />
+            {/* Ambient glows */}
+            <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-[#39d353] opacity-[0.025] rounded-full blur-[160px] pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[140px] pointer-events-none" />
+
+            <div className="relative z-10 max-w-6xl mx-auto px-6">
+
+                {/* ── PAGE HEADER ── */}
+                <div className="mb-14">
+                    <div className="flex items-center gap-3 mb-6">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
+                        <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">
+                            SYSTEM_MODULE / ABOUT
+                        </span>
+                    </div>
+                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+                        <ScanlineOverlay />
+                        <CornerAccent color="#39d353" />
+                        <WindowChrome filename="ABOUT_ME.txt" />
+                        <div className="px-8 py-6">
+                            <h2
+                                className={`font-mono font-black text-3xl md:text-4xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"}`}
+                                style={{ textShadow: "0 0 24px rgba(57,211,83,0.25)" }}
+                            >
+                                ABOUT_<span className="text-[#39d353]">ME</span>
+                                <Cursor />
+                            </h2>
+                            <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider">
+                                $ cat ./about/profile.txt — Full Stack Developer from Jabalpur, MP.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* ── TOP SECTION: IMAGE + BIO ── */}
+                <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-6 mb-6">
+
+                    {/* Image panel */}
+                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden group hover:border-[#39d353] transition-colors duration-300">
+                        <ScanlineOverlay />
+                        <CornerAccent color="#39d353" />
+                        <WindowChrome filename="PROFILE_IMG.png" status="LOADED" statusColor="#00e5ff" />
+                        <div className="p-4 relative z-10">
+                            <div className="relative border border-[#1a2332] overflow-hidden">
+                                <CornerAccent color="#39d353" />
+                                <Image
+                                    src="/images/hero3.png"
+                                    alt="Prayag Sahu"
+                                    width={400}
+                                    height={500}
+                                    className="w-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                                />
+                                {/* Image overlay strip */}
+                                <div className="absolute bottom-0 left-0 right-0 border-t border-[#1a2332] bg-[#010409]/80 px-3 py-2">
+                                    <p className="font-mono text-[9px] text-[#39d353] tracking-[0.2em]">PRAYAG_SAHU.EXE</p>
+                                    <p className="font-mono text-[8px] text-[#30363d]">FULL_STACK_DEVELOPER</p>
+                                </div>
+                            </div>
+
+                            {/* Quick stat pills under image */}
+                            <div className="grid grid-cols-2 gap-2 mt-3">
+                                {[
+                                    { label: "STATUS", value: "AVAILABLE", color: "#39d353" },
+                                    { label: "MODE", value: "FREELANCE", color: "#00e5ff" },
+                                    { label: "BASE", value: "JABALPUR", color: "#f59e0b" },
+                                    { label: "DEGREE", value: "B.TECH CSE", color: "#a855f7" },
+                                ].map((s) => (
+                                    <div key={s.label} className="border border-[#1a2332] bg-[#010409] px-2 py-1.5">
+                                        <div className="font-mono text-[7px] text-[#30363d] tracking-[0.2em]">{s.label}</div>
+                                        <div className="font-mono text-[10px] font-bold" style={{ color: s.color }}>{s.value}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Bio panel */}
+                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden hover:border-[#39d353] transition-colors duration-300 flex flex-col">
+                        <ScanlineOverlay />
+                        <CornerAccent color="#00e5ff" />
+                        <WindowChrome filename="BIO_DATA.txt" status="ONLINE" statusColor="#00e5ff" />
+
+                        <div className="p-7 relative z-10 flex flex-col flex-1">
+                            {/* Name & title */}
+                            <div className="mb-5">
+                                <div className="font-mono text-[10px] text-[#8b949e] tracking-[0.2em] mb-1">$ whoami</div>
+                                <h3
+                                    className="font-mono font-black text-2xl text-white tracking-tight"
+                                    style={{ textShadow: "0 0 16px rgba(0,229,255,0.2)" }}
+                                >
+                                    <TypewriterText text="PRAYAG SAHU" speed={70} />
+                                </h3>
+                                <p className="font-mono text-[11px] text-[#00e5ff] tracking-[0.2em] mt-1">
+                                    COMPUTER SCIENCE ENGINEER · FREELANCE FULL STACK DEVELOPER
+                                </p>
+                            </div>
+
+                            {/* Bio text */}
+                            <div className="border border-[#1a2332] bg-[#010409] p-4 mb-5 relative">
+                                <CornerAccent color="#1a2332" />
+                                <div className="font-mono text-[9px] text-[#39d353] tracking-[0.2em] mb-2">README.md</div>
+                                <p className="font-mono text-[12px] text-[#8b949e] leading-[1.9] tracking-wide">
+                                    I am{" "}
+                                    <span className="text-[#39d353] font-bold">Prayag Sahu</span>, a Computer Science
+                                    Engineer undergraduate and Freelance Full Stack Developer from{" "}
+                                    <span className="text-white">Jabalpur, Madhya Pradesh</span>.
+                                    <br /><br />
+                                    Completed Higher Secondary Education under{" "}
+                                    <span className="text-white">MPBSE with First Division</span> and currently pursuing{" "}
+                                    <span className="text-[#00e5ff] font-bold">B.Tech (CSE)</span> from{" "}
+                                    <span className="text-white">Baderia Global Institute of Engineering & Management</span>,
+                                    affiliated with <span className="text-[#39d353]">RGPV University</span>.
+                                    <br /><br />
+                                    Focused on building modern, scalable and performance-driven web applications
+                                    using clean architecture and practical problem solving.
+                                </p>
+                            </div>
+
+                            {/* Info pills */}
+                            <div className="grid grid-cols-2 gap-2 mt-auto">
+                                <InfoPill icon={<MapPin size={13} />} text="Jabalpur, Madhya Pradesh" accent="#39d353" />
+                                <InfoPill icon={<GraduationCap size={13} />} text="B.Tech CSE — BGIEM RGPV" accent="#00e5ff" />
+                                <InfoPill icon={<Briefcase size={13} />} text="Freelance Full Stack Dev" accent="#f59e0b" />
+                                <InfoPill icon={<Rocket size={13} />} text="Open to Opportunities" accent="#a855f7" />
+                            </div>
+                        </div>
+
+                        {/* Terminal footer */}
+                        <div className="px-7 py-3 border-t border-[#1a2332] flex items-center justify-between relative z-10">
+                            <div className="flex items-center gap-2 font-mono text-[9px] text-[#30363d]">
+                                <span>$</span>
+                                <span className="text-[#8b949e]">cat bio.txt _</span>
+                            </div>
+                            <a
+                                href="http://prayagsahuportfolio.netlify.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group/btn flex items-center gap-2 border border-[#39d353] text-[#39d353] font-mono text-[9px] tracking-[0.15em] uppercase px-3 py-1.5 hover:bg-[#39d353] hover:text-[#010409] transition-all duration-200"
+                            >
+                                PORTFOLIO →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* ── BOTTOM SECTION: ACCORDIONS ── */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                    {/* Core Expertise */}
+                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden hover:border-[#39d353] transition-colors duration-300">
+                        <ScanlineOverlay />
+                        <CornerAccent color="#39d353" />
+                        <WindowChrome filename="CORE_EXPERTISE.log" status="ACTIVE" statusColor="#39d353" />
+
+                        <div className="p-6 relative z-10">
+                            <div className="flex items-center justify-between mb-4">
+                                <div>
+                                    <div className="font-mono text-[9px] text-[#39d353] tracking-[0.2em] mb-1">$ ls ./skills/</div>
+                                    <h3 className="font-mono font-black text-base text-white tracking-[0.1em] uppercase">
+                                        CORE_EXPERTISE
+                                    </h3>
+                                </div>
+                                <div className="border border-[#1a2332] bg-[#010409] px-3 py-1">
+                                    <span className="font-mono text-[9px] text-[#39d353] tracking-widest">{skills.length} MODULES</span>
+                                </div>
+                            </div>
+
+                            <div className="space-y-2">
+                                {skills.map((skill, i) => (
+                                    <AccordionItem
+                                        key={i}
+                                        index={i}
+                                        icon={skill.icon}
+                                        title={skill.title}
+                                        desc={skill.desc}
+                                        isOpen={activeSkill === i}
+                                        onToggle={() => setActiveSkill(activeSkill === i ? null : i)}
+                                        accent="#39d353"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="px-6 py-3 border-t border-[#1a2332] flex items-center gap-2 relative z-10">
+                            <span className="font-mono text-[9px] text-[#30363d]">$</span>
+                            <span className="font-mono text-[9px] text-[#8b949e]">skills --expertise _</span>
+                        </div>
+                    </div>
+
+                    {/* Core Qualities */}
+                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden hover:border-[#00e5ff] transition-colors duration-300">
+                        <ScanlineOverlay />
+                        <CornerAccent color="#00e5ff" />
+                        <WindowChrome filename="CORE_QUALITIES.log" status="ACTIVE" statusColor="#00e5ff" />
+
+                        <div className="p-6 relative z-10">
+                            <div className="flex items-center justify-between mb-4">
+                                <div>
+                                    <div className="font-mono text-[9px] text-[#00e5ff] tracking-[0.2em] mb-1">$ ls ./traits/</div>
+                                    <h3 className="font-mono font-black text-base text-white tracking-[0.1em] uppercase">
+                                        CORE_QUALITIES
+                                    </h3>
+                                </div>
+                                <div className="border border-[#1a2332] bg-[#010409] px-3 py-1">
+                                    <span className="font-mono text-[9px] text-[#00e5ff] tracking-widest">{traits.length} TRAITS</span>
+                                </div>
+                            </div>
+
+                            <div className="space-y-2">
+                                {traits.map((trait, i) => (
+                                    <AccordionItem
+                                        key={i}
+                                        index={i}
+                                        icon={trait.icon}
+                                        title={trait.title}
+                                        desc={trait.desc}
+                                        isOpen={activeTrait === i}
+                                        onToggle={() => setActiveTrait(activeTrait === i ? null : i)}
+                                        accent="#00e5ff"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="px-6 py-3 border-t border-[#1a2332] flex items-center gap-2 relative z-10">
+                            <span className="font-mono text-[9px] text-[#30363d]">$</span>
+                            <span className="font-mono text-[9px] text-[#8b949e]">traits --list _</span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* ── FOOTER ── */}
+                <div className="mt-8 flex items-center justify-between">
+                    <div className="font-mono text-[10px] text-[#30363d] tracking-widest">
+                        $ about --profile prayag-sahu _
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
+                        <span className="font-mono text-[9px] text-[#39d353] tracking-[0.2em]">ALL SYSTEMS OPERATIONAL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
