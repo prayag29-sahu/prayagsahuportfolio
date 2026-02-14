@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // /* eslint-disable @next/next/no-img-element */
 // // /* eslint-disable @next/next/no-img-element */
 // // // 'use client';
@@ -1896,7 +1897,7 @@ export default function Education() {
 
                 {/* ── FOOTER ── */}
                 <div className="mt-4 flex items-center justify-between">
-                    <div className="font-mono text-[10px] text-[#30363d] tracking-widest">
+                        <div className="font-mono text-[10px] text-[#8b949e] tracking-widest">
                         $ education --list --all _
                     </div>
                     <div className="flex items-center gap-3">

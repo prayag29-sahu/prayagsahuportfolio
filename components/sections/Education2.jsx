@@ -1018,7 +1018,7 @@ export default function Certifications() {
 
                     {/* ── FOOTER ROW ── */}
                     <div className="max-w-6xl mx-auto px-6 mt-10 flex items-center justify-between">
-                        <div className="font-mono text-[10px] text-[#30363d] tracking-widest">
+                        <div className="font-mono text-[10px] text-[#8b949e] tracking-widest">
                             $ certifications --list --all _
                         </div>
                         <div className="flex items-center gap-4">

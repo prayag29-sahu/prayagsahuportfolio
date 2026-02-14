@@ -881,7 +881,7 @@ export default function DevStats() {
                     </div>
 
                     {/* Footer */}
-                    <div className="mt-6 flex items-center justify-between text-[9px] font-mono text-[#30363d] tracking-widest">
+                    <div className="mt-6 flex items-center justify-between text-[9px] font-mono text-[#8b949e] tracking-widest">
                         <span>© 2026 PRAYAG_SAHU.DEV</span>
                         <span className="flex items-center gap-2">
                             <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />

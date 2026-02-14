@@ -1120,7 +1120,7 @@ export default function AboutSection() {
                                 {/* Image overlay strip */}
                                 <div className="absolute bottom-0 left-0 right-0 border-t border-[#1a2332] bg-[#010409]/80 px-3 py-2">
                                     <p className="font-mono text-[9px] text-[#39d353] tracking-[0.2em]">PRAYAG_SAHU.EXE</p>
-                                    <p className="font-mono text-[8px] text-[#30363d]">FULL_STACK_DEVELOPER</p>
+                                        <p className="font-mono text-[8px] text-[#8b949e]">FULL_STACK_DEVELOPER</p>
                                 </div>
                             </div>
 
@@ -1133,7 +1133,7 @@ export default function AboutSection() {
                                     { label: "DEGREE", value: "B.TECH CSE", color: "#a855f7" },
                                 ].map((s) => (
                                     <div key={s.label} className="border border-[#1a2332] bg-[#010409] px-2 py-1.5">
-                                        <div className="font-mono text-[7px] text-[#30363d] tracking-[0.2em]">{s.label}</div>
+                                        <div className="font-mono text-[7px] text-[#8b949e] tracking-[0.2em]">{s.label}</div>
                                         <div className="font-mono text-[10px] font-bold" style={{ color: s.color }}>{s.value}</div>
                                     </div>
                                 ))}
@@ -1298,7 +1298,7 @@ export default function AboutSection() {
 
                 {/* ── FOOTER ── */}
                 <div className="mt-8 flex items-center justify-between">
-                    <div className="font-mono text-[10px] text-[#30363d] tracking-widest">
+                        <div className="font-mono text-[10px] text-[#8b949e] tracking-widest">
                         $ about --profile prayag-sahu _
                     </div>
                     <div className="flex items-center gap-2">
