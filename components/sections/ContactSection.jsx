@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 
 
 
@@ -458,7 +459,7 @@ function TerminalInput({ label, name, type = "text", placeholder, value, onChang
                 <div className="absolute left-0 top-0 bottom-0 w-[2px] transition-all duration-200"
                     style={{ background: focused ? accentColor : "transparent" }} />
                 <div className="flex items-center px-4 py-0">
-                    <span className="font-mono text-[10px] mr-2 shrink-0" style={{ color: focused ? accentColor : "#30363d" }}>
+                    <span className="font-mono text-[10px] mr-2 shrink-0" style={{ color: focused ? accentColor : "#8b949e" }}>
                         {focused ? ">" : "$"}
                     </span>
                     <input
@@ -470,7 +471,7 @@ function TerminalInput({ label, name, type = "text", placeholder, value, onChang
                         required={required}
                         onFocus={() => setFocused(true)}
                         onBlur={() => setFocused(false)}
-                        className="w-full bg-transparent py-3 font-mono text-[12px] text-white placeholder-[#30363d] outline-none"
+                        className="w-full bg-transparent py-3 font-mono text-[12px] text-white placeholder-[#8b949e] outline-none"
                     />
                     {focused && <span className="animate-pulse font-mono text-[12px] ml-1" style={{ color: accentColor }}>█</span>}
                 </div>
@@ -493,7 +494,7 @@ function TerminalTextarea({ label, name, value, onChange, required, accentColor 
                 <div className="absolute left-0 top-0 bottom-0 w-[2px] transition-all duration-200"
                     style={{ background: focused ? accentColor : "transparent" }} />
                 <div className="flex items-start px-4 pt-3 pb-1">
-                    <span className="font-mono text-[10px] mr-2 mt-0.5 shrink-0" style={{ color: focused ? accentColor : "#30363d" }}>
+                    <span className="font-mono text-[10px] mr-2 mt-0.5 shrink-0" style={{ color: focused ? accentColor : "#8b949e" }}>
                         {focused ? ">" : "$"}
                     </span>
                     <textarea
@@ -505,10 +506,10 @@ function TerminalTextarea({ label, name, value, onChange, required, accentColor 
                         placeholder="Describe your project, job opportunity or query..."
                         onFocus={() => setFocused(true)}
                         onBlur={() => setFocused(false)}
-                        className="w-full bg-transparent font-mono text-[12px] text-white placeholder-[#30363d] outline-none resize-none"
+                        className="w-full bg-transparent font-mono text-[12px] text-white placeholder-[#8b949e] outline-none resize-none"
                     />
                 </div>
-                <div className="px-4 pb-2 font-mono text-[8px] text-[#30363d] tracking-widest flex justify-between">
+                <div className="px-4 pb-2 font-mono text-[8px] text-[#8b949e] tracking-widest flex justify-between">
                     <span>MESSAGE.txt</span>
                     <span>{value?.length || 0} CHARS</span>
                 </div>
@@ -704,32 +705,11 @@ export default function Contact() {
                                 <WindowChrome filename="CONTACT_INFO.log" status="ONLINE" statusColor="#39d353" />
                                 <div className="p-5 space-y-2 relative z-10">
                                     <div className="font-mono text-[9px] text-[#39d353] tracking-[0.2em] mb-3">$ cat ./contact/info.txt</div>
-                                    <ContactItem icon={<Mail size={15} />} label="EMAIL" value="sahuprayag145@gmail.com" href="mailto:sahuprayag145@gmail.com" color="#39d353" />
+                                    <ContactItem icon={<Mail size={15} />} label="EMAIL" value="sahuprayag145@gmail.com" href="mailto:sahuprayag229@gmail.com" color="#39d353" />
                                     <ContactItem icon={<Phone size={15} />} label="PHONE" value="+91 79999 26855" href="tel:+917999926855" color="#00e5ff" />
                                     <ContactItem icon={<MapPin size={15} />} label="LOCATION" value="Jabalpur, Madhya Pradesh, India" color="#f59e0b" />
                                 </div>
                             </div>
-
-                            {/* Image panel */}
-                            <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden group flex-1">
-                                <ScanlineOverlay />
-                                <CornerAccent color="#a855f7" />
-                                <WindowChrome filename="CONNECT.png" status="READY" statusColor="#a855f7" />
-                                <div className="p-4 relative z-10">
-                                    <div className="relative border border-[#1a2332] overflow-hidden">
-                                        <CornerAccent color="#a855f7" />
-                                        <img src="/images/contact.png" alt="Contact"
-                                            className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
-                                            style={{ filter: "grayscale(15%)" }} />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#010409]/70 via-transparent to-transparent" />
-                                        <div className="absolute bottom-3 left-3">
-                                            <div className="font-mono text-[8px] text-[#8b949e] tracking-widest">LETS_BUILD_SOMETHING</div>
-                                            <div className="font-mono text-[10px] text-[#a855f7]">GREAT_TOGETHER.exe</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                             {/* Social links */}
                             <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
                                 <ScanlineOverlay />
@@ -748,10 +728,10 @@ export default function Contact() {
                             {/* Quick message prompt */}
                             <div className="border border-[#1a2332] bg-[#010409] p-4 relative overflow-hidden">
                                 <CornerAccent color="#1a2332" />
-                                <div className="font-mono text-[9px] text-[#30363d] space-y-1">
-                                    <div><span className="text-[#39d353]">$</span> ping prayag-sahu.dev</div>
+                                <div className="font-mono text-[9px] text-[#8b949e] space-y-1">
+                                    <div><span className="text-[#8b949e]">$</span> ping prayag-sahu.dev</div>
                                     <div><span className="text-[#8b949e]">PONG:</span> <span className="text-[#39d353]">I am here! Ready to collaborate.</span></div>
-                                    <div><span className="text-[#39d353]">$</span> status --availability<span className="animate-pulse">█</span></div>
+                                    <div><span className="text-[#8b9494e]">$</span> status --availability<span className="animate-pulse">█</span></div>
                                     <div><span className="text-[#8b949e]">→</span> <span className="text-[#f59e0b]">OPEN_TO_WORK: TRUE</span></div>
                                 </div>
                             </div>
@@ -801,7 +781,7 @@ export default function Contact() {
                                         {/* Privacy note */}
                                         <div className="border border-[#1a2332] bg-[#010409] px-4 py-2.5 flex items-center gap-2">
                                             <div className="w-1 h-1 rounded-full bg-[#39d353] shrink-0" />
-                                            <p className="font-mono text-[9px] text-[#30363d] tracking-wide">
+                                            <p className="font-mono text-[9px] text-[#8b949e] tracking-wide">
                                                 Your information is encrypted and will never be shared with third parties.
                                             </p>
                                         </div>
@@ -826,22 +806,6 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    {/* ── FOOTER ── */}
-                    <div className="mt-12 border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-                        <ScanlineOverlay />
-                        <div className="px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
-                            <div className="flex items-center gap-3">
-                                <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
-                                <span className="font-mono text-[10px] text-[#39d353] tracking-[0.2em]">ALL_SYSTEMS_ONLINE</span>
-                            </div>
-                            <div className="font-mono text-[10px] text-[#30363d] tracking-widest text-center">
-                                © 2026 PRAYAG_SAHU — FULL_STACK_DEVELOPER & FREELANCER
-                            </div>
-                            <div className="font-mono text-[9px] text-[#30363d] tracking-widest">
-                                $ contact --version 1.0.0 _
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
         </ParallaxSection>

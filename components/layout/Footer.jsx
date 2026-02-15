@@ -596,7 +596,7 @@ export default function Footer() {
                                         { cmd: "$ leetcode", out: "157 problems solved", outColor: "#f59e0b" },
                                     ].map((line, i) => (
                                         <div key={i}>
-                                            <div className="text-[#30363d]">{line.cmd}</div>
+                                            <div className="text-[#8b949e]">{line.cmd}</div>
                                             <div style={{ color: line.outColor }}>→ {line.out}</div>
                                         </div>
                                     ))}

@@ -553,7 +553,7 @@ export default function CTA() {
                                 <div className="flex flex-wrap gap-4 mt-6 mb-8">
                                     {[
                                         { label: "PROJECTS", end: 4, suffix: "+", color: "#39d353" },
-                                        { label: "CLIENTS", end: 2, suffix: "+", color: "#00e5ff" },
+                                        { label: "CLIENTS", end: 1, suffix: "+", color: "#00e5ff" },
                                         { label: "COMMITS", end: 4167, suffix: "+", color: "#f59e0b" },
                                         { label: "RATING", end: 49, suffix: "★/50", color: "#a855f7" },
                                     ].map(s => (

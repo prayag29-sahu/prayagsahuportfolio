@@ -769,7 +769,7 @@ export default function AchievementsPage() {
                                     <ProgressRing value={93} max={100} label="10th Score" color="#a855f7" />
                                     <ProgressRing value={88} max={100} label="12th Score" color="#00e5ff" />
                                     <ProgressRing value={82} max={100} label="CGPA" color="#39d353" />
-                                    <ProgressRing value={157} max={200} label="InterviewBit" color="#f59e0b" />
+                                    {/* <ProgressRing value={157} max={200} label="InterviewBit" color="#f59e0b" /> */}
                                 </div>
                             </div>
                         </div>
@@ -781,16 +781,16 @@ export default function AchievementsPage() {
                             <div className="p-4 relative z-10">
                                 <div className="grid grid-cols-3 gap-2">
                                     {[
-                                        { label: "CERTS", value: "15+", color: "#39d353" },
-                                        { label: "BADGES", value: "20+", color: "#00e5ff" },
-                                        { label: "EVENTS", value: "10+", color: "#f59e0b" },
+                                        { label: "CERTS", value: "20+", color: "#39d353" },
+                                        { label: "BADGES", value: "25+", color: "#00e5ff" },
+                                        { label: "EVENTS", value: "02+", color: "#f59e0b" },
                                         { label: "PLATFORMS", value: "05", color: "#a855f7" },
                                         { label: "AWARDS", value: "08+", color: "#39d353" },
                                         { label: "COMMITS", value: "4K+", color: "#00e5ff" },
                                     ].map(b => (
                                         <div key={b.label} className="border border-[#1a2332] bg-[#010409] px-2 py-2 text-center hover:border-[#39d353] transition-colors duration-200">
                                             <div className="font-mono font-black text-base" style={{ color: b.color }}>{b.value}</div>
-                                            <div className="font-mono text-[7px] text-[#30363d] tracking-widest mt-0.5">{b.label}</div>
+                                            <div className="font-mono text-[7px] text-[#8b949e] tracking-widest mt-0.5">{b.label}</div>
                                         </div>
                                     ))}
                                 </div>
@@ -801,7 +801,7 @@ export default function AchievementsPage() {
 
                 {/* ── FOOTER ── */}
                 <div className="flex items-center justify-between">
-                    <div className="font-mono text-[10px] text-[#30363d] tracking-widest">
+                    <div className="font-mono text-[10px] text-[#8b949e] tracking-widest">
                         $ achievements --all --sorted-by-year _
                     </div>
                     <div className="flex items-center gap-2">
