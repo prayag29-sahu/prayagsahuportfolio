@@ -447,7 +447,61 @@ const mainProjects = [
     },
     {
         id: "PRJ_03",
-        title: "Authentication Page",
+        title: "Security Verification web",
+        subtitle: "Full Stack Collage Minor Project",
+        stack: ["React", "Tailwind","Python","Supabase", "Emailjs",],
+        description: "A Security verification web to identify froud links, URL, Images, and Documents using python API's and  secure database",
+        accentColor: "#f59e0b",
+        tag: "FULLSTACK",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/05.png",
+        video: "/videos/bank.mp4",
+    },
+    {
+        id: "PRJ_04",
+        title: "Online Language Helper",
+        subtitle: "Learn and Communicate in different languages",
+        stack: ["HTML", "CSS","JavaScript","Python"],
+        description: "An interactive Learning platform with Different languages help user to translate each topic and word easily for learning and communication purpose",
+        accentColor: "#a855f7",
+        tag: "WEB_APP",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/04.png",
+        video: "/videos/quiz.mp4",
+    },
+];
+const mainProjects1 = [
+    {
+        id: "PRJ_01",
+        title: "Ghotul Homestay Platform",
+        subtitle: "Full Stack Hospitality App",
+        stack: ["React", "Node.js", "PostgreSQL", "Express","Booking Engines","Razorpay Gateway"],
+        description: "A complete homestay booking platform with real-time availability, user authentication, admin dashboard, payment integration and booking management system.",
+        accentColor: "#39d353",
+        tag: "FULLSTACK",
+        github: "https://github.com/prayag29-sahu",
+        live: "http://prayagsahuportfolio.netlify.app",
+        image: "/images/09_Projects/03.png",
+        video: "/videos/ghotul.mp4",
+    },
+    {
+        id: "PRJ_02",
+        title: "3D Developer Portfolio",
+        subtitle: "Interactive Personal Portfolio",
+        stack: ["Next.js", "Tailwind", "Three.js", "Framer"],
+        description: "A visually immersive 3D developer portfolio with parallax sections, animated skill trees, project showcases and contact integration.",
+        accentColor: "#00e5ff",
+        tag: "FRONTEND",
+        github: "https://github.com/prayag29-sahu",
+        live: "http://prayagsahuportfolio.netlify.app",
+        image: "/images/09_Projects/01.png",
+        video: "/videos/portfolio.mp4",
+    },
+    {
+        id: "PRJ_03",
+        title: "Full Stack Security Verification web",
         subtitle: "Login-Signup with Full Stack",
         stack: ["React", "Tailwind", "Emailjs", "Twillio"],
         description: "A Complete Frontend Backend Working Login signup page with email verification, OTP-verifiy and Forget credentials with secure database",
@@ -470,6 +524,19 @@ const mainProjects = [
         live: null,
         image: "/images/09_Projects/04.png",
         video: "/videos/quiz.mp4",
+    },
+    {
+        id: "PRJ_05",
+        title: "Authentication Page",
+        subtitle: "Login-Signup with Full Stack",
+        stack: ["React", "Tailwind", "Emailjs", "Twillio"],
+        description: "A Complete Frontend Backend Working Login signup page with email verification, OTP-verifiy and Forget credentials with secure database",
+        accentColor: "#f59e0b",
+        tag: "React",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/02.png",
+        video: "/videos/bank.mp4",
     },
 ];
 
@@ -622,7 +689,7 @@ function MajorCard({ project, onExplore }) {
                 <p className="font-mono text-[8px] mb-2" style={{ color: ac }}>{project.subtitle}</p>
                 <div className="flex flex-wrap gap-1 mb-3">
                     {project.stack.slice(0, 2).map(s => (
-                        <span key={s} className="font-mono text-[7px] px-1.5 py-0.5 border border-[#1a2332] text-[#30363d]">{s}</span>
+                        <span key={s} className="font-mono text-[7px] px-1.5 py-0.5 border border-[#1a2332] text-[#8b949e]">{s}</span>
                     ))}
                 </div>
                 <button
@@ -910,7 +977,7 @@ export default function ProjectsPage() {
                         ))}
                     </div>
                     {/* Right: Big slider */}
-                    <BigSlider projects={mainProjects} onExplore={setPopup} />
+                    <BigSlider projects={mainProjects1} onExplore={setPopup} />
                 </div>
 
                 {/* ── MINOR PROJECTS ── */}
