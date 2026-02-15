@@ -688,12 +688,42 @@ function ProfileCard({ imageSrc, name, role }) {
                     </div>
 
                     {/* Photo */}
-                    <div className="relative h-60 overflow-hidden border-b border-[#1a2332]">
+                    {/* <div className="relative h-60 overflow-hidden border-b border-[#1a2332]">
                         <Image src={imageSrc} alt={name} fill className="object-cover" style={{ filter: "brightness(0.7)" }} />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-transparent to-transparent" />
-                        {/* Scan line sweep */}
                         <div className="absolute left-0 right-0 h-[1px] pointer-events-none animate-scan-line"
                             style={{ background: "rgba(57,211,83,0.3)", boxShadow: "0 0 8px rgba(57,211,83,0.5)" }} />
+                    </div> */}
+                    <div className="relative h-60 overflow-hidden border-b border-[#1a2332] group">
+
+                        {/* Image */}
+                        <Image
+                            src={imageSrc}
+                            alt={name}
+                            fill
+                            className="object-cover transition-all duration-700"
+                            style={{
+                                filter: "brightness(0.55) contrast(1.1) saturate(0.9)"
+                            }}
+                        />
+
+                        {/* Dark Overlay */}
+                        <div className="absolute inset-0 bg-black/40 pointer-events-none transition-all duration-700 group-hover:bg-black/20" />
+
+                        {/* Gradient Bottom Shadow */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-transparent to-transparent pointer-events-none" />
+
+                        {/* Subtle Green Glow Overlay */}
+                        <div className="absolute inset-0 bg-[#39d353]/5 pointer-events-none mix-blend-overlay" />
+
+                        {/* Scan Line (Working Animation) */}
+                        <div className="absolute left-0 right-0 h-[1px] pointer-events-none scan-line"
+                            style={{
+                                background: "rgba(57,211,83,0.6)",
+                                boxShadow: "0 0 8px rgba(57,211,83,0.7)"
+                            }}
+                        />
+
                     </div>
 
                     {/* Info */}
@@ -1043,6 +1073,7 @@ export default function HeroSection() {
                 </div>
 
                 <style jsx>{`
+                
         @keyframes scan-line {
           0% { top: -5%; }
           100% { top: 105%; }
@@ -1059,6 +1090,38 @@ export default function HeroSection() {
           0%, 100% { box-shadow: 0 0 0 0 rgba(0,229,255,0); }
           50% { box-shadow: 0 0 0 6px rgba(0,229,255,0.1); }
         }
+           .scan-line {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #39d353;
+        box-shadow: 0 0 12px #39d353, 0 0 20px #39d353;
+        animation: scanMove 3s linear infinite;
+    }
+
+    .scan-area {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: linear-gradient(
+            to bottom,
+            rgba(57, 211, 83, 0.25),
+            rgba(57, 211, 83, 0.08),
+            transparent
+        );
+        animation: scanMove 3s linear infinite;
+    }
+
+    @keyframes scanMove {
+        0% {
+            top: -60px;
+        }
+        100% {
+            top: 100%;
+        }
+    }
       `}</style>
             </section>
         </ParallaxSection>

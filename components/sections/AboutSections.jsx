@@ -1112,13 +1112,23 @@ export default function AboutSection() {
                         <div className="p-4 relative z-10">
                             <div className="relative border border-[#1a2332] overflow-hidden">
                                 <CornerAccent color="#39d353" />
-                                <Image
-                                    src="/images/hero3.png"
-                                    alt="Prayag Sahu"
-                                    width={400}
-                                    height={500}
-                                    className="w-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
-                                />
+                                    <div className="relative overflow-hidden group">
+
+                                        <Image
+                                            src="/images/hero3.png"
+                                            alt="Prayag Sahu"
+                                            width={400}
+                                            height={500}
+                                            className="w-full object-cover transition-all duration-700 group-hover:brightness-90 group-hover:contrast-110"
+                                            style={{
+                                                filter: "brightness(0.55) contrast(1.1)"
+                                            }}
+                                        />
+
+                                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-700 pointer-events-none" />
+
+                                    </div>
+
                                 {/* Image overlay strip */}
                                 <div className="absolute bottom-0 left-0 right-0 border-t border-[#1a2332] bg-[#010409]/80 px-3 py-2">
                                     <p className="font-mono text-[9px] text-[#39d353] tracking-[0.2em]">PRAYAG_SAHU.EXE</p>
