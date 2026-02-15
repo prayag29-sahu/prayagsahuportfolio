@@ -423,7 +423,7 @@ const mainProjects = [
         id: "PRJ_01",
         title: "Ghotul Homestay Platform",
         subtitle: "Full Stack Hospitality App",
-        stack: ["React", "Node.js", "PostgreSQL", "Express","Booking Engines","Razorpay Gateway"],
+        stack: ["React", "Node.js", "PostgreSQL", "Express", "Booking Engines", "Razorpay Gateway"],
         description: "A complete homestay booking platform with real-time availability, user authentication, admin dashboard, payment integration and booking management system.",
         accentColor: "#39d353",
         tag: "FULLSTACK",
@@ -449,7 +449,7 @@ const mainProjects = [
         id: "PRJ_03",
         title: "Security Verification web",
         subtitle: "Full Stack Collage Minor Project",
-        stack: ["React", "Tailwind","Python","Supabase", "Emailjs",],
+        stack: ["React", "Tailwind", "Python", "Supabase", "Emailjs",],
         description: "A Security verification web to identify froud links, URL, Images, and Documents using python API's and  secure database",
         accentColor: "#f59e0b",
         tag: "FULLSTACK",
@@ -462,7 +462,7 @@ const mainProjects = [
         id: "PRJ_04",
         title: "Online Language Helper",
         subtitle: "Learn and Communicate in different languages",
-        stack: ["HTML", "CSS","JavaScript","Python"],
+        stack: ["HTML", "CSS", "JavaScript", "Python"],
         description: "An interactive Learning platform with Different languages help user to translate each topic and word easily for learning and communication purpose",
         accentColor: "#a855f7",
         tag: "WEB_APP",
@@ -477,7 +477,7 @@ const mainProjects1 = [
         id: "PRJ_01",
         title: "Ghotul Homestay Platform",
         subtitle: "Full Stack Hospitality App",
-        stack: ["React", "Node.js", "PostgreSQL", "Express","Booking Engines","Razorpay Gateway"],
+        stack: ["React", "Node.js", "PostgreSQL", "Express", "Booking Engines", "Razorpay Gateway"],
         description: "A complete homestay booking platform with real-time availability, user authentication, admin dashboard, payment integration and booking management system.",
         accentColor: "#39d353",
         tag: "FULLSTACK",
@@ -516,7 +516,7 @@ const mainProjects1 = [
         id: "PRJ_04",
         title: "Online Language Helper",
         subtitle: "Learn and Communicate in different languages",
-        stack: ["HTML", "CSS","JavaScript","Python"],
+        stack: ["HTML", "CSS", "JavaScript", "Python"],
         description: "An interactive Learning platform with Different languages help user to translate each topic and word easily for learning and communication purpose",
         accentColor: "#a855f7",
         tag: "WEB_APP",
@@ -531,17 +531,30 @@ const mainProjects1 = [
         subtitle: "Login-Signup with Full Stack",
         stack: ["React", "Tailwind", "Emailjs", "Twillio"],
         description: "A Complete Frontend Backend Working Login signup page with email verification, OTP-verifiy and Forget credentials with secure database",
-        accentColor: "#f59e0b",
+        accentColor: "#f50bf1",
         tag: "React",
         github: "https://github.com/prayag29-sahu",
         live: null,
         image: "/images/09_Projects/02.png",
         video: "/videos/bank.mp4",
     },
+    {
+        id: "PRJ_06",
+        title: "Voice Assistent",
+        subtitle: "Voice Controlled Assistant",
+        stack: ["Python"],
+        description: "A voice assistent which can perform various tasks based on user commands, such as web search, opening applications, providing weather updates, and more.",
+        accentColor: "#f52e0b",
+        tag: "Python",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/06.png",
+        video: "/videos/bank.mp4",
+    },
 ];
 
 const minorProjects = [
-    { id: "M_01", title: "Mini CRM Tool", desc: "Small scale CRM dashboard with pipeline, contacts and activity tracking.", stack: "React • Supabase", icon: <Terminal size={16} />, color: "#39d353", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80", github: "https://github.com/prayag29-sahu", live: null },
+    { id: "M_01", title: "Mini Chatbot", desc: "Asimple chatbot for students related data using python and conda", stack: "Python • Conda", icon: <Terminal size={16} />, color: "#39d353", image: "/images/09_Projects/minor/01.png", github: "https://github.com/prayag29-sahu", live: null },
     { id: "M_02", title: "Landing Page UI", desc: "High-converting marketing UI with animated hero and testimonial sections.", stack: "Next.js • Tailwind", icon: <Code2 size={16} />, color: "#00e5ff", image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&q=80", github: "https://github.com/prayag29-sahu", live: null },
     { id: "M_03", title: "Todo App", desc: "Full-featured task manager with priorities, deadlines and local persistence.", stack: "React • LocalStorage", icon: <Terminal size={16} />, color: "#f59e0b", image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&q=80", github: "https://github.com/prayag29-sahu", live: null },
     { id: "M_04", title: "Weather App", desc: "Live weather dashboard using OpenWeather API with 5-day forecast.", stack: "HTML • JS • API", icon: <Code2 size={16} />, color: "#a855f7", image: "https://images.unsplash.com/photo-1504608524841-42584120d693?w=400&q=80", github: "https://github.com/prayag29-sahu", live: null },
@@ -810,6 +823,12 @@ function BigSlider({ projects, onExplore }) {
                     <button onClick={goPrev} className="border border-[#1a2332] p-2.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-colors"><ChevronLeft size={14} /></button>
                     <button onClick={goNext} className="border border-[#1a2332] p-2.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-colors"><ChevronRight size={14} /></button>
                 </div>
+
+                <div className="flex items-start justify-between mt-6">
+                    <div>
+                        <p className="font-mono text-[10px] tracking-widest mt-0.5" style={{ color: ac }}>{cur.description}</p>
+                    </div>
+                </div>
             </div>
         </div>
     );
@@ -914,109 +933,109 @@ export default function ProjectsPage() {
     }, []);
 
     return (
-          <ParallaxSection backgroundImage="/images/bg.png" height="auto">
+        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
             <section className="relative  min-h-screen py-28 overflow-hidden"
                 id='projects'
-            style={{  fontFamily: "'Courier New', Courier, monospace" }}>
-            <CursorGlow />
+                style={{ fontFamily: "'Courier New', Courier, monospace" }}>
+                <CursorGlow />
 
-            {/* BG grid */}
-            <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
-                style={{
-                    backgroundImage: "linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)",
-                    backgroundSize: "40px 40px",
-                }} />
-            {/* Glows */}
-            <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#39d353] opacity-[0.02] rounded-full blur-[180px] pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[160px] pointer-events-none" />
+                {/* BG grid */}
+                <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
+                    style={{
+                        backgroundImage: "linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)",
+                        backgroundSize: "40px 40px",
+                    }} />
+                {/* Glows */}
+                <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#39d353] opacity-[0.02] rounded-full blur-[180px] pointer-events-none" />
+                <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[160px] pointer-events-none" />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-6">
+                <div className="relative z-10 max-w-7xl mx-auto px-6">
 
-                {/* ── HEADER ── */}
-                <div className="mb-14">
-                    <div className="flex items-center gap-3 mb-6">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
-                        <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">SYSTEM_MODULE / PROJECTS</span>
+                    {/* ── HEADER ── */}
+                    <div className="mb-14">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
+                            <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">SYSTEM_MODULE / PROJECTS</span>
+                        </div>
+                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+                            <ScanlineOverlay />
+                            <CornerAccent color="#39d353" />
+                            <WindowChrome filename="PROJECT_SHOWCASE.exe" />
+                            <div className="px-8 py-6">
+                                <h2 className={`font-mono font-black text-3xl md:text-5xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"}`}
+                                    style={{ textShadow: "0 0 24px rgba(57,211,83,0.25)" }}>
+                                    PROJECT_<span className="text-[#39d353]">SHOWCASE</span>
+                                    <span className="inline-block w-[10px] h-[18px] bg-[#39d353] animate-pulse ml-2 align-middle" />
+                                </h2>
+                                <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider">
+                                    $ ls ./projects/ — {mainProjects.length} major builds + {minorProjects.length} minor experiments loaded.
+                                </p>
+                                <div className="flex flex-wrap gap-4 mt-5">
+                                    {[
+                                        { l: "MAJOR_PROJECTS", v: mainProjects.length.toString().padStart(2, "0") },
+                                        { l: "MINOR_BUILDS", v: minorProjects.length.toString().padStart(2, "0") },
+                                        { l: "TECH_STACKS", v: "12+" },
+                                        { l: "STATUS", v: "ACTIVE" },
+                                    ].map(s => (
+                                        <div key={s.l} className="border border-[#1a2332] bg-[#010409] px-4 py-2">
+                                            <div className="font-mono text-[7px] text-[#39d353] tracking-[0.2em]">{s.l}</div>
+                                            <div className="font-mono text-lg font-bold text-white">{s.v}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+
+                    {/* ── MAIN GRID: 2x2 left + Big slider right ── */}
+                    <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-6 mb-10">
+                        {/* Left: 2x2 */}
+                        <div className="grid grid-cols-2 gap-4">
+                            {mainProjects.map((p, i) => (
+                                <MajorCard key={p.id} project={p} onExplore={setPopup} />
+                            ))}
+                        </div>
+                        {/* Right: Big slider */}
+                        <BigSlider projects={mainProjects1} onExplore={setPopup} />
+                    </div>
+
+                    {/* ── MINOR PROJECTS ── */}
+                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden mb-6">
                         <ScanlineOverlay />
-                        <CornerAccent color="#39d353" />
-                        <WindowChrome filename="PROJECT_SHOWCASE.exe" />
-                        <div className="px-8 py-6">
-                            <h2 className={`font-mono font-black text-3xl md:text-5xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"}`}
-                                style={{ textShadow: "0 0 24px rgba(57,211,83,0.25)" }}>
-                                PROJECT_<span className="text-[#39d353]">SHOWCASE</span>
-                                <span className="inline-block w-[10px] h-[18px] bg-[#39d353] animate-pulse ml-2 align-middle" />
-                            </h2>
-                            <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider">
-                                $ ls ./projects/ — {mainProjects.length} major builds + {minorProjects.length} minor experiments loaded.
-                            </p>
-                            <div className="flex flex-wrap gap-4 mt-5">
-                                {[
-                                    { l: "MAJOR_PROJECTS", v: mainProjects.length.toString().padStart(2, "0") },
-                                    { l: "MINOR_BUILDS", v: minorProjects.length.toString().padStart(2, "0") },
-                                    { l: "TECH_STACKS", v: "12+" },
-                                    { l: "STATUS", v: "ACTIVE" },
-                                ].map(s => (
-                                    <div key={s.l} className="border border-[#1a2332] bg-[#010409] px-4 py-2">
-                                        <div className="font-mono text-[7px] text-[#39d353] tracking-[0.2em]">{s.l}</div>
-                                        <div className="font-mono text-lg font-bold text-white">{s.v}</div>
-                                    </div>
+                        <CornerAccent color="#00e5ff" />
+                        <WindowChrome filename="MINOR_EXPERIMENTS.log" status="LOADED" statusColor="#00e5ff" />
+                        <div className="p-6">
+                            <div className="flex items-center justify-between mb-5">
+                                <div>
+                                    <div className="font-mono text-[9px] text-[#00e5ff] tracking-[0.2em] mb-1">$ ls ./experiments/</div>
+                                    <h3 className="font-mono font-black text-base text-white tracking-[0.1em] uppercase">MINOR_EXPERIMENTS</h3>
+                                </div>
+                                <div className="border border-[#1a2332] bg-[#010409] px-3 py-1">
+                                    <span className="font-mono text-[9px] text-[#00e5ff] tracking-widest">{minorProjects.length} BUILDS</span>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+                                {minorProjects.map((p, i) => (
+                                    <MinorCard key={p.id} project={p} delay={i * 80} />
                                 ))}
                             </div>
                         </div>
                     </div>
-                </div>
 
-                {/* ── MAIN GRID: 2x2 left + Big slider right ── */}
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-6 mb-10">
-                    {/* Left: 2x2 */}
-                    <div className="grid grid-cols-2 gap-4">
-                        {mainProjects.map((p, i) => (
-                            <MajorCard key={p.id} project={p} onExplore={setPopup} />
-                        ))}
-                    </div>
-                    {/* Right: Big slider */}
-                    <BigSlider projects={mainProjects1} onExplore={setPopup} />
-                </div>
-
-                {/* ── MINOR PROJECTS ── */}
-                <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden mb-6">
-                    <ScanlineOverlay />
-                    <CornerAccent color="#00e5ff" />
-                    <WindowChrome filename="MINOR_EXPERIMENTS.log" status="LOADED" statusColor="#00e5ff" />
-                    <div className="p-6">
-                        <div className="flex items-center justify-between mb-5">
-                            <div>
-                                <div className="font-mono text-[9px] text-[#00e5ff] tracking-[0.2em] mb-1">$ ls ./experiments/</div>
-                                <h3 className="font-mono font-black text-base text-white tracking-[0.1em] uppercase">MINOR_EXPERIMENTS</h3>
-                            </div>
-                            <div className="border border-[#1a2332] bg-[#010409] px-3 py-1">
-                                <span className="font-mono text-[9px] text-[#00e5ff] tracking-widest">{minorProjects.length} BUILDS</span>
-                            </div>
-                        </div>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-                            {minorProjects.map((p, i) => (
-                                <MinorCard key={p.id} project={p} delay={i * 80} />
-                            ))}
-                        </div>
+                    {/* ── FOOTER ── */}
+                    <div className="flex items-center justify-between">
+                        <div className="font-mono text-[10px] text-[#8b949e] tracking-widest">$ projects --list --all _</div>
+                        <a href="https://github.com/prayag29-sahu" target="_blank" rel="noopener noreferrer"
+                            className="flex items-center gap-2 border border-[#39d353] font-mono text-[10px] tracking-widest uppercase px-5 py-2.5 text-[#39d353] hover:bg-[#39d353] hover:text-[#010409] transition-all duration-200">
+                            <Github size={13} /> VIEW_ALL_ON_GITHUB →
+                        </a>
                     </div>
                 </div>
 
-                {/* ── FOOTER ── */}
-                <div className="flex items-center justify-between">
-                    <div className="font-mono text-[10px] text-[#30363d] tracking-widest">$ projects --list --all _</div>
-                    <a href="https://github.com/prayag29-sahu" target="_blank" rel="noopener noreferrer"
-                        className="flex items-center gap-2 border border-[#39d353] font-mono text-[10px] tracking-widest uppercase px-5 py-2.5 text-[#39d353] hover:bg-[#39d353] hover:text-[#010409] transition-all duration-200">
-                        <Github size={13} /> VIEW_ALL_ON_GITHUB →
-                    </a>
-                </div>
-            </div>
+                {/* ── POPUP ── */}
+                {popup && <ProjectPopup project={popup} onClose={() => setPopup(null)} />}
 
-            {/* ── POPUP ── */}
-            {popup && <ProjectPopup project={popup} onClose={() => setPopup(null)} />}
-
-            <style jsx>{`
+                <style jsx>{`
         @keyframes scan {
           0% { top: 0%; }
           100% { top: 100%; }
