@@ -1170,7 +1170,7 @@ const allStackProjects = [
         shortName: "HTML·CSS·JS",
         icon: <Code2 size={16} />,
         color: "#f59e0b",
-        desc: "Web projects built with core HTML, CSS and JavaScript",
+        desc: "Web projects with core HTML, CSS and JavaScript",
         totalProjects: 15,
         projects: [
 
@@ -1335,21 +1335,23 @@ const allStackProjects = [
         shortName: "C++·DSA",
         icon: <Terminal size={16} />,
         color: "#00e5ff",
-        desc: "C, C Graphics, C++, Data structures, algorithms and competitive programming solutions",
-        totalProjects: 10,
+        desc: "C, C Graphics, C++, Data structures, algorithms and competitive programming",
+        totalProjects: 12,
         projects: [
             { sid: "STK_02-A", title: "C++ Essential", desc: "Completed Certification Course Of C++ From Cisco.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/01_certificates/c/01.png" },
             { sid: "STK_02-B", title: "Levelup C", desc: "Completed Certification Course Of C From Linkedin Learning.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/01_certificates/c/02.jpg" },
-            { sid: "STK_02-C", title: "Real time clock", desc: "C++ Project Show Real World Indian Timing in Hr/min/sec.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/03c.png" },
-            { sid: "STK_02-D", title: "Progress Bar", desc: "A progress bar built using C programming with dynamic updates.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/05c.png" },
-            { sid: "STK_02-E", title: "Sudoku Solver", desc: "C++ Project Game Solve Sudoku Problem", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/08c.png" },
-            { sid: "STK_02-F", title: "Tic Tac Toe", desc: "Tic Tac Toe Game Create using c++ Implementing Arrays Form For 2 Players and with Computer", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/09c.png" },
-            { sid: "STK_02-G", title: "Running bus", desc: "C++ Graphics Use For Creating Running Graphics Drawing", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/02cg.png" },
-            { sid: "STK_02-H", title: "Rainbow", desc: "C++ Graphics Coloring Representation By Rainbow Creation.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/06cg.png" },
-            { sid: "STK_02-I", title: "Rain Walk", desc: "C++ Graphics For Design A Man Walking On Road In Rain", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/07cg.png" },
-            { sid: "STK_02-J", title: "Lord Buddha Sketch", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/14_OtherActivity/06.jpg" },
-            { sid: "STK_02-K", title: "Sir Ramanujan Sketch", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/14_OtherActivity/07.jpg" },
-            { sid: "STK_02-L", title: "Consentric Circle", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/14_OtherActivity/10cg.jpg" },
+            { sid: "STK_05-C", title: "Java Bank System", desc: "Desktop banking application using Java  — account management, fund transfers, transaction history, Loan and interest calculation.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" },
+            { sid: "STK_05-D", title: "Library Management System", desc: "OOP-based library system with book issuance, return tracking, member management and overdue fine calculation.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" },
+            { sid: "STK_02-E", title: "Real time clock", desc: "C++ Project Show Real World Indian Timing in Hr/min/sec.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/03c.png" },
+            { sid: "STK_02-F", title: "Progress Bar", desc: "A progress bar built using C programming with dynamic updates.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/05c.png" },
+            { sid: "STK_02-G", title: "Sudoku Solver", desc: "C++ Project Game Solve Sudoku Problem", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/08c.png" },
+            { sid: "STK_02-H", title: "Tic Tac Toe", desc: "Tic Tac Toe Game Create using c++ Implementing Arrays Form For 2 Players and with Computer", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/09c.png" },
+            { sid: "STK_02-I", title: "Running bus", desc: "C++ Graphics Use For Creating Running Graphics Drawing", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/02cg.png" },
+            { sid: "STK_02-J", title: "Rainbow", desc: "C++ Graphics Coloring Representation By Rainbow Creation.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/06cg.png" },
+            { sid: "STK_02-K", title: "Rain Walk", desc: "C++ Graphics For Design A Man Walking On Road In Rain", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/07cg.png" },
+            { sid: "STK_02-L", title: "Lord Buddha Sketch", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/14_OtherActivity/06.jpg" },
+            { sid: "STK_02-M", title: "Sir Ramanujan Sketch", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/14_OtherActivity/07.jpg" },
+            { sid: "STK_02-N", title: "Consentric Circle", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/10cg.jpg" },
         ],
     },
     {
@@ -1361,10 +1363,10 @@ const allStackProjects = [
         desc: "Modern frontend applications built with React and Next.js ecosystem",
         totalProjects: 4,
         projects: [
-            { sid: "STK_03-A", title: "3D Developer Portfolio", desc: "Visually immersive 3D portfolio with Three.js parallax, animated skill trees, terminal-styled sections and contact form.", github: "https://github.com/prayag29-sahu", live: "http://prayagsahuportfolio.netlify.app", image: "/images/09_Projects/01.png" },
+            { sid: "STK_03-A", title: "3D Developer Portfolio", desc: "Visually immersive 3D portfolio with Reactjs, Tailwind, Emailjs sections and contact form.", github: "https://github.com/prayag29-sahu", live: "http://prayagsahuportfolio.netlify.app", image: "/images/09_Projects/01.png" },
             { sid: "STK_03-B", title: "Ghotul Homestay Frontend", desc: "React frontend for the homestay platform with room browsing, availability calendar, booking flow and real-time notifications.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/03.png" },
             { sid: "STK_03-C", title: "Authentication System", desc: "Complete React auth system with email OTP verification, JWT tokens, forgot password flow, and protected route management.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/02.png" },
-            { sid: "STK_03-D", title: "Mini CRM Dashboard", desc: "Small-scale CRM tool with pipeline stages, contact management, activity log and analytics overview using Recharts.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" },
+            { sid: "STK_03-D", title: "Online Language Helper", desc: "An interactive learning platform with different language support to help users translate each topic and word easily for learning and communication.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/04.png" },
         ],
     },
     {
@@ -1376,9 +1378,12 @@ const allStackProjects = [
         desc: "UI design concepts, Figma prototypes and design system work",
         totalProjects: 3,
         projects: [
-            { sid: "STK_04-A", title: "Portfolio Design System", desc: "Comprehensive hacker terminal design system — color palette, typography scale, component library and animation guidelines.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" },
-            { sid: "STK_04-B", title: "Homestay App Figma Mockup", desc: "Full Figma UI/UX design for the Ghotul homestay platform — wireframes, high-fidelity screens and interactive prototype.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=600&q=80" },
-            { sid: "STK_04-C", title: "Component Gallery", desc: "Collection of reusable UI components — buttons, cards, modals, navbars — each with dark/light variants and hover states.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80" },
+            { sid: "STK_04-A", title: "Hotel Booking", desc: "Complete hotel booking UI/UX design with responsive layout and interactive elements, landing page, Room Page, Contact pages.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/01.png" },
+            { sid: "STK_04-B", title: "Cloths E-commerce", desc: "UI/UX design for a clothing e-commerce platform with product browsing, cart management and checkout flow.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/02.png" },
+            { sid: "STK_04-C", title: "Gaming Website", desc: "Collection of UI components — buttons, cards, modals, navbars — each with dark/light variants and hover states.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/03.png" },
+            { sid: "STK_04-D", title: "Parallex UI", desc: "A modern Simple and interactive web design actual looks paraller movement animations ", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/04.png" },
+            { sid: "STK_04-E", title: "Product Based", desc: "UI design for a product-based company website with landing page ith products, product showcase and representation.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/05.png" },
+            { sid: "STK_04-F", title: "Plants Selling", desc: "A Plant selling plateform to presentive and interactive reusable UI.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/06.png" },
         ],
     },
     {
@@ -1390,9 +1395,8 @@ const allStackProjects = [
         desc: "Core Java applications, OOP projects and backend systems",
         totalProjects: 3,
         projects: [
-            { sid: "STK_05-A", title: "Java Bank System", desc: "Desktop banking application using Java Swing — account management, fund transfers, transaction history and interest calculation.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" },
+            { sid: "STK_05-A", title: "Java Bank System", desc: "Desktop banking application using Java  — account management, fund transfers, transaction history, Loan and interest calculation.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" },
             { sid: "STK_05-B", title: "Library Management System", desc: "OOP-based library system with book issuance, return tracking, member management and overdue fine calculation.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" },
-            { sid: "STK_05-C", title: "Student Grade Tracker", desc: "Java application to track student grades per subject, calculate SGPA/CGPA, generate reports and visualize performance trends.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" },
         ],
     },
     {
@@ -1407,7 +1411,7 @@ const allStackProjects = [
             { sid: "STK_06-A", title: "Voice Assistant", desc: "Voice-controlled assistant performing web search, app opening, weather updates, music playback and system commands via speech recognition.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/06.png" },
             { sid: "STK_06-B", title: "Security Fraud Detector", desc: "Python API-powered URL/link/document fraud detection system with image analysis, phishing detection and threat scoring.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/05.png" },
             { sid: "STK_06-C", title: "Mini Chatbot", desc: "Simple rule-based chatbot for students built with Python and Conda — handles academic queries, schedules and FAQs.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/01.png" },
-            { sid: "STK_06-D", title: "Data Automation Scripts", desc: "Collection of Python automation scripts — file organizer, PDF merger, web scraper and Excel report generator using pandas.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80" },
+            
         ],
     },
 ];
