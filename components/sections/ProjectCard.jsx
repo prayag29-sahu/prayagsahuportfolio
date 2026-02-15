@@ -1171,7 +1171,7 @@ const allStackProjects = [
         icon: <Code2 size={16} />,
         color: "#f59e0b",
         desc: "Web projects built with core HTML, CSS and JavaScript",
-        totalProjects: 17,
+        totalProjects: 15,
         projects: [
 
             {
@@ -1335,12 +1335,21 @@ const allStackProjects = [
         shortName: "C++·DSA",
         icon: <Terminal size={16} />,
         color: "#00e5ff",
-        desc: "Data structures, algorithms and competitive programming solutions",
-        totalProjects: 3,
+        desc: "C, C Graphics, C++, Data structures, algorithms and competitive programming solutions",
+        totalProjects: 10,
         projects: [
-            { sid: "STK_02-A", title: "DSA Visualizer", desc: "Step-by-step algorithm visualizer for sorting (bubble, merge, quick), tree traversal and BFS/DFS graph algorithms with speed control.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80" },
-            { sid: "STK_02-B", title: "C Graphics Sketcher", desc: "2D city layouts and artistic sketches drawn programmatically using pure C graphics.h library — architecture and art exploration.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" },
-            { sid: "STK_02-C", title: "LeetCode Solutions", desc: "157+ solved problems spanning arrays, trees, graphs, DP and greedy algorithms — organized by difficulty with optimal complexity analysis.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&q=80" },
+            { sid: "STK_02-A", title: "C++ Essential", desc: "Completed Certification Course Of C++ From Cisco.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/01_certificates/c/01.png" },
+            { sid: "STK_02-B", title: "Levelup C", desc: "Completed Certification Course Of C From Linkedin Learning.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/01_certificates/c/02.jpg" },
+            { sid: "STK_02-C", title: "Real time clock", desc: "C++ Project Show Real World Indian Timing in Hr/min/sec.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/03c.png" },
+            { sid: "STK_02-D", title: "Progress Bar", desc: "A progress bar built using C programming with dynamic updates.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/05c.png" },
+            { sid: "STK_02-E", title: "Sudoku Solver", desc: "C++ Project Game Solve Sudoku Problem", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/08c.png" },
+            { sid: "STK_02-F", title: "Tic Tac Toe", desc: "Tic Tac Toe Game Create using c++ Implementing Arrays Form For 2 Players and with Computer", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/09c.png" },
+            { sid: "STK_02-G", title: "Running bus", desc: "C++ Graphics Use For Creating Running Graphics Drawing", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/02cg.png" },
+            { sid: "STK_02-H", title: "Rainbow", desc: "C++ Graphics Coloring Representation By Rainbow Creation.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/06cg.png" },
+            { sid: "STK_02-I", title: "Rain Walk", desc: "C++ Graphics For Design A Man Walking On Road In Rain", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/07cg.png" },
+            { sid: "STK_02-J", title: "Lord Buddha Sketch", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/14_OtherActivity/06.jpg" },
+            { sid: "STK_02-K", title: "Sir Ramanujan Sketch", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/14_OtherActivity/07.jpg" },
+            { sid: "STK_02-L", title: "Consentric Circle", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/14_OtherActivity/10cg.jpg" },
         ],
     },
     {
