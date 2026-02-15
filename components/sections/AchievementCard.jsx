@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // /* eslint-disable @next/next/no-img-element */
 
 // // export default function AchievementCard() {
@@ -390,12 +391,12 @@ function AnimatedCounter({ target, suffix = "" }) {
 
 /* ─── Data ───────────────────────────────────────────────── */
 const stats = [
-    { icon: <Code size={20} />, value: "4", suffix: "+", label: "Projects Completed", desc: "Academic & Freelance builds", color: "#39d353", id: "STAT_01" },
-    { icon: <Star size={20} />, value: "2", suffix: "", label: "Clients Served", desc: "Freelancing projects delivered", color: "#00e5ff", id: "STAT_02" },
-    { icon: <GraduationCap size={20} />, value: "2", suffix: "+", label: "Years Active", desc: "Continuous development journey", color: "#f59e0b", id: "STAT_03" },
-    { icon: <Award size={20} />, value: "15", suffix: "+", label: "Certificates", desc: "Courses, hackathons & badges", color: "#a855f7", id: "STAT_04" },
+    { icon: <Code size={20} />, value: "3", suffix: "+", label: "Projects Completed", desc: "Academic & Freelance builds", color: "#39d353", id: "STAT_01" },
+    { icon: <Star size={20} />, value: "1", suffix: "", label: "Clients Served", desc: "Freelancing projects delivered", color: "#00e5ff", id: "STAT_02" },
+    { icon: <GraduationCap size={20} />, value: "6", suffix: "+", label: "Months Active", desc: "Continuous development journey", color: "#f59e0b", id: "STAT_03" },
+    { icon: <Award size={20} />, value: "20", suffix: "+", label: "Certificates", desc: "Courses, technical and Non-technical, Hackathons ", color: "#a855f7", id: "STAT_04" },
     { icon: <Flame size={20} />, value: "4167", suffix: "+", label: "GitHub Commits", desc: "Consistent daily contributions", color: "#39d353", id: "STAT_05" },
-    { icon: <Target size={20} />, value: "157", suffix: "", label: "LeetCode Solved", desc: "Easy, Medium & Hard problems", color: "#00e5ff", id: "STAT_06" },
+    { icon: <Target size={20} />, value: "157", suffix: "", label: "InterviewBit Solved", desc: "Easy, Medium & Hard problems", color: "#00e5ff", id: "STAT_06" },
     { icon: <Crown size={20} />, value: "8", suffix: ".2+", label: "Current SGPA", desc: "B.Tech CSE — BGIEM RGPV", color: "#f59e0b", id: "STAT_07" },
     { icon: <Zap size={20} />, value: "93", suffix: ".2%", label: "Top Score (10th)", desc: "School Topper — MPBSE Board", color: "#a855f7", id: "STAT_08" },
 ];
@@ -450,7 +451,7 @@ const majorAchievements = [
         id: "ACH_04",
         icon: <Cpu size={18} />,
         title: "DSA & Coding Platform Milestones",
-        subtitle: "LeetCode • InterviewBit • GitHub",
+        subtitle: "InterviewBit • GitHub",
         year: "2024 – 2026",
         tag: "CODING",
         accentColor: "#a855f7",
@@ -499,7 +500,7 @@ const trophyItems = [
     { label: "Best Student Award", year: "2023", color: "#00e5ff", icon: "🏆" },
     { label: "School Topper (10th)", year: "2021", color: "#a855f7", icon: "👑" },
     { label: "BrahmX Hackathon", year: "2024", color: "#39d353", icon: "🚀" },
-    { label: "Oracle Web Cert", year: "2025", color: "#f59e0b", icon: "📜" },
+    { label: "Oracle Cert", year: "2025", color: "#f59e0b", icon: "📜" },
     { label: "freeCodeCamp Cert", year: "2023", color: "#00e5ff", icon: "💻" },
     { label: "157 LeetCode Solved", year: "2026", color: "#a855f7", icon: "🎯" },
 ];
@@ -524,14 +525,14 @@ function StatCard({ stat }) {
                         style={{ borderColor: hovered ? ac : "#1a2332", color: hovered ? ac : "#30363d" }}>
                         {stat.icon}
                     </div>
-                    <span className="font-mono text-[8px] text-[#30363d] tracking-widest">{stat.id}</span>
+                    <span className="font-mono text-[8px] text-[#8b949e] tracking-widest">{stat.id}</span>
                 </div>
                 <div className="font-mono font-black text-3xl mb-1 transition-all duration-200"
                     style={{ color: hovered ? ac : "#fff", textShadow: hovered ? `0 0 16px ${ac}60` : "none" }}>
                     <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                 </div>
                 <div className="font-mono text-[11px] font-bold text-white mb-1 tracking-wide">{stat.label}</div>
-                <div className="font-mono text-[9px] text-[#30363d] tracking-wider">{stat.desc}</div>
+                <div className="font-mono text-[9px] text-[#8b949e] tracking-wider">{stat.desc}</div>
             </div>
 
             {/* Bottom accent bar */}
@@ -746,7 +747,7 @@ export default function AchievementsPage() {
                             <div className="p-4 relative z-10">
                                 <div className="relative border border-[#1a2332] overflow-hidden group">
                                     <CornerAccent color="#a855f7" />
-                                    <img src="/images/achievements.png" alt="Achievements"
+                                    <img src="/images/01ach.png" alt="Achievements"
                                         className="w-full h-52 object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
                                         style={{ filter: "grayscale(10%)" }} />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#010409]/60 via-transparent to-transparent" />
@@ -767,8 +768,8 @@ export default function AchievementsPage() {
                                 <div className="flex items-center justify-around flex-wrap gap-4">
                                     <ProgressRing value={93} max={100} label="10th Score" color="#a855f7" />
                                     <ProgressRing value={88} max={100} label="12th Score" color="#00e5ff" />
-                                    <ProgressRing value={82} max={100} label="SGPA×10" color="#39d353" />
-                                    <ProgressRing value={157} max={200} label="LeetCode" color="#f59e0b" />
+                                    <ProgressRing value={82} max={100} label="CGPA" color="#39d353" />
+                                    <ProgressRing value={157} max={200} label="InterviewBit" color="#f59e0b" />
                                 </div>
                             </div>
                         </div>
