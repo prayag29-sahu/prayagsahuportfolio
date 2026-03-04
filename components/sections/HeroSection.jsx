@@ -962,9 +962,13 @@ export default function HeroSection() {
 
                             {/* Download CV + Contact */}
                             <div className="flex gap-3">
-                                <a href="/resume.pdf" download
-                                    className="flex-1 flex items-center justify-center gap-2 bg-[#39d353] text-[#010409] font-mono font-bold text-[11px] tracking-[0.2em] uppercase py-3.5 hover:bg-[#27c93f] transition-all duration-200 hover:shadow-[0_0_20px_rgba(57,211,83,0.4)]">
-                                    <Download size={13} /> DOWNLOAD_CV →
+                                <a
+                                    href="/PrayagCV.pdf"
+                                    download="Prayag_Sahu_Resume.pdf"
+                                    className="flex-1 flex items-center justify-center gap-2 bg-[#39d353] text-[#010409] font-mono font-bold text-[11px] tracking-[0.2em] uppercase py-3.5 hover:bg-[#27c93f] transition-all duration-200 hover:shadow-[0_0_20px_rgba(57,211,83,0.4)]"
+                                >
+                                    <Download size={13} />
+                                    DOWNLOAD_CV →
                                 </a>
                                 <a href="#contact"
                                     className="flex items-center gap-2 border border-[#1a2332] font-mono text-[11px] tracking-[0.15em] uppercase px-4 py-3.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200">
