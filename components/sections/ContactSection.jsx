@@ -272,16 +272,6 @@ export default function Contact() {
                 EMAILJS_PUBLIC_KEY
             );
 
-            // 2. Send the Auto-Reply to the visitor (if the ID is provided)
-            if (EMAILJS_AUTO_REPLY_ID && EMAILJS_AUTO_REPLY_ID !== "YOUR_AUTO_REPLY_TEMPLATE_ID") {
-                await emailjs.send(
-                    EMAILJS_SERVICE_ID,
-                    EMAILJS_AUTO_REPLY_ID,
-                    templateParams,
-                    EMAILJS_PUBLIC_KEY
-                );
-            }
-
             setSubmitted("success");
             setForm({ name: "", email: "", phone: "", subject: "", message: "" });
         } catch (error) {
