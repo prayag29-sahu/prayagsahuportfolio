@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, CheckCircle, XCircle, Terminal, Loader } from "lucide-react";
 import emailjs from '@emailjs/browser';
+import { motion } from 'motion/react';
 
 /* 
    Email Service Setup 
@@ -12,6 +13,7 @@ import emailjs from '@emailjs/browser';
 const EMAILJS_SERVICE_ID = "service_c1lcmym";   
 const EMAILJS_TEMPLATE_ID = "template_3d23n3n";  
 const EMAILJS_PUBLIC_KEY = "iDnsyeNW2wHQtj5-7"; 
+const EMAILJS_AUTO_REPLY_ID = "template_w2i2syl";
 
 /* Basic UI parts for the computer-style look */
 function ScanlineOverlay() {
@@ -151,60 +153,57 @@ function ContactItem({ icon, label, value, href, color }) {
     );
 }
 
-/* Social Links (Optional) */
-// function SocialBtn({ icon, href, label, color }) {
-//     const [hovered, setHovered] = useState(false);
-//     return (
-//         <a href={href} target="_blank" rel="noopener noreferrer"
-//             className="flex-1 flex items-center justify-center gap-2 border py-4 font-mono text-[10px] tracking-[0.15em] uppercase transition-all duration-200 relative overflow-hidden font-bold"
-//             style={{ color: hovered ? "var(--bg)" : color, borderColor: hovered ? color : "var(--border)", background: hovered ? color : "transparent" }}
-//             onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-//             {icon} {label}
-//         </a>
-//     );
-// }
-
-/* Message Status Screen */
+/* 
+   Message Status Screen 
+   This shows a "Success" or "Error" message after you send an email.
+*/
 function StatusOverlay({ status, onReset }) {
     const isSuccess = status === "success";
-    const ac = isSuccess ? "var(--accent)" : "#ff5f56";
     return (
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center backdrop-blur-sm" style={{ background: "var(--bg-dim)" }}>
-            <CornerAccent color={ac} />
-            <div className="text-center px-6">
-                {isSuccess
-                    ? <CheckCircle size={48} className="mx-auto mb-4" style={{ color: ac }} />
-                    : <XCircle size={48} className="mx-auto mb-4" style={{ color: ac }} />
-                }
-                <h3 className="font-mono font-black text-xl mb-2" style={{ color: ac }}>
-                    {isSuccess ? "MESSAGE_SENT.exe" : "TRANSMISSION_FAILED.err"}
-                </h3>
-                <p className="font-mono text-[11px] leading-relaxed max-w-xs mx-auto mb-6" style={{ color: "var(--text-muted)" }}>
-                    {isSuccess
-                        ? "Your message has been successfully transmitted. I'll get back to you within 24 hours."
-                        : "Failed to send your message. Please try again or reach out directly via email."}
-                </p>
-                <div className="border bg-theme-bg px-4 py-2 font-mono text-[9px] mb-4 text-left" style={{ borderColor: "var(--border)", color: "var(--accent)" }}>
-                    <div>$ status --check</div>
-                    <div style={{ color: ac }}>
-                        {isSuccess ? "✓ DELIVERY: CONFIRMED" : "✗ DELIVERY: FAILED"}
-                    </div>
-                    <div className="text-dim text-[8px] mt-1">{new Date().toLocaleString()}</div>
+        <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="absolute inset-0 z-50 flex items-center justify-center backdrop-blur-md"
+            style={{ background: "rgba(0,0,0,0.85)" }}
+        >
+            <div className="max-w-md w-full p-8 border-2 text-center relative overflow-hidden"
+                style={{ borderColor: isSuccess ? "var(--accent)" : "#ef4444", background: "var(--bg)" }}>
+                <ScanlineOverlay />
+                <CornerAccent color={isSuccess ? "var(--accent)" : "#ef4444"} />
+                
+                <div className="relative z-10">
+                    {isSuccess ? (
+                        <CheckCircle size={64} className="mx-auto mb-6" style={{ color: "var(--accent)" }} />
+                    ) : (
+                        <XCircle size={64} className="mx-auto mb-6" style={{ color: "#ef4444" }} />
+                    )}
+                    
+                    <h3 className="font-mono font-black text-2xl tracking-tighter uppercase mb-2"
+                        style={{ color: "var(--text-primary)" }}>
+                        {isSuccess ? "TRANSMISSION_COMPLETE" : "SYSTEM_ERROR"}
+                    </h3>
+                    
+                    <p className="font-mono text-xs tracking-wider mb-8 leading-relaxed font-bold"
+                        style={{ color: "var(--text-muted)" }}>
+                        {isSuccess 
+                            ? "Your data has been securely transmitted through the encrypted tunnel. I will process your request shortly."
+                            : "Connection timed out. Please verify your network and attempt re-transmission."
+                        }
+                    </p>
+                    
+                    <button onClick={onReset}
+                        className="px-8 py-3 border font-mono text-[11px] tracking-[0.2em] uppercase transition-all duration-200 font-black hover:bg-white hover:text-black"
+                        style={{ borderColor: isSuccess ? "var(--accent)" : "#ef4444", color: isSuccess ? "var(--accent)" : "#ef4444" }}>
+                        $ RETURN_TO_DASHBOARD
+                    </button>
                 </div>
-                <button onClick={onReset}
-                    className="border font-mono text-[10px] tracking-widest uppercase px-6 py-2.5 transition-all duration-200"
-                    style={{ borderColor: ac, color: ac }}
-                    onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "var(--bg)"; }}
-                    onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ac; }}>
-                    {isSuccess ? "$ SEND_ANOTHER →" : "$ RETRY →"}
-                </button>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
-/* Moving Effect for Titles */
-function GlitchTitle({ glitch }) {
+/* Contact Item Header (The animated title part) */
+function ContactHeader({ glitch }) {
     return (
         <h2 className={`font-mono font-black text-3xl md:text-5xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "translate-x-[2px]" : ""}`}
             style={{ color: glitch ? "var(--accent)" : "var(--text-primary)", textShadow: "0 0 24px var(--accent-glow)" }}>
@@ -235,15 +234,58 @@ export default function Contact() {
         e.preventDefault();
         setSending(true);
         try {
-            await emailjs.sendForm(
+            const templateParams = {
+                // Name Fallbacks
+                from_name: form.name,
+                user_name: form.name,
+                name: form.name,
+
+                // Email Fallbacks
+                from_email: form.email,
+                user_email: form.email,
+                email: form.email,
+                reply_to: form.email, 
+
+                // Phone Fallbacks
+                phone: form.phone,
+                contact: form.phone, 
+                contact_number: form.phone,
+                user_phone: form.phone,
+
+                // Content Fallbacks
+                subject: form.subject,
+                user_subject: form.subject,
+                from_subject: form.subject,
+                message: form.message,
+                user_message: form.message,
+                from_message: form.message,
+                message_html: form.message, 
+                text: form.message,
+                to_name: "Prayag Sahu"
+            };
+
+            // 1. Send the email to you
+            await emailjs.send(
                 EMAILJS_SERVICE_ID,
                 EMAILJS_TEMPLATE_ID,
-                formRef.current,
-                { publicKey: EMAILJS_PUBLIC_KEY }
+                templateParams,
+                EMAILJS_PUBLIC_KEY
             );
+
+            // 2. Send the Auto-Reply to the visitor (if the ID is provided)
+            if (EMAILJS_AUTO_REPLY_ID && EMAILJS_AUTO_REPLY_ID !== "YOUR_AUTO_REPLY_TEMPLATE_ID") {
+                await emailjs.send(
+                    EMAILJS_SERVICE_ID,
+                    EMAILJS_AUTO_REPLY_ID,
+                    templateParams,
+                    EMAILJS_PUBLIC_KEY
+                );
+            }
+
             setSubmitted("success");
             setForm({ name: "", email: "", phone: "", subject: "", message: "" });
-        } catch {
+        } catch (error) {
+            console.error("EmailJS Error:", error);
             setSubmitted("error");
         } finally {
             setSending(false);
@@ -281,7 +323,7 @@ export default function Contact() {
                         <CornerAccent color="var(--accent)" />
                         <WindowChrome filename="CONTACT_ME.exe" />
                         <div className="px-8 py-8">
-                            <GlitchTitle glitch={glitch} />
+                            <ContactHeader glitch={glitch} />
                             <p className="font-mono text-[13px] mt-4 tracking-wider max-w-2xl" style={{ color: "var(--text-muted)" }}>
                                 $ init --connection — Open to job opportunities, freelance projects & long-term collaborations.
                             </p>
@@ -315,25 +357,11 @@ export default function Contact() {
                             <WindowChrome filename="CONTACT_INFO.log" status="ONLINE" statusColor="var(--accent)" />
                             <div className="p-6 space-y-3 relative z-10">
                                 <div className="font-mono text-[11px] tracking-[0.2em] mb-4 font-bold uppercase" style={{ color: "var(--accent)" }}>$ cat ./contact/info.txt</div>
-                                <ContactItem icon={<Mail size={18} />} label="EMAIL" value="sahuprayag145@gmail.com" href="mailto:sahuprayag145@gmail.com" color="var(--accent)" />
+                                <ContactItem icon={<Mail size={18} />} label="EMAIL" value="sahuprayag229@gmail.com" href="mailto:sahuprayag229@gmail.com" color="var(--accent)" />
                                 <ContactItem icon={<Phone size={18} />} label="PHONE" value="+91 79999 26855" href="tel:+917999926855" color="var(--accent-blue)" />
                                 <ContactItem icon={<MapPin size={18} />} label="LOCATION" value="Jabalpur, Madhya Pradesh, India" color="var(--accent-amber)" />
                             </div>
                         </div>
-                        {/* Social links */}
-                        {/* <div className="border relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
-                            <ScanlineOverlay />
-                            <CornerAccent color="var(--accent-blue)" />
-                            <WindowChrome filename="SOCIAL_LINKS.sh" status="ACTIVE" statusColor="var(--accent-blue)" />
-                            <div className="p-6 relative z-10">
-                                <div className="font-mono text-[11px] tracking-[0.2em] mb-4 font-bold uppercase" style={{ color: "var(--accent-blue)" }}>$ open --social-profiles</div>
-                                <div className="flex gap-3">
-                                    <SocialBtn icon={<Github size={15} />} href="https://github.com/prayag29-sahu" label="GITHUB" color="var(--accent)" />
-                                    <SocialBtn icon={<Linkedin size={15} />} href="https://linkedin.com" label="LINKEDIN" color="var(--accent-blue)" />
-                                    <SocialBtn icon={<Twitter size={15} />} href="https://twitter.com" label="TWITTER" color="var(--accent-purple)" />
-                                </div>
-                            </div>
-                        </div> */}
                         {/* Quick message prompt */}
                         <div className="border p-6 relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
                             <CornerAccent color="var(--border)" />

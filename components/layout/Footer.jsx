@@ -189,7 +189,7 @@ export default function Footer() {
                                     <SocialBtn icon={<Github size={14} />} href="https://github.com/prayag29-sahu" label="GITHUB" color="var(--accent)" />
                                     <SocialBtn icon={<Linkedin size={14} />} href="https://linkedin.com/in/prayag-sahu29" label="LINKEDIN" color="var(--accent-blue)" />
                                     <SocialBtn icon={<Twitter size={14} />} href="https://twitter.com" label="TWITTER" color="var(--accent-purple)" />
-                                    <SocialBtn icon={<Mail size={14} />} href="mailto:sahuprayag145@gmail.com" label="EMAIL" color="var(--accent-amber)" />
+                                    <SocialBtn icon={<Mail size={14} />} href="mailto:sahuprayag229@gmail.com" label="EMAIL" color="var(--accent-amber)" />
                                 </div>
                             </div>
                         </div>
@@ -256,7 +256,7 @@ export default function Footer() {
                                     { cmd: "$ whoami",  out: "prayag-sahu",          outColor: "var(--accent)" },
                                     { cmd: "$ location",out: "Jabalpur, MP, IN",     outColor: "var(--accent-blue)" },
                                     { cmd: "$ role",    out: "Creative Engineer",    outColor: "var(--text-muted)" },
-                                    { cmd: "$ email",   out: "sahuprayag145@...",     outColor: "var(--accent-purple)" },
+                                    { cmd: "$ email",   out: "sahuprayag229@...",     outColor: "var(--accent-purple)" },
                                     { cmd: "$ commits", out: "5,095+ this year",      outColor: "var(--accent-blue)" },
                                 ].map((line, i) => (
                                     <div key={i}>
@@ -273,7 +273,7 @@ export default function Footer() {
                             {/* CTA */}
                             <div className="p-5 border-t relative z-10" style={{ borderColor: "var(--border)" }}>
                                 <a
-                                    href="mailto:sahuprayag145@gmail.com"
+                                    href="mailto:sahuprayag229@gmail.com"
                                     className="flex items-center justify-center gap-2.5 border font-mono text-[12px] tracking-[0.18em] uppercase py-4 transition-all duration-200 font-bold"
                                     style={{ borderColor: "var(--accent)", color: "var(--accent)" }}
                                     onMouseEnter={e => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "var(--bg)"; }}
