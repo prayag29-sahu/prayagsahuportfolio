@@ -1,423 +1,27 @@
-/* eslint-disable @next/next/no-img-element */
-
-
-
-
-
-// export default function Contact() {
-//     return (
-
-
-//         <section
-//             id="contact"
-//             className="py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden"
-//         >
-//             <div className="container mx-auto px-6 lg:px-8">
-//                 <div className="max-w-7xl mx-auto">
-
-//                     {/* Heading */}
-//                     <div className="text-center mb-16">
-//                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-//                             Let&apos;s{" "}
-//                             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-//                                 Connect
-//                             </span>
-//                         </h2>
-//                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-//                             Ready to bring your next project to life? I&apos;m always excited to discuss
-//                             new opportunities and collaborate on innovative solutions.
-//                         </p>
-//                     </div>
-
-//                     <div className="grid lg:grid-cols-2 gap-16 items-start">
-
-//                         {/* LEFT SIDE */}
-//                         <div className="space-y-8">
-
-//                             {/* CONTACT INFO CARD */}
-//                             <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-//                                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
-//                                     Get In Touch
-//                                 </h3>
-
-//                                 <div className="space-y-6">
-
-//                                     {/* Email */}
-//                                     <ContactItem
-//                                         bg="bg-blue-50"
-//                                         iconBg="bg-blue-600"
-//                                         title="Email"
-//                                         value="hello@yourportfolio.com"
-//                                     />
-
-//                                     {/* Phone */}
-//                                     <ContactItem
-//                                         bg="bg-green-50"
-//                                         iconBg="bg-green-600"
-//                                         title="Phone"
-//                                         value="+1 (555) 123-4567"
-//                                     />
-
-//                                     {/* Location */}
-//                                     <ContactItem
-//                                         bg="bg-purple-50"
-//                                         iconBg="bg-purple-600"
-//                                         title="Location"
-//                                         value="San Francisco, CA"
-//                                     />
-//                                 </div>
-//                             </div>
-
-//                             {/* SOCIAL ICONS */}
-//                             <div className="flex space-x-4">
-//                                 <SocialButton />
-//                                 <SocialButton dark />
-//                                 <SocialButton twitter />
-//                             </div>
-//                         </div>
-
-//                         {/* RIGHT SIDE */}
-//                         <div className="space-y-8">
-
-//                             {/* IMAGE */}
-//                             <img
-//                                 src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/f29e6dbb-5983-4f63-86ac-121a3164c61a/contact/contact-illustration-4e363e91ea0a4be0a098a831064be11d.png"
-//                                 alt="Contact illustration"
-//                                 className="w-full rounded-2xl object-cover shadow-sm"
-//                             />
-
-//                             {/* CONTACT FORM */}
-//                             <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-//                                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
-//                                     Send a Message
-//                                 </h3>
-
-//                                 <form className="space-y-6">
-
-//                                     <div className="grid md:grid-cols-2 gap-6">
-//                                         <Input label="Full Name" placeholder="Your name" />
-//                                         <Input label="Email Address" placeholder="your@email.com" />
-//                                     </div>
-
-//                                     <Input label="Subject" placeholder="Project inquiry" />
-
-//                                     <div>
-//                                         <label className="block text-sm font-semibold text-gray-700 mb-2">
-//                                             Message
-//                                         </label>
-//                                         <textarea
-//                                             rows="5"
-//                                             className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-//                                             placeholder="Tell me about your project..."
-//                                         />
-//                                     </div>
-
-//                                     <button
-//                                         type="submit"
-//                                         className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-xl transition transform hover:scale-105"
-//                                     >
-//                                         Send Message
-//                                     </button>
-
-//                                 </form>
-//                             </div>
-//                         </div>
-
-//                     </div>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// }
-// function ContactItem({ bg, iconBg, title, value }) {
-//     return (
-//         <div className={`flex items-center space-x-4 p-4 ${bg} rounded-2xl`}>
-//             <div className={`w-12 h-12 ${iconBg} rounded-xl`} />
-//             <div>
-//                 <p className="font-semibold text-gray-900">{title}</p>
-//                 <p className="text-gray-600">{value}</p>
-//             </div>
-//         </div>
-//     );
-// }
-
-// function Input({ label, placeholder }) {
-//     return (
-//         <div>
-//             <label className="block text-sm font-semibold text-gray-700 mb-2">
-//                 {label}
-//             </label>
-//             <input
-//                 className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-//                 placeholder={placeholder}
-//             />
-//         </div>
-//     );
-// }
-
-// function SocialButton({ dark, twitter }) {
-//     let bg = "bg-blue-600 hover:bg-blue-700";
-//     if (dark) bg = "bg-gray-900 hover:bg-gray-800";
-//     if (twitter) bg = "bg-blue-400 hover:bg-blue-500";
-
-//     return (
-//         <a
-//             href="#"
-//             className={`w-12 h-12 ${bg} rounded-xl flex items-center justify-center transition transform hover:scale-110`}
-//         />
-//     );
-// }
-
-
-
-
-
-
-
-// 'use client';
-
-// import {
-//     Mail,
-//     Phone,
-//     MapPin,
-//     Github,
-//     Linkedin,
-//     Twitter,
-//     Send
-// } from "lucide-react";
-// import ParallaxSection from "@/components/ui/ParallaxSection";
-// export default function Contact() {
-//     return (
-//         <ParallaxSection
-//             // backgroundImage="/img/img1.jpeg"
-//             backgroundImage="/images/bg.png"
-//             height="400px"
-//         >
-//             <section
-//                 id="contact"
-//                 className="py-24  relative overflow-hidden"
-//             >
-//                 {/* Background Glow */}
-//                 <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-//                 <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-
-//                 <div className="container mx-auto px-6 lg:px-8 relative z-10">
-//                     <div className="max-w-7xl mx-auto">
-
-//                         {/* Heading */}
-//                         <div className="text-center mb-16">
-
-//                             <div
-//                                 className={`w-full lg:px-[12%] px-[5%]  flex flex-col justify-center items-center
-//   `}                            >
-
-//                                 <div className="flex items-center justify-center gap-6 mb-4">
-
-//                                     {/* LEFT LINE */}
-//                                     <div
-//                                         className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-r from-transparent via-cyan-400 to-blue-400`}
-//                                     ></div>
-
-//                                     {/* TITLE */}
-//                                     <h1
-//                                         className={`text-3xl sm:text-4xl md:text-5xl  font-extrabold tracking-wide drop-shadow-lg transition-all bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`}
-//                                     >
-//                                         <h2 className="text-4xl md:text-5xl font-bold text-white ">
-//                                             Let&apos;s{" "}
-//                                             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-//                                                 Build Something Great
-//                                             </span>
-//                                         </h2>
-//                                     </h1>
-//                                     {/* RIGHT LINE */}
-//                                     <div
-//                                         className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`}
-//                                     ></div>
-//                                 </div>
-//                             </div>
-//                             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-//                                 Looking for a reliable full stack developer or freelancer?
-//                                 I&apos;m open to job opportunities, freelance projects, and
-//                                 long-term collaborations.
-//                             </p>
-//                         </div>
-
-//                         <div className="grid lg:grid-cols-2 gap-16 items-start">
-
-//                             {/* LEFT SIDE */}
-//                             <div className="space-y-8">
-
-//                                 {/* CONTACT INFO */}
-//                                 <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 shadow-xl border border-white/10">
-//                                     <h3 className="text-2xl font-bold text-white mb-6">
-//                                         Contact Information
-//                                     </h3>
-
-//                                     <div className="space-y-6">
-
-//                                         <ContactItem
-//                                             icon={<Mail />}
-//                                             title="Email"
-//                                             value="sahuprayag145@gmail.com"
-//                                         />
-
-//                                         <ContactItem
-//                                             icon={<Phone />}
-//                                             title="Phone"
-//                                             value="+91 79999 26855"
-//                                         />
-
-//                                         <ContactItem
-//                                             icon={<MapPin />}
-//                                             title="Location"
-//                                             value="Jabalpur, Madhya Pradesh, India"
-//                                         />
-
-//                                     </div>
-//                                 </div>
-
-//                                 {/* SOCIAL ICONS */}
-//                                 <div className="flex space-x-4">
-//                                     <SocialButton icon={<Github />} />
-//                                     <SocialButton icon={<Linkedin />} />
-//                                     <SocialButton icon={<Twitter />} />
-//                                 </div>
-//                             </div>
-
-//                             {/* RIGHT SIDE */}
-//                             <div className="space-y-8">
-
-//                                 {/* IMAGE */}
-//                                 <img
-//                                     src="/images/contact.png"
-//                                     alt="Contact illustration"
-//                                     className="w-full rounded-2xl object-cover shadow-2xl border border-white/10 hover:scale-105 transition-transform duration-500"
-//                                 />
-
-//                                 {/* CONTACT FORM */}
-//                                 <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 shadow-xl border border-white/10">
-//                                     <h3 className="text-2xl font-bold text-white mb-6">
-//                                         Send a Message
-//                                     </h3>
-
-//                                     <form className="space-y-6">
-
-//                                         <div className="grid md:grid-cols-2 gap-6">
-//                                             <Input label="Full Name" placeholder="Your name" />
-//                                             <Input label="Email Address" placeholder="your@email.com" />
-//                                         </div>
-
-//                                         <Input label="Subject" placeholder="Job / Freelance Project" />
-
-//                                         <div>
-//                                             <label className="block text-sm font-semibold text-gray-300 mb-2">
-//                                                 Message
-//                                             </label>
-//                                             <textarea
-//                                                 rows="5"
-//                                                 className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-//                                                 placeholder="Tell me about your requirement..."
-//                                             />
-//                                         </div>
-
-//                                         <button
-//                                             type="submit"
-//                                             className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 rounded-xl transition transform hover:scale-105"
-//                                         >
-//                                             Send Message
-//                                             <Send size={18} />
-//                                         </button>
-
-//                                     </form>
-//                                 </div>
-//                             </div>
-
-//                         </div>
-
-//                         {/* FOOTER LINE */}
-//                         <div className="mt-20 text-center text-gray-400 text-sm">
-//                             © 2026 Prayag Sahu — Full Stack Developer & Freelancer
-//                         </div>
-
-//                     </div>
-//                 </div>
-//             </section>
-//         </ParallaxSection>
-//     );
-// }
-
-// /* CONTACT ITEM */
-// function ContactItem({ icon, title, value }) {
-//     return (
-//         <div className="flex items-center space-x-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:border-cyan-400/50 transition">
-//             <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-white">
-//                 {icon}
-//             </div>
-//             <div>
-//                 <p className="font-semibold text-white">{title}</p>
-//                 <p className="text-gray-300 text-sm">{value}</p>
-//             </div>
-//         </div>
-//     );
-// }
-
-// /* INPUT */
-// function Input({ label, placeholder }) {
-//     return (
-//         <div>
-//             <label className="block text-sm font-semibold text-gray-300 mb-2">
-//                 {label}
-//             </label>
-//             <input
-//                 className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-//                 placeholder={placeholder}
-//             />
-//         </div>
-//     );
-// }
-
-// /* SOCIAL BUTTON */
-// function SocialButton({ icon }) {
-//     return (
-//         <a
-//             href="#"
-//             className="w-12 h-12 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-cyan-500 hover:border-cyan-400 hover:scale-110 transition-all"
-//         >
-//             {icon}
-//         </a>
-//     );
-// }
-
-
-
-
-
-
-
-
-
-
-
 'use client';
 
 import { useRef, useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, CheckCircle, XCircle, Terminal, Loader } from "lucide-react";
 import emailjs from '@emailjs/browser';
-import ParallaxSection from '@/components/ui/ParallaxSection';
 
-/* ─── EMAILJS CONFIG — apne credentials dalo ─────────────── */
-const EMAILJS_SERVICE_ID = "service_c1lcmym";   // 👈 apna service ID
-const EMAILJS_TEMPLATE_ID = "template_3d23n3n";  // 👈 apna template ID
-const EMAILJS_PUBLIC_KEY = "iDnsyeNW2wHQtj5-7"; // 👈 apni public key
+/* 
+   Email Service Setup 
+   I connected EmailJS so I can receive your messages directly in my inbox 
+   without needing a complicated server setup.
+*/
+const EMAILJS_SERVICE_ID = "service_c1lcmym";   
+const EMAILJS_TEMPLATE_ID = "template_3d23n3n";  
+const EMAILJS_PUBLIC_KEY = "iDnsyeNW2wHQtj5-7"; 
 
-/* ─── Shared Primitives ──────────────────────────────────── */
+/* Basic UI parts for the computer-style look */
 function ScanlineOverlay() {
     return (
         <div className="pointer-events-none absolute inset-0 z-0"
-            style={{ background: "repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px)" }} />
+            style={{ background: "repeating-linear-gradient(0deg,transparent,transparent 2px,var(--scanline-color) 2px,var(--scanline-color) 4px)" }} />
     );
 }
-function CornerAccent({ color = "#39d353" }) {
+
+function CornerAccent({ color = "var(--accent)" }) {
     return (<>
         <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 z-10" style={{ borderColor: color }} />
         <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 z-10" style={{ borderColor: color }} />
@@ -425,41 +29,45 @@ function CornerAccent({ color = "#39d353" }) {
         <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 z-10" style={{ borderColor: color }} />
     </>);
 }
-function WindowChrome({ filename, status = "LIVE", statusColor = "#39d353" }) {
+
+function WindowChrome({ filename, status = "LIVE", statusColor = "var(--accent)" }) {
     return (
-        <div className="flex items-center justify-between px-4 py-2.5 border-b border-[#1a2332]">
+        <div className="flex items-center justify-between px-4 py-2.5 md:px-5 md:py-3.5 border-b" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
             <div className="flex items-center gap-3">
-                <div className="flex gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#ff5f56]" />
-                    <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
-                    <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                <div className="flex gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                 </div>
-                <span className="font-mono text-[10px] tracking-[0.18em] text-[#8b949e]">{filename}</span>
+                <span className="font-mono text-[11px] tracking-[0.18em] font-bold truncate max-w-[130px] md:max-w-none" style={{ color: "var(--text-muted)" }}>{filename}</span>
             </div>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-2 shrink-0">
                 <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: statusColor }} />
-                <span className="font-mono text-[8px] border px-1.5 py-0.5 tracking-widest" style={{ color: statusColor, borderColor: statusColor }}>{status}</span>
+                <span className="font-mono text-[9px] md:text-[10px] border px-2 py-0.5 tracking-widest font-bold whitespace-nowrap" style={{ color: statusColor, borderColor: statusColor }}>{status}</span>
             </div>
         </div>
     );
 }
 
-/* ─── Terminal Input ─────────────────────────────────────── */
-function TerminalInput({ label, name, type = "text", placeholder, value, onChange, required, accentColor = "#39d353" }) {
+/* 
+   Computer-Style Input Boxes 
+   I made these boxes look like a real computer terminal, 
+   with symbols that change when you click on them.
+*/
+function TerminalInput({ label, name, type = "text", placeholder, value, onChange, required, accentColor = "var(--accent)" }) {
     const [focused, setFocused] = useState(false);
     return (
         <div>
-            <label className="block font-mono text-[9px] tracking-[0.2em] uppercase mb-1.5"
-                style={{ color: focused ? accentColor : "#8b949e" }}>
+            <label className="block font-mono text-[10px] tracking-[0.2em] uppercase mb-2 font-bold"
+                style={{ color: focused ? accentColor : "var(--text-muted)" }}>
                 {label} {required && <span style={{ color: accentColor }}>*</span>}
             </label>
-            <div className="relative border bg-[#010409] transition-all duration-200 overflow-hidden"
-                style={{ borderColor: focused ? accentColor : "#1a2332", boxShadow: focused ? `0 0 12px ${accentColor}20` : "none" }}>
-                {/* Left accent bar */}
+            <div className="relative border transition-all duration-200 overflow-hidden"
+                style={{ borderColor: focused ? accentColor : "var(--border)", background: "var(--bg)", boxShadow: focused ? `0 0 12px var(--accent-glow)` : "none" }}>
                 <div className="absolute left-0 top-0 bottom-0 w-[2px] transition-all duration-200"
                     style={{ background: focused ? accentColor : "transparent" }} />
                 <div className="flex items-center px-4 py-0">
-                    <span className="font-mono text-[10px] mr-2 shrink-0" style={{ color: focused ? accentColor : "#8b949e" }}>
+                    <span className="font-mono text-[10px] mr-2 shrink-0" style={{ color: focused ? accentColor : "var(--text-dim)" }}>
                         {focused ? ">" : "$"}
                     </span>
                     <input
@@ -471,30 +79,31 @@ function TerminalInput({ label, name, type = "text", placeholder, value, onChang
                         required={required}
                         onFocus={() => setFocused(true)}
                         onBlur={() => setFocused(false)}
-                        className="w-full bg-transparent py-3 font-mono text-[12px] text-white placeholder-[#8b949e] outline-none"
+                        className="w-full bg-transparent py-3.5 font-mono text-[13px] placeholder-dim outline-none font-bold"
+                        style={{ color: "var(--text-primary)" }}
                     />
-                    {focused && <span className="animate-pulse font-mono text-[12px] ml-1" style={{ color: accentColor }}>█</span>}
+                    {focused && <span className="animate-pulse font-mono text-[13px] ml-1" style={{ color: accentColor }}>█</span>}
                 </div>
             </div>
         </div>
     );
 }
 
-/* ─── Terminal Textarea ──────────────────────────────────── */
-function TerminalTextarea({ label, name, value, onChange, required, accentColor = "#39d353" }) {
+/* Computer-Style Message Box */
+function TerminalTextarea({ label, name, value, onChange, required, accentColor = "var(--accent)" }) {
     const [focused, setFocused] = useState(false);
     return (
         <div>
-            <label className="block font-mono text-[9px] tracking-[0.2em] uppercase mb-1.5"
-                style={{ color: focused ? accentColor : "#8b949e" }}>
+            <label className="block font-mono text-[10px] tracking-[0.2em] uppercase mb-2 font-bold"
+                style={{ color: focused ? accentColor : "var(--text-muted)" }}>
                 {label} {required && <span style={{ color: accentColor }}>*</span>}
             </label>
-            <div className="relative border bg-[#010409] transition-all duration-200 overflow-hidden"
-                style={{ borderColor: focused ? accentColor : "#1a2332", boxShadow: focused ? `0 0 12px ${accentColor}20` : "none" }}>
+            <div className="relative border transition-all duration-200 overflow-hidden"
+                style={{ borderColor: focused ? accentColor : "var(--border)", background: "var(--bg)", boxShadow: focused ? `0 0 12px var(--accent-glow)` : "none" }}>
                 <div className="absolute left-0 top-0 bottom-0 w-[2px] transition-all duration-200"
                     style={{ background: focused ? accentColor : "transparent" }} />
                 <div className="flex items-start px-4 pt-3 pb-1">
-                    <span className="font-mono text-[10px] mr-2 mt-0.5 shrink-0" style={{ color: focused ? accentColor : "#8b949e" }}>
+                    <span className="font-mono text-[10px] mr-2 mt-0.5 shrink-0" style={{ color: focused ? accentColor : "var(--text-dim)" }}>
                         {focused ? ">" : "$"}
                     </span>
                     <textarea
@@ -506,10 +115,11 @@ function TerminalTextarea({ label, name, value, onChange, required, accentColor 
                         placeholder="Describe your project, job opportunity or query..."
                         onFocus={() => setFocused(true)}
                         onBlur={() => setFocused(false)}
-                        className="w-full bg-transparent font-mono text-[12px] text-white placeholder-[#8b949e] outline-none resize-none"
+                        className="w-full bg-transparent font-mono text-[13px] placeholder-dim outline-none resize-none font-bold"
+                        style={{ color: "var(--text-primary)" }}
                     />
                 </div>
-                <div className="px-4 pb-2 font-mono text-[8px] text-[#8b949e] tracking-widest flex justify-between">
+                <div className="px-4 pb-2.5 font-mono text-[10px] tracking-widest flex justify-between font-bold" style={{ color: "var(--text-dim)" }}>
                     <span>MESSAGE.txt</span>
                     <span>{value?.length || 0} CHARS</span>
                 </div>
@@ -518,47 +128,48 @@ function TerminalTextarea({ label, name, value, onChange, required, accentColor 
     );
 }
 
-/* ─── Contact Info Item ──────────────────────────────────── */
+/* Contact Info Item */
 function ContactItem({ icon, label, value, href, color }) {
     const [hovered, setHovered] = useState(false);
     return (
         <a href={href || "#"} target={href ? "_blank" : undefined} rel="noopener noreferrer"
-            className="flex items-center gap-4 border border-[#1a2332] bg-[#010409] p-4 relative overflow-hidden group transition-all duration-200 hover:border-[#39d353]"
+            className="flex items-center gap-4 border p-5 relative overflow-hidden group transition-all duration-200"
+            style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}
             onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-            <CornerAccent color={hovered ? color : "#1a2332"} />
-            <div className="w-9 h-9 border flex items-center justify-center shrink-0 transition-all duration-200"
-                style={{ borderColor: hovered ? color : "#1a2332", color: hovered ? color : "#30363d", background: hovered ? `${color}15` : "transparent" }}>
+            <CornerAccent color={hovered ? color : "var(--border)"} />
+            <div className="w-10 h-10 border flex items-center justify-center shrink-0 transition-all duration-200"
+                style={{ borderColor: hovered ? color : "var(--border)", color: hovered ? color : "var(--text-dim)", background: hovered ? `${color}15` : "transparent" }}>
                 {icon}
             </div>
             <div className="relative z-10">
-                <div className="font-mono text-[8px] tracking-[0.2em] uppercase mb-0.5" style={{ color: color }}>{label}</div>
-                <div className="font-mono text-[12px] text-white">{value}</div>
+                <div className="font-mono text-[10px] tracking-[0.2em] uppercase mb-1 font-bold" style={{ color: color }}>{label}</div>
+                <div className="font-mono text-[13px] font-bold" style={{ color: "var(--text-primary)" }}>{value}</div>
             </div>
-            <div className="ml-auto font-mono text-[9px] transition-all duration-200 relative z-10"
-                style={{ color: hovered ? color : "#30363d" }}>→</div>
+            <div className="ml-auto font-mono text-[11px] transition-all duration-200 relative z-10 font-bold"
+                style={{ color: hovered ? color : "var(--text-dim)" }}>→</div>
         </a>
     );
 }
 
-/* ─── Social Button ──────────────────────────────────────── */
-function SocialBtn({ icon, href, label, color }) {
-    const [hovered, setHovered] = useState(false);
-    return (
-        <a href={href} target="_blank" rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 border border-[#1a2332] py-3 font-mono text-[9px] tracking-[0.15em] uppercase transition-all duration-200 relative overflow-hidden"
-            style={{ color: hovered ? "#010409" : color, borderColor: hovered ? color : "#1a2332", background: hovered ? color : "transparent" }}
-            onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-            {icon} {label}
-        </a>
-    );
-}
+/* Social Links (Optional) */
+// function SocialBtn({ icon, href, label, color }) {
+//     const [hovered, setHovered] = useState(false);
+//     return (
+//         <a href={href} target="_blank" rel="noopener noreferrer"
+//             className="flex-1 flex items-center justify-center gap-2 border py-4 font-mono text-[10px] tracking-[0.15em] uppercase transition-all duration-200 relative overflow-hidden font-bold"
+//             style={{ color: hovered ? "var(--bg)" : color, borderColor: hovered ? color : "var(--border)", background: hovered ? color : "transparent" }}
+//             onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+//             {icon} {label}
+//         </a>
+//     );
+// }
 
-/* ─── Success / Error overlay ────────────────────────────── */
+/* Message Status Screen */
 function StatusOverlay({ status, onReset }) {
     const isSuccess = status === "success";
-    const ac = isSuccess ? "#39d353" : "#ff5f56";
+    const ac = isSuccess ? "var(--accent)" : "#ff5f56";
     return (
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-[#010409]/97 backdrop-blur-sm">
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center backdrop-blur-sm" style={{ background: "var(--bg-dim)" }}>
             <CornerAccent color={ac} />
             <div className="text-center px-6">
                 {isSuccess
@@ -568,22 +179,22 @@ function StatusOverlay({ status, onReset }) {
                 <h3 className="font-mono font-black text-xl mb-2" style={{ color: ac }}>
                     {isSuccess ? "MESSAGE_SENT.exe" : "TRANSMISSION_FAILED.err"}
                 </h3>
-                <p className="font-mono text-[11px] text-[#8b949e] leading-relaxed max-w-xs mx-auto mb-6">
+                <p className="font-mono text-[11px] leading-relaxed max-w-xs mx-auto mb-6" style={{ color: "var(--text-muted)" }}>
                     {isSuccess
                         ? "Your message has been successfully transmitted. I'll get back to you within 24 hours."
                         : "Failed to send your message. Please try again or reach out directly via email."}
                 </p>
-                <div className="border border-[#1a2332] bg-[#010409] px-4 py-2 font-mono text-[9px] text-[#39d353] mb-4 text-left">
+                <div className="border bg-theme-bg px-4 py-2 font-mono text-[9px] mb-4 text-left" style={{ borderColor: "var(--border)", color: "var(--accent)" }}>
                     <div>$ status --check</div>
                     <div style={{ color: ac }}>
                         {isSuccess ? "✓ DELIVERY: CONFIRMED" : "✗ DELIVERY: FAILED"}
                     </div>
-                    <div className="text-[#30363d] text-[8px] mt-1">{new Date().toLocaleString()}</div>
+                    <div className="text-dim text-[8px] mt-1">{new Date().toLocaleString()}</div>
                 </div>
                 <button onClick={onReset}
-                    className="border font-mono text-[10px] tracking-widest uppercase px-6 py-2.5 transition-all duration-200 hover:text-[#010409]"
+                    className="border font-mono text-[10px] tracking-widest uppercase px-6 py-2.5 transition-all duration-200"
                     style={{ borderColor: ac, color: ac }}
-                    onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "#010409"; }}
+                    onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "var(--bg)"; }}
                     onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ac; }}>
                     {isSuccess ? "$ SEND_ANOTHER →" : "$ RETRY →"}
                 </button>
@@ -592,23 +203,23 @@ function StatusOverlay({ status, onReset }) {
     );
 }
 
-/* ─── Glitch text ────────────────────────────────────────── */
+/* Moving Effect for Titles */
 function GlitchTitle({ glitch }) {
     return (
-        <h2 className={`font-mono font-black text-3xl md:text-5xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"}`}
-            style={{ textShadow: "0 0 24px rgba(57,211,83,0.25)" }}>
-            CONTACT_<span className="text-[#39d353]">ME</span>
-            <span className="inline-block w-[10px] h-[18px] bg-[#39d353] animate-pulse ml-2 align-middle" />
+        <h2 className={`font-mono font-black text-3xl md:text-5xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "translate-x-[2px]" : ""}`}
+            style={{ color: glitch ? "var(--accent)" : "var(--text-primary)", textShadow: "0 0 24px var(--accent-glow)" }}>
+            CONTACT_<span style={{ color: "var(--accent)" }}>ME</span>
+            <span className="inline-block w-[10px] h-[18px] animate-pulse ml-2 align-middle" style={{ background: "var(--accent)" }} />
         </h2>
     );
 }
 
-/* ─── Main Export ────────────────────────────────────────── */
+/* Contact Section */
 export default function Contact() {
     const formRef = useRef();
     const [glitch, setGlitch] = useState(false);
     const [sending, setSending] = useState(false);
-    const [submitted, setSubmitted] = useState(null); // null | "success" | "error"
+    const [submitted, setSubmitted] = useState(null); 
     const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
 
     useEffect(() => {
@@ -642,172 +253,168 @@ export default function Contact() {
     const resetForm = () => setSubmitted(null);
 
     return (
-        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-            <section className="relative py-28 pt-0 overflow-hidden"
-                id='contact'
-                style={{ fontFamily: "'Courier New', Courier, monospace" }}>
+        <section
+            className="relative py-10 md:py-14 overflow-hidden"
+            id='contact'
+            style={{ background: "var(--bg)", fontFamily: "'Courier New', Courier, monospace" }}
+        >
+            {/* BG grid */}
+            <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
+                style={{
+                    backgroundImage: "linear-gradient(var(--accent) 1px,transparent 1px),linear-gradient(90deg,var(--accent) 1px,transparent 1px)",
+                    backgroundSize: "40px 40px",
+                }} />
+            {/* Glows */}
+            <div className="absolute top-0 right-1/4 w-[600px] h-[600px] rounded-full blur-[180px] pointer-events-none" style={{ background: "var(--accent)", opacity: 0.02 }} />
+            <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] rounded-full blur-[160px] pointer-events-none" style={{ background: "var(--accent-blue)", opacity: 0.02 }} />
 
-                {/* BG grid */}
-                <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
-                    style={{
-                        backgroundImage: "linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)",
-                        backgroundSize: "40px 40px",
-                    }} />
-                {/* Glows */}
-                <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#39d353] opacity-[0.02] rounded-full blur-[180px] pointer-events-none" />
-                <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[160px] pointer-events-none" />
+            <div className="relative z-10 max-w-7xl mx-auto px-6">
 
-                <div className="relative z-10 max-w-7xl mx-auto px-6">
-
-                    {/* ── HEADER ── */}
-                    <div className="mb-12">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
-                            <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">SYSTEM_MODULE / CONTACT</span>
-                        </div>
-                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-                            <ScanlineOverlay />
-                            <CornerAccent color="#39d353" />
-                            <WindowChrome filename="CONTACT_ME.exe" />
-                            <div className="px-8 py-6">
-                                <GlitchTitle glitch={glitch} />
-                                <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider max-w-2xl">
-                                    $ init --connection — Open to job opportunities, freelance projects & long-term collaborations.
-                                </p>
-                                {/* Status pills */}
-                                <div className="flex flex-wrap gap-3 mt-5">
-                                    {[
-                                        { label: "STATUS", value: "AVAILABLE", color: "#39d353" },
-                                        { label: "RESPONSE", value: "< 24 HRS", color: "#00e5ff" },
-                                        { label: "MODE", value: "OPEN TO WORK", color: "#f59e0b" },
-                                        { label: "LOCATION", value: "JABALPUR, MP", color: "#a855f7" },
-                                    ].map(p => (
-                                        <div key={p.label} className="border border-[#1a2332] bg-[#010409] px-3 py-1.5">
-                                            <div className="font-mono text-[7px] tracking-[0.2em]" style={{ color: p.color }}>{p.label}</div>
-                                            <div className="font-mono text-[11px] font-bold text-white">{p.value}</div>
-                                        </div>
-                                    ))}
-                                </div>
+                {/* ── HEADER ── */}
+                <div className="mb-8">
+                    <div className="flex items-center gap-3 mb-6">
+                        <div className="w-2 h-2 rounded-full animate-pulse shadow-[0_0_8px_var(--accent-glow)]" style={{ background: "var(--accent)" }} />
+                        <span className="font-mono text-[11px] tracking-[0.3em] uppercase font-bold" style={{ color: "var(--accent)" }}>SYSTEM_MODULE / CONTACT</span>
+                    </div>
+                    <div className="border relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+                        <ScanlineOverlay />
+                        <CornerAccent color="var(--accent)" />
+                        <WindowChrome filename="CONTACT_ME.exe" />
+                        <div className="px-8 py-8">
+                            <GlitchTitle glitch={glitch} />
+                            <p className="font-mono text-[13px] mt-4 tracking-wider max-w-2xl" style={{ color: "var(--text-muted)" }}>
+                                $ init --connection — Open to job opportunities, freelance projects & long-term collaborations.
+                            </p>
+                            {/* Status pills */}
+                            <div className="flex flex-wrap gap-3 mt-5">
+                                {[
+                                    { label: "STATUS", value: "AVAILABLE", color: "var(--accent)" },
+                                    { label: "RESPONSE", value: "< 24 HRS", color: "var(--accent-blue)" },
+                                    { label: "MODE", value: "OPEN TO WORK", color: "var(--accent-amber)" },
+                                    { label: "LOCATION", value: "JABALPUR, MP", color: "var(--accent-purple)" },
+                                ].map(p => (
+                                    <div key={p.label} className="border px-4 py-2" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                                        <div className="font-mono text-[9px] tracking-[0.2em] font-bold" style={{ color: p.color }}>{p.label}</div>
+                                        <div className="font-mono text-lg font-bold" style={{ color: "var(--text-primary)" }}>{p.value}</div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
-
-                    {/* ── MAIN GRID ── */}
-                    <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-6">
-
-                        {/* ── LEFT: Contact info + image + socials ── */}
-                        <div className="flex flex-col gap-4">
-
-                            {/* Contact info panel */}
-                            <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-                                <ScanlineOverlay />
-                                <CornerAccent color="#39d353" />
-                                <WindowChrome filename="CONTACT_INFO.log" status="ONLINE" statusColor="#39d353" />
-                                <div className="p-5 space-y-2 relative z-10">
-                                    <div className="font-mono text-[9px] text-[#39d353] tracking-[0.2em] mb-3">$ cat ./contact/info.txt</div>
-                                    <ContactItem icon={<Mail size={15} />} label="EMAIL" value="sahuprayag145@gmail.com" href="mailto:sahuprayag229@gmail.com" color="#39d353" />
-                                    <ContactItem icon={<Phone size={15} />} label="PHONE" value="+91 79999 26855" href="tel:+917999926855" color="#00e5ff" />
-                                    <ContactItem icon={<MapPin size={15} />} label="LOCATION" value="Jabalpur, Madhya Pradesh, India" color="#f59e0b" />
-                                </div>
-                            </div>
-                            {/* Social links */}
-                            <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-                                <ScanlineOverlay />
-                                <CornerAccent color="#00e5ff" />
-                                <WindowChrome filename="SOCIAL_LINKS.sh" status="ACTIVE" statusColor="#00e5ff" />
-                                <div className="p-4 relative z-10">
-                                    <div className="font-mono text-[9px] text-[#00e5ff] tracking-[0.2em] mb-3">$ open --social-profiles</div>
-                                    <div className="flex gap-2">
-                                        <SocialBtn icon={<Github size={13} />} href="https://github.com/prayag29-sahu" label="GITHUB" color="#39d353" />
-                                        <SocialBtn icon={<Linkedin size={13} />} href="https://linkedin.com" label="LINKEDIN" color="#00e5ff" />
-                                        <SocialBtn icon={<Twitter size={13} />} href="https://twitter.com" label="TWITTER" color="#a855f7" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Quick message prompt */}
-                            <div className="border border-[#1a2332] bg-[#010409] p-4 relative overflow-hidden">
-                                <CornerAccent color="#1a2332" />
-                                <div className="font-mono text-[9px] text-[#8b949e] space-y-1">
-                                    <div><span className="text-[#8b949e]">$</span> ping prayag-sahu.dev</div>
-                                    <div><span className="text-[#8b949e]">PONG:</span> <span className="text-[#39d353]">I am here! Ready to collaborate.</span></div>
-                                    <div><span className="text-[#8b9494e]">$</span> status --availability<span className="animate-pulse">█</span></div>
-                                    <div><span className="text-[#8b949e]">→</span> <span className="text-[#f59e0b]">OPEN_TO_WORK: TRUE</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* ── RIGHT: Contact form ── */}
-                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden"
-                            style={{ borderTopWidth: 3, borderTopColor: "#39d353", borderTopStyle: "solid" }}>
-                            <ScanlineOverlay />
-                            <CornerAccent color="#39d353" />
-                            <WindowChrome filename="SEND_MESSAGE.sh" status="READY" statusColor="#39d353" />
-
-                            <div className="relative">
-                                {/* Status overlay */}
-                                {submitted && <StatusOverlay status={submitted} onReset={resetForm} />}
-
-                                <div className="p-6 relative z-10">
-                                    <div className="flex items-center justify-between mb-5">
-                                        <div>
-                                            <div className="font-mono text-[9px] text-[#39d353] tracking-[0.2em] mb-1">$ compose --new-message</div>
-                                            <h3 className="font-mono font-black text-base text-white tracking-[0.1em] uppercase">SEND_A_MESSAGE</h3>
-                                        </div>
-                                        <div className="flex items-center gap-1.5 border border-[#1a2332] px-3 py-1.5">
-                                            <Terminal size={11} className="text-[#39d353]" />
-                                            <span className="font-mono text-[8px] text-[#39d353] tracking-widest">SECURE_CHANNEL</span>
-                                        </div>
-                                    </div>
-
-                                    <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                            <TerminalInput label="Full Name" name="name" placeholder="Your full name"
-                                                value={form.name} onChange={handleChange} required accentColor="#39d353" />
-                                            <TerminalInput label="Email Address" name="email" type="email" placeholder="your@email.com"
-                                                value={form.email} onChange={handleChange} required accentColor="#00e5ff" />
-                                        </div>
-
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                            <TerminalInput label="Phone (Optional)" name="phone" type="tel" placeholder="+91 XXXXX XXXXX"
-                                                value={form.phone} onChange={handleChange} accentColor="#f59e0b" />
-                                            <TerminalInput label="Subject" name="subject" placeholder="Job / Freelance / Collab"
-                                                value={form.subject} onChange={handleChange} required accentColor="#a855f7" />
-                                        </div>
-
-                                        <TerminalTextarea label="Message" name="message"
-                                            value={form.message} onChange={handleChange} required accentColor="#39d353" />
-
-                                        {/* Privacy note */}
-                                        <div className="border border-[#1a2332] bg-[#010409] px-4 py-2.5 flex items-center gap-2">
-                                            <div className="w-1 h-1 rounded-full bg-[#39d353] shrink-0" />
-                                            <p className="font-mono text-[9px] text-[#8b949e] tracking-wide">
-                                                Your information is encrypted and will never be shared with third parties.
-                                            </p>
-                                        </div>
-
-                                        {/* Submit button */}
-                                        <button type="submit" disabled={sending}
-                                            className="w-full flex items-center justify-center gap-3 border font-mono text-[11px] tracking-[0.2em] uppercase py-4 transition-all duration-200 relative overflow-hidden group/btn"
-                                            style={{ borderColor: "#39d353", color: sending ? "#30363d" : "#39d353", borderWidth: 1 }}
-                                            onMouseEnter={e => { if (!sending) { e.currentTarget.style.background = "#39d353"; e.currentTarget.style.color = "#010409"; } }}
-                                            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = sending ? "#30363d" : "#39d353"; }}>
-                                            {/* Animated scan on hover */}
-                                            <div className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity pointer-events-none"
-                                                style={{ background: "linear-gradient(90deg, transparent 0%, rgba(57,211,83,0.08) 50%, transparent 100%)" }} />
-                                            {sending
-                                                ? <><Loader size={14} className="animate-spin" /> TRANSMITTING...</>
-                                                : <><Send size={14} /> $ SEND_MESSAGE.exe →</>
-                                            }
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </section>
-        </ParallaxSection>
+
+                {/* ── MAIN GRID ── */}
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-6">
+
+                    {/* ── LEFT: Contact info + socials ── */}
+                    <div className="flex flex-col gap-4">
+                        {/* Contact info panel */}
+                        <div className="border relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+                            <ScanlineOverlay />
+                            <CornerAccent color="var(--accent)" />
+                            <WindowChrome filename="CONTACT_INFO.log" status="ONLINE" statusColor="var(--accent)" />
+                            <div className="p-6 space-y-3 relative z-10">
+                                <div className="font-mono text-[11px] tracking-[0.2em] mb-4 font-bold uppercase" style={{ color: "var(--accent)" }}>$ cat ./contact/info.txt</div>
+                                <ContactItem icon={<Mail size={18} />} label="EMAIL" value="sahuprayag145@gmail.com" href="mailto:sahuprayag145@gmail.com" color="var(--accent)" />
+                                <ContactItem icon={<Phone size={18} />} label="PHONE" value="+91 79999 26855" href="tel:+917999926855" color="var(--accent-blue)" />
+                                <ContactItem icon={<MapPin size={18} />} label="LOCATION" value="Jabalpur, Madhya Pradesh, India" color="var(--accent-amber)" />
+                            </div>
+                        </div>
+                        {/* Social links */}
+                        {/* <div className="border relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+                            <ScanlineOverlay />
+                            <CornerAccent color="var(--accent-blue)" />
+                            <WindowChrome filename="SOCIAL_LINKS.sh" status="ACTIVE" statusColor="var(--accent-blue)" />
+                            <div className="p-6 relative z-10">
+                                <div className="font-mono text-[11px] tracking-[0.2em] mb-4 font-bold uppercase" style={{ color: "var(--accent-blue)" }}>$ open --social-profiles</div>
+                                <div className="flex gap-3">
+                                    <SocialBtn icon={<Github size={15} />} href="https://github.com/prayag29-sahu" label="GITHUB" color="var(--accent)" />
+                                    <SocialBtn icon={<Linkedin size={15} />} href="https://linkedin.com" label="LINKEDIN" color="var(--accent-blue)" />
+                                    <SocialBtn icon={<Twitter size={15} />} href="https://twitter.com" label="TWITTER" color="var(--accent-purple)" />
+                                </div>
+                            </div>
+                        </div> */}
+                        {/* Quick message prompt */}
+                        <div className="border p-6 relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                            <CornerAccent color="var(--border)" />
+                            <div className="font-mono text-[11px] space-y-2 font-bold" style={{ color: "var(--text-dim)" }}>
+                                <div><span style={{ color: "var(--text-dim)" }}>$</span> ping prayag-sahu.dev</div>
+                                <div><span style={{ color: "var(--text-dim)" }}>PONG:</span> <span style={{ color: "var(--accent)" }}>I am here! Ready to collaborate.</span></div>
+                                <div><span style={{ color: "var(--text-dim)" }}>$</span> status --availability<span className="animate-pulse">█</span></div>
+                                <div><span style={{ color: "var(--text-dim)" }}>→</span> <span style={{ color: "var(--accent-amber)" }}>OPEN_TO_WORK: TRUE</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ── RIGHT: Contact form ── */}
+                    <div className="border relative overflow-hidden"
+                        style={{ borderColor: "var(--border)", background: "var(--surface)", borderTopWidth: 3, borderTopColor: "var(--accent)", borderTopStyle: "solid" }}>
+                        <ScanlineOverlay />
+                        <CornerAccent color="var(--accent)" />
+                        <WindowChrome filename="SEND_MESSAGE.sh" status="READY" statusColor="var(--accent)" />
+
+                        <div className="relative">
+                            {/* Status overlay */}
+                            {submitted && <StatusOverlay status={submitted} onReset={resetForm} />}
+
+                            <div className="p-6 relative z-10">
+                                <div className="flex items-center justify-between mb-6">
+                                    <div>
+                                        <div className="font-mono text-[11px] tracking-[0.2em] mb-1.5 font-bold uppercase" style={{ color: "var(--accent)" }}>$ compose --new-message</div>
+                                        <h3 className="font-mono font-black text-xl tracking-[0.1em] uppercase" style={{ color: "var(--text-primary)" }}>SEND_A_MESSAGE</h3>
+                                    </div>
+                                    <div className="flex items-center gap-2 border px-4 py-2 font-bold" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                                        <Terminal size={14} style={{ color: "var(--accent)" }} />
+                                        <span className="font-mono text-[10px] tracking-widest uppercase" style={{ color: "var(--accent)" }}>SECURE_CHANNEL</span>
+                                    </div>
+                                </div>
+
+                                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <TerminalInput label="Full Name" name="name" placeholder="Your full name"
+                                            value={form.name} onChange={handleChange} required accentColor="var(--accent)" />
+                                        <TerminalInput label="Email Address" name="email" type="email" placeholder="your@email.com"
+                                            value={form.email} onChange={handleChange} required accentColor="var(--accent-blue)" />
+                                    </div>
+
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <TerminalInput label="Phone (Optional)" name="phone" type="tel" placeholder="+91 XXXXX XXXXX"
+                                            value={form.phone} onChange={handleChange} accentColor="var(--accent-amber)" />
+                                        <TerminalInput label="Subject" name="subject" placeholder="Job / Freelance / Collab"
+                                            value={form.subject} onChange={handleChange} required accentColor="var(--accent-purple)" />
+                                    </div>
+
+                                    <TerminalTextarea label="Message" name="message"
+                                        value={form.message} onChange={handleChange} required accentColor="var(--accent)" />
+
+                                    {/* Privacy note */}
+                                    <div className="border bg-theme-bg px-5 py-3 flex items-center gap-3" style={{ borderColor: "var(--border)", background: "rgba(0,0,0,0.02)" }}>
+                                        <div className="w-1.5 h-1.5 rounded-full shrink-0 animate-pulse" style={{ background: "var(--accent)" }} />
+                                        <p className="font-mono text-[11px] tracking-wide font-bold" style={{ color: "var(--text-muted)" }}>
+                                            Your information is encrypted and will never be shared with third parties.
+                                        </p>
+                                    </div>
+
+                                    {/* Submit button */}
+                                    <button type="submit" disabled={sending}
+                                        className="w-full flex items-center justify-center gap-4 border font-mono text-[13px] tracking-[0.2em] uppercase py-4.5 transition-all duration-200 relative overflow-hidden group/btn font-black"
+                                        style={{ borderColor: "var(--accent)", color: sending ? "var(--text-dim)" : "var(--accent)", borderWidth: 1 }}
+                                        onMouseEnter={e => { if (!sending) { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "var(--bg)"; } }}
+                                        onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = sending ? "var(--text-dim)" : "var(--accent)"; }}>
+                                        {/* Animated scan on hover */}
+                                        <div className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity pointer-events-none"
+                                            style={{ background: "linear-gradient(90deg, transparent 0%, var(--accent-glow) 50%, transparent 100%)" }} />
+                                        {sending
+                                            ? <><Loader size={18} className="animate-spin" /> TRANSMITTING...</>
+                                            : <><Send size={18} /> $ SEND_MESSAGE.exe →</>
+                                        }
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 }

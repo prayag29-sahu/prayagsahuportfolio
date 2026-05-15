@@ -1,494 +1,16 @@
-/* eslint-disable @next/next/no-img-element */
-// /* eslint-disable jsx-a11y/alt-text */
-// /* eslint-disable @next/next/no-img-element */
-// // 'use client';
-
-// // import ParallaxSection from '@/components/ui/ParallaxSection';
-// // import { Trophy, BookOpen, Code2, Award } from "lucide-react";
-
-// // export default function Certifications() {
-
-// //     const certData = [
-// //         {
-// //             title: "NPTEL – DBMS (IIT Kharagpur)",
-// //             subtitle: "Silver + Elite Certificate",
-// //             icon: <Trophy size={16} />,
-// //             image: "/images/01_certificates/01_Major_06/NPTEL_DBMS.png",
-// //             year: "2024"
-// //         },
-// //         {
-// //             title: "freeCodeCamp",
-// //             subtitle: "Frontend & Full Stack Development",
-// //             icon: <BookOpen size={16} />,
-// //             image: "/images/01_certificates/01_Major_06/freecodecampwebdevelopment.png",
-// //             year: "2023"
-// //         },
-// //         {
-// //             title: "InterviewBit",
-// //             subtitle: "DSA • Badges • Streak Achievements",
-// //             icon: <Code2 size={16} />,
-// //             image: "/images/01_badges/array-master.png",
-// //             year: "2023"
-// //         },
-// //         {
-// //             title: "Hackathons",
-// //             subtitle: "SIH • Brahmax • College Hackathons",
-// //             icon: <Award size={16} />,
-// //             image: "/images/01_certificates/01_Major_06/sih.jpg",
-// //             year: "2022"
-// //         }
-// //     ];
-
-// //     return (
-// //         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-
-// //             <section id="certifications" className="relative py-28 text-white">
-
-// //                 <div className="max-w-6xl mx-auto px-6">
-
-// //                     {/* HEADING */}
-// //                     <div className="mb-20">
-// //                         <h2 className="text-6xl font-extrabold tracking-tight">
-// //                             CERTIFICATION<span className="highlight">_LOG</span>
-// //                         </h2>
-// //                     </div>
-
-// //                     {/* Timeline Wrapper */}
-// //                     <div className="relative">
-
-// //                         {/* Vertical Line */}
-// //                         <div className="absolute left-3 top-0 bottom-0 w-[3px] bg-[#6ea046] shadow-[0_0_12px_rgba(110,160,70,0.7)]" />
-
-// //                         <div className="space-y-20">
-
-// //                             {certData.map((item, index) => (
-// //                                 <div key={index} className="relative flex items-start gap-10">
-
-// //                                     {/* Timeline Node */}
-// //                                     <div className="relative z-10">
-// //                                         <div className="w-6 h-6 bg-[#6ea046] border-2 border-white shadow-[0_0_12px_rgba(110,160,70,0.8)]" />
-// //                                     </div>
-
-// //                                     {/* Card */}
-// //                                     <div className="
-// //                                         relative
-// //                                         flex-1
-// //                                         bg-black/60
-// //                                         backdrop-blur-md
-// //                                         border border-white/20
-// //                                         p-10
-// //                                         rounded-xl
-// //                                         shadow-[0_20px_40px_rgba(0,0,0,0.6)]
-// //                                         hover:shadow-[0_25px_50px_rgba(110,160,70,0.4)]
-// //                                         transition-all duration-300
-// //                                     ">
-
-// //                                         {/* Year Badge */}
-// //                                         <div className="absolute top-6 right-6 bg-white text-black px-4 py-1 text-sm font-semibold tracking-wide rounded">
-// //                                             {item.year}
-// //                                         </div>
-
-// //                                         {/* Content Grid */}
-// //                                         <div className="grid grid-cols-1 lg:grid-cols-[1fr_180px] gap-8 items-center">
-
-// //                                             {/* LEFT TEXT */}
-// //                                             <div className="flex items-start gap-4">
-
-// //                                                 <div className="w-10 h-10 rounded-full bg-[#6ea046] flex items-center justify-center text-black shrink-0">
-// //                                                     {item.icon}
-// //                                                 </div>
-
-// //                                                 <div>
-// //                                                     <h3 className="text-2xl font-bold tracking-wide mb-2">
-// //                                                         {item.title}
-// //                                                     </h3>
-
-// //                                                     <p className="text-white/70">
-// //                                                         {item.subtitle}
-// //                                                     </p>
-// //                                                 </div>
-
-// //                                             </div>
-
-// //                                             {/* RIGHT IMAGE */}
-// //                                             <div className="
-// //                                                 w-full h-32
-// //                                                 rounded-lg
-// //                                                 overflow-hidden
-// //                                                 border border-white/10
-// //                                                 shadow-[0_8px_20px_rgba(110,160,70,0.4)]
-// //                                             ">
-// //                                                 <img
-// //                                                     src={item.image}
-// //                                                     alt={item.title}
-// //                                                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-// //                                                 />
-// //                                             </div>
-
-// //                                         </div>
-
-// //                                     </div>
-
-// //                                 </div>
-// //                             ))}
-
-// //                         </div>
-// //                     </div>
-
-// //                 </div>
-
-// //             </section>
-
-// //         </ParallaxSection>
-// //     );
-// // }
-
-
-
-
-
-
-// 'use client';
-
-// import { useEffect, useState } from "react";
-// import ParallaxSection from '@/components/ui/ParallaxSection';
-// import { X } from "lucide-react";
-
-// export default function Certifications() {
-
-//     const [activePopup, setActivePopup] = useState(null);
-//     const [currentSlides, setCurrentSlides] = useState({});
-//     const [isPaused, setIsPaused] = useState(false);
-
-
-//     const certData = [
-//         {
-//             title: "InterviewBit",
-//             subtitle: "DSA • Badges • Streak",
-//             year: "2024",
-//             description: "Solved DSA challenges and earned consistent streak badges with algorithm mastery.",
-//             images: [
-//                 { src: "/images/01_badges/01.png", caption: "Badge" },
-//                 { src: "/images/01_badges/02.png", caption: "Badge" },
-//                 { src: "/images/01_badges/03.png", caption: "Badge" },
-//                 { src: "/images/01_badges/04.png", caption: "Badge" },
-//                 { src: "/images/01_badges/05.png", caption: "Badge" },
-//                 { src: "/images/01_badges/06.png", caption: "Badge" },
-//                 { src: "/images/01_badges/07.png", caption: "Badge" },
-//                 { src: "/images/01_badges/08.png", caption: "Badge" },
-//                 { src: "/images/01_badges/09.png", caption: "Badge" },
-//                 { src: "/images/01_badges/10.png", caption: "Badge" },
-//                 { src: "/images/01_badges/11.png", caption: "Badge" }
-//             ]
-//         },
-//         {
-//             title: "NPTEL – DBMS (IIT Kharagpur)",
-//             subtitle: "Silver + Elite Certificate",
-//             year: "2025",
-//             description: "Completed IIT Kharagpur certified Database Management Systems course with Silver + Elite distinction.",
-//             images: [
-//                 { src: "/images/01_certificates/01_Major_06/NPTEL_DBMS.png", caption: "Certificate View" },
-//             ]
-//         },
-//         {
-//             title: "freeCodeCamp",
-//             subtitle: "Frontend & Full Stack Development",
-//             year: "2023",
-//             description: "Completed full frontend & full stack web development curriculum covering HTML, CSS, JS & React.",
-//             images: [
-//                 { src: "/images/01_certificates/01_Major_06/freecodecampwebdevelopment.png", caption: "Certificate" }
-//             ]
-//         },
-//         {
-//             title: "Cisco",
-//             subtitle: "Networking & Python",
-//             year: "2026",
-//             description: "Cisco certifications in Networking and Python programming for IT professionals.",
-//             images: [
-//                 { src: "/images/15_Cisco/1 (3).png", caption: "Certificate" },
-//                 { src: "/images/15_Cisco/1 (2).png", caption: "Certificate" },
-//                 { src: "/images/15_Cisco/1 (1).png", caption: "Certificate" },
-//                 { src: "/images/15_Cisco/1 (4).png", caption: "Certificate" },
-//                 { src: "/images/15_Cisco/1 (5).png", caption: "Certificate" },
-//                 { src: "/images/15_Cisco/1 (6).png", caption: "Certificate" },
-//                 { src: "/images/15_Cisco/1 (7).png", caption: "Badges" },
-//                 { src: "/images/15_Cisco/1 (18).png", caption: "Badges" },
-//                 { src: "/images/15_Cisco/1 (23).png", caption: "Badges" },
-//                 { src: "/images/15_Cisco/1 (8).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (9).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (10).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (11).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (12).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (13).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (14).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (15).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (16).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (17).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (19).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (20).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (21).png", caption: "Achivement" },
-//                 { src: "/images/15_Cisco/1 (22).png", caption: "Achivement" },
-//             ]
-//         },
-//         {
-//             title: "InterviewBit",
-//             subtitle: "DSA • Badges • Streak",
-//             year: "2024",
-//             description: "Solved DSA challenges and earned consistent streak badges with algorithm mastery.",
-//             images: [
-//                 { src: "/images/01_badges/01.png", caption: "Badge" },
-//                 { src: "/images/01_badges/02.png", caption: "Badge" },
-//                 { src: "/images/01_badges/03.png", caption: "Badge" },
-//                 { src: "/images/01_badges/04.png", caption: "Badge" },
-//                 { src: "/images/01_badges/05.png", caption: "Badge" },
-//                 { src: "/images/01_badges/06.png", caption: "Badge" },
-//                 { src: "/images/01_badges/07.png", caption: "Badge" },
-//                 { src: "/images/01_badges/08.png", caption: "Badge" },
-//                 { src: "/images/01_badges/09.png", caption: "Badge" },
-//                 { src: "/images/01_badges/10.png", caption: "Badge" },
-//                 { src: "/images/01_badges/11.png", caption: "Badge" }
-//             ]
-//         },
-
-
-//     ];
-
-//     /* Individual auto sliders for each card */
-//     useEffect(() => {
-//         const interval = setInterval(() => {
-//             setCurrentSlides(prev => {
-//                 const updated = { ...prev };
-//                 certData.forEach((item, i) => {
-//                     updated[i] = ((prev[i] || 0) + 1) % item.images.length;
-//                 });
-//                 return updated;
-//             });
-//         }, 3000);
-
-//         return () => clearInterval(interval);
-//     }, []);
-
-//     return (
-//         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-
-//             <section className="py-28 text-white overflow-hidden">
-
-//                 {/* HEADER */}
-//                 <div className="max-w-6xl mx-auto px-6 mb-16">
-//                     <div className="bg-[#111] border border-white/10 p-4 flex items-center gap-4 shadow-lg">
-//                         <div className="flex gap-2">
-//                             <span className="w-3 h-3 bg-red-500 rounded-full"></span>
-//                             <span className="w-3 h-3 bg-yellow-400 rounded-full"></span>
-//                             <span className="w-3 h-3 bg-green-500 rounded-full"></span>
-//                         </div>
-//                         <div className="font-mono text-lg tracking-wide">
-//                             MY_CERTIFICATIONS.txt
-//                         </div>
-//                         <div className="ml-auto text-xs bg-[#6ea046] px-3 py-1 text-black font-semibold">
-//                             LIVE_FEED
-//                         </div>
-//                     </div>
-//                 </div>
-
-//                 {/* AUTO SCROLL ROW */}
-//                 <div className="relative  overflow-hidden">
-
-//                     <div
-//                         className="flex gap-12 animate-scroll"
-//                         style={{
-//                             animationPlayState: isPaused ? "paused" : "running"
-//                         }}
-//                     >
-
-
-//                         {[...certData, ...certData].map((item, index) => {
-
-//                             const realIndex = index % certData.length;
-//                             const slideIndex = currentSlides[realIndex] || 0;
-
-//                             return (
-//                                 <div
-//                                     key={index}
-//                                     onMouseEnter={() => setIsPaused(true)}
-//                                     onMouseLeave={() => setIsPaused(false)}
-//                                     className="min-w-[650px] bg-[#0f0f0f] border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.6)] hover:border-[#6ea046] transition-all duration-300"
-//                                 >
-
-//                                     {/* TOP BAR */}
-//                                     <div className="border-t-4 border-[#6ea046] p-4 flex justify-between items-center text-sm font-mono">
-//                                         <span className="text-[#6ea046]">
-//                                             REPORT_{realIndex + 1}.LOG
-//                                         </span>
-//                                         <span className="text-white/40">
-//                                             {item.year}.txt
-//                                         </span>
-//                                     </div>
-
-//                                     {/* MAIN CONTENT GRID */}
-//                                     <div className="p-8 grid grid-cols-[1.2fr_1fr] gap-8 items-center">
-
-//                                         {/* LEFT SIDE */}
-//                                         <div className="space-y-4">
-
-//                                             <h3 className="text-2xl font-bold">
-//                                                 {item.title}
-//                                             </h3>
-
-//                                             <p className="text-white/60 text-sm">
-//                                                 {item.subtitle}
-//                                             </p>
-
-//                                             <p className="text-white/80 text-sm leading-relaxed">
-//                                                 {item.description}
-//                                             </p>
-
-//                                             <button
-//                                                 onClick={() => setActivePopup(realIndex)}
-//                                                 className="mt-6 text-xs border border-[#6ea046] px-5 py-2 hover:bg-[#6ea046] hover:text-black transition"
-//                                             >
-//                                                 EXPLORE
-//                                             </button>
-
-//                                         </div>
-
-//                                         {/* RIGHT SIDE AUTO SLIDER */}
-//                                         <div className="relative w-30 aspect-square border border-white/20 overflow-hidden rounded-md">
-
-//                                             <img
-//                                                 src={item.images[slideIndex].src}
-//                                                 className="w-full h-full object-fit transition-all duration-700"
-//                                             />
-
-//                                         </div>
-
-//                                     </div>
-
-//                                 </div>
-//                             );
-//                         })}
-
-//                     </div>
-//                 </div>
-
-//                 {/* POPUP GALLERY */}
-//                 {activePopup !== null && certData[activePopup] && (
-//                     <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center">
-
-//                         <div className="relative bg-[#111] border border-[#6ea046] w-[90%] max-w-6xl h-[85vh] flex flex-col overflow-hidden">
-
-//                             {/* CLOSE */}
-//                             <button
-//                                 onClick={() => setActivePopup(null)}
-//                                 className="absolute top-6 right-6 hover:text-[#6ea046] z-20"
-//                             >
-//                                 <X size={30} />
-//                             </button>
-
-//                             {/* HEADER */}
-//                             <div className="p-8 border-b border-white/10">
-//                                 <h3 className="text-3xl font-bold text-[#6ea046]">
-//                                     {certData[activePopup].title}
-//                                 </h3>
-//                             </div>
-
-//                             {/* SCROLL AREA */}
-//                             <div className="flex-1 overflow-y-auto p-8 custom-scroll">
-
-//                                 <div className="grid md:grid-cols-3 gap-8">
-
-//                                     {certData[activePopup].images.map((img, i) => (
-//                                         <div
-//                                             key={i}
-//                                             className="border border-white/10 p-4 hover:scale-105 transition"
-//                                         >
-//                                             <img
-//                                                 src={img.src}
-//                                                 alt=""
-//                                                 className="w-full h-60 object-cover rounded"
-//                                             />
-//                                             <p className="text-sm text-white/60 mt-3">
-//                                                 {img.caption}
-//                                             </p>
-//                                         </div>
-//                                     ))}
-
-//                                 </div>
-
-//                             </div>
-
-//                         </div>
-//                     </div>
-//                 )}
-
-//             </section>
-
-
-//             <style jsx>{`
-//                .animate-scroll {
-//     display: flex;
-//     width: 3000px;
-//     will-change: transform;
-
-//     animation: scroll 10s linear infinite;
-// }
-
-// @keyframes scroll {
-//     0% { transform: translateX(0); }
-//     100% { transform: translateX(-50%); }
-// }
-
-
-
-
-//                 .custom-scroll::-webkit-scrollbar {
-//                     width: 8px;
-//                 }
-
-//                 .custom-scroll::-webkit-scrollbar-track {
-//                     background: #111;
-//                 }
-
-//                 .custom-scroll::-webkit-scrollbar-thumb {
-//                     background: #6ea046;
-//                     border-radius: 20px;
-//                 }
-
-//                 .custom-scroll {
-//                     scrollbar-width: thin;
-//                     scrollbar-color: #6ea046 #111;
-//                 }
-
-
-//             `}</style>
-
-//         </ParallaxSection>
-//     );
-// }
-
-
-
-
-
-
-
-
-
-
-
 'use client';
 
 import { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import ParallaxSection from '@/components/ui/ParallaxSection';
 
 /* ─── Scanline overlay ───────────────────────────────────── */
 function ScanlineOverlay() {
     return (
         <div
-            className="pointer-events-none absolute inset-0 z-0"
+            className="pointer-events-none absolute inset-0 z-0 scanline-overlay"
             style={{
                 background:
-                    "repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px)",
+                    "repeating-linear-gradient(0deg,transparent,transparent 2px,var(--scanline-color) 2px,var(--scanline-color) 4px)",
             }}
         />
     );
@@ -498,17 +20,17 @@ function ScanlineOverlay() {
 function CornerAccent({ color = "#39d353" }) {
     return (
         <>
-            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2" style={{ borderColor: color }} />
-            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2" style={{ borderColor: color }} />
-            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2" style={{ borderColor: color }} />
-            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2" style={{ borderColor: color }} />
+            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2" style={{ borderColor: color || "var(--accent)" }} />
+            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2" style={{ borderColor: color || "var(--accent)" }} />
+            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2" style={{ borderColor: color || "var(--accent)" }} />
+            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2" style={{ borderColor: color || "var(--accent)" }} />
         </>
     );
 }
 
 /* ─── Blinking cursor ────────────────────────────────────── */
 function Cursor() {
-    return <span className="inline-block w-[8px] h-[14px] bg-[#39d353] animate-pulse ml-1 align-middle" />;
+    return <span className="inline-block w-[8px] h-[14px] animate-pulse ml-1 align-middle" style={{ background: "var(--accent)" }} />;
 }
 
 /* ─── Data ───────────────────────────────────────────────── */
@@ -519,7 +41,7 @@ const certData = [
         subtitle: "DSA • Badges • Streak",
         year: "Ongoing",
         tag: "DSA",
-        tagColor: "#39d353",
+        tagColor: "var(--accent)",
         count: "11 Badges",
         description:
             "Solved DSA challenges and earned consistent streak badges with algorithm mastery across arrays, trees, graphs and DP.",
@@ -542,9 +64,9 @@ const certData = [
         title: "NPTEL – DBMS",
         subtitle: "IIT Kharagpur",
         year: "2025",
-        tag: "Silver + ELITE",
-        tagColor: "#00e5ff",
-        count: "Silver + Elite",
+        tag: "Silver + Elite",
+        tagColor: "var(--accent-blue)",
+        count: "Top 5%",
         description:
             "Completed IIT Kharagpur certified Database Management Systems course with Silver + Elite distinction. Covered relational algebra, SQL, normalization and transactions.",
         images: [
@@ -553,25 +75,39 @@ const certData = [
     },
     {
         id: "CERT_03",
+        title: "NPTEL – DBMS",
+        subtitle: "IIT Kharagpur",
+        year: "2026",
+        tag: "Silver + ELITE",
+        tagColor: "var(--accent-blue)",
+        count: "Top 2%",
+        description:
+            "Completed IIT Kharagpur certified Computer Network and Internet Protocol course with Silver + Elite distinction. Covered different models and connectivity and compunication across network.",
+        images: [
+            { src: "/images/01_certificates/01_Major_06/NPTEL_CN.png", caption: "Certificate" },
+        ],
+    },
+    {
+        id: "CERT_04",
         title: "freeCodeCamp",
-        subtitle: "Frontend & Full Stack",
+        subtitle: "Modern Web Technologies",
         year: "2023",
-        tag: "FULLSTACK",
-        tagColor: "#f59e0b",
+        tag: "WEB_DEV",
+        tagColor: "var(--accent-amber)",
         count: "2 Certs",
         description:
-            "Completed full frontend & full stack web development curriculum covering HTML, CSS, JavaScript, React, Node and database fundamentals.",
+            "Completed comprehensive web development curriculum covering HTML, CSS, JavaScript, React, Node and database fundamentals.",
         images: [
             { src: "/images/01_certificates/01_Major_06/freecodecampwebdevelopment.png", caption: "Certificate" },
         ],
     },
     {
-        id: "CERT_04",
+        id: "CERT_05",
         title: "Cisco",
         subtitle: "Networking & Python",
         year: "2026",
         tag: "NETWORKING",
-        tagColor: "#39d353",
+        tagColor: "var(--accent-blue)",
         count: "23 Files",
         description:
             "Cisco certifications in Networking essentials and Python programming for IT professionals. Includes badges and achievement records.",
@@ -601,6 +137,63 @@ const certData = [
             { src: "/images/15_Cisco/1 (22).png", caption: "Achievement" },
         ],
     },
+    {
+        id: "CERT_06",
+        title: "NASSCOM MERN Stack",
+        subtitle: "Approved Internship Certification",
+        year: "2026",
+        tag: "INTERNSHIP",
+        tagColor: "var(--accent)",
+        count: "NASSCOM",
+        description:
+            "Completed a structured MERN Stack internship program certified by NASSCOM, covering modern React patterns, RESTful API design, and MongoDB data modeling.",
+        images: [
+            { src: "/images/01_certificates/01_Major_06/nasscom.png", caption: "NASSCOM Cert" },
+        ],
+    },
+    {
+        id: "CERT_07",
+        title: "TITANS Nagpur",
+        subtitle: "60 Hours Pre-Placement Training (3P)",
+        year: "2026",
+        tag: "TRAINING",
+        tagColor: "var(--accent-amber)",
+        count: "60 Hours",
+        description:
+            "Completed intensive pre-placement training focusing on technical skills, soft skills, and interview preparation for top-tier software roles.",
+        images: [
+            { src: "/images/01_certificates/01_Major_06/3p.png", caption: "Training Cert" },
+        ],
+    },
+    {
+        id: "CERT_08",
+        title: "Hackathon Champion",
+        subtitle: "SIH & BRAHMAX 1.0 Participant",
+        year: "2024-25",
+        tag: "HACKATHON",
+        tagColor: "var(--accent-purple)",
+        count: "2+ Major",
+        description:
+            "Participated in SIH and BRAHMAX 1.0 (24-hour hackathon). Developed innovative solutions under tight deadlines and collaborative environments.",
+        images: [
+            { src: "/images/01_certificates/01_Major_06/sih.jpg", caption: "SIH Participant" },
+            { src: "/images/01_certificates/01_Major_06/Bramhax.jpg", caption: "SIH Participant" },
+        ],
+    },
+    {
+        id: "CERT_09",
+        title: "Best Student Award",
+        subtitle: "Sincerity & Conduct Award",
+        year: "2023",
+        tag: "AWARD",
+        tagColor: "var(--accent-blue)",
+        count: "School",
+        description:
+            "Awarded 'Best Student' for outstanding sincerity, conduct, and academic excellence during schooling.",
+        images: [
+            { src: "/images/11_Class12th/01.jpg", caption: "Award Certificate" },
+        ],
+    },
 ];
 
 /* ─── Card component ─────────────────────────────────────── */
@@ -621,7 +214,8 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
 
 
             <div
-                className="min-w-[620px] border border-[#1a2332] relative overflow-hidden flex flex-col group transition-all duration-300 hover:border-[#39d353] hover:shadow-[0_0_24px_rgba(57,211,83,0.08)]"
+                className="w-[85vw] max-w-[450px] md:w-[520px] shrink-0 border relative overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-[0_0_24px_var(--accent-glow)]"
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
             >
@@ -630,71 +224,71 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
 
                 {/* ── Top bar ── */}
                 <div
-                    className="flex items-center justify-between px-5 py-3 border-b border-[#1a2332] relative z-10"
-                    style={{ borderTopWidth: 3, borderTopColor: accentColor, borderTopStyle: "solid" }}
+                    className="flex items-center justify-between px-5 py-3.5 border-b relative z-10"
+                    style={{ borderColor: "var(--border)", borderTopWidth: 3, borderTopColor: accentColor, borderTopStyle: "solid", background: "var(--bg-subtle)" }}
                 >
                     <div className="flex items-center gap-3">
-                        <div className="flex gap-1.5">
+                        <div className="flex gap-2">
                             <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
                             <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
                             <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                         </div>
-                        <span className="font-mono text-[10px] tracking-[0.2em] text-[#8b949e] uppercase">
+                        <span className="font-mono text-[11px] tracking-[0.2em] uppercase font-bold" style={{ color: "var(--text-muted)" }}>
                             {item.id}.LOG
                         </span>
                     </div>
                     <div className="flex items-center gap-3">
                         <span
-                            className="font-mono text-[9px] tracking-[0.15em] px-2 py-0.5 border font-bold"
+                            className="font-mono text-[10px] tracking-[0.15em] px-2.5 py-1 border font-bold"
                             style={{ color: accentColor, borderColor: accentColor }}
                         >
                             {item.tag}
                         </span>
-                        <span className="font-mono text-[10px] text-[#8b949e]">{item.year}.txt</span>
+                        <span className="font-mono text-[11px] font-bold" style={{ color: "var(--text-muted)" }}>{item.year}.txt</span>
                     </div>
                 </div>
 
                 {/* ── Body ── */}
-                <div className="p-6 grid max-w-[500px] [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] gap-6 flex-1 relative z-10">
+                <div className="p-6 flex flex-col md:flex-row items-start gap-6 flex-1 relative z-10">
 
                     {/* Left */}
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                         <div>
-                            <h3 className="font-mono font-black text-xl text-white tracking-tight leading-tight">
+                            <h3 className="font-mono font-black text-xl tracking-tight leading-tight" style={{ color: "var(--text-primary)" }}>
                                 {item.title}
                             </h3>
-                            <p className="font-mono text-[11px] tracking-[0.15em] mt-1" style={{ color: accentColor }}>
+                            <p className="font-mono text-[12px] tracking-[0.15em] mt-1 font-bold" style={{ color: accentColor }}>
                                 {item.subtitle}
                             </p>
                         </div>
 
-                        <p className="font-mono text-[12px] text-[#8b949e] leading-relaxed">
+                        <p className="font-mono text-[13px] leading-relaxed" style={{ color: "var(--text-muted)" }}>
                             {item.description}
                         </p>
 
-                        <div className="flex items-center gap-3 pt-1">
-                            <div className="border border-[#1a2332] px-3 py-1 bg-[#010409]">
-                                <span className="font-mono text-[9px] text-[#8b949e] tracking-widest uppercase">FILES </span>
-                                <span className="font-mono text-[11px] font-bold" style={{ color: accentColor }}>
+                        <div className="flex items-center gap-4 pt-1">
+                            <div className="border px-4 py-2" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                                <span className="font-mono text-[10px] tracking-widest uppercase font-bold" style={{ color: "var(--text-muted)" }}>FILES </span>
+                                <span className="font-mono text-[12px] font-bold" style={{ color: accentColor }}>
                                     {item.count}
                                 </span>
                             </div>
-                            <div className="flex items-center gap-1 font-mono text-[9px] text-[#8b949e]">
-                                <div className="w-1 h-1 rounded-full bg-[#39d353] animate-pulse" />
+                            <div className="flex items-center gap-2 font-mono text-[10px] font-bold" style={{ color: "var(--text-muted)" }}>
+                                <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "var(--accent)" }} />
                                 LOADED
                             </div>
                         </div>
 
                         <button
                             onClick={() => onExplore(index)}
-                            className="mt-2 group/btn flex items-center gap-2 border font-mono text-[10px] tracking-[0.2em] uppercase px-5 py-2.5 transition-all duration-200"
+                            className="mt-2 group/btn flex items-center gap-2 border font-mono text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 transition-all duration-200 font-bold"
                             style={{
                                 borderColor: accentColor,
                                 color: accentColor,
                             }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.background = accentColor;
-                                e.currentTarget.style.color = "#010409";
+                                e.currentTarget.style.color = "var(--bg)";
                             }}
                             onMouseLeave={(e) => {
                                 e.currentTarget.style.background = "transparent";
@@ -707,9 +301,9 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
                     </div>
 
                     {/* Right — image slider */}
-                    <div className="relative w-[200px] h-[140px] ml-20  md:h-[180px] border border-[#1a2332] overflow-hidden bg-[#010409]">
+                    <div className="relative w-full md:w-[200px] h-[180px] md:h-[150px] shrink-0 border overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--bg)" }}>
 
-                        <CornerAccent color="#1a2332" />
+                        <CornerAccent color="var(--border)" />
                         <img
                             src={item.images[slide].src}
                             alt={item.images[slide].caption}
@@ -730,7 +324,7 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
                             </div>
                         )}
                         {/* Slide counter */}
-                        <div className="absolute top-2 right-2 font-mono text-[8px] text-[#8b949e] bg-[#010409]/80 px-1.5 py-0.5 border border-[#1a2332]">
+                        <div className="absolute top-2 right-2 font-mono text-[8px] px-1.5 py-0.5 border" style={{ color: "var(--text-muted)", background: "var(--bg-dim)", borderColor: "var(--border)" }}>
                             {slide + 1}/{item.images.length}
                         </div>
                     </div>
@@ -748,10 +342,10 @@ function PopupGallery({ item, onClose }) {
 
     return (
 
-        <div className="fixed mt-10 inset-0 z-50 bg-[#010409]/97 backdrop-blur-xl flex items-center justify-center">
+        <div className="fixed mt-10 inset-0 z-50 flex items-center justify-center" style={{ background: "var(--bg-dim)", backdropFilter: "blur(12px)" }}>
             <div
-                className="relative bg-[#0d1117] border w-[92%] max-w-5xl h-[88vh] flex flex-col overflow-hidden"
-                style={{ borderColor: accentColor }}
+                className="relative border w-[92%] max-w-5xl h-[88vh] flex flex-col overflow-hidden"
+                style={{ borderColor: accentColor, background: "var(--surface)" }}
                 onClick={(e) => e.stopPropagation()}
             >
                 <ScanlineOverlay />
@@ -760,15 +354,18 @@ function PopupGallery({ item, onClose }) {
                 {/* Close */}
                 <button
                     onClick={onClose}
-                    className="absolute top-2 right-2 z-20 border border-[#1a2332] p-1.5 hover:border-[#ff5f56] hover:text-[#ff5f56] transition-colors duration-200 text-[#8b949e]"
+                    className="absolute top-2 right-2 z-20 border p-1.5 transition-colors duration-200"
+                    style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor = "#ff5f56"; e.currentTarget.style.color = "#ff5f56"; }}
+                    onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}
                 >
                     <X size={18} />
                 </button>
 
                 {/* Header */}
                 <div
-                    className="px-8 py-5 border-b border-[#1a2332] relative z-10 flex items-center justify-between"
-                    style={{ borderTopWidth: 3, borderTopColor: accentColor, borderTopStyle: "solid" }}
+                    className="px-8 py-5 border-b relative z-10 flex items-center justify-between"
+                    style={{ borderColor: "var(--border)", borderTopWidth: 3, borderTopColor: accentColor, borderTopStyle: "solid" }}
                 >
                     <div>
                         <div className="flex items-center gap-3 mb-1">
@@ -777,11 +374,11 @@ function PopupGallery({ item, onClose }) {
                                 <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
                                 <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                             </div>
-                            <span className="font-mono text-[10px] tracking-[0.2em] text-[#8b949e] uppercase">
+                            <span className="font-mono text-[10px] tracking-[0.2em] uppercase" style={{ color: "var(--text-muted)" }}>
                                 {item.id}_GALLERY.VIEW
                             </span>
                         </div>
-                        <h3 className="font-mono font-black text-2xl text-white">{item.title}</h3>
+                        <h3 className="font-mono font-black text-2xl" style={{ color: "var(--text-primary)" }}>{item.title}</h3>
                         <p className="font-mono text-[11px] tracking-[0.2em] mt-1" style={{ color: accentColor }}>
                             {item.subtitle} — {item.year}
                         </p>
@@ -795,28 +392,31 @@ function PopupGallery({ item, onClose }) {
                 </div>
 
                 {/* Grid */}
-                <div className="flex-1 overflow-y-auto p-8 relative z-10 custom-gallery-scroll">
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+                <div className="flex-1 overflow-y-auto p-4 md:p-8 relative z-10 custom-gallery-scroll">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                         {item.images.map((img, i) => (
                             <div
                                 key={i}
                                 onClick={() => setLightbox(i)}
-                                className="border border-[#1a2332] bg-[#010409] p-3 relative overflow-hidden group/card cursor-pointer hover:border-[#39d353] transition-all duration-200"
+                                className="border p-3 relative overflow-hidden group/card cursor-pointer transition-all duration-200"
+                                style={{ borderColor: "var(--border)", background: "var(--bg)" }}
+                                onMouseEnter={e => e.currentTarget.style.borderColor = "var(--accent)"}
+                                onMouseLeave={e => e.currentTarget.style.borderColor = "var(--border)"}
                             >
-                                <CornerAccent color="#1a2332" />
+                                <CornerAccent color="var(--border)" />
                                 <div className="relative overflow-hidden">
                                     <img
                                         src={img.src}
                                         alt={img.caption}
                                         className="w-full h-52 object-cover group-hover/card:scale-105 transition-transform duration-300"
                                     />
-                                    <div className="absolute inset-0 bg-[#010409]/0 group-hover/card:bg-[#010409]/20 transition-all duration-200" />
-                                    <div className="absolute top-2 right-2 font-mono text-[8px] bg-[#010409]/90 border border-[#1a2332] px-1.5 py-0.5 text-[#8b949e]">
+                                    <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/20 transition-all duration-200" />
+                                    <div className="absolute top-2 right-2 font-mono text-[8px] border px-1.5 py-0.5" style={{ background: "var(--bg-dim)", borderColor: "var(--border)", color: "var(--text-muted)" }}>
                                         {String(i + 1).padStart(2, "0")}
                                     </div>
                                 </div>
                                 <div className="mt-3 flex items-center justify-between">
-                                    <p className="font-mono text-[10px] text-[#8b949e] tracking-wider uppercase">{img.caption}</p>
+                                    <p className="font-mono text-[10px] tracking-wider uppercase" style={{ color: "var(--text-muted)" }}>{img.caption}</p>
                                     <span
                                         className="font-mono text-[9px] tracking-widest"
                                         style={{ color: item.tagColor }}
@@ -832,30 +432,38 @@ function PopupGallery({ item, onClose }) {
 
             {/* Lightbox */}
             {lightbox !== null && (
-                <div
-                    className="fixed inset-0 z-[60] bg-[#010409]/99 flex items-center justify-center"
+        <div
+                    className="fixed inset-0 z-[60] flex items-center justify-center"
+                    style={{ background: "var(--bg-dim)", backdropFilter: "blur(20px)" }}
                     onClick={() => setLightbox(null)}
                 >
                     <div className="relative max-w-4xl w-[90%]" onClick={(e) => e.stopPropagation()}>
                         <button
                             onClick={() => setLightbox(null)}
-                            className="absolute -top-10 right-0 font-mono text-[10px] text-[#8b949e] hover:text-[#39d353] tracking-widest"
+                            className="absolute -top-10 right-0 font-mono text-[10px] tracking-widest hover:text-theme-accent transition-colors"
+                            style={{ color: "var(--text-muted)" }}
                         >
                             [ESC] CLOSE
                         </button>
                         <button
                             onClick={() => setLightbox((p) => (p - 1 + item.images.length) % item.images.length)}
-                            className="absolute left-[-50px] top-1/2 -translate-y-1/2 border border-[#1a2332] p-2 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-colors"
+                            className="absolute left-[-50px] top-1/2 -translate-y-1/2 border p-2 transition-colors"
+                            style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+                            onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
+                            onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}
                         >
                             <ChevronLeft size={20} />
                         </button>
                         <button
                             onClick={() => setLightbox((p) => (p + 1) % item.images.length)}
-                            className="absolute right-[-50px] top-1/2 -translate-y-1/2 border border-[#1a2332] p-2 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-colors"
+                            className="absolute right-[-50px] top-1/2 -translate-y-1/2 border p-2 transition-colors"
+                            style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+                            onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
+                            onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}
                         >
                             <ChevronRight size={20} />
                         </button>
-                        <div className="border border-[#39d353] p-2 bg-[#0d1117]">
+                        <div className="border p-2" style={{ borderColor: "var(--accent)", background: "var(--surface)" }}>
                             <img
                                 src={item.images[lightbox].src}
                                 alt={item.images[lightbox].caption}
@@ -863,10 +471,10 @@ function PopupGallery({ item, onClose }) {
                             />
                         </div>
                         <div className="mt-3 flex items-center justify-between px-1">
-                            <p className="font-mono text-[10px] text-[#8b949e] tracking-widest uppercase">
+                            <p className="font-mono text-[10px] tracking-widest uppercase" style={{ color: "var(--text-muted)" }}>
                                 {item.images[lightbox].caption}
                             </p>
-                            <p className="font-mono text-[10px] text-[#30363d]">
+                            <p className="font-mono text-[10px]" style={{ color: "var(--text-muted)" }}>
                                 {lightbox + 1} / {item.images.length}
                             </p>
                         </div>
@@ -876,9 +484,9 @@ function PopupGallery({ item, onClose }) {
 
             <style jsx>{`
         .custom-gallery-scroll::-webkit-scrollbar { width: 4px; }
-        .custom-gallery-scroll::-webkit-scrollbar-track { background: #010409; }
-        .custom-gallery-scroll::-webkit-scrollbar-thumb { background: #39d353; border-radius: 2px; }
-        .custom-gallery-scroll { scrollbar-width: thin; scrollbar-color: #39d353 #010409; }
+        .custom-gallery-scroll::-webkit-scrollbar-track { background: var(--bg); }
+        .custom-gallery-scroll::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+        .custom-gallery-scroll { scrollbar-width: thin; scrollbar-color: var(--accent) var(--bg); }
       `}</style>
         </div>
     );
@@ -899,11 +507,10 @@ export default function Certifications() {
     }, []);
 
     return (
-        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
             <section
-                className="relative py-28 pt-0 overflow-hidden"
+                className="relative py-10 md:py-14 overflow-hidden" id='about'
                 style={{
-                    // background: "#010409",
+                    background: "var(--bg)",
                     fontFamily: "'Courier New', Courier, monospace",
                 }}
             >
@@ -911,74 +518,74 @@ export default function Certifications() {
                 <div
                     className="absolute inset-0 opacity-[0.025] pointer-events-none"
                     style={{
-                        // backgroundImage: `linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)`,
+                        backgroundImage: "linear-gradient(var(--accent) 1px,transparent 1px),linear-gradient(90deg,var(--accent) 1px,transparent 1px)",
                         backgroundSize: "40px 40px",
                     }}
                 />
                 {/* Ambient glow */}
-                <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-[#39d353] opacity-[0.025] rounded-full blur-[160px] pointer-events-none" />
-                <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[140px] pointer-events-none" />
+                <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full blur-[160px] pointer-events-none" style={{ background: "var(--accent)", opacity: 0.025 }} />
+                <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full blur-[140px] pointer-events-none" style={{ background: "var(--accent-blue)", opacity: 0.02 }} />
 
                 <div className="relative z-10">
 
                     {/* ── HEADER ── */}
-                    <div className="max-w-7xl mx-auto px-6 mb-14">
+                    <div className="relative z-10 max-w-7xl mx-auto px-6 mb-8">
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
-                            <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">
+                            <div className="w-1.5 h-1.5 rounded-full animate-pulse shadow-[0_0_8px_var(--accent)]" style={{ background: "var(--accent)" }} />
+                            <span className="font-mono text-[10px] tracking-[0.3em] uppercase" style={{ color: "var(--accent)" }}>
                                 SYSTEM_MODULE / CERTIFICATIONS
                             </span>
                         </div>
 
-                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+                        <div className="border relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                             <ScanlineOverlay />
-                            <CornerAccent color="#39d353" />
+                            <CornerAccent color="var(--accent)" />
 
                             {/* Window chrome */}
-                            <div className="flex items-center justify-between px-5 py-3 border-b border-[#1a2332]">
+                            <div className="flex items-center justify-between px-4 py-2.5 md:px-5 md:py-3.5 border-b" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
                                 <div className="flex items-center gap-3">
-                                    <div className="flex gap-1.5">
+                                    <div className="flex gap-2">
                                         <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
                                         <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
                                         <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                                     </div>
-                                    <span className="font-mono text-[11px] tracking-[0.2em] text-[#8b949e]">
+                                    <span className="font-mono text-[11px] md:text-[13px] tracking-[0.2em] truncate max-w-[150px] md:max-w-none" style={{ color: "var(--text-muted)" }}>
                                         MY_CERTIFICATIONS.txt
                                     </span>
                                 </div>
-                                <div className="flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
-                                    <span className="font-mono text-[9px] tracking-[0.2em] text-[#39d353] border border-[#39d353] px-2 py-0.5">
+                                <div className="flex items-center gap-2 shrink-0">
+                                    <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "var(--accent)" }} />
+                                    <span className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] border px-2 py-0.5 font-bold whitespace-nowrap" style={{ color: "var(--accent)", borderColor: "var(--accent)" }}>
                                         LIVE_FEED
                                     </span>
                                 </div>
                             </div>
 
                             {/* Title */}
-                            <div className="px-8 py-6">
+                            <div className="px-5 py-6 md:px-8 md:py-6">
                                 <h2
-                                    className={`font-mono font-black text-3xl md:text-4xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"
+                                    className={`font-mono font-black text-2xl xs:text-3xl md:text-5xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "translate-x-[2px]" : ""
                                         }`}
-                                    style={{ textShadow: "0 0 24px rgba(57,211,83,0.25)" }}
+                                    style={{ color: glitch ? "var(--accent)" : "var(--text-primary)", textShadow: "0 0 24px var(--accent-glow)" }}
                                 >
-                                    CERTIFICATIONS_<span className="text-[#39d353]">ARCHIVE</span>
+                                    CERTIFICATIONS_<span style={{ color: "var(--accent)" }}>ARCHIVE</span>
                                     <Cursor />
                                 </h2>
-                                <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider max-w-xl">
+                                <p className="font-mono text-[12px] mt-3 tracking-wider max-w-xl" style={{ color: "var(--text-muted)" }}>
                                     $ cat ./certifications/* — Loaded {certData.length} records from achievement database.
                                 </p>
 
                                 {/* Stats row */}
-                                <div className="flex gap-6 mt-5">
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                                     {[
-                                        { label: "TOTAL_CERTS", value: "07+" },
-                                        { label: "BADGES", value: "20+" },
-                                        { label: "PLATFORMS", value: "04" },
+                                        { label: "TOTAL_CERTS", value: "11+" },
+                                        { label: "BADGES", value: "30+" },
+                                        { label: "PLATFORMS", value: "06" },
                                         { label: "YEAR_RANGE", value: "2023–26" },
                                     ].map((s) => (
-                                        <div key={s.label} className="border border-[#1a2332] bg-[#010409] px-4 py-2">
-                                            <div className="font-mono text-[8px] text-[#39d353] tracking-[0.2em] uppercase">{s.label}</div>
-                                            <div className="font-mono text-lg font-bold text-white">{s.value}</div>
+                                        <div key={s.label} className="border px-4 py-3 md:px-5 md:py-3" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                                            <div className="font-mono text-[9px] tracking-[0.2em] uppercase font-bold" style={{ color: "var(--accent)" }}>{s.label}</div>
+                                            <div className="font-mono text-lg md:text-xl font-bold" style={{ color: "var(--text-primary)" }}>{s.value}</div>
                                         </div>
                                     ))}
                                 </div>
@@ -990,10 +597,10 @@ export default function Certifications() {
                     <div className="relative overflow-hidden">
                         {/* Left fade */}
                         <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                            style={{ background: "linear-gradient(to right, #010409, transparent)" }} />
+                            style={{ background: "linear-gradient(to right, var(--bg), transparent)" }} />
                         {/* Right fade */}
                         <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                            style={{ background: "linear-gradient(to left, #010409, transparent)" }} />
+                            style={{ background: "linear-gradient(to left, var(--bg), transparent)" }} />
 
                         <div
                             className="flex gap-6 px-6"
@@ -1017,16 +624,19 @@ export default function Certifications() {
                     </div>
 
                     {/* ── FOOTER ROW ── */}
-                    <div className="max-w-6xl mx-auto px-6 mt-10 flex items-center justify-between">
-                        <div className="font-mono text-[10px] text-[#8b949e] tracking-widest">
+                    <div className="max-w-6xl mx-auto px-6 mt-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div className="font-mono text-[10px] tracking-widest" style={{ color: "var(--text-muted)" }}>
                             $ certifications --list --all _
                         </div>
-                        <div className="flex items-center gap-4">
+                        <div className="flex flex-wrap items-center justify-center gap-3">
                             {certData.map((c, i) => (
                                 <button
                                     key={i}
                                     onClick={() => setActivePopup(i)}
-                                    className="font-mono text-[9px] tracking-[0.15em] px-3 py-1.5 border border-[#1a2332] text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200 uppercase"
+                                    className="font-mono text-[9px] tracking-[0.15em] px-3 py-1.5 border transition-all duration-200 uppercase"
+                                    style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+                                    onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
+                                    onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}
                                 >
                                     {c.id}
                                 </button>
@@ -1050,6 +660,5 @@ export default function Certifications() {
         }
       `}</style>
             </section>
-        </ParallaxSection>
     );
 }

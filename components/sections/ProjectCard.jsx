@@ -1,1085 +1,17 @@
-
-
-// // export default function Project() {
-
-
-
-// //     return (
-
-// //         <section
-// //             id="projects"
-// //             className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 relative overflow-hidden"
-// //         >
-// //             {/* Background Pattern */}
-// //             <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml,%3Csvg width=%2280%22 height=%2280%22 viewBox=%220 0 80 80%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22 fill-opacity=%220.02%22%3E%3Cpath d=%22M0 0h40v40H0V0zm40 40h40v40H40V40z%22/%3E%3C/g%3E%3C/svg%3E')"></div>
-
-// //             <div className="max-w-7xl mx-auto px-6 relative z-10">
-
-// //                 {/* Heading */}
-// //                 <div className="text-center mb-16">
-// //                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-// //                         Featured{" "}
-// //                         <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-// //                             Projects
-// //                         </span>
-// //                     </h2>
-
-// //                     <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-// //                         Explore my latest work showcasing innovative solutions and cutting-edge
-// //                         technologies
-// //                     </p>
-// //                 </div>
-
-// //                 {/* PROJECT GRID */}
-// //                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-// //                     {/* PROJECT 1 */}
-// //                     <ProjectCard
-// //                         image="https://cdn.ailandingpage.ai/landingpage_io/user-generate/f29e6dbb-5983-4f63-86ac-121a3164c61a/projects/project-1-ec07c34233e041ce8e7a759844c27dcd.png"
-// //                         title="E-Commerce Platform"
-// //                         tags={["React", "Node.js"]}
-// //                         description="A full-stack e-commerce solution with advanced features including real-time inventory management, secure payment processing, and responsive design optimized for all devices."
-// //                         rating="4.9"
-// //                         year="2023"
-// //                     />
-
-// //                     {/* PROJECT 2 */}
-// //                     <ProjectCard
-// //                         image="https://cdn.ailandingpage.ai/landingpage_io/user-generate/f29e6dbb-5983-4f63-86ac-121a3164c61a/projects/project-2-35a4a61661314ce6a916071910a38eec.png"
-// //                         title="AI Task Manager"
-// //                         tags={["AI/ML", "Python"]}
-// //                         description="An intelligent task management system powered by machine learning algorithms that automatically prioritizes tasks, predicts completion times, and optimizes workflow efficiency."
-// //                         rating="4.8"
-// //                         year="2023"
-// //                     />
-
-// //                     {/* PROJECT 3 */}
-// //                     <ProjectCard
-// //                         image="https://cdn.ailandingpage.ai/landingpage_io/user-generate/f29e6dbb-5983-4f63-86ac-121a3164c61a/projects/project-3-fc0ac4b372c64a3eb3078c369dfa3543.png"
-// //                         title="Real-time Chat App"
-// //                         tags={["Socket.io", "Express"]}
-// //                         description="A feature-rich real-time messaging application with end-to-end encryption, file sharing, video calls, and group chat functionality built with modern web technologies."
-// //                         rating="4.7"
-// //                         year="2023"
-// //                     />
-
-// //                     {/* PROJECT 4 */}
-// //                     <ProjectCard
-// //                         image="https://cdn.ailandingpage.ai/landingpage_io/user-generate/f29e6dbb-5983-4f63-86ac-121a3164c61a/projects/project-4-412c6202801f41d6a3d7d5ab03c3c879.png"
-// //                         title="Crypto Trading Platform"
-// //                         tags={["Blockchain", "Vue.js"]}
-// //                         description="A comprehensive cryptocurrency trading platform with real-time market data, advanced charting tools, portfolio management, and secure wallet integration for seamless trading experience."
-// //                         rating="4.6"
-// //                         year="2023"
-// //                     />
-
-// //                 </div>
-
-// //                 {/* VIEW ALL BUTTON */}
-// //                 <div className="mt-16 text-center">
-// //                     <a
-// //                         href="#"
-// //                         className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-2xl hover:scale-105 transition-all shadow-lg"
-// //                     >
-// //                         View All Projects →
-// //                     </a>
-// //                 </div>
-
-// //             </div>
-// //         </section>
-// //     );
-// // }
-// // function ProjectCard({ image, title, tags, description, rating, year }) {
-// //     return (
-// //         <div className="group bg-white/5 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-
-// //             {/* Image */}
-// //             <div className="relative overflow-hidden">
-// //                 <img
-// //                     src={image}
-// //                     alt={title}
-// //                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-// //                 />
-// //                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-// //             </div>
-
-// //             {/* Content */}
-// //             <div className="p-8">
-// //                 <div className="flex items-center justify-between mb-4">
-// //                     <h3 className="text-2xl font-bold text-white">
-// //                         {title}
-// //                     </h3>
-
-// //                     <div className="flex gap-2">
-// //                         {tags.map((tag) => (
-// //                             <span
-// //                                 key={tag}
-// //                                 className="px-3 py-1 bg-white/10 text-gray-200 rounded-full text-sm"
-// //                             >
-// //                                 {tag}
-// //                             </span>
-// //                         ))}
-// //                     </div>
-// //                 </div>
-
-// //                 <p className="text-gray-300 mb-6 leading-relaxed">
-// //                     {description}
-// //                 </p>
-
-// //                 <div className="flex items-center gap-3 text-sm text-gray-400">
-// //                     <span>⭐ {rating}</span>
-// //                     <span>•</span>
-// //                     <span>{year}</span>
-// //                 </div>
-// //             </div>
-// //         </div>
-// //     );
-// // }
-
-
-
-
-
-
-// 'use client';
-
-// import { useState } from "react";
-// import { ChevronLeft, ChevronRight } from "lucide-react";
-// import ParallaxSection from "@/components/ui/ParallaxSection";
-// export default function ProjectsPage() {
-
-//     /* ===================== DATA ===================== */
-
-//     const mainProjects = [
-//         {
-//             title: "Ghotul Homestay Platform",
-//             stack: "React • Node • PostgreSQL",
-//             image: "/images/projects/ghotul.png",
-//         },
-//         {
-//             title: "3D Developer Portfolio",
-//             stack: "Next.js • Tailwind",
-//             image: "/images/projects/portfolio.png",
-//         },
-//         {
-//             title: "Java Bank System",
-//             stack: "Java • OOP • DB",
-//             image: "/images/projects/bank.png",
-//         },
-//         {
-//             title: "Online Quiz App",
-//             stack: "HTML • JS • Django",
-//             image: "/images/projects/quiz.png",
-//         },
-//     ];
-
-//     const sliderProjects = [
-//         {
-//             title: "Mini CRM Tool",
-//             description: "Small scale CRM dashboard",
-//             image: "/images/projects/s1.png",
-//             video: "/videos/s1.mp4",
-//         },
-//         {
-//             title: "Landing Page UI",
-//             description: "Marketing UI concept",
-//             image: "/images/projects/s2.png",
-//             video: "/videos/s2.mp4",
-//         },
-//         {
-//             title: "Todo App",
-//             description: "Task management app",
-//             image: "/images/projects/s3.png",
-//             video: "/videos/s3.mp4",
-//         },
-//         {
-//             title: "Weather App",
-//             description: "API based weather app",
-//             image: "/images/projects/s4.png",
-//             video: "/videos/s4.mp4",
-//         },
-//     ];
-
-//     /* ===================== SLIDER STATE ===================== */
-
-//     const [index, setIndex] = useState(0);
-
-//     const next = () =>
-//         setIndex((prev) => (prev + 1) % sliderProjects.length);
-
-//     const prev = () =>
-//         setIndex((prev) =>
-//             prev === 0 ? sliderProjects.length - 1 : prev - 1
-//         );
-
-//     /* ===================== UI ===================== */
-
-
-
-
-//     return (
-//         <ParallaxSection
-//             // backgroundImage="/img/img1.jpeg"
-//             backgroundImage="/images/bg.png"
-//             height="400px"
-//         >
-//             <section
-//                 id="projects"
-//                 className="min-h-screen py-20 "
-//             >
-//                 <div className="max-w-7xl mx-auto px-6">
-
-//                     {/* HEADER */}
-//                     <div className="text-center mb-14">
-//                         <div
-//                             className={`w-full lg:px-[12%] px-[5%]  flex flex-col justify-center items-center
-//   `}
-//                         >
-
-//                             <div className="flex items-center justify-center gap-6 mb-4">
-
-//                                 {/* LEFT LINE */}
-//                                 <div
-//                                     className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-r from-transparent via-cyan-400 to-blue-400`}
-//                                 ></div>
-
-//                                 {/* TITLE */}
-//                                 <h1
-//                                     className={`text-3xl sm:text-4xl md:text-5xl  font-extrabold tracking-wide drop-shadow-lg transition-all bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`}
-//                                 >
-//                                     <h2 className="text-4xl md:text-5xl font-bold text-white ">
-//                                         Project {" "}
-//                                         <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-//                                             Showcase
-//                                         </span>
-//                                     </h2>
-//                                 </h1>
-
-//                                 {/* RIGHT LINE */}
-//                                 <div
-//                                     className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`}
-//                                 ></div>
-
-//                             </div>
-
-//                         </div>
-//                         <p className="text-gray-400 max-w-2xl mx-auto">
-//                             Major projects on the left and a live preview slider on the right
-//                         </p>
-//                     </div>
-
-//                     {/* MAIN GRID */}
-//                     <div className="grid lg:grid-cols-3 gap-10 items-start">
-
-//                         {/* ================= LEFT : 2x2 GRID ================= */}
-//                         <div className="grid grid-cols-2 gap-6">
-//                             {mainProjects.map((project, i) => (
-//                                 <SmallProjectCard key={i} project={project} />
-//                             ))}
-//                         </div>
-
-//                         {/* ================= RIGHT : BIG SLIDER ================= */}
-//                         <div className="lg:col-span-2 relative">
-
-//                             {/* SLIDE */}
-//                             <ProjectSlide project={sliderProjects[index]} />
-
-//                             {/* CONTENT STRIP */}
-//                             <div className="bg-black/60 p-6 border border-white/10">
-//                                 <h3 className="text-xl font-bold text-white">
-//                                     {sliderProjects[index].title}
-//                                 </h3>
-//                                 <p className="text-gray-300 text-sm mt-1">
-//                                     {sliderProjects[index].description}
-//                                 </p>
-//                             </div>
-
-//                             {/* CONTROLS */}
-//                             <div className="absolute bottom-6 right-6 flex gap-3">
-//                                 <button
-//                                     onClick={prev}
-//                                     className="p-3 bg-black/70 hover:bg-cyan-500 rounded-full text-white transition"
-//                                 >
-//                                     <ChevronLeft />
-//                                 </button>
-//                                 <button
-//                                     onClick={next}
-//                                     className="p-3 bg-black/70 hover:bg-cyan-500 rounded-full text-white transition"
-//                                 >
-//                                     <ChevronRight />
-//                                 </button>
-//                             </div>
-
-//                         </div>
-//                     </div>
-//                 </div>
-//             </section>
-//         </ParallaxSection>
-//     );
-// }
-
-// /* ===================== SMALL CARD ===================== */
-
-// function SmallProjectCard({ project }) {
-//     return (
-//         <div className="border border-white/10 rounded-xl overflow-hidden bg-white/5 hover:border-cyan-400/50 transition">
-//             <img
-//                 src={project.image}
-//                 alt={project.title}
-//                 className="w-full h-40 object-cover"
-//             />
-//             <div className="p-3 bg-black/50">
-//                 <h4 className="text-sm font-semibold text-white">
-//                     {project.title}
-//                 </h4>
-//                 <p className="text-xs text-gray-400">
-//                     {project.stack}
-//                 </p>
-//             </div>
-//         </div>
-//     );
-// }
-
-// /* ===================== BIG SLIDE ===================== */
-
-// function ProjectSlide({ project }) {
-//     return (
-//         <div className="relative group rounded-xl overflow-hidden border border-white/10">
-
-//             {/* IMAGE */}
-//             <img
-//                 src={project.image}
-//                 alt={project.title}
-//                 className="w-full h-[360px] object-cover transition-opacity duration-500 group-hover:opacity-0"
-//             />
-
-//             {/* VIDEO ON HOVER */}
-//             <video
-//                 src={project.video}
-//                 muted
-//                 loop
-//                 playsInline
-//                 className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-//                 onMouseEnter={(e) => e.currentTarget.play()}
-//                 onMouseLeave={(e) => {
-//                     e.currentTarget.pause();
-//                     e.currentTarget.currentTime = 0;
-//                 }}
-//             />
-//         </div>
-//     );
-// }
-
-
-
-
-
-
-
-
-// 'use client';
-
-// import { useState, useRef, useEffect } from "react";
-// import { X, Github, ExternalLink, ChevronLeft, ChevronRight, Play, Code2, Terminal } from "lucide-react";
-
-// import ParallaxSection from '@/components/ui/ParallaxSection';
-// /* ─── Shared Primitives ──────────────────────────────────── */
-// function ScanlineOverlay() {
-//     return (
-//         <div className="pointer-events-none absolute inset-0 z-0"
-//             style={{ background: "repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px)" }} />
-//     );
-// }
-// function CornerAccent({ color = "#39d353" }) {
-//     return (<>
-//         <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 z-10" style={{ borderColor: color }} />
-//         <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 z-10" style={{ borderColor: color }} />
-//         <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 z-10" style={{ borderColor: color }} />
-//         <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 z-10" style={{ borderColor: color }} />
-//     </>);
-// }
-// function WindowChrome({ filename, status = "LIVE", statusColor = "#39d353" }) {
-//     return (
-//         <div className="flex items-center justify-between px-4 py-2.5 border-b border-[#1a2332]">
-//             <div className="flex items-center gap-3">
-//                 <div className="flex gap-1.5">
-//                     <span className="w-2 h-2 rounded-full bg-[#ff5f56]" />
-//                     <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
-//                     <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
-//                 </div>
-//                 <span className="font-mono text-[10px] tracking-[0.18em] text-[#8b949e]">{filename}</span>
-//             </div>
-//             <div className="flex items-center gap-1.5">
-//                 <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: statusColor }} />
-//                 <span className="font-mono text-[8px] border px-1.5 py-0.5 tracking-widest" style={{ color: statusColor, borderColor: statusColor }}>{status}</span>
-//             </div>
-//         </div>
-//     );
-// }
-
-// /* ─── Data ───────────────────────────────────────────────── */
-// const mainProjects = [
-//     {
-//         id: "PRJ_01",
-//         title: "Ghotul Homestay Platform",
-//         subtitle: "Full Stack Hospitality App",
-//         stack: ["React", "Node.js", "PostgreSQL", "Express", "Booking Engines", "Razorpay Gateway"],
-//         description: "A complete homestay booking platform with real-time availability, user authentication, admin dashboard, payment integration and booking management system.",
-//         accentColor: "#39d353",
-//         tag: "FULLSTACK",
-//         github: "https://github.com/prayag29-sahu",
-//         live: "http://prayagsahuportfolio.netlify.app",
-//         image: "/images/09_Projects/03.png",
-//         video: "/videos/ghotul.mp4",
-//     },
-//     {
-//         id: "PRJ_02",
-//         title: "3D Developer Portfolio",
-//         subtitle: "Interactive Personal Portfolio",
-//         stack: ["Next.js", "Tailwind", "Three.js", "Framer"],
-//         description: "A visually immersive 3D developer portfolio with parallax sections, animated skill trees, project showcases and contact integration.",
-//         accentColor: "#00e5ff",
-//         tag: "FRONTEND",
-//         github: "https://github.com/prayag29-sahu",
-//         live: "http://prayagsahuportfolio.netlify.app",
-//         image: "/images/09_Projects/01.png",
-//         video: "/videos/portfolio.mp4",
-//     },
-//     {
-//         id: "PRJ_03",
-//         title: "Security Verification web",
-//         subtitle: "Full Stack Collage Minor Project",
-//         stack: ["React", "Tailwind", "Python", "Supabase", "Emailjs",],
-//         description: "A Security verification web to identify froud links, URL, Images, and Documents using python API's and  secure database",
-//         accentColor: "#f59e0b",
-//         tag: "FULLSTACK",
-//         github: "https://github.com/prayag29-sahu",
-//         live: null,
-//         image: "/images/09_Projects/05.png",
-//         video: "/videos/bank.mp4",
-//     },
-//     {
-//         id: "PRJ_04",
-//         title: "Online Language Helper",
-//         subtitle: "Learn and Communicate in different languages",
-//         stack: ["HTML", "CSS", "JavaScript", "Python"],
-//         description: "An interactive Learning platform with Different languages help user to translate each topic and word easily for learning and communication purpose",
-//         accentColor: "#a855f7",
-//         tag: "WEB_APP",
-//         github: "https://github.com/prayag29-sahu",
-//         live: null,
-//         image: "/images/09_Projects/04.png",
-//         video: "/videos/quiz.mp4",
-//     },
-// ];
-// const mainProjects1 = [
-//     {
-//         id: "PRJ_01",
-//         title: "Ghotul Homestay Platform",
-//         subtitle: "Full Stack Hospitality App",
-//         stack: ["React", "Node.js", "PostgreSQL", "Express", "Booking Engines", "Razorpay Gateway"],
-//         description: "A complete homestay booking platform with real-time availability, user authentication, admin dashboard, payment integration and booking management system.",
-//         accentColor: "#39d353",
-//         tag: "FULLSTACK",
-//         github: "https://github.com/prayag29-sahu",
-//         live: "http://prayagsahuportfolio.netlify.app",
-//         image: "/images/09_Projects/03.png",
-//         video: "/videos/ghotul.mp4",
-//     },
-//     {
-//         id: "PRJ_02",
-//         title: "3D Developer Portfolio",
-//         subtitle: "Interactive Personal Portfolio",
-//         stack: ["Next.js", "Tailwind", "Three.js", "Framer"],
-//         description: "A visually immersive 3D developer portfolio with parallax sections, animated skill trees, project showcases and contact integration.",
-//         accentColor: "#00e5ff",
-//         tag: "FRONTEND",
-//         github: "https://github.com/prayag29-sahu",
-//         live: "http://prayagsahuportfolio.netlify.app",
-//         image: "/images/09_Projects/01.png",
-//         video: "/videos/portfolio.mp4",
-//     },
-//     {
-//         id: "PRJ_03",
-//         title: "Full Stack Security Verification web",
-//         subtitle: "Login-Signup with Full Stack",
-//         stack: ["React", "Tailwind", "Emailjs", "Twillio"],
-//         description: "A Complete Frontend Backend Working Login signup page with email verification, OTP-verifiy and Forget credentials with secure database",
-//         accentColor: "#f59e0b",
-//         tag: "React",
-//         github: "https://github.com/prayag29-sahu",
-//         live: null,
-//         image: "/images/09_Projects/02.png",
-//         video: "/videos/bank.mp4",
-//     },
-//     {
-//         id: "PRJ_04",
-//         title: "Online Language Helper",
-//         subtitle: "Learn and Communicate in different languages",
-//         stack: ["HTML", "CSS", "JavaScript", "Python"],
-//         description: "An interactive Learning platform with Different languages help user to translate each topic and word easily for learning and communication purpose",
-//         accentColor: "#a855f7",
-//         tag: "WEB_APP",
-//         github: "https://github.com/prayag29-sahu",
-//         live: null,
-//         image: "/images/09_Projects/04.png",
-//         video: "/videos/quiz.mp4",
-//     },
-//     {
-//         id: "PRJ_05",
-//         title: "Authentication Page",
-//         subtitle: "Login-Signup with Full Stack",
-//         stack: ["React", "Tailwind", "Emailjs", "Twillio"],
-//         description: "A Complete Frontend Backend Working Login signup page with email verification, OTP-verifiy and Forget credentials with secure database",
-//         accentColor: "#f50bf1",
-//         tag: "React",
-//         github: "https://github.com/prayag29-sahu",
-//         live: null,
-//         image: "/images/09_Projects/02.png",
-//         video: "/videos/bank.mp4",
-//     },
-//     {
-//         id: "PRJ_06",
-//         title: "Voice Assistent",
-//         subtitle: "Voice Controlled Assistant",
-//         stack: ["Python"],
-//         description: "A voice assistent which can perform various tasks based on user commands, such as web search, opening applications, providing weather updates, and more.",
-//         accentColor: "#f52e0b",
-//         tag: "Python",
-//         github: "https://github.com/prayag29-sahu",
-//         live: null,
-//         image: "/images/09_Projects/06.png",
-//         video: "/videos/bank.mp4",
-//     },
-// ];
-
-// const minorProjects = [
-//     { id: "M_01", title: "Mini Chatbot", desc: "Asimple chatbot for students related data using python and conda", stack: "Python • Conda", icon: <Terminal size={16} />, color: "#39d353", image: "/images/09_Projects/minor/01.png", github: "https://github.com/prayag29-sahu", live: null },
-//     { id: "M_02", title: "Landing Page UI", desc: "High-converting marketing UI with animated hero and testimonial sections.", stack: "Next.js • Tailwind", icon: <Code2 size={16} />, color: "#00e5ff", image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&q=80", github: "https://github.com/prayag29-sahu", live: null },
-//     { id: "M_03", title: "Todo App", desc: "Full-featured task manager with priorities, deadlines and local persistence.", stack: "React • LocalStorage", icon: <Terminal size={16} />, color: "#f59e0b", image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&q=80", github: "https://github.com/prayag29-sahu", live: null },
-//     { id: "M_04", title: "Weather App", desc: "Live weather dashboard using OpenWeather API with 5-day forecast.", stack: "HTML • JS • API", icon: <Code2 size={16} />, color: "#a855f7", image: "https://images.unsplash.com/photo-1504608524841-42584120d693?w=400&q=80", github: "https://github.com/prayag29-sahu", live: null },
-//     { id: "M_05", title: "C Graphics Sketcher", desc: "2D art and city layouts drawn using pure C graphics.h library.", stack: "C • graphics.h", icon: <Terminal size={16} />, color: "#39d353", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80", github: "https://github.com/prayag29-sahu", live: null },
-//     { id: "M_06", title: "DSA Visualizer", desc: "Step-by-step visualizer for sorting, tree traversal and graph algorithms.", stack: "JavaScript • Canvas", icon: <Code2 size={16} />, color: "#00e5ff", image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&q=80", github: "https://github.com/prayag29-sahu", live: null },
-// ];
-
-// /* ─── Popup Modal ────────────────────────────────────────── */
-// function ProjectPopup({ project, onClose }) {
-//     if (!project) return null;
-//     const ac = project.accentColor;
-//     return (
-//         <div className="fixed inset-0 z-[60] bg-[#010409]/95 backdrop-blur-xl flex items-center justify-center p-4"
-//             onClick={onClose} style={{ fontFamily: "'Courier New', Courier, monospace" }}>
-//             <div className="relative bg-[#0d1117] border w-full max-w-3xl overflow-hidden"
-//                 style={{ borderColor: ac }} onClick={e => e.stopPropagation()}>
-//                 <ScanlineOverlay />
-//                 <CornerAccent color={ac} />
-
-//                 {/* Header */}
-//                 <div className="flex items-center justify-between px-6 py-4 border-b border-[#1a2332]"
-//                     style={{ borderTopWidth: 3, borderTopColor: ac, borderTopStyle: "solid" }}>
-//                     <div>
-//                         <div className="flex items-center gap-2 mb-1">
-//                             <div className="flex gap-1.5"><span className="w-2 h-2 rounded-full bg-[#ff5f56]" /><span className="w-2 h-2 rounded-full bg-[#ffbd2e]" /><span className="w-2 h-2 rounded-full bg-[#27c93f]" /></div>
-//                             <span className="font-mono text-[9px] tracking-[0.2em] text-[#8b949e]">{project.id}_DETAILS.log</span>
-//                         </div>
-//                         <h3 className="font-mono font-black text-xl text-white">{project.title}</h3>
-//                         <p className="font-mono text-[10px] tracking-widest mt-0.5" style={{ color: ac }}>{project.subtitle}</p>
-//                     </div>
-//                     <button onClick={onClose} className="border border-[#1a2332] p-1.5 text-[#8b949e] hover:border-[#ff5f56] hover:text-[#ff5f56] transition-colors"><X size={16} /></button>
-//                 </div>
-
-//                 {/* Image */}
-//                 <div className="relative h-52 overflow-hidden">
-//                     <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-//                     <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-transparent to-transparent" />
-//                     <div className="absolute top-3 right-3 font-mono text-[8px] border px-2 py-1 bg-[#010409]/80 tracking-widest"
-//                         style={{ borderColor: ac, color: ac }}>{project.tag}</div>
-//                 </div>
-
-//                 {/* Content */}
-//                 <div className="p-6 space-y-4 relative z-10">
-//                     <div className="border border-[#1a2332] bg-[#010409] p-4 relative">
-//                         <CornerAccent color="#1a2332" />
-//                         <div className="font-mono text-[8px] text-[#39d353] tracking-[0.2em] mb-2">PROJECT_DESCRIPTION.txt</div>
-//                         <p className="font-mono text-[12px] text-[#8b949e] leading-relaxed">{project.description}</p>
-//                     </div>
-
-//                     <div>
-//                         <div className="font-mono text-[8px] text-[#8b949e] tracking-widest mb-2">TECH_STACK</div>
-//                         <div className="flex flex-wrap gap-2">
-//                             {project.stack.map(s => (
-//                                 <span key={s} className="font-mono text-[9px] px-2 py-1 border" style={{ color: ac, borderColor: ac }}>{s}</span>
-//                             ))}
-//                         </div>
-//                     </div>
-
-//                     <div className="flex items-center gap-3 pt-2">
-//                         <a href={project.github} target="_blank" rel="noopener noreferrer"
-//                             className="flex items-center gap-2 border font-mono text-[10px] tracking-widest uppercase px-4 py-2.5 transition-all duration-200 hover:text-[#010409]"
-//                             style={{ borderColor: "#39d353", color: "#39d353" }}
-//                             onMouseEnter={e => { e.currentTarget.style.background = "#39d353"; e.currentTarget.style.color = "#010409"; }}
-//                             onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#39d353"; }}>
-//                             <Github size={13} /> VIEW_CODE →
-//                         </a>
-//                         {project.live && (
-//                             <a href={project.live} target="_blank" rel="noopener noreferrer"
-//                                 className="flex items-center gap-2 border font-mono text-[10px] tracking-widest uppercase px-4 py-2.5 transition-all duration-200"
-//                                 style={{ borderColor: ac, color: ac }}
-//                                 onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "#010409"; }}
-//                                 onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ac; }}>
-//                                 <ExternalLink size={13} /> LIVE_DEMO →
-//                             </a>
-//                         )}
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-// /* ─── Major Project Card (left 2x2 grid) ─────────────────── */
-// function MajorCard({ project, onExplore }) {
-//     const videoRef = useRef(null);
-//     const [hovered, setHovered] = useState(false);
-//     const ac = project.accentColor;
-
-//     const handleEnter = () => {
-//         setHovered(true);
-//         if (videoRef.current) { videoRef.current.currentTime = 0; videoRef.current.play().catch(() => { }); }
-//     };
-//     const handleLeave = () => {
-//         setHovered(false);
-//         if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; }
-//     };
-
-//     return (
-//         <div
-//             className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-[0_0_30px_rgba(57,211,83,0.1)]"
-//             style={{ borderLeftWidth: 2, borderLeftColor: ac }}
-//             onMouseEnter={handleEnter}
-//             onMouseLeave={handleLeave}
-//         >
-//             <ScanlineOverlay />
-//             <CornerAccent color={ac} />
-
-//             {/* Window top bar */}
-//             <div className="flex items-center justify-between px-3 py-2 border-b border-[#1a2332] relative z-10">
-//                 <span className="font-mono text-[8px] text-[#8b949e] tracking-[0.15em]">{project.id}.exe</span>
-//                 <span className="font-mono text-[7px] border px-1.5 py-0.5 tracking-widest" style={{ color: ac, borderColor: ac }}>{project.tag}</span>
-//             </div>
-
-//             {/* Media */}
-//             <div className="relative h-36 overflow-hidden">
-//                 <img src={project.image} alt={project.title}
-//                     className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-//                     style={{ opacity: hovered ? 0 : 1 }} />
-//                 <video ref={videoRef} src={project.video} muted loop playsInline
-//                     className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-//                     style={{ opacity: hovered ? 1 : 0 }} />
-
-//                 {/* Hover overlay with content */}
-//                 <div className="absolute inset-0 flex flex-col justify-end p-3 transition-all duration-300"
-//                     style={{ background: hovered ? "linear-gradient(to top, #0d1117ee 0%, transparent 100%)" : "transparent" }}>
-//                     {hovered && (
-//                         <p className="font-mono text-[9px] text-[#8b949e] leading-relaxed line-clamp-2 animate-fade-in">
-//                             {project.description}
-//                         </p>
-//                     )}
-//                 </div>
-
-//                 {/* Play indicator */}
-//                 {hovered && (
-//                     <div className="absolute top-2 right-2 w-6 h-6 border flex items-center justify-center"
-//                         style={{ borderColor: ac }}>
-//                         <Play size={10} style={{ color: ac }} />
-//                     </div>
-//                 )}
-//             </div>
-
-//             {/* Bottom info */}
-//             <div className="p-3 relative z-10">
-//                 <h4 className="font-mono font-bold text-[11px] text-white mb-0.5 leading-tight">{project.title}</h4>
-//                 <p className="font-mono text-[8px] mb-2" style={{ color: ac }}>{project.subtitle}</p>
-//                 <div className="flex flex-wrap gap-1 mb-3">
-//                     {project.stack.slice(0, 2).map(s => (
-//                         <span key={s} className="font-mono text-[7px] px-1.5 py-0.5 border border-[#1a2332] text-[#8b949e]">{s}</span>
-//                     ))}
-//                 </div>
-//                 <button
-//                     onClick={() => onExplore(project)}
-//                     className="w-full font-mono text-[8px] tracking-[0.15em] uppercase py-1.5 border transition-all duration-200"
-//                     style={{ borderColor: ac, color: ac }}
-//                     onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "#010409"; }}
-//                     onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ac; }}
-//                 >
-//                     $ EXPLORE →
-//                 </button>
-//             </div>
-//         </div>
-//     );
-// }
-
-// /* ─── Right Big Slider ───────────────────────────────────── */
-// function BigSlider({ projects, onExplore }) {
-//     const [idx, setIdx] = useState(0);
-//     const videoRef = useRef(null);
-//     const [hovered, setHovered] = useState(false);
-//     const cur = projects[idx];
-//     const ac = cur.accentColor;
-
-//     const goNext = () => { setIdx(p => (p + 1) % projects.length); setHovered(false); };
-//     const goPrev = () => { setIdx(p => p === 0 ? projects.length - 1 : p - 1); setHovered(false); };
-
-//     const handleEnter = () => {
-//         setHovered(true);
-//         if (videoRef.current) { videoRef.current.currentTime = 0; videoRef.current.play().catch(() => { }); }
-//     };
-//     const handleLeave = () => {
-//         setHovered(false);
-//         if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; }
-//     };
-
-//     return (
-//         <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden" style={{ borderTopWidth: 3, borderTopColor: ac, borderTopStyle: "solid" }}>
-//             <ScanlineOverlay />
-//             <CornerAccent color={ac} />
-//             <WindowChrome filename={`${cur.id}_PREVIEW.exe`} status="RUNNING" statusColor={ac} />
-
-//             {/* 3D tilt wrapper */}
-//             <div className="relative h-[340px] overflow-hidden group"
-//                 onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
-
-//                 {/* Image */}
-//                 <img src={cur.image} alt={cur.title}
-//                     className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
-//                     style={{ opacity: hovered ? 0 : 1, transform: hovered ? "scale(1.05)" : "scale(1)" }} />
-
-//                 {/* Video */}
-//                 <video ref={videoRef} src={cur.video} muted loop playsInline
-//                     className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-//                     style={{ opacity: hovered ? 1 : 0 }} />
-
-//                 {/* Dark gradient base */}
-//                 <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d111740] to-transparent" />
-
-//                 {/* Hover: text content reveal */}
-//                 <div className="absolute bottom-0 left-0 right-0 p-5 transition-all duration-400"
-//                     style={{ transform: hovered ? "translateY(0)" : "translateY(20px)", opacity: hovered ? 1 : 0 }}>
-//                     <p className="font-mono text-[11px] text-[#8b949e] leading-relaxed mb-3">{cur.description}</p>
-//                     <div className="flex flex-wrap gap-1.5 mb-3">
-//                         {cur.stack.map(s => (
-//                             <span key={s} className="font-mono text-[9px] px-2 py-0.5 border" style={{ color: ac, borderColor: ac }}>{s}</span>
-//                         ))}
-//                     </div>
-//                 </div>
-
-//                 {/* Always visible: tag */}
-//                 <div className="absolute top-3 left-3 font-mono text-[8px] border px-2 py-1 bg-[#010409]/80"
-//                     style={{ borderColor: ac, color: ac }}>{cur.tag}</div>
-
-//                 {/* Play badge */}
-//                 {hovered && (
-//                     <div className="absolute top-3 right-3 flex items-center gap-1.5 border px-2 py-1 bg-[#010409]/80 font-mono text-[8px]"
-//                         style={{ borderColor: ac, color: ac }}>
-//                         <Play size={9} /> LIVE_PREVIEW
-//                     </div>
-//                 )}
-//             </div>
-
-//             {/* Bottom strip */}
-//             <div className="p-5 border-t border-[#1a2332] relative z-10">
-//                 <div className="flex items-start justify-between mb-4">
-//                     <div>
-//                         <h3 className="font-mono font-black text-lg text-white">{cur.title}</h3>
-//                         <p className="font-mono text-[10px] tracking-widest mt-0.5" style={{ color: ac }}>{cur.subtitle}</p>
-//                     </div>
-//                     <div className="flex items-center gap-2">
-//                         {projects.map((_, i) => (
-//                             <div key={i} onClick={() => setIdx(i)}
-//                                 className="w-1.5 h-1.5 rounded-full cursor-pointer transition-all duration-200"
-//                                 style={{ background: i === idx ? ac : "#30363d", transform: i === idx ? "scale(1.4)" : "scale(1)" }} />
-//                         ))}
-//                     </div>
-//                 </div>
-
-//                 <div className="flex items-center gap-3">
-//                     <button onClick={() => onExplore(cur)}
-//                         className="flex-1 flex items-center justify-center gap-2 border font-mono text-[10px] tracking-widest uppercase py-2.5 transition-all duration-200"
-//                         style={{ borderColor: ac, color: ac }}
-//                         onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "#010409"; }}
-//                         onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ac; }}>
-//                         $ EXPLORE_NOW →
-//                     </button>
-//                     <a href={cur.github} target="_blank" rel="noopener noreferrer"
-//                         className="flex items-center gap-1.5 border border-[#1a2332] font-mono text-[9px] tracking-widest px-3 py-2.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200">
-//                         <Github size={12} /> CODE
-//                     </a>
-//                     {cur.live && (
-//                         <a href={cur.live} target="_blank" rel="noopener noreferrer"
-//                             className="flex items-center gap-1.5 border border-[#1a2332] font-mono text-[9px] tracking-widest px-3 py-2.5 text-[#8b949e] hover:border-[#00e5ff] hover:text-[#00e5ff] transition-all duration-200">
-//                             <ExternalLink size={12} /> LIVE
-//                         </a>
-//                     )}
-//                     <button onClick={goPrev} className="border border-[#1a2332] p-2.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-colors"><ChevronLeft size={14} /></button>
-//                     <button onClick={goNext} className="border border-[#1a2332] p-2.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-colors"><ChevronRight size={14} /></button>
-//                 </div>
-
-//                 <div className="flex items-start justify-between mt-6">
-//                     <div>
-//                         <p className="font-mono text-[10px] tracking-widest mt-0.5" style={{ color: ac }}>{cur.description}</p>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-// /* ─── Minor Project Card ─────────────────────────────────── */
-// function MinorCard({ project, delay = 0 }) {
-//     const [hovered, setHovered] = useState(false);
-//     const ac = project.color;
-
-//     return (
-//         <div
-//             className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_rgba(57,211,83,0.08)]"
-//             style={{
-//                 animationDelay: `${delay}ms`,
-//                 borderLeftWidth: 2,
-//                 borderLeftColor: hovered ? ac : "#1a2332",
-//                 transition: "all 0.3s ease",
-//             }}
-//             onMouseEnter={() => setHovered(true)}
-//             onMouseLeave={() => setHovered(false)}
-//         >
-//             <ScanlineOverlay />
-//             {hovered && <CornerAccent color={ac} />}
-
-//             {/* Image with overlay */}
-//             <div className="relative h-32 overflow-hidden">
-//                 <img src={project.image} alt={project.title}
-//                     className="w-full h-full object-cover transition-all duration-500"
-//                     style={{ transform: hovered ? "scale(1.08)" : "scale(1)", filter: hovered ? "brightness(0.4)" : "brightness(0.25) grayscale(30%)" }} />
-
-//                 {/* Content that appears on hover */}
-//                 <div className="absolute inset-0 flex flex-col justify-center items-start px-4 transition-all duration-300"
-//                     style={{ opacity: hovered ? 1 : 0 }}>
-//                     <div className="font-mono text-[9px] text-[#8b949e] leading-relaxed mb-2">{project.desc}</div>
-//                 </div>
-
-//                 {/* Always: ID badge */}
-//                 <div className="absolute top-2 right-2 font-mono text-[7px] bg-[#010409]/90 border border-[#1a2332] px-1.5 py-0.5 text-[#30363d]">{project.id}</div>
-
-//                 {/* Animated scan line on hover */}
-//                 {hovered && (
-//                     <div className="absolute left-0 right-0 h-[1px] pointer-events-none"
-//                         style={{ background: ac, top: "50%", boxShadow: `0 0 8px ${ac}`, animation: "scan 1.5s linear infinite" }} />
-//                 )}
-//             </div>
-
-//             {/* Bottom */}
-//             <div className="p-3 relative z-10">
-//                 <div className="flex items-center gap-2 mb-1">
-//                     <span style={{ color: hovered ? ac : "#30363d" }} className="transition-colors duration-200">{project.icon}</span>
-//                     <h4 className="font-mono font-bold text-[11px] text-white">{project.title}</h4>
-//                 </div>
-//                 <p className="font-mono text-[8px] mb-2" style={{ color: ac }}>{project.stack}</p>
-//                 <div className="flex gap-2">
-//                     <a href={project.github} target="_blank" rel="noopener noreferrer"
-//                         className="flex items-center gap-1 font-mono text-[8px] border border-[#1a2332] px-2 py-1 text-[#8b949e] hover:text-[#39d353] hover:border-[#39d353] transition-all duration-200">
-//                         <Github size={9} /> CODE
-//                     </a>
-//                     {project.live ? (
-//                         <a href={project.live} target="_blank" rel="noopener noreferrer"
-//                             className="flex items-center gap-1 font-mono text-[8px] border px-2 py-1 transition-all duration-200"
-//                             style={{ borderColor: ac, color: ac }}>
-//                             <ExternalLink size={9} /> LIVE
-//                         </a>
-//                     ) : (
-//                         <span className="flex items-center gap-1 font-mono text-[8px] border border-[#1a2332] px-2 py-1 text-[#30363d]">
-//                             WIP
-//                         </span>
-//                     )}
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-// /* ─── Cursor glow tracker ────────────────────────────────── */
-// function CursorGlow() {
-//     const [pos, setPos] = useState({ x: 0, y: 0 });
-//     useEffect(() => {
-//         const h = (e) => setPos({ x: e.clientX, y: e.clientY });
-//         window.addEventListener("mousemove", h);
-//         return () => window.removeEventListener("mousemove", h);
-//     }, []);
-//     return (
-//         <div className="pointer-events-none fixed z-0" style={{
-//             left: pos.x - 200, top: pos.y - 200, width: 400, height: 400,
-//             background: "radial-gradient(circle, rgba(57,211,83,0.04) 0%, transparent 70%)",
-//             borderRadius: "50%", transition: "left 0.1s, top 0.1s",
-//         }} />
-//     );
-// }
-
-// /* ─── Main Export ────────────────────────────────────────── */
-// export default function ProjectsPage() {
-//     const [popup, setPopup] = useState(null);
-//     const [glitch, setGlitch] = useState(false);
-
-//     useEffect(() => {
-//         const t = setInterval(() => { setGlitch(true); setTimeout(() => setGlitch(false), 120); }, 7000);
-//         return () => clearInterval(t);
-//     }, []);
-
-//     return (
-//         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-//             <section className="relative  min-h-screen py-28 overflow-hidden"
-//                 id='projects'
-//                 style={{ fontFamily: "'Courier New', Courier, monospace" }}>
-//                 <CursorGlow />
-
-//                 {/* BG grid */}
-//                 <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
-//                     style={{
-//                         backgroundImage: "linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)",
-//                         backgroundSize: "40px 40px",
-//                     }} />
-//                 {/* Glows */}
-//                 <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#39d353] opacity-[0.02] rounded-full blur-[180px] pointer-events-none" />
-//                 <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[160px] pointer-events-none" />
-
-//                 <div className="relative z-10 max-w-7xl mx-auto px-6">
-
-//                     {/* ── HEADER ── */}
-//                     <div className="mb-14">
-//                         <div className="flex items-center gap-3 mb-6">
-//                             <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
-//                             <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">SYSTEM_MODULE / PROJECTS</span>
-//                         </div>
-//                         <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
-//                             <ScanlineOverlay />
-//                             <CornerAccent color="#39d353" />
-//                             <WindowChrome filename="PROJECT_SHOWCASE.exe" />
-//                             <div className="px-8 py-6">
-//                                 <h2 className={`font-mono font-black text-3xl md:text-5xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"}`}
-//                                     style={{ textShadow: "0 0 24px rgba(57,211,83,0.25)" }}>
-//                                     PROJECT_<span className="text-[#39d353]">SHOWCASE</span>
-//                                     <span className="inline-block w-[10px] h-[18px] bg-[#39d353] animate-pulse ml-2 align-middle" />
-//                                 </h2>
-//                                 <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider">
-//                                     $ ls ./projects/ — {mainProjects.length} major builds + {minorProjects.length} minor experiments loaded.
-//                                 </p>
-//                                 <div className="flex flex-wrap gap-4 mt-5">
-//                                     {[
-//                                         { l: "MAJOR_PROJECTS", v: mainProjects.length.toString().padStart(2, "0") },
-//                                         { l: "MINOR_BUILDS", v: minorProjects.length.toString().padStart(2, "0") },
-//                                         { l: "TECH_STACKS", v: "12+" },
-//                                         { l: "STATUS", v: "ACTIVE" },
-//                                     ].map(s => (
-//                                         <div key={s.l} className="border border-[#1a2332] bg-[#010409] px-4 py-2">
-//                                             <div className="font-mono text-[7px] text-[#39d353] tracking-[0.2em]">{s.l}</div>
-//                                             <div className="font-mono text-lg font-bold text-white">{s.v}</div>
-//                                         </div>
-//                                     ))}
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     </div>
-
-//                     {/* ── MAIN GRID: 2x2 left + Big slider right ── */}
-//                     <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-6 mb-10">
-//                         {/* Left: 2x2 */}
-//                         <div className="grid grid-cols-2 gap-4">
-//                             {mainProjects.map((p, i) => (
-//                                 <MajorCard key={p.id} project={p} onExplore={setPopup} />
-//                             ))}
-//                         </div>
-//                         {/* Right: Big slider */}
-//                         <BigSlider projects={mainProjects1} onExplore={setPopup} />
-//                     </div>
-
-//                     {/* ── MINOR PROJECTS ── */}
-//                     <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden mb-6">
-//                         <ScanlineOverlay />
-//                         <CornerAccent color="#00e5ff" />
-//                         <WindowChrome filename="MINOR_EXPERIMENTS.log" status="LOADED" statusColor="#00e5ff" />
-//                         <div className="p-6">
-//                             <div className="flex items-center justify-between mb-5">
-//                                 <div>
-//                                     <div className="font-mono text-[9px] text-[#00e5ff] tracking-[0.2em] mb-1">$ ls ./experiments/</div>
-//                                     <h3 className="font-mono font-black text-base text-white tracking-[0.1em] uppercase">MINOR_EXPERIMENTS</h3>
-//                                 </div>
-//                                 <div className="border border-[#1a2332] bg-[#010409] px-3 py-1">
-//                                     <span className="font-mono text-[9px] text-[#00e5ff] tracking-widest">{minorProjects.length} BUILDS</span>
-//                                 </div>
-//                             </div>
-//                             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-//                                 {minorProjects.map((p, i) => (
-//                                     <MinorCard key={p.id} project={p} delay={i * 80} />
-//                                 ))}
-//                             </div>
-//                         </div>
-//                     </div>
-
-//                     {/* ── FOOTER ── */}
-//                     <div className="flex items-center justify-between">
-//                         <div className="font-mono text-[10px] text-[#8b949e] tracking-widest">$ projects --list --all _</div>
-//                         <a href="https://github.com/prayag29-sahu" target="_blank" rel="noopener noreferrer"
-//                             className="flex items-center gap-2 border border-[#39d353] font-mono text-[10px] tracking-widest uppercase px-5 py-2.5 text-[#39d353] hover:bg-[#39d353] hover:text-[#010409] transition-all duration-200">
-//                             <Github size={13} /> VIEW_ALL_ON_GITHUB →
-//                         </a>
-//                     </div>
-//                 </div>
-
-//                 {/* ── POPUP ── */}
-//                 {popup && <ProjectPopup project={popup} onClose={() => setPopup(null)} />}
-
-//                 <style jsx>{`
-//         @keyframes scan {
-//           0% { top: 0%; }
-//           100% { top: 100%; }
-//         }
-//         @keyframes fade-in {
-//           from { opacity: 0; transform: translateY(4px); }
-//           to { opacity: 1; transform: translateY(0); }
-//         }
-//         .animate-fade-in { animation: fade-in 0.3s ease forwards; }
-//       `}</style>
-//             </section>
-//         </ParallaxSection>
-//     );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 'use client';
 
-import { useState, useRef, useEffect } from "react";
-import { X, Github, ExternalLink, ChevronLeft, ChevronRight, Play, Code2, Terminal, Layers, FolderOpen } from "lucide-react";
-import ParallaxSection from '@/components/ui/ParallaxSection';
+import { useState, useEffect } from "react";
+import { X, Github, ExternalLink, ChevronLeft, ChevronRight, Code2, Terminal, Layers, FolderOpen, Server } from "lucide-react";
 
-/* ─── Shared Primitives ──────────────────────────────────── */
+/* The basic building blocks for the projects section */
 function ScanlineOverlay() {
     return (
-        <div className="pointer-events-none absolute inset-0 z-0"
-            style={{ background: "repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px)" }} />
+        <div className="pointer-events-none absolute inset-0 z-0 opacity-30"
+            style={{ background: "repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.03) 2px,rgba(0,0,0,0.03) 4px)" }} />
     );
 }
-function CornerAccent({ color = "#39d353" }) {
+
+function CornerAccent({ color = "var(--accent)" }) {
     return (<>
         <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 z-10" style={{ borderColor: color }} />
         <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 z-10" style={{ borderColor: color }} />
@@ -1087,530 +19,381 @@ function CornerAccent({ color = "#39d353" }) {
         <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 z-10" style={{ borderColor: color }} />
     </>);
 }
-function WindowChrome({ filename, status = "LIVE", statusColor = "#39d353" }) {
+
+function WindowChrome({ filename, status = "LIVE", statusColor = "var(--accent)" }) {
     return (
-        <div className="flex items-center justify-between px-4 py-2.5 border-b border-[#1a2332]">
+        <div className="flex items-center justify-between px-4 py-2 md:px-5 md:py-3 border-b"
+            style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
             <div className="flex items-center gap-3">
                 <div className="flex gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#ff5f56]" />
-                    <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
-                    <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                 </div>
-                <span className="font-mono text-[10px] tracking-[0.18em] text-[#8b949e]">{filename}</span>
+                <span className="font-mono text-[9px] md:text-[10px] tracking-[0.18em] truncate max-w-[130px] md:max-w-none" style={{ color: "var(--text-muted)" }}>{filename}</span>
             </div>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-2 shrink-0">
                 <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: statusColor }} />
-                <span className="font-mono text-[8px] border px-1.5 py-0.5 tracking-widest" style={{ color: statusColor, borderColor: statusColor }}>{status}</span>
+                <span className="font-mono text-[8px] md:text-[9px] border px-2 py-0.5 tracking-widest font-bold whitespace-nowrap" style={{ color: statusColor, borderColor: statusColor }}>{status}</span>
             </div>
         </div>
     );
 }
 
-/* ─── Major Projects Data ────────────────────────────────── */
+/* Theme Colors and Styling */
+/* I added these colors here so the projects look good in both light and dark mode. */
+const CSS_VARS = `
+  :root {
+    --bg: #010409;
+    --surface: #0d1117;
+    --bg-subtle: #090e16;
+    --border: #1a2332;
+    --border-dim: #111923;
+    --accent: #39d353;
+    --accent-blue: #00e5ff;
+    --accent-amber: #f59e0b;
+    --accent-purple: #a855f7;
+    --accent-glow: rgba(57,211,83,0.12);
+    --text-primary: #e6edf3;
+    --text-muted: #8b949e;
+    --text-dim: #30363d;
+    --scanline-color: rgba(0,0,0,0.03);
+  }
+  .dark {
+    --bg: #010409;
+    --surface: #0d1117;
+    --bg-subtle: #090e16;
+    --border: #1a2332;
+    --accent: #39d353;
+    --accent-blue: #00e5ff;
+    --accent-amber: #f59e0b;
+    --accent-purple: #a855f7;
+    --text-primary: #e6edf3;
+    --text-muted: #8b949e;
+  }
+  .light {
+    --bg: #f6f8fa;
+    --surface: #ffffff;
+    --bg-subtle: #eef1f5;
+    --border: #d0d7de;
+    --accent: #1a7f37;
+    --accent-blue: #0969da;
+    --accent-amber: #9a6700;
+    --accent-purple: #7c3aed;
+    --text-primary: #1f2328;
+    --text-muted: #57606a;
+    --text-dim: #8c959f;
+  }
+  .custom-scroll::-webkit-scrollbar { width: 4px; }
+  .custom-scroll::-webkit-scrollbar-track { background: transparent; }
+  .custom-scroll::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+  @keyframes scan-h { 0% { top: 0%; } 100% { top: 100%; } }
+  .animate-scan-h { animation: scan-h 2s linear infinite; }
+`;
+
+/* List of My Projects */
+/* I picked these projects to show my work on real apps and my experiments with AI. */
 const mainProjects = [
     {
-        id: "PRJ_01", title: "Ghotul Homestay Platform", subtitle: "Full Stack Hospitality App",
-        stack: ["React", "Node.js", "PostgreSQL", "Express", "Razorpay"],
-        description: "A complete homestay booking platform with real-time availability, user authentication, admin dashboard, payment integration and booking management system.",
-        accentColor: "#39d353", tag: "FULLSTACK",
-        github: "https://github.com/prayag29-sahu", live: "http://prayagsahuportfolio.netlify.app",
-        image: "/images/09_Projects/03.png", video: "/videos/ghotul.mp4",
+        id: "PRJ_01",
+        title: "Ghotul — Hospitality Platform",
+        subtitle: "Full Stack Developer Intern · 12 Months · Remote",
+        stack: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Firebase", "JWT", "Razorpay", "Nginx", "PM2"],
+        description: "Architected and deployed a production-grade hospitality management platform on Hostinger VPS, replacing 100% of the client's manual reservation operations. Engineered a room booking system with real-time availability management and DB-level locking (PostgreSQL SELECT FOR UPDATE) to prevent race conditions. Built a staff portal with role-based access control — owner, manager, and staff roles with distinct interfaces and API-level authorization. Integrated Razorpay end-to-end: order creation → checkout → HMAC-SHA256 webhook signature verification → booking confirmation. Implemented JWT authentication with refresh token rotation, bcrypt password hashing, and httpOnly cookies to prevent XSS.",
+        accentColor: "var(--accent)",
+        tag: "PRODUCTION",
+        github: "https://github.com/prayag29-sahu",
+        live: "https://ghotulstays.com",
+        image: "/images/09_Projects/03.png",
     },
     {
-        id: "PRJ_02", title: "3D Developer Portfolio", subtitle: "Interactive Personal Portfolio",
-        stack: ["Next.js", "Tailwind", "Three.js", "Framer"],
-        description: "A visually immersive 3D developer portfolio with parallax sections, animated skill trees, project showcases and contact integration.",
-        accentColor: "#00e5ff", tag: "FRONTEND",
-        github: "https://github.com/prayag29-sahu", live: "http://prayagsahuportfolio.netlify.app",
-        image: "/images/09_Projects/01.png", video: "/videos/portfolio.mp4",
+        id: "PRJ_02",
+        title: "Developer Portfolio — V2",
+        subtitle: "Personal Portfolio · React & Tailwind",
+        stack: ["React.js", "Tailwind CSS", "Framer Motion", "EmailJS"],
+        description: "A visually immersive personal developer portfolio featuring parallax sections, animated skill trees, interactive project showcases, and a fully integrated email contact system using Nodemailer and EmailJS. Built with performance-first architecture and a focus on responsive design across all device breakpoints.",
+        accentColor: "var(--accent-blue)",
+        tag: "PORTFOLIO",
+        github: "https://github.com/prayag29-sahu",
+        live: "https://prayagsahu.vercel.app/",
+        image: "/images/09_Projects/00.png",
     },
     {
-        id: "PRJ_03", title: "Security Verification Web", subtitle: "Full Stack College Minor Project",
-        stack: ["React", "Tailwind", "Python", "Supabase", "Emailjs"],
-        description: "A Security verification web to identify fraud links, URLs, Images and Documents using Python APIs and secure database.",
-        accentColor: "#f59e0b", tag: "FULLSTACK",
-        github: "https://github.com/prayag29-sahu", live: null,
-        image: "/images/09_Projects/05.png", video: "/videos/bank.mp4",
+        id: "PRJ_03",
+        title: "Fake Info Detector",
+        subtitle: "AI-Powered Verification Platform · College Minor Project",
+        stack: ["React", "Node.js", "Express.js", "PostgreSQL", "Firebase", "Supabase", "LLM", "HuggingFace", "OpenCV"],
+        description: "A multi-modal AI-driven platform to detect misinformation across text, images, documents, and URLs. Built as a college team minor project, the system leverages LLMs, HuggingFace models, open-source Computer Vision pipelines, and multiple AI tools to analyze content authenticity and assign threat scores in real time.",
+        accentColor: "var(--accent-amber)",
+        tag: "AI / ML",
+        github: "https://github.com/prayag29-sahu",
+        live: "https://fakeinfodetectionvercel.vercel.app",
+        image: "/images/09_Projects/05.png",
     },
     {
-        id: "PRJ_04", title: "Online Language Helper", subtitle: "Learn & Communicate in Different Languages",
-        stack: ["HTML", "CSS", "JavaScript", "Python"],
-        description: "An interactive learning platform with different language support to help users translate each topic and word easily for learning and communication.",
-        accentColor: "#a855f7", tag: "WEB_APP",
-        github: "https://github.com/prayag29-sahu", live: null,
-        image: "/images/09_Projects/04.png", video: "/videos/quiz.mp4",
+        id: "PRJ_04",
+        title: "StockVault — Trading Engine",
+        subtitle: "College Major Project · NASSCOM FutureSkills MERN Intern",
+        stack: ["MongoDB", "Express.js", "React", "Node.js", "Redux", "Finance API"],
+        description: "A team-built MERN stack application for tracking and managing stock investments, developed under the NASSCOM FutureSkills internship program. Features sophisticated portfolio analytics, investment activity monitoring, real-time transaction simulations, and a role-based dashboard for managing assets and performance metrics.",
+        accentColor: "var(--accent-purple)",
+        tag: "FINTECH",
+        github: "https://github.com/Pranjalpatel07/Stock-app",
+        live: "https://sb-stock-app.vercel.app",
+        image: "/images/09_Projects/07.png",
+    },
+    {
+        id: "PRJ_05",
+        title: "The Light Room",
+        subtitle: "Professional Photographer Portfolio",
+        stack: ["MongoDB", "Express.js", "React", "Node.js", "Cloudinary", "Framer Motion"],
+        description: "A premium MERN-based portfolio platform built for a professional photographer to showcase their work, connect with clients, and manage bookings. Features a curated gallery with Cloudinary image hosting, client inquiry forms, and a content management interface for the photographer to update portfolios and packages independently.",
+        accentColor: "var(--accent)",
+        tag: "PORTFOLIO",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/08.png",
+    },
+    {
+        id: "PRJ_06",
+        title: "Shopsy — Garments E-Commerce",
+        subtitle: "Full-Stack Fashion Retail Platform",
+        stack: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Admin Panel"],
+        description: "A fully-featured garments e-commerce platform for selling clothing products online. Built on the MERN stack with complete user authentication, product catalog browsing, shopping cart management, order tracking, and a comprehensive admin panel for inventory, product listings, and order fulfillment management.",
+        accentColor: "var(--accent-blue)",
+        tag: "E-COMMERCE",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/09.png",
+    },
+    {
+        id: "PRJ_07",
+        title: "Sachin Men's Parlor",
+        subtitle: "Barber Appointment Booking System",
+        stack: ["MongoDB", "Express.js", "React", "Node.js", "Real-time Booking"],
+        description: "A real-time appointment booking platform built for a local barbershop, enabling customers to check availability, select services, and book slots directly online. Includes an owner dashboard for managing daily schedules, walk-in queues, and appointment confirmations — eliminating phone-based coordination entirely.",
+        accentColor: "var(--accent-amber)",
+        tag: "BUSINESS",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/10.png",
+    },
+    {
+        id: "PRJ_08",
+        title: "P.S. Shivay",
+        subtitle: "First Web Project · HTML & CSS",
+        stack: ["HTML5", "CSS3"],
+        description: "My web development project, built in the first year of engineering using pure HTML and CSS. A dedicated showcase of Lord Shiva's stories, sacred temples, and spiritual locations — marking the beginning of my development journey and foundational mastery of semantic HTML structure, CSS layouts, and responsive design principles, Now again work on them and refine it",
+        accentColor: "var(--accent-purple)",
+        tag: "LEGACY",
+        github: "https://github.com/prayag29-sahu/Shivay",
+        live: "https://prayag-sahu.github.io/www.P.S.shivay.com",
+        image: "/images/09_Projects/11.png",
+    },
+    {
+        id: "PRJ_09",
+        title: "SecureAuth Suite",
+        subtitle: "Multi-Factor Authentication System",
+        stack: ["MongoDB", "Express.js", "React", "Node.js", "Twilio", "Nodemailer", "JWT"],
+        description: "A complete full-stack authentication system implementing email OTP verification via Nodemailer, SMS OTP verification via Twilio, JWT access tokens with refresh token rotation, forgot password workflows, and protected route management. Built as a college learning project to master secure authentication architecture end-to-end.",
+        accentColor: "var(--accent)",
+        tag: "SECURITY",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/02.png",
+    },
+    {
+        id: "PRJ_10",
+        title: "Razorpay CLI Integration",
+        subtitle: "Open-Source Contribution · Apna College",
+        stack: ["JavaScript", "Node.js", "CLI Tools", "Razorpay API"],
+        description: "An open-source contribution to Apna College's community project repository — a CLI tool that simplifies Razorpay payment gateway integration for developers, abstracting order creation, webhook setup, and HMAC signature verification into streamlined command-line workflows. Contributed as part of my learning path into real-world payment infrastructure.",
+        accentColor: "var(--accent-amber)",
+        tag: "OPEN-SOURCE",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/12.png",
+    },
+    {
+        id: "PRJ_11",
+        title: "Velvet Animated Shop",
+        subtitle: "Ladies E-Commerce · Animated Frontend",
+        stack: ["HTML5", "CSS3", "JavaScript", "Animation Libraries"],
+        description: "A highly animated ladies' shopping website built with pure HTML, CSS, and JavaScript — featuring smooth product carousels, parallax scroll effects, hover micro-animations, and an engaging purchasing experience. Designed to demonstrate advanced frontend animation techniques and polished UI craftsmanship without any framework dependencies.",
+        accentColor: "var(--accent-purple)",
+        tag: "FRONTEND",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/minor/03/02.png",
+    },
+    {
+        id: "PRJ_12",
+        title: "Language Translator",
+        subtitle: "Multi-Language Text Translation · Hackathon",
+        stack: ["HTML5", "CSS3", "JavaScript", "Python", "Translation APIs", "NLP Models"],
+        description: "A hackathon project that translates text across a wide range of global languages using public translation APIs and lightweight NLP models. Built under competitive time constraints, the platform provides real-time language detection and translation output with a clean, accessible interface supporting learners and communicators.",
+        accentColor: "var(--accent-blue)",
+        tag: "NLP",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/04.png",
+    },
+    {
+        id: "PRJ_13",
+        title: "Jarvis — Voice Assistant",
+        subtitle: "Python-Based OS Automation Assistant",
+        stack: ["Python", "SpeechRecognition", "pyttsx3", "OS Modules", "Automation"],
+        description: "An intelligent voice-controlled assistant built in Python that listens to spoken commands and executes corresponding system tasks — opening applications, performing web searches, reading out results, writing text, and managing files. Designed to demonstrate Python's automation capabilities through real-world voice-driven interaction.",
+        accentColor: "var(--accent)",
+        tag: "AUTOMATION",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/06.png",
+    },
+    {
+        id: "PRJ_14",
+        title: "GALE Employee Chatbot",
+        subtitle: "SIH Hackathon · GALE Company Entry",
+        stack: ["HTML5", "CSS3", "JavaScript", "Python", "NLP", "Rule-Based Logic"],
+        description: "My first Smart India Hackathon (SIH) project — a lightweight chatbot designed for GALE company employees to resolve internal queries, access schedules, and navigate HR FAQs. Built using HTML/CSS/JS for the frontend and Python NLP for intent classification, delivering a streamlined internal communication tool under hackathon constraints.",
+        accentColor: "var(--accent-amber)",
+        tag: "HACKATHON",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/minor/01/15.png",
+    },
+    {
+        id: "PRJ_15",
+        title: "MediMap — Care Locator",
+        subtitle: "Hospital Finder · SIH Hackathon Entry",
+        stack: ["MongoDB", "Express.js", "React", "Node.js", "Geolocation API", "Maps Integration"],
+        description: "A MERN-based hackathon project that helps users locate the best hospitals in any region based on their specific disease or medical need. Features geolocation-based hospital filtering, specialty matching, and a surgical cost calculator that estimates total treatment expenses — empowering informed healthcare decisions under time-critical situations.",
+        accentColor: "var(--accent-blue)",
+        tag: "HEALTH-TECH",
+        github: "https://github.com/prayag29-sahu",
+        live: null,
+        image: "/images/09_Projects/13.png",
     },
 ];
 
-const mainProjects1 = [
-    ...mainProjects,
-    {
-        id: "PRJ_05", title: "Authentication Page", subtitle: "Login-Signup with Full Stack",
-        stack: ["React", "Tailwind", "Emailjs", "Twilio"],
-        description: "A complete frontend-backend login/signup system with email verification, OTP-verify and forgot credentials with secure database.",
-        accentColor: "#f50bf1", tag: "React",
-        github: "https://github.com/prayag29-sahu", live: null,
-        image: "/images/09_Projects/02.png", video: "/videos/bank.mp4",
-    },
-    {
-        id: "PRJ_06", title: "Voice Assistant", subtitle: "Voice Controlled Assistant",
-        stack: ["Python"],
-        description: "A voice assistant which can perform various tasks based on user commands — web search, opening applications, weather updates and more.",
-        accentColor: "#f52e0b", tag: "Python",
-        github: "https://github.com/prayag29-sahu", live: null,
-        image: "/images/09_Projects/06.png", video: "/videos/bank.mp4",
-    },
-];
-
-/* ─── ALL STACK Projects (nested structure) ──────────────── */
-const allStackProjects = [
+/* Projects grouped by technology */
+const stackCategories = [
     {
         id: "STK_01",
-        stackName: "Basics OF Frontend",
-        shortName: "HTML·CSS·JS",
-        icon: <Code2 size={16} />,
-        color: "#f59e0b",
-        desc: "Web projects with core HTML, CSS and JavaScript",
-        totalProjects: 15,
-        projects: [
-
-            {
-                sid: "STK_01-A",
-                title: "Web Development Certificate (freeCodeCamp)",
-                desc: "Completed Web Development Course from freeCodeCamp and built multiple real-world practice projects during the certification journey.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/002.png"
-            },
-
-            {
-                sid: "STK_01-B",
-                title: "HTML5 Certification (LinkedIn Learning)",
-                desc: "Completed HTML5 Certification Course from LinkedIn Learning with strong foundation in semantic structure and modern HTML standards.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/001.png"
-            },
-
-            {
-                sid: "STK_01-C",
-                title: "Portfolio Design",
-                desc: "Personal portfolio project showcasing HTML, CSS and foundational JavaScript concepts with responsive layout and animations.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/12.png"
-            },
-
-            {
-                sid: "STK_01-D",
-                title: "Shivay Web",
-                desc: "First major web project built during 1st semester using HTML and CSS, presenting Lord Shiva stories, temples and locations.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/01.png"
-            },
-
-            {
-                sid: "STK_01-E",
-                title: "3D Gallery",
-                desc: "3D visualization web project using animations and Typed.js library to enhance interactive UI experience.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/14.png"
-            },
-
-            {
-                sid: "STK_01-F",
-                title: "Animated Gaming Web",
-                desc: "Animated product-style web interface built using HTML, CSS and JavaScript.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/15.png"
-            },
-
-            {
-                sid: "STK_01-G",
-                title: "E-Commerce Photography UI",
-                desc: "Product showcase website focusing on high-quality visual presentation for photography services.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/03.png"
-            },
-            {
-                sid: "STK_01-I",
-                title: "Building Structure (CSS Variables)",
-                desc: "Project built during freeCodeCamp certification demonstrating CSS variables and color-changing building structure.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/07.png"
-            },
-
-            {
-                sid: "STK_01-J",
-                title: "Netflix Interface Clone",
-                desc: "Practice project recreating Netflix-style UI using containers, navigation and footer layout concepts.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/08.png"
-            },
-
-            {
-                sid: "STK_01-K",
-                title: "HTML Quiz Form",
-                desc: "Quiz form project built using only HTML during freeCodeCamp certification.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/11.png"
-            },
-
-            {
-                sid: "STK_01-L",
-                title: "Container Roller Animation",
-                desc: "CSS-based animated roller project with dynamic color-changing effects.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/10.png"
-            },
-
-            {
-                sid: "STK_01-M",
-                title: "Basic HTML Page",
-                desc: "Foundational HTML page created during early certification practice.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/09.png"
-            },
-
-            {
-                sid: "STK_01-N",
-                title: "Survey Form",
-                desc: "Survey form page built using HTML and CSS during certification course.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/02.png"
-            },
-
-            {
-                sid: "STK_01-O",
-                title: "Piano UI",
-                desc: "Interactive piano structure created using HTML and CSS to understand layout and styling.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/04.png"
-            },
-
-            {
-                sid: "STK_01-P",
-                title: "Markers UI",
-                desc: "Marker design structure built using HTML and CSS to strengthen styling concepts.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/05.png"
-            },
-
-            {
-                sid: "STK_01-Q",
-                title: "Hackathon Chatbot UI",
-                desc: "Frontend chatbot interface built during SIH Hackathon for assisting GAIL workers.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/15.png"
-            },
-
-            {
-                sid: "STK_01-R",
-                title: "CSS CatFace Design",
-                desc: "Creative CatFace design built using pure HTML and CSS to understand advanced CSS positioning and styling.",
-                github: "https://github.com/prayag29-sahu",
-                live: null,
-                image: "/images/09_Projects/minor/01/06.png"
-            }
-
-        ]
-
+        stackName: "Full-Stack & Production",
+        shortName: "MERN · SQL · LIVE",
+        icon: <Server size={15} />,
+        color: "var(--accent)",
+        desc: "Production-grade business apps, e-commerce platforms, and hospitality systems deployed to live infrastructure.",
+        projects: mainProjects.filter(p => ["PRODUCTION", "E-COMMERCE", "FINTECH", "SECURITY"].includes(p.tag)),
     },
     {
         id: "STK_02",
-        stackName: "C++ / DSA",
-        shortName: "C++·DSA",
-        icon: <Terminal size={16} />,
-        color: "#00e5ff",
-        desc: "C, C Graphics, C++, Data structures, algorithms and competitive programming",
-        totalProjects: 12,
-        projects: [
-            { sid: "STK_02-A", title: "C++ Essential", desc: "Completed Certification Course Of C++ From Cisco.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/01_certificates/c/01.png" },
-            { sid: "STK_02-B", title: "Levelup C", desc: "Completed Certification Course Of C From Linkedin Learning.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/01_certificates/c/02.jpg" },
-            { sid: "STK_05-C", title: "Java Bank System", desc: "Desktop banking application using Java  — account management, fund transfers, transaction history, Loan and interest calculation.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" },
-            { sid: "STK_05-D", title: "Library Management System", desc: "OOP-based library system with book issuance, return tracking, member management and overdue fine calculation.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" },
-            { sid: "STK_02-E", title: "Real time clock", desc: "C++ Project Show Real World Indian Timing in Hr/min/sec.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/03c.png" },
-            { sid: "STK_02-F", title: "Progress Bar", desc: "A progress bar built using C programming with dynamic updates.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/05c.png" },
-            { sid: "STK_02-G", title: "Sudoku Solver", desc: "C++ Project Game Solve Sudoku Problem", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/08c.png" },
-            { sid: "STK_02-H", title: "Tic Tac Toe", desc: "Tic Tac Toe Game Create using c++ Implementing Arrays Form For 2 Players and with Computer", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/09c.png" },
-            { sid: "STK_02-I", title: "Running bus", desc: "C++ Graphics Use For Creating Running Graphics Drawing", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/02cg.png" },
-            { sid: "STK_02-J", title: "Rainbow", desc: "C++ Graphics Coloring Representation By Rainbow Creation.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/06cg.png" },
-            { sid: "STK_02-K", title: "Rain Walk", desc: "C++ Graphics For Design A Man Walking On Road In Rain", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/07cg.png" },
-            { sid: "STK_02-L", title: "Lord Buddha Sketch", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/14_OtherActivity/06.jpg" },
-            { sid: "STK_02-M", title: "Sir Ramanujan Sketch", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/14_OtherActivity/07.jpg" },
-            { sid: "STK_02-N", title: "Consentric Circle", desc: "C++ Graphics Desing For Creating Sketchs", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/02/10cg.jpg" },
-        ],
+        stackName: "AI & Automation",
+        shortName: "PYTHON · ML · NLP",
+        icon: <Terminal size={15} />,
+        color: "var(--accent-amber)",
+        desc: "Intelligent assistants, AI-driven verification systems, and NLP-powered tools across hackathons and college projects.",
+        projects: mainProjects.filter(p => ["AI / ML", "AUTOMATION", "HACKATHON", "NLP"].includes(p.tag)),
     },
     {
         id: "STK_03",
-        stackName: "React / Next.js",
-        shortName: "React·Next",
-        icon: <Code2 size={16} />,
-        color: "#39d353",
-        desc: "Modern frontend applications built with React and Next.js ecosystem",
-        totalProjects: 4,
-        projects: [
-            { sid: "STK_03-A", title: "3D Developer Portfolio", desc: "Visually immersive 3D portfolio with Reactjs, Tailwind, Emailjs sections and contact form.", github: "https://github.com/prayag29-sahu", live: "http://prayagsahuportfolio.netlify.app", image: "/images/09_Projects/01.png" },
-            { sid: "STK_03-B", title: "Ghotul Homestay Frontend", desc: "React frontend for the homestay platform with room browsing, availability calendar, booking flow and real-time notifications.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/03.png" },
-            { sid: "STK_03-C", title: "Authentication System", desc: "Complete React auth system with email OTP verification, JWT tokens, forgot password flow, and protected route management.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/02.png" },
-            { sid: "STK_03-D", title: "Online Language Helper", desc: "An interactive learning platform with different language support to help users translate each topic and word easily for learning and communication.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/04.png" },
-        ],
+        stackName: "Frontend & UI",
+        shortName: "REACT · HTML · CSS",
+        icon: <Code2 size={15} />,
+        color: "var(--accent-blue)",
+        desc: "Visually polished portfolios, animated shopping experiences, and interactive web UIs crafted with modern CSS.",
+        projects: mainProjects.filter(p => ["PORTFOLIO", "FRONTEND", "LEGACY"].includes(p.tag)),
     },
     {
         id: "STK_04",
-        stackName: "UI / Design",
-        shortName: "UI·Design",
-        icon: <Layers size={16} />,
-        color: "#a855f7",
-        desc: "UI design concepts, Figma prototypes and design system work",
-        totalProjects: 3,
-        projects: [
-            { sid: "STK_04-A", title: "Hotel Booking", desc: "Complete hotel booking UI/UX design with responsive layout and interactive elements, landing page, Room Page, Contact pages.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/01.png" },
-            { sid: "STK_04-B", title: "Cloths E-commerce", desc: "UI/UX design for a clothing e-commerce platform with product browsing, cart management and checkout flow.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/02.png" },
-            { sid: "STK_04-C", title: "Gaming Website", desc: "Collection of UI components — buttons, cards, modals, navbars — each with dark/light variants and hover states.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/03.png" },
-            { sid: "STK_04-D", title: "Parallex UI", desc: "A modern Simple and interactive web design actual looks paraller movement animations ", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/04.png" },
-            { sid: "STK_04-E", title: "Product Based", desc: "UI design for a product-based company website with landing page ith products, product showcase and representation.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/05.png" },
-            { sid: "STK_04-F", title: "Plants Selling", desc: "A Plant selling plateform to presentive and interactive reusable UI.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/03/06.png" },
-        ],
-    },
-    {
-        id: "STK_05",
-        stackName: "Java",
-        shortName: "Java",
-        icon: <Terminal size={16} />,
-        color: "#f59e0b",
-        desc: "Core Java applications, OOP projects and backend systems",
-        totalProjects: 3,
-        projects: [
-            { sid: "STK_05-A", title: "Java Bank System", desc: "Desktop banking application using Java  — account management, fund transfers, transaction history, Loan and interest calculation.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" },
-            { sid: "STK_05-B", title: "Library Management System", desc: "OOP-based library system with book issuance, return tracking, member management and overdue fine calculation.", github: "https://github.com/prayag29-sahu", live: null, image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" },
-        ],
-    },
-    {
-        id: "STK_06",
-        stackName: "Python",
-        shortName: "Python",
-        icon: <Code2 size={16} />,
-        color: "#39d353",
-        desc: "Python scripts, automation tools, ML experiments and API projects",
-        totalProjects: 4,
-        projects: [
-            { sid: "STK_06-A", title: "Voice Assistant", desc: "Voice-controlled assistant performing web search, app opening, weather updates, music playback and system commands via speech recognition.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/06.png" },
-            { sid: "STK_06-B", title: "Security Fraud Detector", desc: "Python API-powered URL/link/document fraud detection system with image analysis, phishing detection and threat scoring.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/05.png" },
-            { sid: "STK_06-C", title: "Mini Chatbot", desc: "Simple rule-based chatbot for students built with Python and Conda — handles academic queries, schedules and FAQs.", github: "https://github.com/prayag29-sahu", live: null, image: "/images/09_Projects/minor/01.png" },
-            
-        ],
+        stackName: "Open Source & Tools",
+        shortName: "CLI · TOOLS · CONTRIB",
+        icon: <FolderOpen size={15} />,
+        color: "var(--accent-purple)",
+        desc: "Open-source contributions, developer tooling, and specialized platform integrations for the community.",
+        projects: mainProjects.filter(p => ["OPEN-SOURCE", "HEALTH-TECH"].includes(p.tag)),
     },
 ];
 
-/* ─── Stack Gallery Popup ────────────────────────────────── */
-function StackGalleryPopup({ stack, onClose }) {
-    const [lightbox, setLightbox] = useState(null);
-    if (!stack) return null;
-    const ac = stack.color;
-
+/* Project Details (Full View) */
+/* I created this popup to show more details about how I built each project and what I learned. */
+function ProjectPopup({ project, onClose }) {
+    if (!project) return null;
+    const ac = project.accentColor;
     return (
-        <div className="fixed inset-0 z-[60] mt-10 bg-[#010409]/97 backdrop-blur-xl flex items-center justify-center p-4"
-            style={{ fontFamily: "'Courier New', Courier, monospace" }} onClick={onClose}>
-            <div className="relative bg-[#0d1117] border w-full max-w-5xl h-[88vh] flex flex-col overflow-hidden"
-                style={{ borderColor: ac }} onClick={e => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4"
+            style={{ background: "rgba(1,4,9,0.92)", backdropFilter: "blur(12px)" }}
+            onClick={onClose}>
+            <div className="relative border w-full max-w-2xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col"
+                style={{ borderColor: ac, borderTopWidth: 3, borderTopColor: ac, background: "var(--surface)" }}
+                onClick={e => e.stopPropagation()}>
                 <ScanlineOverlay />
                 <CornerAccent color={ac} />
 
                 {/* Header */}
-                <div className="flex items-center justify-between px-6 py-4 border-b border-[#1a2332] relative z-10"
-                    style={{ borderTopWidth: 3, borderTopColor: ac, borderTopStyle: "solid" }}>
+                <div className="flex items-center justify-between px-6 py-4 border-b relative z-10 shrink-0"
+                    style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
                     <div>
-                        <div className="flex items-center gap-3 mb-1">
+                        <div className="flex items-center gap-2 mb-1.5">
                             <div className="flex gap-1.5">
                                 <span className="w-2 h-2 rounded-full bg-[#ff5f56]" />
                                 <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
                                 <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
                             </div>
-                            <span className="font-mono text-[9px] tracking-[0.2em] text-[#8b949e] uppercase">{stack.id}_GALLERY.log</span>
+                            <span className="font-mono text-[9px] tracking-[0.2em] font-bold" style={{ color: "var(--text-muted)" }}>{project.id}_DETAILS.log</span>
                         </div>
-                        <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 border flex items-center justify-center shrink-0" style={{ borderColor: ac, color: ac }}>{stack.icon}</div>
-                            <div>
-                                <h3 className="font-mono font-black text-xl text-white">{stack.stackName}</h3>
-                                <p className="font-mono text-[10px] tracking-widest mt-0.5" style={{ color: ac }}>{stack.desc}</p>
-                            </div>
-                        </div>
+                        <h3 className="font-mono font-black text-xl tracking-tight" style={{ color: "var(--text-primary)" }}>{project.title}</h3>
+                        <p className="font-mono text-[10px] tracking-widest mt-1 font-bold" style={{ color: ac }}>{project.subtitle}</p>
                     </div>
-                    <div className="flex items-center gap-3">
-                        <div className="border border-[#1a2332] bg-[#010409] px-3 py-1.5 text-center">
-                            <div className="font-mono text-[7px] tracking-[0.2em]" style={{ color: ac }}>PROJECTS</div>
-                            <div className="font-mono font-black text-lg text-white">{stack.projects.length}</div>
-                        </div>
-                        <button onClick={onClose}
-                            className="border border-[#1a2332] p-1.5 text-[#8b949e] hover:border-[#ff5f56] hover:text-[#ff5f56] transition-colors">
-                            <X size={16} />
-                        </button>
-                    </div>
+                    <button onClick={onClose}
+                        className="border p-2 transition-colors ml-4 shrink-0"
+                        style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+                        onMouseEnter={e => { e.currentTarget.style.borderColor = "#ff5f56"; e.currentTarget.style.color = "#ff5f56"; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}>
+                        <X size={16} />
+                    </button>
                 </div>
 
-                {/* Projects grid */}
-                <div className="flex-1 overflow-y-auto p-6 gallery-scroll relative z-10">
-                    <div className="font-mono text-[9px] tracking-[0.2em] mb-4" style={{ color: ac }}>
-                        $ ls ./{stack.id.toLowerCase()}/ — {stack.projects.length} projects loaded
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {stack.projects.map((proj, i) => (
-                            <div key={proj.sid}
-                                className="border border-[#1a2332] bg-[#010409] relative overflow-hidden group/pcard cursor-pointer hover:border-[#39d353] transition-all duration-200"
-                                onClick={() => setLightbox(i)}>
-                                <CornerAccent color="#1a2332" />
-
-                                {/* Image */}
-                                <div className="relative h-44 overflow-hidden">
-                                    <img src={proj.image} alt={proj.title}
-                                        className="w-full h-full object-cover group-hover/pcard:scale-105 transition-transform duration-400"
-                                        style={{ filter: "brightness(0.85)" }} />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#010409] via-transparent to-transparent" />
-                                    <div className="absolute top-2 left-2 font-mono text-[7px] border border-[#1a2332] bg-[#010409]/90 px-1.5 py-0.5 text-[#30363d]">{proj.sid}</div>
-                                    <div className="absolute top-2 right-2 font-mono text-[8px] text-[#8b949e] opacity-0 group-hover/pcard:opacity-100 transition-opacity border border-[#1a2332] bg-[#010409]/90 px-2 py-0.5">
-                                        CLICK TO ZOOM →
-                                    </div>
-                                </div>
-
-                                {/* Content */}
-                                <div className="p-4">
-                                    <h4 className="font-mono font-black text-[13px] text-white mb-1">{proj.title}</h4>
-                                    <p className="font-mono text-[11px] text-[#8b949e] leading-relaxed mb-3">{proj.desc}</p>
-                                    <div className="flex gap-2">
-                                        <a href={proj.github} target="_blank" rel="noopener noreferrer"
-                                            onClick={e => e.stopPropagation()}
-                                            className="flex items-center gap-1.5 border border-[#1a2332] font-mono text-[9px] tracking-widest uppercase px-3 py-1.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200">
-                                            <Github size={10} /> CODE
-                                        </a>
-                                        {proj.live && (
-                                            <a href={proj.live} target="_blank" rel="noopener noreferrer"
-                                                onClick={e => e.stopPropagation()}
-                                                className="flex items-center gap-1.5 border font-mono text-[9px] tracking-widest uppercase px-3 py-1.5 transition-all duration-200"
-                                                style={{ borderColor: ac, color: ac }}>
-                                                <ExternalLink size={10} /> LIVE
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* Lightbox */}
-            {lightbox !== null && (
-                <div className="fixed inset-0 z-[70] bg-[#010409]/99 flex items-center justify-center"
-                    onClick={() => setLightbox(null)}>
-                    <div className="relative max-w-4xl w-[90%]" onClick={e => e.stopPropagation()}>
-                        <button onClick={() => setLightbox(null)}
-                            className="absolute -top-9 right-0 font-mono text-[10px] text-[#8b949e] hover:text-[#39d353] tracking-widest">
-                            [ESC] CLOSE
-                        </button>
-                        <button onClick={() => setLightbox(p => (p - 1 + stack.projects.length) % stack.projects.length)}
-                            className="absolute left-[-48px] top-1/2 -translate-y-1/2 border border-[#1a2332] p-2 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-colors">
-                            <ChevronLeft size={18} />
-                        </button>
-                        <button onClick={() => setLightbox(p => (p + 1) % stack.projects.length)}
-                            className="absolute right-[-48px] top-1/2 -translate-y-1/2 border border-[#1a2332] p-2 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-colors">
-                            <ChevronRight size={18} />
-                        </button>
-                        <div className="border p-2 bg-[#0d1117]" style={{ borderColor: ac }}>
-                            <img src={stack.projects[lightbox].image} alt={stack.projects[lightbox].title}
-                                className="w-full max-h-[70vh] object-contain" />
-                        </div>
-                        <div className="mt-2 px-1">
-                            <p className="font-mono font-bold text-[13px] text-white">{stack.projects[lightbox].title}</p>
-                            <p className="font-mono text-[11px] text-[#8b949e] mt-1">{stack.projects[lightbox].desc}</p>
-                            <div className="flex items-center justify-between mt-2">
-                                <span className="font-mono text-[9px] text-[#30363d]">{stack.projects[lightbox].sid}</span>
-                                <span className="font-mono text-[10px] text-[#30363d]">{lightbox + 1} / {stack.projects.length}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
-
-            <style jsx>{`
-        .gallery-scroll::-webkit-scrollbar { width: 4px; }
-        .gallery-scroll::-webkit-scrollbar-track { background: #010409; }
-        .gallery-scroll::-webkit-scrollbar-thumb { background: #39d353; border-radius: 2px; }
-        .gallery-scroll { scrollbar-width: thin; scrollbar-color: #39d353 #010409; }
-      `}</style>
-        </div>
-    );
-}
-
-/* ─── Major Project Popup ────────────────────────────────── */
-function ProjectPopup({ project, onClose }) {
-    if (!project) return null;
-    const ac = project.accentColor;
-    return (
-        <div className="fixed inset-0 z-[60] bg-[#010409]/95 backdrop-blur-xl flex items-center justify-center p-4"
-            onClick={onClose} style={{ fontFamily: "'Courier New', Courier, monospace" }}>
-            <div className="relative bg-[#0d1117] border w-full max-w-3xl overflow-hidden"
-                style={{ borderColor: ac }} onClick={e => e.stopPropagation()}>
-                <ScanlineOverlay />
-                <CornerAccent color={ac} />
-                <div className="flex items-center justify-between px-6 py-4 border-b border-[#1a2332]"
-                    style={{ borderTopWidth: 3, borderTopColor: ac, borderTopStyle: "solid" }}>
-                    <div>
-                        <div className="flex items-center gap-2 mb-1">
-                            <div className="flex gap-1.5"><span className="w-2 h-2 rounded-full bg-[#ff5f56]" /><span className="w-2 h-2 rounded-full bg-[#ffbd2e]" /><span className="w-2 h-2 rounded-full bg-[#27c93f]" /></div>
-                            <span className="font-mono text-[9px] tracking-[0.2em] text-[#8b949e]">{project.id}_DETAILS.log</span>
-                        </div>
-                        <h3 className="font-mono font-black text-xl text-white">{project.title}</h3>
-                        <p className="font-mono text-[10px] tracking-widest mt-0.5" style={{ color: ac }}>{project.subtitle}</p>
-                    </div>
-                    <button onClick={onClose} className="border border-[#1a2332] p-1.5 text-[#8b949e] hover:border-[#ff5f56] hover:text-[#ff5f56] transition-colors"><X size={16} /></button>
-                </div>
-                <div className="relative h-52 overflow-hidden">
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden shrink-0">
                     <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-transparent to-transparent" />
-                    <div className="absolute top-3 right-3 font-mono text-[8px] border px-2 py-1 bg-[#010409]/80 tracking-widest"
-                        style={{ borderColor: ac, color: ac }}>{project.tag}</div>
+                    <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface) 0%, transparent 60%)" }} />
+                    <div className="absolute top-3 right-3 font-mono text-[8px] border px-2 py-1 font-bold tracking-widest"
+                        style={{ borderColor: ac, color: ac, background: "rgba(1,4,9,0.8)" }}>{project.tag}</div>
                 </div>
-                <div className="p-6 space-y-4 relative z-10">
-                    <div className="border border-[#1a2332] bg-[#010409] p-4 relative">
-                        <CornerAccent color="#1a2332" />
-                        <div className="font-mono text-[8px] text-[#39d353] tracking-[0.2em] mb-2">PROJECT_DESCRIPTION.txt</div>
-                        <p className="font-mono text-[12px] text-[#8b949e] leading-relaxed">{project.description}</p>
+
+                {/* Content */}
+                <div className="p-6 space-y-4 relative z-10 overflow-y-auto custom-scroll">
+                    <div className="border p-4 relative" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                        <CornerAccent color="var(--border-dim)" />
+                        <div className="font-mono text-[8px] tracking-[0.2em] mb-2 font-bold" style={{ color: ac }}>PROJECT_DESCRIPTION.txt</div>
+                        <p className="font-mono text-[12px] leading-relaxed" style={{ color: "var(--text-muted)" }}>{project.description}</p>
                     </div>
                     <div>
-                        <div className="font-mono text-[8px] text-[#8b949e] tracking-widest mb-2">TECH_STACK</div>
+                        <div className="font-mono text-[8px] tracking-widest mb-2.5 font-bold" style={{ color: "var(--text-muted)" }}>TECH_STACK</div>
                         <div className="flex flex-wrap gap-2">
-                            {project.stack.map(s => (<span key={s} className="font-mono text-[9px] px-2 py-1 border" style={{ color: ac, borderColor: ac }}>{s}</span>))}
+                            {project.stack.map(s => (
+                                <span key={s} className="font-mono text-[9px] px-2.5 py-1 border font-bold"
+                                    style={{ color: ac, borderColor: ac, background: "var(--bg-subtle)" }}>{s}</span>
+                            ))}
                         </div>
                     </div>
                     <div className="flex items-center gap-3 pt-2">
                         <a href={project.github} target="_blank" rel="noopener noreferrer"
-                            className="flex items-center gap-2 border font-mono text-[10px] tracking-widest uppercase px-4 py-2.5 transition-all duration-200"
-                            style={{ borderColor: "#39d353", color: "#39d353" }}
-                            onMouseEnter={e => { e.currentTarget.style.background = "#39d353"; e.currentTarget.style.color = "#010409"; }}
-                            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#39d353"; }}>
-                            <Github size={13} /> VIEW_CODE →
+                            className="flex items-center gap-2 border font-mono text-[9px] tracking-widest uppercase px-4 py-2.5 transition-all duration-200 font-bold"
+                            style={{ borderColor: "var(--accent)", color: "var(--accent)" }}
+                            onMouseEnter={e => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "var(--bg)"; }}
+                            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--accent)"; }}>
+                            <Github size={12} /> VIEW_CODE →
                         </a>
                         {project.live && (
                             <a href={project.live} target="_blank" rel="noopener noreferrer"
-                                className="flex items-center gap-2 border font-mono text-[10px] tracking-widest uppercase px-4 py-2.5 transition-all duration-200"
+                                className="flex items-center gap-2 border font-mono text-[9px] tracking-widest uppercase px-4 py-2.5 transition-all duration-200 font-bold"
                                 style={{ borderColor: ac, color: ac }}
-                                onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "#010409"; }}
+                                onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "var(--bg)"; }}
                                 onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ac; }}>
-                                <ExternalLink size={13} /> LIVE_DEMO →
+                                <ExternalLink size={12} /> LIVE_DEMO →
                             </a>
                         )}
                     </div>
@@ -1620,289 +403,372 @@ function ProjectPopup({ project, onClose }) {
     );
 }
 
-/* ─── Major Card ─────────────────────────────────────────── */
-function MajorCard({ project, onExplore }) {
-    const videoRef = useRef(null);
-    const [hovered, setHovered] = useState(false);
+/* Small Project Card */
+function ProjectCard({ project, onExplore }) {
     const ac = project.accentColor;
-
     return (
-        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-[0_0_30px_rgba(57,211,83,0.1)]"
-            style={{ borderLeftWidth: 2, borderLeftColor: ac }}
-            onMouseEnter={() => { setHovered(true); if (videoRef.current) { videoRef.current.currentTime = 0; videoRef.current.play().catch(() => { }); } }}
-            onMouseLeave={() => { setHovered(false); if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; } }}>
+        <div className="border relative overflow-hidden cursor-pointer transition-all duration-300 flex flex-col h-full group"
+            style={{ borderColor: "var(--border)", background: "var(--surface)", borderLeftWidth: 2, borderLeftColor: ac }}
+            onClick={() => onExplore(project)}>
             <ScanlineOverlay />
             <CornerAccent color={ac} />
-            <div className="flex items-center justify-between px-3 py-2 border-b border-[#1a2332] relative z-10">
-                <span className="font-mono text-[8px] text-[#8b949e] tracking-[0.15em]">{project.id}.exe</span>
-                <span className="font-mono text-[7px] border px-1.5 py-0.5 tracking-widest" style={{ color: ac, borderColor: ac }}>{project.tag}</span>
+
+            {/* Top bar */}
+            <div className="flex items-center justify-between px-3 py-2 border-b relative z-10 shrink-0"
+                style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                <span className="font-mono text-[8px] tracking-[0.15em]" style={{ color: "var(--text-dim)" }}>{project.id}.exe</span>
+                <span className="font-mono text-[7px] border px-1.5 py-0.5 tracking-widest font-bold"
+                    style={{ color: ac, borderColor: ac }}>{project.tag}</span>
             </div>
-            <div className="relative h-36 overflow-hidden">
-                <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500" style={{ opacity: hovered ? 0 : 1 }} />
-                <video ref={videoRef} src={project.video} muted loop playsInline className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500" style={{ opacity: hovered ? 1 : 0 }} />
-                <div className="absolute inset-0 flex flex-col justify-end p-3 transition-all duration-300" style={{ background: hovered ? "linear-gradient(to top, #0d1117ee 0%, transparent 100%)" : "transparent" }}>
-                    {hovered && <p className="font-mono text-[9px] text-[#8b949e] leading-relaxed line-clamp-2">{project.description}</p>}
-                </div>
-                {hovered && (<div className="absolute top-2 right-2 w-6 h-6 border flex items-center justify-center" style={{ borderColor: ac }}><Play size={10} style={{ color: ac }} /></div>)}
+
+            {/* Image */}
+            <div className="relative h-40 overflow-hidden shrink-0">
+                <img src={project.image} alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    style={{ filter: "brightness(0.82)" }} />
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface) 0%, transparent 55%)" }} />
             </div>
-            <div className="p-3 relative z-10">
-                <h4 className="font-mono font-bold text-[11px] text-white mb-0.5 leading-tight">{project.title}</h4>
-                <p className="font-mono text-[8px] mb-2" style={{ color: ac }}>{project.subtitle}</p>
+
+            {/* Content */}
+            <div className="p-4 relative z-10 flex flex-col flex-1">
+                <h4 className="font-mono font-black text-[13px] mb-1 leading-tight" style={{ color: "var(--text-primary)" }}>{project.title}</h4>
+                <p className="font-mono text-[9px] mb-2.5 font-bold tracking-wide" style={{ color: ac }}>{project.subtitle}</p>
+                <p className="font-mono text-[10px] leading-relaxed mb-3 flex-1 line-clamp-2" style={{ color: "var(--text-muted)" }}>{project.description}</p>
                 <div className="flex flex-wrap gap-1 mb-3">
-                    {project.stack.slice(0, 2).map(s => (<span key={s} className="font-mono text-[7px] px-1.5 py-0.5 border border-[#1a2332] text-[#8b949e]">{s}</span>))}
+                    {project.stack.slice(0, 3).map(s => (
+                        <span key={s} className="font-mono text-[7px] px-1.5 py-0.5 border"
+                            style={{ color: "var(--text-muted)", borderColor: "var(--border)" }}>{s}</span>
+                    ))}
                 </div>
-                <button onClick={() => onExplore(project)} className="w-full font-mono text-[8px] tracking-[0.15em] uppercase py-1.5 border transition-all duration-200" style={{ borderColor: ac, color: ac }}
-                    onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "#010409"; }}
-                    onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ac; }}>
-                    $ EXPLORE →
-                </button>
-            </div>
-        </div>
-    );
-}
-
-/* ─── Big Slider ─────────────────────────────────────────── */
-function BigSlider({ projects, onExplore }) {
-    const [idx, setIdx] = useState(0);
-    const videoRef = useRef(null);
-    const [hovered, setHovered] = useState(false);
-    const cur = projects[idx];
-    const ac = cur.accentColor;
-
-    return (
-        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden" style={{ borderTopWidth: 3, borderTopColor: ac, borderTopStyle: "solid" }}>
-            <ScanlineOverlay />
-            <CornerAccent color={ac} />
-            <WindowChrome filename={`${cur.id}_PREVIEW.exe`} status="RUNNING" statusColor={ac} />
-            <div className="relative h-[350px] overflow-hidden group"
-                onMouseEnter={() => { setHovered(true); if (videoRef.current) { videoRef.current.currentTime = 0; videoRef.current.play().catch(() => { }); } }}
-                onMouseLeave={() => { setHovered(false); if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; } }}>
-                <img src={cur.image} alt={cur.title} className="absolute inset-0 w-full h-full object-cover transition-all duration-700" style={{ opacity: hovered ? 0 : 1, transform: hovered ? "scale(1.05)" : "scale(1)" }} />
-                <video ref={videoRef} src={cur.video} muted loop playsInline className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500" style={{ opacity: hovered ? 1 : 0 }} />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d111740] to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 transition-all duration-400" style={{ transform: hovered ? "translateY(0)" : "translateY(20px)", opacity: hovered ? 1 : 0 }}>
-                    <p className="font-mono text-[11px] text-[#8b949e] leading-relaxed mb-3">{cur.description}</p>
-                    <div className="flex flex-wrap gap-1.5">{cur.stack.map(s => (<span key={s} className="font-mono text-[9px] px-2 py-0.5 border" style={{ color: ac, borderColor: ac }}>{s}</span>))}</div>
-                </div>
-                <div className="absolute top-3 left-3 font-mono text-[8px] border px-2 py-1 bg-[#010409]/80" style={{ borderColor: ac, color: ac }}>{cur.tag}</div>
-                {hovered && (<div className="absolute top-3 right-3 flex items-center gap-1.5 border px-2 py-1 bg-[#010409]/80 font-mono text-[8px]" style={{ borderColor: ac, color: ac }}><Play size={9} /> LIVE_PREVIEW</div>)}
-            </div>
-            <div className="p-5 border-t border-[#1a2332] relative z-10">
-                <div className="flex items-start justify-between mb-3">
-                    <div>
-                        <h3 className="font-mono font-black text-lg text-white">{cur.title}</h3>
-                        <p className="font-mono text-[10px] tracking-widest mt-0.5" style={{ color: ac }}>{cur.subtitle}</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        {projects.map((_, i) => (<div key={i} onClick={() => setIdx(i)} className="w-1.5 h-1.5 rounded-full cursor-pointer transition-all duration-200" style={{ background: i === idx ? ac : "#30363d", transform: i === idx ? "scale(1.4)" : "scale(1)" }} />))}
-                    </div>
-                </div>
-                <p className="font-mono text-[11px] text-[#8b949e] leading-relaxed mb-4">{cur.description}</p>
                 <div className="flex items-center gap-2">
-                    <button onClick={() => onExplore(cur)} className="flex-1 flex items-center justify-center gap-2 border font-mono text-[10px] tracking-widest uppercase py-2.5 transition-all duration-200" style={{ borderColor: ac, color: ac }}
-                        onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "#010409"; }}
+                    <button className="flex-1 font-mono text-[8px] tracking-widest uppercase py-2 border transition-all duration-200 font-bold"
+                        style={{ borderColor: ac, color: ac }}
+                        onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "var(--bg)"; }}
                         onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ac; }}>
-                        $ EXPLORE_NOW →
+                        $ EXPLORE →
                     </button>
-                    <a href={cur.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 border border-[#1a2332] font-mono text-[9px] tracking-widest px-3 py-2.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-all duration-200"><Github size={12} /> CODE</a>
-                    {cur.live && (<a href={cur.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 border border-[#1a2332] font-mono text-[9px] tracking-widest px-3 py-2.5 text-[#8b949e] hover:border-[#00e5ff] hover:text-[#00e5ff] transition-all duration-200"><ExternalLink size={12} /> LIVE</a>)}
-                    <button onClick={() => setIdx(p => p === 0 ? projects.length - 1 : p - 1)} className="border border-[#1a2332] p-2.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-colors"><ChevronLeft size={14} /></button>
-                    <button onClick={() => setIdx(p => (p + 1) % projects.length)} className="border border-[#1a2332] p-2.5 text-[#8b949e] hover:border-[#39d353] hover:text-[#39d353] transition-colors"><ChevronRight size={14} /></button>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer"
+                        onClick={e => e.stopPropagation()}
+                        className="border p-2 transition-colors"
+                        style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+                        onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}>
+                        <Github size={12} />
+                    </a>
+                    {project.live && (
+                        <a href={project.live} target="_blank" rel="noopener noreferrer"
+                            onClick={e => e.stopPropagation()}
+                            className="border p-2 transition-colors"
+                            style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+                            onMouseEnter={e => { e.currentTarget.style.borderColor = ac; e.currentTarget.style.color = ac; }}
+                            onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}>
+                            <ExternalLink size={12} />
+                        </a>
+                    )}
                 </div>
             </div>
         </div>
     );
 }
 
-/* ─── Stack Category Card ────────────────────────────────── */
-function StackCard({ stack, onExplore, delay = 0 }) {
+/* Folder card for technology groups */
+function StackCard({ stack, onExplore }) {
     const [hovered, setHovered] = useState(false);
     const ac = stack.color;
-
     return (
-        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden cursor-pointer transition-all duration-300"
-            style={{ borderLeftWidth: 2, borderLeftColor: hovered ? ac : "#1a2332", animationDelay: `${delay}ms` }}
-            onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+        <div className="border relative overflow-hidden cursor-pointer transition-all duration-300"
+            style={{ borderColor: hovered ? ac : "var(--border)", background: "var(--surface)", borderLeftWidth: 2, borderLeftColor: hovered ? ac : "var(--border)" }}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onClick={() => onExplore(stack)}>
             <ScanlineOverlay />
             {hovered && <CornerAccent color={ac} />}
 
-            {/* Sub-project preview thumbnails strip */}
-            <div className="relative h-28 overflow-hidden bg-[#010409]">
+            {/* Preview thumbnails */}
+            <div className="relative h-24 overflow-hidden" style={{ background: "var(--bg)" }}>
                 <div className="absolute inset-0 grid grid-cols-2 gap-0.5 p-0.5">
                     {stack.projects.slice(0, 4).map((proj, i) => (
-                        <div key={proj.sid} className="overflow-hidden relative">
+                        <div key={i} className="overflow-hidden">
                             <img src={proj.image} alt={proj.title}
                                 className="w-full h-full object-cover transition-all duration-500"
-                                style={{ filter: hovered ? "brightness(0.55)" : "brightness(0.2) grayscale(40%)", transform: hovered ? "scale(1.06)" : "scale(1)" }} />
+                                style={{ filter: hovered ? "brightness(0.5)" : "brightness(0.18) grayscale(50%)", transform: hovered ? "scale(1.05)" : "scale(1)" }} />
                         </div>
                     ))}
                 </div>
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d111750] to-transparent" />
-
-                {/* Count badge */}
-                <div className="absolute top-2 right-2 font-mono text-[8px] border bg-[#010409]/90 px-2 py-0.5 z-10"
-                    style={{ borderColor: ac, color: ac }}>
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface) 0%, transparent 60%)" }} />
+                <div className="absolute top-1.5 right-1.5 font-mono text-[7px] border px-1.5 py-0.5 font-bold z-10"
+                    style={{ borderColor: ac, color: ac, background: "rgba(1,4,9,0.9)" }}>
                     {stack.projects.length} PROJECTS
                 </div>
-
-                {/* Scan line on hover */}
-                {hovered && (
-                    <div className="absolute left-0 right-0 h-[1px] pointer-events-none z-10 animate-scan-h"
-                        style={{ background: ac, boxShadow: `0 0 8px ${ac}` }} />
-                )}
             </div>
 
             {/* Content */}
             <div className="p-4 relative z-10">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2.5 mb-3">
                     <div className="w-7 h-7 border flex items-center justify-center shrink-0 transition-all duration-200"
-                        style={{ borderColor: hovered ? ac : "#1a2332", color: hovered ? ac : "#30363d" }}>
+                        style={{ borderColor: hovered ? ac : "var(--border)", color: hovered ? ac : "var(--text-dim)" }}>
                         {stack.icon}
                     </div>
                     <div>
-                        <h4 className="font-mono font-black text-[13px] text-white leading-tight">{stack.stackName}</h4>
-                        <div className="font-mono text-[8px] tracking-widest" style={{ color: ac }}>{stack.shortName}</div>
+                        <h4 className="font-mono font-black text-[12px] leading-tight" style={{ color: "var(--text-primary)" }}>{stack.stackName}</h4>
+                        <div className="font-mono text-[8px] tracking-widest font-bold mt-0.5" style={{ color: ac }}>{stack.shortName}</div>
                     </div>
                 </div>
-                <p className="font-mono text-[10px] text-[#8b949e] leading-relaxed mb-3">{stack.desc}</p>
-
-                {/* Sub-project titles preview */}
+                <p className="font-mono text-[10px] leading-relaxed mb-3" style={{ color: "var(--text-muted)" }}>{stack.desc}</p>
                 <div className="space-y-1 mb-3">
                     {stack.projects.slice(0, 2).map(p => (
-                        <div key={p.sid} className="flex items-center gap-1.5">
-                            <span className="font-mono text-[9px]" style={{ color: ac }}>▸</span>
-                            <span className="font-mono text-[9px] text-[#8b949e] truncate">{p.title}</span>
+                        <div key={p.id} className="flex items-center gap-1.5">
+                            <span className="font-mono text-[8px] font-bold" style={{ color: ac }}>▸</span>
+                            <span className="font-mono text-[9px] truncate" style={{ color: "var(--text-muted)" }}>{p.title}</span>
                         </div>
                     ))}
                     {stack.projects.length > 2 && (
-                        <div className="font-mono text-[9px] text-[#30363d]">+ {stack.projects.length - 2} more...</div>
+                        <div className="font-mono text-[9px]" style={{ color: "var(--text-dim)" }}>+ {stack.projects.length - 2} more projects...</div>
                     )}
                 </div>
-
-                <button onClick={() => onExplore(stack)}
-                    className="w-full flex items-center justify-center gap-2 border font-mono text-[9px] tracking-[0.18em] uppercase py-2 transition-all duration-200"
+                <button className="w-full flex items-center justify-center gap-2 border font-mono text-[8px] tracking-[0.15em] uppercase py-2 transition-all duration-200 font-bold"
                     style={{ borderColor: ac, color: ac }}
-                    onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "#010409"; }}
+                    onMouseEnter={e => { e.currentTarget.style.background = ac; e.currentTarget.style.color = "var(--bg)"; }}
                     onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = ac; }}>
-                    <FolderOpen size={11} /> $ EXPLORE_STACK →
+                    <FolderOpen size={10} /> $ LS_DIR →
                 </button>
             </div>
-
-            <div className="h-[1px] w-0 group-hover:w-full transition-all duration-500" style={{ background: `linear-gradient(to right, ${ac}, transparent)` }} />
         </div>
     );
 }
 
-/* ─── Cursor Glow ────────────────────────────────────────── */
-function CursorGlow() {
-    const [pos, setPos] = useState({ x: 0, y: 0 });
-    useEffect(() => {
-        const h = e => setPos({ x: e.clientX, y: e.clientY });
-        window.addEventListener("mousemove", h);
-        return () => window.removeEventListener("mousemove", h);
-    }, []);
+/* A list of all projects in this group */
+function StackGalleryPopup({ stack, onClose, onProjectExplore }) {
+    if (!stack) return null;
+    const ac = stack.color;
     return (
-        <div className="pointer-events-none fixed z-0" style={{
-            left: pos.x - 200, top: pos.y - 200, width: 400, height: 400,
-            background: "radial-gradient(circle, rgba(57,211,83,0.04) 0%, transparent 70%)",
-            borderRadius: "50%", transition: "left 0.1s, top 0.1s",
-        }} />
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4"
+            style={{ background: "rgba(1,4,9,0.94)", backdropFilter: "blur(14px)" }}
+            onClick={onClose}>
+            <div className="relative border w-full max-w-5xl h-[85vh] overflow-hidden shadow-2xl flex flex-col"
+                style={{ borderColor: ac, borderTopWidth: 3, borderTopColor: ac, background: "var(--surface)" }}
+                onClick={e => e.stopPropagation()}>
+                <ScanlineOverlay />
+                <CornerAccent color={ac} />
+
+                <div className="flex items-center justify-between px-6 py-4 border-b relative z-10 shrink-0"
+                    style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                    <div className="flex items-center gap-3">
+                        <div className="flex gap-1.5">
+                            <span className="w-2 h-2 rounded-full bg-[#ff5f56]" />
+                            <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
+                            <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                        </div>
+                        <div className="w-7 h-7 border flex items-center justify-center" style={{ borderColor: ac, color: ac }}>{stack.icon}</div>
+                        <div>
+                            <h3 className="font-mono font-black text-lg" style={{ color: "var(--text-primary)" }}>{stack.stackName}</h3>
+                            <p className="font-mono text-[9px] tracking-widest font-bold" style={{ color: ac }}>{stack.shortName}</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <div className="border px-3 py-1.5 text-center" style={{ borderColor: "var(--border)", background: "var(--bg)" }}>
+                            <div className="font-mono text-[7px] tracking-[0.2em] font-bold" style={{ color: ac }}>PROJECTS</div>
+                            <div className="font-mono font-black text-lg" style={{ color: "var(--text-primary)" }}>{stack.projects.length}</div>
+                        </div>
+                        <button onClick={onClose}
+                            className="border p-1.5 transition-colors"
+                            style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+                            onMouseEnter={e => { e.currentTarget.style.borderColor = "#ff5f56"; e.currentTarget.style.color = "#ff5f56"; }}
+                            onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}>
+                            <X size={15} />
+                        </button>
+                    </div>
+                </div>
+
+                <div className="p-6 overflow-y-auto custom-scroll flex-1 relative z-10">
+                    <div className="font-mono text-[8px] tracking-[0.2em] mb-4 font-bold" style={{ color: ac }}>
+                        $ ls ./{stack.id.toLowerCase()}/ — {stack.projects.length} entries found
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {stack.projects.map(proj => (
+                            <ProjectCard key={proj.id} project={proj} onExplore={(p) => { onClose(); setTimeout(() => onProjectExplore(p), 50); }} />
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 }
 
-/* ─── Main Export ────────────────────────────────────────── */
+/* Projects Section */
+/* I used a slider and filters to help users browse my work easily. */
 export default function ProjectsPage() {
     const [popup, setPopup] = useState(null);
     const [stackPopup, setStackPopup] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [visibleCount, setVisibleCount] = useState(3);
     const [glitch, setGlitch] = useState(false);
 
     useEffect(() => {
-        const t = setInterval(() => { setGlitch(true); setTimeout(() => setGlitch(false), 120); }, 7000);
+        const handleResize = () => {
+            if (window.innerWidth < 640) setVisibleCount(1);
+            else if (window.innerWidth < 1024) setVisibleCount(2);
+            else setVisibleCount(3);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        const t = setInterval(() => {
+            setGlitch(true);
+            setTimeout(() => setGlitch(false), 120);
+        }, 6000);
         return () => clearInterval(t);
     }, []);
 
-    return (
-        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-            <section id="projects" className="relative min-h-screen py-28 overflow-hidden"
-                style={{ fontFamily: "'Courier New', Courier, monospace" }}>
-                <CursorGlow />
+    const maxIndex = mainProjects.length - visibleCount;
 
-                <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
-                    style={{ backgroundImage: "linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)", backgroundSize: "40px 40px" }} />
-                <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#39d353] opacity-[0.02] rounded-full blur-[180px] pointer-events-none" />
-                <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[160px] pointer-events-none" />
+    const nextSlide = () => setCurrentIndex(prev => Math.min(prev + 1, maxIndex));
+    const prevSlide = () => setCurrentIndex(prev => Math.max(prev - 1, 0));
+
+    return (
+        <>
+            <style>{CSS_VARS}</style>
+            <section
+                id="projects"
+                className="relative py-12 overflow-hidden"
+                style={{ background: "var(--bg)", fontFamily: "'Courier New', Courier, monospace" }}>
+
+                {/* Grid background */}
+                <div className="absolute inset-0 opacity-[0.022] pointer-events-none"
+                    style={{ backgroundImage: "linear-gradient(var(--accent) 1px,transparent 1px),linear-gradient(90deg,var(--accent) 1px,transparent 1px)", backgroundSize: "40px 40px" }} />
+
+                {/* Ambient glow blobs */}
+                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none"
+                    style={{ background: "radial-gradient(circle, rgba(57,211,83,0.03) 0%, transparent 70%)" }} />
+                <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full pointer-events-none"
+                    style={{ background: "radial-gradient(circle, rgba(0,229,255,0.025) 0%, transparent 70%)" }} />
 
                 <div className="relative z-10 max-w-7xl mx-auto px-6">
 
                     {/* ── HEADER ── */}
-                    <div className="mb-10">
+                    <div className="mb-8">
                         <div className="flex items-center gap-3 mb-5">
-                            <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
-                            <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">SYSTEM_MODULE / PROJECTS</span>
+                            <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "var(--accent)", boxShadow: "0 0 8px var(--accent)" }} />
+                            <span className="font-mono text-[10px] tracking-[0.3em] uppercase font-bold" style={{ color: "var(--accent)" }}>SYSTEM_MODULE / PROJECTS</span>
                         </div>
-                        <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+
+                        <div className="border relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--surface)", borderTopWidth: 2, borderTopColor: "var(--accent)" }}>
                             <ScanlineOverlay />
-                            <CornerAccent color="#39d353" />
-                            <WindowChrome filename="PROJECT_SHOWCASE.exe" />
-                            <div className="px-8 py-6">
-                                <h2 className={`font-mono font-black text-3xl md:text-5xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"}`}
-                                    style={{ textShadow: "0 0 24px rgba(57,211,83,0.25)" }}>
-                                    PROJECT_<span className="text-[#39d353]">SHOWCASE</span>
-                                    <span className="inline-block w-[10px] h-[18px] bg-[#39d353] animate-pulse ml-2 align-middle" />
-                                </h2>
-                                <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider">
-                                    $ ls ./projects/ — {mainProjects.length} major builds + {allStackProjects.length} stack categories loaded.
-                                </p>
-                                <div className="flex flex-wrap gap-4 mt-5">
-                                    {[
-                                        { l: "MAJOR_PROJECTS", v: mainProjects1.length.toString().padStart(2, "0") },
-                                        { l: "STACK_CATEGORIES", v: allStackProjects.length.toString().padStart(2, "0") },
-                                        { l: "TOTAL_BUILDS", v: `${allStackProjects.reduce((a, s) => a + s.projects.length, 0) + mainProjects1.length}+` },
-                                        { l: "STATUS", v: "ACTIVE" },
-                                    ].map(s => (
-                                        <div key={s.l} className="border border-[#1a2332] bg-[#010409] px-4 py-2">
-                                            <div className="font-mono text-[7px] text-[#39d353] tracking-[0.2em]">{s.l}</div>
-                                            <div className="font-mono text-lg font-bold text-white">{s.v}</div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            <CornerAccent color="var(--accent)" />
+                            <WindowChrome filename="PROJECT_ARCHIVE.exe" status="ACTIVE" />
 
-                    {/* ── MAIN GRID ── */}
-                    <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-6 mb-8">
-                        <div className="grid grid-cols-2 gap-4">
-                            {mainProjects.map(p => (<MajorCard key={p.id} project={p} onExplore={setPopup} />))}
-                        </div>
-                        <BigSlider projects={mainProjects1} onExplore={setPopup} />
-                    </div>
-
-                    {/* ── ALL STACK PROJECTS ── */}
-                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden mb-6">
-                        <ScanlineOverlay />
-                        <CornerAccent color="#00e5ff" />
-                        <WindowChrome filename="ALL_STACK_PROJECTS.log" status="LOADED" statusColor="#00e5ff" />
-                        <div className="p-6">
-                            <div className="flex items-center justify-between mb-5">
+                            <div className="px-8 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                                 <div>
-                                    <div className="font-mono text-[9px] text-[#00e5ff] tracking-[0.2em] mb-1">$ ls ./all-stacks/ — explore by technology</div>
-                                    <h3 className="font-mono font-black text-base text-white tracking-[0.1em] uppercase">MY ALL STACK PROJECTS</h3>
-                                    <p className="font-mono text-[11px] text-[#8b949e] mt-1">Click any stack to explore all projects in that technology</p>
+                                    <h2 className={`font-mono font-black text-3xl md:text-5xl tracking-widest uppercase transition-all duration-75`}
+                                        style={{ color: glitch ? "var(--accent)" : "var(--text-primary)", transform: glitch ? "translateX(2px)" : "none", textShadow: "0 0 24px rgba(57,211,83,0.2)" }}>
+                                        PROJECT_<span style={{ color: "var(--accent)" }}>FILES</span>
+                                        <span className="inline-block w-[10px] h-[18px] align-middle ml-2 animate-pulse" style={{ background: "var(--accent)" }} />
+                                    </h2>
+                                    <p className="font-mono text-[12px] mt-3 tracking-wider" style={{ color: "var(--text-muted)" }}>
+                                        $ find ./projects -type f — Loaded <span style={{ color: "var(--accent)" }}>{mainProjects.length}</span> core production builds and development experiments.
+                                    </p>
+
+                                    <div className="flex flex-wrap gap-4 mt-4">
+                                        {[
+                                            { label: "TOTAL_PROJECTS", value: mainProjects.length.toString().padStart(2, "0") },
+                                            { label: "STACK_CATEGORIES", value: stackCategories.length.toString().padStart(2, "0") },
+                                            { label: "PRODUCTION_DEPLOYS", value: mainProjects.filter(p => p.live).length.toString().padStart(2, "0") },
+                                            { label: "STATUS", value: "ACTIVE" },
+                                        ].map(s => (
+                                            <div key={s.label} className="border px-4 py-2" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                                                <div className="font-mono text-[7px] tracking-[0.2em] font-bold" style={{ color: "var(--accent)" }}>{s.label}</div>
+                                                <div className="font-mono font-black text-lg" style={{ color: "var(--text-primary)" }}>{s.value}</div>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
-                                <div className="border border-[#1a2332] bg-[#010409] px-3 py-2 text-center">
-                                    <div className="font-mono text-[7px] text-[#00e5ff] tracking-[0.2em]">TOTAL</div>
-                                    <div className="font-mono font-bold text-lg text-white">
-                                        {allStackProjects.reduce((a, s) => a + s.projects.length, 0)}+
+
+                                {/* Slider nav */}
+                                <div className="flex flex-col items-end gap-3 shrink-0">
+                                    <div className="font-mono text-[9px] tracking-widest" style={{ color: "var(--text-muted)" }}>
+                                        {currentIndex + 1} – {Math.min(currentIndex + visibleCount, mainProjects.length)} / {mainProjects.length}
+                                    </div>
+                                    <div className="flex gap-2">
+                                        <button onClick={prevSlide} disabled={currentIndex === 0}
+                                            className="p-3 border transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+                                            style={{ borderColor: "var(--border)", color: "var(--accent)" }}
+                                            onMouseEnter={e => { if (currentIndex > 0) { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "var(--bg)"; } }}
+                                            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--accent)"; }}>
+                                            <ChevronLeft size={20} />
+                                        </button>
+                                        <button onClick={nextSlide} disabled={currentIndex >= maxIndex}
+                                            className="p-3 border transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+                                            style={{ borderColor: "var(--border)", color: "var(--accent)" }}
+                                            onMouseEnter={e => { if (currentIndex < maxIndex) { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "var(--bg)"; } }}
+                                            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--accent)"; }}>
+                                            <ChevronRight size={20} />
+                                        </button>
+                                    </div>
+                                    {/* Progress dots */}
+                                    <div className="flex gap-1.5">
+                                        {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+                                            <button key={i} onClick={() => setCurrentIndex(i)}
+                                                className="rounded-full transition-all duration-200"
+                                                style={{
+                                                    width: i === currentIndex ? "16px" : "6px",
+                                                    height: "6px",
+                                                    background: i === currentIndex ? "var(--accent)" : "var(--border)",
+                                                }} />
+                                        ))}
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            {/* 6-column stack grid */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-                                {allStackProjects.map((stack, i) => (
-                                    <StackCard key={stack.id} stack={stack} onExplore={setStackPopup} delay={i * 60} />
+                    {/* ── PROJECTS SLIDER ── */}
+                    <div className="mb-10">
+                        <div className="font-mono text-[9px] mb-3 tracking-widest uppercase font-bold" style={{ color: "var(--accent)" }}>
+                            $ cat ./active_projects.log — showing {visibleCount} of {mainProjects.length}
+                        </div>
+                        <div className="overflow-hidden">
+                            <div
+                                className="flex gap-5 transition-transform duration-500 ease-in-out"
+                                style={{ transform: `translateX(calc(-${currentIndex} * (100% / ${visibleCount}) - ${currentIndex} * (20px / ${visibleCount})))` }}>
+                                {mainProjects.map(p => (
+                                    <div key={p.id}
+                                        className="shrink-0"
+                                        style={{ width: `calc(${100 / visibleCount}% - ${(20 * (visibleCount - 1)) / visibleCount}px)` }}>
+                                        <ProjectCard project={p} onExplore={setPopup} />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ── STACK CATEGORIES ── */}
+                    <div className="border relative overflow-hidden mb-8" style={{ borderColor: "var(--border)", background: "var(--surface)", borderTopWidth: 2, borderTopColor: "var(--accent-blue)" }}>
+                        <ScanlineOverlay />
+                        <CornerAccent color="var(--accent-blue)" />
+                        <WindowChrome filename="STACK_DIRECTORIES.log" status="INDEXED" statusColor="var(--accent-blue)" />
+
+                        <div className="p-6">
+                            <div className="flex items-center justify-between mb-5">
+                                <div>
+                                    <div className="font-mono text-[8px] tracking-[0.2em] mb-1 font-bold" style={{ color: "var(--accent-blue)" }}>
+                                        $ ls -la ./stack_directories/ — click to explore by technology
+                                    </div>
+                                    <h3 className="font-mono font-black text-base uppercase tracking-[0.1em]" style={{ color: "var(--text-primary)" }}>
+                                        MY ALL STACK PROJECTS
+                                    </h3>
+                                </div>
+                                <div className="border px-3 py-2 text-center" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                                    <div className="font-mono text-[7px] tracking-[0.2em] font-bold" style={{ color: "var(--accent-blue)" }}>CATEGORIES</div>
+                                    <div className="font-mono font-black text-xl" style={{ color: "var(--text-primary)" }}>{stackCategories.length}</div>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                {stackCategories.map(s => (
+                                    <StackCard key={s.id} stack={s} onExplore={setStackPopup} />
                                 ))}
                             </div>
                         </div>
@@ -1910,26 +776,29 @@ export default function ProjectsPage() {
 
                     {/* ── FOOTER ── */}
                     <div className="flex items-center justify-between">
-                        <div className="font-mono text-[10px] text-[#8b949e] tracking-widest">$ projects --list --all _</div>
-                        <a href="https://github.com/prayag29-sahu" target="_blank" rel="noopener noreferrer"
-                            className="flex items-center gap-2 border border-[#39d353] font-mono text-[10px] tracking-widest uppercase px-5 py-2.5 text-[#39d353] hover:bg-[#39d353] hover:text-[#010409] transition-all duration-200">
+                        <div className="font-mono text-[9px] tracking-widest" style={{ color: "var(--text-dim)" }}>
+                            $ projects --list --all --count={mainProjects.length} _
+                        </div>
+                        <a href="https://github.com/prayag29-sahu?tab=repositories" target="_blank" rel="noopener noreferrer"
+                            className="flex items-center gap-2 border font-mono text-[9px] tracking-widest uppercase px-5 py-2.5 transition-all duration-200 font-bold"
+                            style={{ borderColor: "var(--accent)", color: "var(--accent)" }}
+                            onMouseEnter={e => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "var(--bg)"; }}
+                            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--accent)"; }}>
                             <Github size={13} /> VIEW_ALL_ON_GITHUB →
                         </a>
                     </div>
                 </div>
 
-                {/* Popups */}
+                {/* ── POPUPS ── */}
                 {popup && <ProjectPopup project={popup} onClose={() => setPopup(null)} />}
-                {stackPopup && <StackGalleryPopup stack={stackPopup} onClose={() => setStackPopup(null)} />}
-
-                <style jsx>{`
-          @keyframes scan { 0% { top: 0%; } 100% { top: 100%; } }
-          @keyframes fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
-          .animate-fade-in { animation: fade-in 0.3s ease forwards; }
-          @keyframes scan-h { 0% { top: 0%; } 100% { top: 100%; } }
-          .animate-scan-h { animation: scan-h 1.8s linear infinite; }
-        `}</style>
+                {stackPopup && (
+                    <StackGalleryPopup
+                        stack={stackPopup}
+                        onClose={() => setStackPopup(null)}
+                        onProjectExplore={setPopup}
+                    />
+                )}
             </section>
-        </ParallaxSection>
+        </>
     );
 }

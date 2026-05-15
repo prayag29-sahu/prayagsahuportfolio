@@ -1,885 +1,3 @@
-
-
-// // // export default function AboutContent() {
-
-// // //     return (
-
-// // //         <section
-// // //             id="about"
-// // //             className="py-20 bg-white relative overflow-hidden"
-// // //         >
-// // //             {/* Top Gradient Line */}
-// // //             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-pink-600"></div>
-
-// // //             <div className="max-w-7xl mx-auto px-6">
-// // //                 {/* Heading */}
-// // //                 <div className="text-center mb-16">
-// // //                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-// // //                         About{" "}
-// // //                         <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-// // //                             Me
-// // //                         </span>
-// // //                     </h2>
-
-// // //                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-// // //                         Passionate about creating digital experiences that blend creativity
-// // //                         with cutting-edge technology
-// // //                     </p>
-// // //                 </div>
-
-// // //                 {/* Content Grid */}
-// // //                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-// // //                     {/* LEFT IMAGE */}
-// // //                     <div className="space-y-8">
-// // //                         <div className="relative">
-// // //                             <img
-// // //                                 src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/f29e6dbb-5983-4f63-86ac-121a3164c61a/about/about-portrait-423b5deb58764c43af83a71a10d36f8b.png"
-// // //                                 alt="Professional portrait"
-// // //                                 className="w-full rounded-2xl object-cover shadow-2xl"
-// // //                             />
-
-// // //                             {/* Availability Badge */}
-// // //                             <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl">
-// // //                                 <div className="flex items-center gap-3">
-// // //                                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-// // //                                     <span className="text-sm font-medium text-gray-700">
-// // //                                         Available for projects
-// // //                                     </span>
-// // //                                 </div>
-// // //                             </div>
-// // //                         </div>
-// // //                     </div>
-
-// // //                     {/* RIGHT CONTENT */}
-// // //                     <div className="space-y-8">
-// // //                         <div className="space-y-6">
-// // //                             <h3 className="text-3xl font-bold text-gray-900">
-// // //                                 Crafting Digital Excellence
-// // //                             </h3>
-
-// // //                             <p className="text-lg text-gray-600 leading-relaxed">
-// // //                                 With over 3 years of experience in web development and design, I
-// // //                                 specialize in creating immersive digital experiences that combine
-// // //                                 stunning visuals with seamless functionality. My passion lies in
-// // //                                 pushing the boundaries of what&apos;s possible on the web.
-// // //                             </p>
-
-// // //                             <p className="text-lg text-gray-600 leading-relaxed">
-// // //                                 I believe in the power of clean code, intuitive design, and
-// // //                                 innovative solutions. Every project is an opportunity to create
-// // //                                 something extraordinary that not only meets but exceeds
-// // //                                 expectations.
-// // //                             </p>
-// // //                         </div>
-
-// // //                         {/* STATS */}
-// // //                         <div className="grid grid-cols-2 gap-6">
-// // //                             <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl">
-// // //                                 <div className="text-3xl font-bold text-purple-600 mb-2">
-// // //                                     50+
-// // //                                 </div>
-// // //                                 <div className="text-gray-700 font-medium">
-// // //                                     Projects Completed
-// // //                                 </div>
-// // //                             </div>
-
-// // //                             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl">
-// // //                                 <div className="text-3xl font-bold text-blue-600 mb-2">
-// // //                                     25+
-// // //                                 </div>
-// // //                                 <div className="text-gray-700 font-medium">
-// // //                                     Happy Clients
-// // //                                 </div>
-// // //                             </div>
-// // //                         </div>
-
-// // //                         {/* WORKSPACE */}
-// // //                         <div className="bg-gray-50 p-8 rounded-2xl">
-// // //                             <h4 className="text-xl font-bold text-gray-900 mb-4">
-// // //                                 My Workspace
-// // //                             </h4>
-
-// // //                             <img
-// // //                                 src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/f29e6dbb-5983-4f63-86ac-121a3164c61a/about/about-workspace-a13f78c4508e4f3082a9f98ff8c21755.png"
-// // //                                 alt="Developer workspace"
-// // //                                 className="w-full rounded-xl object-cover shadow-lg"
-// // //                             />
-// // //                         </div>
-// // //                     </div>
-// // //                 </div>
-// // //             </div>
-// // //         </section>
-// // //     );
-// // // }
-
-
-
-// // 'use client';
-
-// // export default function AboutContent() {
-// //     return (
-// //         <section
-// //             id="about"
-// //             className="py-20 bg-white relative overflow-hidden"
-// //         >
-// //             {/* Top Gradient Line */}
-// //             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-pink-600"></div>
-
-// //             <div className="max-w-7xl mx-auto px-6">
-// //                 {/* Heading */}
-// //                 <div className="text-center mb-16">
-// //                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-// //                         About{" "}
-// //                         <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-// //                             Me
-// //                         </span>
-// //                     </h2>
-
-// //                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-// //                         A passionate Full Stack Developer focused on building scalable,
-// //                         high-performance, and user-centric digital solutions
-// //                     </p>
-// //                 </div>
-
-// //                 {/* Content Grid */}
-// //                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-// //                     {/* LEFT IMAGE */}
-// //                     <div className="space-y-8">
-// //                         <div className="relative">
-// //                             <img
-// //                                 src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/f29e6dbb-5983-4f63-86ac-121a3164c61a/about/about-portrait-423b5deb58764c43af83a71a10d36f8b.png"
-// //                                 alt="Prayag Sahu - Full Stack Developer"
-// //                                 className="w-full rounded-2xl object-cover shadow-2xl"
-// //                             />
-
-// //                             {/* Availability Badge */}
-// //                             <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl">
-// //                                 <div className="flex items-center gap-3">
-// //                                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-// //                                     <span className="text-sm font-medium text-gray-700">
-// //                                         Available for freelance & projects
-// //                                     </span>
-// //                                 </div>
-// //                             </div>
-// //                         </div>
-// //                     </div>
-
-// //                     {/* RIGHT CONTENT */}
-// //                     <div className="space-y-8">
-// //                         <div className="space-y-6">
-// //                             <h3 className="text-3xl font-bold text-gray-900">
-// //                                 Crafting Scalable Digital Solutions
-// //                             </h3>
-
-// //                             <p className="text-lg text-gray-600 leading-relaxed">
-// //                                 I am <strong>Prayag Sahu</strong>, a Computer Science and
-// //                                 Engineering undergraduate and a <strong>Freelance Full Stack Developer</strong> from
-// //                                 Jabalpur, Madhya Pradesh. I completed my higher secondary education
-// //                                 under <strong>MPBSE with first division</strong> and am currently
-// //                                 pursuing <strong>B.Tech (CSE)</strong> from
-// //                                 <strong> Baderia Global Institute of Engineering and Management</strong>,
-// //                                 affiliated with <strong>RGPV University</strong>.
-// //                             </p>
-
-// //                             <p className="text-lg text-gray-600 leading-relaxed">
-// //                                 I have a strong foundation in <strong>C++, Java, JavaScript</strong>,
-// //                                 and <strong>Database Management</strong>, with hands-on experience
-// //                                 in <strong>full stack web development</strong>. I focus on writing
-// //                                 clean, maintainable code while designing intuitive UI/UX and
-// //                                 implementing optimized backend logic.
-// //                             </p>
-
-// //                             <p className="text-lg text-gray-600 leading-relaxed">
-// //                                 My strengths include strong <strong>problem-solving skills</strong>,
-// //                                 quick learning ability, attention to detail, and a continuous
-// //                                 passion for learning new technologies. I am currently expanding my
-// //                                 skill set by learning <strong>Python for data analytics</strong> and
-// //                                 advanced system-level concepts.
-// //                             </p>
-// //                         </div>
-
-// //                         {/* STATS */}
-// //                         <div className="grid grid-cols-2 gap-6">
-// //                             <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl">
-// //                                 <div className="text-3xl font-bold text-purple-600 mb-2">
-// //                                     4+
-// //                                 </div>
-// //                                 <div className="text-gray-700 font-medium">
-// //                                     Projects Completed
-// //                                 </div>
-// //                             </div>
-
-// //                             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl">
-// //                                 <div className="text-3xl font-bold text-blue-600 mb-2">
-// //                                     1+
-// //                                 </div>
-// //                                 <div className="text-gray-700 font-medium">
-// //                                     Year of Experience
-// //                                 </div>
-// //                             </div>
-// //                         </div>
-
-// //                         {/* WORKSPACE */}
-// //                         <div className="bg-gray-50 p-8 rounded-2xl">
-// //                             <h4 className="text-xl font-bold text-gray-900 mb-4">
-// //                                 My Workspace & Learning Environment
-// //                             </h4>
-
-// //                             <img
-// //                                 src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/f29e6dbb-5983-4f63-86ac-121a3164c61a/about/about-workspace-a13f78c4508e4f3082a9f98ff8c21755.png"
-// //                                 alt="Developer workspace"
-// //                                 className="w-full rounded-xl object-cover shadow-lg"
-// //                             />
-// //                         </div>
-// //                     </div>
-// //                 </div>
-// //             </div>
-// //         </section>
-// //     );
-// // }
-
-
-
-// 'use client';
-
-// import Image from "next/image";
-// import {
-//     Code2,
-//     Database,
-//     Layout,
-//     Cpu,
-// } from "lucide-react";
-// import ParallaxSection from "../ui/ParallaxSection";
-// export default function AboutContent() {
-//     return (
-//         // <ParallaxSection
-//         //     // backgroundImage="/img/img2.jpeg"
-//         //     backgroundImage="/images/bg1.png"
-//         //     height="400px"
-//         // >
-//         <ParallaxSection
-//             backgroundImage="/images/bg-1.png"
-//             height="100vh"
-//         >
-//             <section
-//                 id="about"
-//                 className="py-24 "
-//             >
-//                 <div className="max-w-7xl mx-auto px-6">
-//                     {/* HEADER */}
-//                     <div className="text-center mb-16">
-//                         <div className={`w-full lg:px-[12%] px-[5%]  flex flex-col justify-center items-center `}>
-//                             <div className="flex items-center justify-center gap-6 mb-4">
-//                                 {/* LEFT LINE */}
-//                                 <div className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-r from-transparent via-cyan-400 to-blue-400`} ></div>
-//                                 {/* TITLE */}
-//                                 <h1 className={`text-3xl sm:text-4xl md:text-5xl  font-extrabold tracking-wide drop-shadow-lg transition-all bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`} >
-//                                     About Me
-//                                 </h1>
-//                                 {/* RIGHT LINE */}
-//                                 <div className={`w-24 h-[2px] shadow-md transition-all bg-gradient-to-l from-transparent vvia-cyan-400 to-blue-400`} ></div>
-//                             </div>
-//                         </div>
-//                     </div>
-//                     {/* MAIN GRID */}
-//                     <div className="grid lg:grid-cols-2 gap-16 items-start">
-//                         {/* LEFT SIDE */}
-//                         <div className="space-y-10">
-//                             {/* MAIN IMAGE */}
-//                             <div className="relative bg-[#0f172a] p-4 rounded-2xl border border-white/5 shadow-xl hover:scale-[1.02] transition hover:border-cyan-400/40">
-//                                 <Image
-//                                     src="/images/2.png"
-//                                     alt="Prayag Sahu"
-//                                     width={1200}
-//                                     height={900}
-//                                     className="rounded-xl object-cover w-full h-[580px]"
-//                                 />
-//                                 {/* AVAILABILITY */}
-//                                 <div className="absolute -bottom-5 -right-5 bg-[#0b1022] px-4 py-2 rounded-xl border border-white/10 shadow-lg">
-//                                     <div className="flex items-center gap-2">
-//                                         <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></span>
-//                                         <span className="text-xs text-gray-300">
-//                                             Available for freelance
-//                                         </span>
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                             {/* SKILLS UNDER IMAGE */}
-//                             <div className="grid grid-cols-2 gap-4">
-//                                 {[
-//                                     {
-//                                         icon: <Code2 className="text-cyan-400" />,
-//                                         title: "Full Stack Dev",
-//                                     },
-//                                     {
-//                                         icon: <Layout className="text-cyan-400" />,
-//                                         title: "UI / UX Design",
-//                                     },
-//                                     {
-//                                         icon: <Database className="text-cyan-400" />,
-//                                         title: "Database Logic",
-//                                     },
-//                                     {
-//                                         icon: <Cpu className="text-cyan-400" />,
-//                                         title: "System Thinking",
-//                                     },
-//                                 ].map((skill, i) => (
-//                                     <div
-//                                         key={i}
-//                                         className="bg-[#0f172a] p-4 rounded-xl border border-white/5
-//                   flex items-center gap-3 hover:border-cyan-400/40
-//                   hover:translate-y-[-4px] transition"
-//                                     >
-//                                         {skill.icon}
-//                                         <span className="text-sm text-gray-300 font-medium">
-//                                             {skill.title}
-//                                         </span>
-//                                     </div>
-//                                 ))}
-//                             </div>
-//                         </div>
-//                         {/* RIGHT SIDE – CONTENT */}
-//                         <div className="space-y-8">
-//                             <div className="bg-[#0f172a] p-8 rounded-2xl border border-white/5 space-y-6 hover:border-cyan-400/30 transition">
-//                                 <p className="text-gray-300 leading-relaxed">
-//                                     I am <strong>Prayag Sahu</strong>, a Computer Science and Engineering
-//                                     undergraduate and <strong>Freelance Full Stack Developer </strong>
-//                                     from Jabalpur, Madhya Pradesh.
-//                                 </p>
-//                                 <p className="text-gray-300 leading-relaxed">
-//                                     I completed my higher secondary education under <strong>MPBSE </strong>
-//                                     with first division and am currently pursuing
-//                                     <strong> B.Tech (CSE)</strong> from
-//                                     <strong> Baderia Global Institute of Engineering & Management</strong>,
-//                                     affiliated with <strong>RGPV University</strong>.
-//                                 </p>
-//                                 <p className="text-gray-300 leading-relaxed">
-//                                     My technical expertise includes <strong>C++, Java, JavaScript</strong>,
-//                                     full stack web development, and <strong>database systems</strong>.
-//                                     I focus on writing clean, maintainable code and designing scalable,
-//                                     backend-driven solutions.
-//                                 </p>
-//                                 <p className="text-gray-300 leading-relaxed">
-//                                     I am a quick learner with strong problem-solving skills and attention
-//                                     to detail. Currently, I am learning
-//                                     <strong> Python for data analytics</strong> and enhancing my backend
-//                                     engineering capabilities.
-//                                 </p>
-//                             </div>
-//                             <div className="mt-20">
-//                                 <div className="bg-[#0f172a] p-2 rounded-2xl border border-white/5 shadow-xl hover:scale-[1.02] transition hover:border-cyan-400/40">
-//                                     <Image
-//                                         src="/images/about/1.png"
-//                                         alt="Workspace & Development Environment"
-//                                         width={2000}
-//                                         height={980}
-//                                         className="rounded-xl object-cover w-full h-[250px]"
-//                                     />
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </section>
-//         </ParallaxSection>
-//     );
-// }
-
-
-// 'use client';
-
-// import Image from 'next/image';
-// import ParallaxSection from '@/components/ui/ParallaxSection';
-// import {
-//     RiUser3Line,
-//     RiUserHeartLine,
-//     RiCalendarLine,
-//     RiMapPinLine,
-//     RiCodeSSlashLine,
-//     RiReactjsLine,
-//     RiNodejsLine,
-//     RiDatabase2Line,
-//     RiAndroidLine,
-// } from 'react-icons/ri';
-// import {
-//     RiTeamLine,
-//     RiBookOpenLine,
-//     RiHeadphoneLine,
-//     RiCodeLine,
-//     RiLightbulbFlashLine,
-//     RiFocus3Line,
-//     RiGraduationCapLine,
-//     RiRocketLine,
-// } from "react-icons/ri";
-
-
-
-// export default function AboutPage() {
-//     return (
-//         <ParallaxSection backgroundImage="/images/bg.png" height="100vh">
-//             <section className="min-h-screen flex text-white">
-
-//                 {/* LEFT SIDEBAR */}
-//                 <aside
-//                     className="
-//     hidden lg:flex
-//     flex-col items-center
-//     w-80
-//     py-10
-//     relative
-//     border-r
-//     border-white/10
-//     shadow-[8px_0_30px_rgba(0,0,0,0.35)]
-//   "
-//                     style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
-//                 >
-//                     {/* RIGHT SIDE PREMIUM SHADOW + GLOW */}
-//                     <div className="
-//     pointer-events-none
-//     absolute top-0 right-0 h-full w-6
-//     bg-gradient-to-l
-//     from-black/30
-//     via-black/10
-//     to-transparent
-//   " />
-
-//                     {/* PROFILE IMAGE */}
-//                     <div className="w-50 h-50 rounded-full overflow-hidden border-4 border-white shadow-2xl">
-//                         <Image
-//                             src="/images/about.png"
-//                             alt="Prayag Sahu"
-//                             width={1024}
-//                             height={980}
-//                             className="object-cover"
-//                         />
-//                     </div>
-
-//                     {/* PERSONAL INFO */}
-//                     <div className="mt-12 space-y-5 text-sm text-white w-full px-6">
-//                         <InfoItem icon={<RiUser3Line />} label="Name" value="Prayag Sahu" />
-//                         <InfoItem icon={<RiUserHeartLine />} label="Father" value="Prakash Chandra Sahu" />
-//                         <InfoItem icon={<RiUserHeartLine />} label="Mother" value="Maya Sahu" />
-//                         <InfoItem icon={<RiCalendarLine />} label="DOB" value="02 Oct 2005" />
-//                         <InfoItem icon={<RiMapPinLine />} label="Location" value="Jabalpur, MP" />
-//                     </div>
-//                 </aside>
-
-
-
-//                 {/* MAIN CONTENT */}
-//                 <div className="flex-1 px-6 lg:px-16 py-5">
-
-//                     {/* HEADING */}
-//                     {/* <h1 className="text-5xl font-extrabold tracking-widest">
-//                         ABOUT ME
-//                     </h1> */}
-//                     <div className="inline-block">
-//                         <h2 className="text-5xl font-extrabold tracking-widest">
-//                             ABOUT ME
-//                         </h2>
-//                         <div className="h-1 w-15 bg-[#6ea046] rounded-full mt-1" />
-//                     </div>
-
-//                     {/* DESCRIPTION */}
-//                     <p className="mt-6 max-w-4xl text-white/80 leading-relaxed">
-//                         I am <strong>Prayag Sahu</strong>, a Computer Science and Engineering
-//                         undergraduate and <strong>Freelance Full Stack Developer</strong> from
-//                         Jabalpur, Madhya Pradesh.
-//                         <br /><br />
-//                         I completed my higher secondary education under MPBSE with first
-//                         division and am currently pursuing B.Tech (CSE) from
-//                         <strong> Baderia Global Institute of Engineering & Management</strong>,
-//                         affiliated with <strong>RGPV University</strong>.
-//                     </p>
-
-//                     {/* TWO COLUMN AREA */}
-//                     <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
-
-//                         {/* WHAT I DO – LEFT */}
-//                         <div>
-//                             <SectionTag title="I Can Do" />
-
-//                             <div className="mt-6 space-y-6">
-//                                 <VerticalSkill
-//                                     icon={<RiReactjsLine />}
-//                                     title="Frontend Development"
-//                                     desc="Building responsive, accessible user interfaces using HTML, CSS, JavaScript, React, Next.js, and Tailwind CSS."
-//                                 />
-
-//                                 <VerticalSkill
-//                                     icon={<RiNodejsLine />}
-//                                     title="Backend & API Development"
-//                                     desc="Developing scalable REST APIs with Node.js and Express, including authentication, authorization, and secure server logic."
-//                                 />
-
-//                                 <VerticalSkill
-//                                     icon={<RiDatabase2Line />}
-//                                     title="Database Management"
-//                                     desc="Designing and managing relational databases using PostgreSQL with proper schema design, relations, and optimized queries."
-//                                 />
-
-//                                 <VerticalSkill
-//                                     icon={<RiAndroidLine />}
-//                                     title="Android App Development"
-//                                     desc="Building Android applications using React Native with API integration and shared backend services."
-//                                 />
-//                             </div>
-
-//                         </div>
-
-//                         {/* FUN FACTS – RIGHT */}
-//                         <div>
-//                             <div className="mt-3 space-y-5">
-//                                 <SectionTag title="I Have" />
-
-//                                 <HighlightItem
-//                                     icon={<RiLightbulbFlashLine />}
-//                                     title="Core Strengths"
-//                                     text="Hardworking, self-motivated, quick learner with strong problem-solving and attention to detail."
-//                                 />
-
-//                                 <HighlightItem
-//                                     icon={<RiGraduationCapLine />}
-//                                     title="Technical Background"
-//                                     text="Computer Science student with experience in frontend development, C++, and currently learning Java."
-//                                 />
-
-//                                 <HighlightItem
-//                                     icon={<RiFocus3Line />}
-//                                     title="Career Goals"
-//                                     text="Short-term goal is to join a reputed company; long-term goal is to become a successful software engineer."
-//                                 />
-
-//                                 <HighlightItem
-//                                     icon={<RiRocketLine />}
-//                                     title="Learning Mindset"
-//                                     text="Always eager to learn new technologies and continuously improve skills."
-//                                 />
-
-//                             </div>
-
-
-//                         </div>
-
-//                     </div>
-//                 </div>
-//             </section>
-//         </ParallaxSection>
-//     );
-// }
-
-// /* ================= SUB COMPONENTS ================= */
-
-// function InfoItem({ icon, label, value }) {
-//     return (
-//         <div className="flex items-center gap-3">
-//             <span className="text-xl">{icon}</span>
-//             <span className="font-semibold">{label}:</span>
-//             <span className="opacity-90">{value}</span>
-//         </div>
-//     );
-// }
-
-// function SectionTag({ title }) {
-//     return (
-//         <div className="inline-block">
-//             <h2 className="font-semibold tracking-wide ">
-//                 {title}
-//             </h2>
-//             <div className="h-1 w-15 bg-[#6ea046] rounded-full mt-1" />
-//         </div>
-//     );
-// }
-
-
-
-
-// function VerticalSkill({ icon, title, desc }) {
-//     return (
-//         <div className="flex items-start gap-4">
-//             <div
-//                 className="w-10 h-10 rounded-full flex items-center justify-center text-black text-xl shrink-0"
-//                 style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
-//             >
-//                 {icon}
-//             </div>
-
-//             <div>
-//                 <h3 className="font-semibold text-white flex items-center gap-2">
-//                     {/* <RiCodeSSlashLine className="text-green-400" /> */}
-//                     {title}
-//                 </h3>
-
-//                 <p className="text-sm text-white/70 leading-relaxed mt-1">
-//                     {desc}
-//                 </p>
-//             </div>
-//         </div>
-//     );
-// }
-
-
-
-// function HighlightItem({ icon, title, text }) {
-//     return (
-//         <div className="flex items-start gap-4">
-//             <div
-//                 className="w-10 h-10 rounded-full flex items-center justify-center text-xl text-black shrink-0"
-//                 style={{ backgroundColor: "rgba(110,160,70,0.9)" }}
-//             >
-//                 {icon}
-//             </div>
-
-//             <div className='gap-3'>
-//                 <h4 className="font-semibold mb-1 text-white">{title}</h4>
-//                 <p className="text-sm text-white/70 leading-relaxed">
-//                     {text}
-//                 </p>
-//             </div>
-//         </div>
-//     );
-// }
-
-
-
-
-
-// 'use client';
-
-// import Image from 'next/image';
-// import ParallaxSection from '@/components/ui/ParallaxSection';
-// import {
-//     RiReactjsLine,
-//     RiNodejsLine,
-//     RiDatabase2Line,
-//     RiAndroidLine,
-//     RiLightbulbFlashLine,
-//     RiGraduationCapLine,
-//     RiFocus3Line,
-//     RiRocketLine,
-// } from "react-icons/ri";
-// import { MapPin, GraduationCap, Briefcase, Rocket } from "lucide-react";
-// import "./About.css"
-// import { useState } from "react";
-
-// import { ChevronDown } from "lucide-react";
-
-
-// export default function AboutSection() {
-//     const [activeIndex, setActiveIndex] = useState(null);
-
-//     const toggleItem = (index) => {
-//         setActiveIndex(activeIndex === index ? null : index);
-//     };
-
-//     const skills = [
-//         {
-//             icon: <RiReactjsLine />,
-//             title: "Frontend Engineering",
-//             desc: "Building responsive, accessible user interfaces using HTML, CSS, JavaScript, React, Next.js and Tailwind CSS with performance-first architecture."
-//         },
-//         {
-//             icon: <RiNodejsLine />,
-//             title: "Backend & API Systems",
-//             desc: "Developing scalable REST APIs using Node.js and Express including authentication, authorization and secure server logic."
-//         },
-//         {
-//             icon: <RiDatabase2Line />,
-//             title: "Database Architecture",
-//             desc: "Designing optimized relational schemas using PostgreSQL with efficient queries, indexing strategies and clean data modeling."
-//         },
-//         {
-//             icon: <RiAndroidLine />,
-//             title: "Mobile Application Development",
-//             desc: "Building cross-platform mobile applications using React Native integrated with backend services and APIs."
-//         }
-//     ];
-//     const [activeIndex1, setActiveIndex1] = useState(null);
-
-//     const toggleItem1 = (index) => {
-//         setActiveIndex1(activeIndex1 === index ? null : index);
-//     };
-
-//     const traits = [
-//         {
-//             icon: <RiLightbulbFlashLine />,
-//             title: "Core Strengths",
-//             desc: "Hardworking, self-motivated and detail-oriented developer with strong analytical thinking and problem-solving ability."
-//         },
-//         {
-//             icon: <RiGraduationCapLine />,
-//             title: "Technical Foundation",
-//             desc: "Computer Science student with solid fundamentals in programming, data structures and modern web development."
-//         },
-//         {
-//             icon: <RiFocus3Line />,
-//             title: "Career Vision",
-//             desc: "Focused on building a long-term career as a software engineer by continuously improving technical depth and system design understanding."
-//         },
-//         {
-//             icon: <RiRocketLine />,
-//             title: "Growth Mindset",
-//             desc: "Actively learning new technologies and frameworks to stay aligned with evolving industry standards."
-//         }
-//     ];
-
-//     return (
-//         <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-
-//             <section className="about-wrapper">
-
-//                 {/* ===================== TOP CONTAINER ===================== */}
-//                 <div className="about-top">
-
-//                     {/* LEFT SIDE */}
-//                     <div className="about-left">
-
-//                         <div className="about-image">
-//                             <Image
-//                                 src="/images/hero3.png"
-//                                 alt="Prayag Sahu"
-//                                 width={400}
-//                                 height={500}
-//                                 className="object-cover"
-//                             />
-//                         </div>
-//                     </div>
-
-//                     {/* RIGHT SIDE */}
-//                     <div className="about-text">
-
-//                         <p className="about-desc">
-//                             I am <span className="highlight">Prayag Sahu</span>, a Computer Science
-//                             Engineer undergraduate and Freelance Full Stack Developer
-//                             from Jabalpur, Madhya Pradesh.
-//                             <br /><br />
-//                             I completed my Higher Secondary Education under MPBSE with
-//                             First Division and I am currently pursuing
-//                             <strong> B.Tech (CSE)</strong> from
-//                             <strong> Baderia Global Institute of Engineering & Management</strong>,
-//                             affiliated with <strong>RGPV University</strong>.
-//                             <br />
-//                             I focus on building modern, scalable and performance-driven web
-//                             applications using clean architecture and practical problem solving.
-//                         </p>
-//                         <div className="info-item mt-7">
-//                             <MapPin size={18} />
-//                             <span>Jabalpur, Madhya Pradesh</span>
-//                             <GraduationCap size={18} />
-//                             <span>B.Tech (CSE) BGIEM – RGPV</span>
-//                         </div>
-
-//                         <div className="info-item mt-2">
-//                             <Briefcase size={18} />
-//                             <span>Freelance Full Stack Developer</span>
-//                             <Rocket size={18} />
-//                             <span>Open to Opportunities</span>
-//                         </div>
-
-//                     </div>
-
-
-//                 </div>
-
-
-//                 {/* ===================== BOTTOM GRID ===================== */}
-//                 <div className="about-bottom">
-
-//                     {/* I CAN DO */}
-//                     <div className="about-card">
-//                         <h2 className="card-title">CORE EXPERTISE</h2>
-
-//                         <div className="card-list">
-//                             {skills.map((skill, index) => (
-//                                 <div key={index} className="accordion-item">
-
-//                                     <div
-//                                         className="accordion-header"
-//                                         onClick={() => toggleItem(index)}
-//                                     >
-//                                         <div className="left">
-//                                             <span className="card-icon">{skill.icon}</span>
-//                                             <span>{skill.title}</span>
-//                                         </div>
-
-//                                         <ChevronDown
-//                                             size={18}
-//                                             className={`arrow ${activeIndex === index ? "rotate" : ""}`}
-//                                         />
-//                                     </div>
-
-//                                     {activeIndex === index && (
-//                                         <div className="accordion-content">
-//                                             {skill.desc}
-//                                         </div>
-//                                     )}
-
-//                                 </div>
-//                             ))}
-//                         </div>
-//                     </div>
-
-//                     {/* I HAVE */}
-//                     <div className="about-card">
-//                         <h2 className="card-title">CORE QUALITIES</h2>
-
-//                         <div className="card-list">
-//                             {traits.map((trait, index) => (
-//                                 <div key={index} className="accordion-item">
-
-//                                     <div
-//                                         className="accordion-header"
-//                                         onClick={() => toggleItem1(index)}
-//                                     >
-//                                         <div className="left">
-//                                             <span className="card-icon">{trait.icon}</span>
-//                                             <span>{trait.title}</span>
-//                                         </div>
-
-//                                         <ChevronDown
-//                                             size={18}
-//                                             className={`arrow ${activeIndex1 === index ? "rotate" : ""}`}
-//                                         />
-//                                     </div>
-
-//                                     {activeIndex1 === index && (
-//                                         <div className="accordion-content">
-//                                             {trait.desc}
-//                                         </div>
-//                                     )}
-
-//                                 </div>
-//                             ))}
-//                         </div>
-//                     </div>
-
-//                 </div>
-
-//             </section>
-
-//         </ParallaxSection>
-//     );
-// }
-
-
-// /* ================= CARD ITEM ================= */
-
-// // function CardItem({ icon, text }) {
-// //     return (
-// //         <div className="card-item">
-// //             <span className="card-icon">{icon}</span>
-// //             <span>{text}</span>
-// //         </div>
-// //     );
-// // }
-
-
-
-
-
-
 'use client';
 
 import Image from 'next/image';
@@ -889,59 +7,52 @@ import {
     RiLightbulbFlashLine, RiGraduationCapLine, RiFocus3Line, RiRocketLine,
 } from "react-icons/ri";
 import { MapPin, GraduationCap, Briefcase, Rocket, ChevronDown } from "lucide-react";
-import ParallaxSection from '@/components/ui/ParallaxSection';
-/* ─── Shared primitives ──────────────────────────────────── */
+
+/* Shared UI primitives for layout consistency */
 function ScanlineOverlay() {
     return (
-        <div
-            className="pointer-events-none absolute inset-0 z-0"
-            style={{
-                background: "repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px)",
-            }}
-        />
+        <div className="pointer-events-none absolute inset-0 z-0"
+            style={{ background: "repeating-linear-gradient(0deg,transparent,transparent 2px,var(--scanline-color) 2px,var(--scanline-color) 4px)" }} />
     );
 }
 
-function CornerAccent({ color = "#39d353" }) {
-    return (
-        <>
-            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2" style={{ borderColor: color }} />
-            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2" style={{ borderColor: color }} />
-            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2" style={{ borderColor: color }} />
-            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2" style={{ borderColor: color }} />
-        </>
-    );
+function CornerAccent({ color = "var(--accent)" }) {
+    return (<>
+        <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 z-10" style={{ borderColor: color }} />
+        <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 z-10" style={{ borderColor: color }} />
+        <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 z-10" style={{ borderColor: color }} />
+        <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 z-10" style={{ borderColor: color }} />
+    </>);
 }
 
-function Cursor() {
-    return <span className="inline-block w-[8px] h-[14px] bg-[#39d353] animate-pulse ml-1 align-middle" />;
-}
-
-function WindowChrome({ filename, status = "LIVE", statusColor = "#39d353" }) {
+function WindowChrome({ filename, status = "LIVE", statusColor = "var(--accent)" }) {
     return (
-        <div className="flex items-center justify-between px-5 py-3 border-b border-[#1a2332]">
+        <div className="flex items-center justify-between px-5 py-3.5 border-b" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
             <div className="flex items-center gap-3">
-                <div className="flex gap-1.5">
+                <div className="flex gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                 </div>
-                <span className="font-mono text-[11px] tracking-[0.2em] text-[#8b949e]">{filename}</span>
+                <span className="font-mono text-[11px] md:text-[13px] tracking-[0.2em] truncate max-w-[150px] md:max-w-none" style={{ color: "var(--text-muted)" }}>{filename}</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 shrink-0">
                 <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: statusColor }} />
-                <span
-                    className="font-mono text-[9px] tracking-[0.2em] border px-2 py-0.5"
-                    style={{ color: statusColor, borderColor: statusColor }}
-                >
-                    {status}
-                </span>
+                <span className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] border px-2 py-0.5 font-bold whitespace-nowrap" style={{ color: statusColor, borderColor: statusColor }}>{status}</span>
             </div>
         </div>
     );
 }
 
-/* ─── Typewriter ─────────────────────────────────────────── */
+function Cursor() {
+    return <span className="inline-block w-[8px] h-[14px] animate-pulse ml-1 align-middle" style={{ background: "var(--accent)" }} />;
+}
+
+/* 
+   Typewriter Effect
+   I implemented this to mimic a real terminal command execution, 
+   adding to the immersive developer portfolio experience.
+*/
 function TypewriterText({ text, speed = 55 }) {
     const [out, setOut] = useState("");
     const [done, setDone] = useState(false);
@@ -953,69 +64,44 @@ function TypewriterText({ text, speed = 55 }) {
         }, speed);
         return () => clearInterval(t);
     }, [text, speed]);
-    return <>{out}{!done && <span className="animate-pulse text-[#39d353]">█</span>}</>;
+    return <>{out}{!done && <span className="animate-pulse" style={{ color: "var(--accent)" }}>█</span>}</>;
 }
 
-/* ─── Info pill ──────────────────────────────────────────── */
-function InfoPill({ icon, text, accent = "#39d353" }) {
+/* Quick info pill */
+function InfoPill({ icon, text, accent = "var(--accent)" }) {
     return (
-        <div className="flex items-center gap-2 border border-[#1a2332] bg-[#010409] px-4 py-2.5 group hover:border-[#39d353] transition-colors duration-200">
-            <span style={{ color: accent }} className="shrink-0">{icon}</span>
-            <span className="font-mono text-[11px] text-[#8b949e] tracking-wider group-hover:text-white transition-colors duration-200 whitespace-nowrap">{text}</span>
+        <div className="flex items-center gap-3 border px-4 py-3 group transition-colors duration-200" 
+            style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+            <span style={{ color: accent }} className="shrink-0 group-hover:scale-110 transition-transform">{icon}</span>
+            <span className="font-mono text-[11px] md:text-[12px] tracking-wide group-hover:text-primary transition-colors duration-200" style={{ color: "var(--text-muted)" }}>{text}</span>
         </div>
     );
 }
 
-/* ─── Accordion item ─────────────────────────────────────── */
-function AccordionItem({ icon, title, desc, isOpen, onToggle, accent = "#39d353", index }) {
+/* Modular Accordion Component */
+function AccordionItem({ icon, title, desc, isOpen, onToggle, accent = "var(--accent)" }) {
     return (
-        <div
-            className="border border-[#1a2332] bg-[#010409] relative overflow-hidden transition-all duration-200 hover:border-[#39d353] group"
-            style={isOpen ? { borderColor: accent } : {}}
-        >
-            <CornerAccent color={isOpen ? accent : "#1a2332"} />
-            <button
-                className="w-full flex items-center justify-between px-4 py-3.5 relative z-10"
-                onClick={onToggle}
-            >
+        <div className="border relative overflow-hidden transition-all duration-200 group"
+            style={{ borderColor: isOpen ? accent : "var(--border)", background: "var(--bg)" }}>
+            <CornerAccent color={isOpen ? accent : "var(--border)"} />
+            <button className="w-full flex items-center justify-between px-4 py-3.5 relative z-10" onClick={onToggle}>
                 <div className="flex items-center gap-3">
-                    <div
-                        className="w-7 h-7 border flex items-center justify-center text-sm transition-all duration-200"
-                        style={{
-                            borderColor: isOpen ? accent : "#1a2332",
-                            color: isOpen ? accent : "#8b949e",
-                            background: isOpen ? `${accent}15` : "transparent",
-                        }}
-                    >
+                    <div className="w-7 h-7 border flex items-center justify-center text-sm transition-all duration-200"
+                        style={{ borderColor: isOpen ? accent : "var(--border)", color: isOpen ? accent : "var(--text-muted)", background: isOpen ? `${accent}15` : "transparent" }}>
                         {icon}
                     </div>
-                    <span className="font-mono text-[11px] tracking-[0.15em] uppercase text-left"
-                        style={{ color: isOpen ? accent : "#c9d1d9" }}>
-                        {title}
-                    </span>
+                    <span className="font-mono text-[13px] tracking-[0.15em] uppercase text-left" style={{ color: isOpen ? accent : "var(--text-primary)" }}>{title}</span>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
-                    <span className="font-mono text-[8px] tracking-widest" style={{ color: isOpen ? accent : "#8b949e" }}>
-                        {isOpen ? "CLOSE" : "OPEN"}
-                    </span>
-                    <ChevronDown
-                        size={14}
-                        className="transition-transform duration-300"
-                        style={{
-                            color: isOpen ? accent : "#8b949e",
-                            transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
-                        }}
-                    />
+                    <span className="font-mono text-[10px] tracking-widest" style={{ color: isOpen ? accent : "var(--text-dim)" }}>{isOpen ? "CLOSE" : "OPEN"}</span>
+                    <ChevronDown size={14} className="transition-transform duration-300" style={{ color: isOpen ? accent : "var(--text-dim)", transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }} />
                 </div>
             </button>
-            <div
-                className="overflow-hidden transition-all duration-300"
-                style={{ maxHeight: isOpen ? "200px" : "0" }}
-            >
-                <div className="px-4 pb-4 relative z-10 border-t border-[#1a2332]">
+            <div className="overflow-hidden transition-all duration-300" style={{ maxHeight: isOpen ? "200px" : "0" }}>
+                <div className="px-4 pb-4 relative z-10 border-t" style={{ borderColor: "var(--border)" }}>
                     <div className="flex items-start gap-2 pt-3">
-                        <span className="font-mono text-[#39d353] text-[10px] mt-0.5 shrink-0">▸</span>
-                        <p className="font-mono text-[11px] text-[#8b949e] leading-relaxed tracking-wide">{desc}</p>
+                        <span className="font-mono text-[10px] mt-0.5 shrink-0" style={{ color: accent }}>▸</span>
+                        <p className="font-mono text-[13px] leading-relaxed tracking-wide" style={{ color: "var(--text-muted)" }}>{desc}</p>
                     </div>
                 </div>
             </div>
@@ -1023,7 +109,7 @@ function AccordionItem({ icon, title, desc, isOpen, onToggle, accent = "#39d353"
     );
 }
 
-/* ─── Data ───────────────────────────────────────────────── */
+/* Professional expertise and traits data */
 const skills = [
     { icon: <RiReactjsLine />, title: "Frontend Engineering", desc: "Building responsive, accessible user interfaces using HTML, CSS, JavaScript, React, Next.js and Tailwind CSS with performance-first architecture." },
     { icon: <RiNodejsLine />, title: "Backend & API Systems", desc: "Developing scalable REST APIs using Node.js and Express including authentication, authorization and secure server logic." },
@@ -1038,11 +124,16 @@ const traits = [
     { icon: <RiRocketLine />, title: "Growth Mindset", desc: "Actively learning new technologies and frameworks to stay aligned with evolving industry standards." },
 ];
 
-/* ─── Main export ────────────────────────────────────────── */
+/* 
+   Main About Section 
+   Structured as a multi-panel terminal interface to balance text density with visuals.
+*/
 export default function AboutSection() {
     const [activeSkill, setActiveSkill] = useState(null);
     const [activeTrait, setActiveTrait] = useState(null);
     const [glitch, setGlitch] = useState(false);
+    const [showExpertise, setShowExpertise] = useState(false);
+    const [showQualities, setShowQualities] = useState(false);
 
     useEffect(() => {
         const t = setInterval(() => {
@@ -1053,100 +144,58 @@ export default function AboutSection() {
     }, []);
 
     return (
-        <ParallaxSection backgroundImage="/images/bg.png" height="auto">
-        <section
-                className="relative py-28 pt-0 overflow-hidden"
-                id='about'
-            style={{ fontFamily: "'Courier New', Courier, monospace" }}
-        >
+        <section className="relative py-10 md:py-14 overflow-hidden" id='about' style={{ background: "var(--bg)", fontFamily: "'Courier New', Courier, monospace" }}>
             {/* BG grid */}
-            <div
-                className="absolute inset-0 opacity-[0.025] pointer-events-none"
-                style={{
-                    backgroundImage: `linear-gradient(rgba(57,211,83,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(57,211,83,0.6) 1px,transparent 1px)`,
-                    backgroundSize: "40px 40px",
-                }}
-            />
+            <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
+                style={{ backgroundImage: `linear-gradient(var(--accent) 1px,transparent 1px),linear-gradient(90deg,var(--accent) 1px,transparent 1px)`, backgroundSize: "40px 40px" }} />
             {/* Ambient glows */}
-            <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-[#39d353] opacity-[0.025] rounded-full blur-[160px] pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#00e5ff] opacity-[0.02] rounded-full blur-[140px] pointer-events-none" />
+            <div className="absolute top-1/4 left-0 w-[500px] h-[500px] rounded-full blur-[160px] pointer-events-none" style={{ background: "var(--accent)", opacity: 0.03 }} />
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full blur-[140px] pointer-events-none" style={{ background: "var(--accent-blue)", opacity: 0.02 }} />
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
-
-                {/* ── PAGE HEADER ── */}
-                <div className="mb-14">
-                    <div className="flex ml-5 items-center gap-3 mb-6">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse shadow-[0_0_8px_#39d353]" />
-                        <span className="font-mono text-[10px] tracking-[0.3em] text-[#39d353] uppercase">
-                            SYSTEM_MODULE / ABOUT
-                        </span>
+                {/* ── HEADER ── */}
+                <div className="mb-8">
+                    <div className="flex items-center gap-3 mb-6">
+                        <div className="w-2 h-2 rounded-full animate-pulse shadow-[0_0_8px_var(--accent-glow)]" style={{ background: "var(--accent)" }} />
+                        <span className="font-mono text-[11px] tracking-[0.3em] uppercase font-bold" style={{ color: "var(--accent)" }}>SYSTEM_MODULE / ABOUT</span>
                     </div>
-                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden">
+                    <div className="border relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                         <ScanlineOverlay />
-                        <CornerAccent color="#39d353" />
+                        <CornerAccent />
                         <WindowChrome filename="ABOUT_ME.txt" />
-                        <div className="px-8 py-6">
-                            <h2
-                                className={`font-mono font-black text-3xl md:text-4xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "text-[#39d353] translate-x-[2px]" : "text-white"}`}
-                                style={{ textShadow: "0 0 24px rgba(57,211,83,0.25)" }}
-                            >
-                                ABOUT_<span className="text-[#39d353]">ME</span>
-                                <Cursor />
+                        <div className="px-6 md:px-8 py-8">
+                            <h2 className={`font-mono font-black text-3xl md:text-5xl tracking-[0.06em] uppercase transition-all duration-75 ${glitch ? "translate-x-[2px]" : ""}`}
+                                style={{ color: glitch ? "var(--accent)" : "var(--text-primary)", textShadow: "0 0 24px var(--accent-glow)" }}>
+                                ABOUT_<span style={{ color: "var(--accent)" }}>ME</span><Cursor />
                             </h2>
-                            <p className="font-mono text-[12px] text-[#8b949e] mt-3 tracking-wider">
-                                $ cat ./about/profile.txt — Full Stack Developer from Jabalpur, MP.
-                            </p>
+                            <p className="font-mono text-[13px] mt-4 tracking-wider" style={{ color: "var(--text-muted)" }}>$ cat ./about/profile.txt — I build full-stack web applications that run in production.</p>
                         </div>
                     </div>
                 </div>
 
-                    
                 {/* ── TOP SECTION: IMAGE + BIO ── */}
-                <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-6 mb-6">
-
+                <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6 mb-6">
                     {/* Image panel */}
-                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden group hover:border-[#39d353] transition-colors duration-300">
+                    <div className="border relative overflow-hidden group transition-colors duration-300 card-hover" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                         <ScanlineOverlay />
-                        <CornerAccent color="#39d353" />
-                        <WindowChrome filename="PROFILE_IMG.png" status="LOADED" statusColor="#00e5ff" />
+                        <CornerAccent />
+                        <WindowChrome filename="PROFILE_IMG.png" status="LOADED" statusColor="var(--accent-blue)" />
                         <div className="p-4 relative z-10">
-                            <div className="relative border border-[#1a2332] overflow-hidden">
-                                <CornerAccent color="#39d353" />
-                                    <div className="relative overflow-hidden group">
-
-                                        <Image
-                                            src="/images/hero3.png"
-                                            alt="Prayag Sahu"
-                                            width={400}
-                                            height={500}
-                                            className="w-full object-cover transition-all duration-700 group-hover:brightness-90 group-hover:contrast-110"
-                                            style={{
-                                                filter: "brightness(0.55) contrast(1.1)"
-                                            }}
-                                        />
-
-                                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-700 pointer-events-none" />
-
-                                    </div>
-
-                                {/* Image overlay strip */}
-                                <div className="absolute bottom-0 left-0 right-0 border-t border-[#1a2332] bg-[#010409]/80 px-3 py-2">
-                                    <p className="font-mono text-[9px] text-[#39d353] tracking-[0.2em]">PRAYAG_SAHU.EXE</p>
-                                        <p className="font-mono text-[8px] text-[#8b949e]">FULL_STACK_DEVELOPER</p>
-                                </div>
+                            <div className="relative border overflow-hidden" style={{ borderColor: "var(--border)" }}>
+                                <CornerAccent color="var(--accent)" />
+                                <Image src="/images/portfolio.png" alt="Prayag Sahu" width={400} height={500} className="w-full object-cover transition-all duration-700" style={{ filter: "brightness(1) contrast(1.1)" }} />
+                                <div className="absolute inset-0 bg-black/30 pointer-events-none" />
                             </div>
-
-                            {/* Quick stat pills under image */}
                             <div className="grid grid-cols-2 gap-2 mt-3">
                                 {[
-                                    { label: "STATUS", value: "AVAILABLE", color: "#39d353" },
-                                    { label: "MODE", value: "FREELANCE", color: "#00e5ff" },
-                                    { label: "BASE", value: "JABALPUR", color: "#f59e0b" },
-                                    { label: "DEGREE", value: "B.TECH CSE", color: "#a855f7" },
+                                    { label: "STATUS", value: "OPEN TO ROLES", color: "var(--accent)" },
+                                    { label: "CGPA", value: "8.35 / 10", color: "var(--accent-blue)" },
+                                    { label: "BASE", value: "MP, INDIA", color: "var(--accent-amber)" },
+                                    { label: "DEGREE", value: "B.TECH CSE", color: "var(--accent-purple)" },
                                 ].map((s) => (
-                                    <div key={s.label} className="border border-[#1a2332] bg-[#010409] px-2 py-1.5">
-                                        <div className="font-mono text-[7px] text-[#8b949e] tracking-[0.2em]">{s.label}</div>
-                                        <div className="font-mono text-[10px] font-bold" style={{ color: s.color }}>{s.value}</div>
+                                    <div key={s.label} className="border px-3 py-2" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                                        <div className="font-mono text-[8px] tracking-[0.2em] font-bold" style={{ color: "var(--text-dim)" }}>{s.label}</div>
+                                        <div className="font-mono text-[11px] font-bold" style={{ color: s.color }}>{s.value}</div>
                                     </div>
                                 ))}
                             </div>
@@ -1154,68 +203,43 @@ export default function AboutSection() {
                     </div>
 
                     {/* Bio panel */}
-                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden hover:border-[#39d353] transition-colors duration-300 flex flex-col">
+                    <div className="border relative overflow-hidden transition-colors duration-300 flex flex-col card-hover" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                         <ScanlineOverlay />
-                        <CornerAccent color="#00e5ff" />
-                        <WindowChrome filename="BIO_DATA.txt" status="ONLINE" statusColor="#00e5ff" />
-
+                        <CornerAccent color="var(--accent-blue)" />
+                        <WindowChrome filename="BIO_DATA.txt" status="ONLINE" statusColor="var(--accent-blue)" />
                         <div className="p-7 relative z-10 flex flex-col flex-1">
-                            {/* Name & title */}
                             <div className="mb-5">
-                                <div className="font-mono text-[10px] text-[#8b949e] tracking-[0.2em] mb-1">$ whoami</div>
-                                <h3
-                                    className="font-mono font-black text-2xl text-white tracking-tight"
-                                    style={{ textShadow: "0 0 16px rgba(0,229,255,0.2)" }}
-                                >
+                                <div className="font-mono text-[12px] tracking-[0.2em] mb-1 font-bold" style={{ color: "var(--text-dim)" }}>$ whoami</div>
+                                <h3 className="font-mono font-black text-2xl md:text-3xl tracking-tight" style={{ color: "var(--text-primary)", textShadow: "0 0 16px var(--accent-glow)" }}>
                                     <TypewriterText text="PRAYAG SAHU" speed={70} />
                                 </h3>
-                                <p className="font-mono text-[11px] text-[#00e5ff] tracking-[0.2em] mt-1">
-                                    COMPUTER SCIENCE ENGINEER · FREELANCE FULL STACK DEVELOPER
-                                </p>
+                                <p className="font-mono text-[11px] tracking-[0.18em] mt-1" style={{ color: "var(--accent-blue)" }}>FULL STACK DEVELOPER · MERN STACK SPECIALIST</p>
                             </div>
-
-                            {/* Bio text */}
-                            <div className="border border-[#1a2332] bg-[#010409] p-4 mb-5 relative">
-                                <CornerAccent color="#1a2332" />
-                                <div className="font-mono text-[9px] text-[#39d353] tracking-[0.2em] mb-2">README.md</div>
-                                <p className="font-mono text-[12px] text-[#8b949e] leading-[1.9] tracking-wide">
-                                    I am{" "}
-                                    <span className="text-[#39d353] font-bold">Prayag Sahu</span>, a Computer Science
-                                    Engineer undergraduate and Freelance Full Stack Developer from{" "}
-                                    <span className="text-white">Jabalpur, Madhya Pradesh</span>.
-                                    <br /><br />
-                                    Completed Higher Secondary Education under{" "}
-                                    <span className="text-white">MPBSE with First Division</span> and currently pursuing{" "}
-                                    <span className="text-[#00e5ff] font-bold">B.Tech (CSE)</span> from{" "}
-                                    <span className="text-white">Baderia Global Institute of Engineering & Management</span>,
-                                    affiliated with <span className="text-[#39d353]">RGPV University</span>.
-                                    <br /><br />
-                                    Focused on building modern, scalable and performance-driven web applications
-                                    using clean architecture and practical problem solving.
-                                </p>
+                            <div className="border p-6 mb-6 relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                                <CornerAccent color="var(--border-dim)" />
+                                <div className="font-mono text-[11px] tracking-[0.2em] mb-4 font-bold" style={{ color: "var(--accent)" }}>README.md</div>
+                                <div className="space-y-4 font-mono text-[13px] leading-[1.8] font-bold" style={{ color: "var(--text-muted)" }}>
+                                    <p>
+                                        Production-focused <span style={{ color: "var(--accent)" }}>Full Stack Developer</span> dedicated to delivering end-to-end commercial web platforms. I bring hands-on experience in <span style={{ color: "var(--accent-purple)" }}>complex data management</span> and system architecture, proven by the successful launch of <span style={{ color: "var(--accent-blue)" }}>ghotulstays.com</span>.
+                                    </p>
+                                    <p>
+                                        I specialize in utilizing the <span style={{ color: "var(--accent)" }}>MERN stack</span> to build highly responsive and user-centric applications that solve real-world business challenges.
+                                    </p>
+                                </div>
                             </div>
-
-                            {/* Info pills */}
-                            <div className="grid grid-cols-2 gap-2 mt-auto">
-                                <InfoPill icon={<MapPin size={13} />} text="Jabalpur, Madhya Pradesh" accent="#39d353" />
-                                <InfoPill icon={<GraduationCap size={13} />} text="B.Tech CSE — BGIEM RGPV" accent="#00e5ff" />
-                                <InfoPill icon={<Briefcase size={13} />} text="Freelance Full Stack Dev" accent="#f59e0b" />
-                                <InfoPill icon={<Rocket size={13} />} text="Open to Opportunities" accent="#a855f7" />
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-auto">
+                                <InfoPill icon={<MapPin size={13} />} text="Jabalpur, Madhya Pradesh" accent="var(--accent)" />
+                                <InfoPill icon={<GraduationCap size={13} />} text="B.Tech CSE — RGPV University" accent="var(--accent-blue)" />
+                                <InfoPill icon={<Briefcase size={13} />} text="Creative Developer" accent="var(--accent-amber)" />
+                                <InfoPill icon={<Rocket size={13} />} text="Open to Opportunities" accent="var(--accent-purple)" />
                             </div>
                         </div>
-
-                        {/* Terminal footer */}
-                        <div className="px-7 py-3 border-t border-[#1a2332] flex items-center justify-between relative z-10">
-                            <div className="flex items-center gap-2 font-mono text-[9px] text-[#30363d]">
-                                <span>$</span>
-                                <span className="text-[#8b949e]">cat bio.txt _</span>
-                            </div>
-                            <a
-                                href="http://prayagsahuportfolio.netlify.app"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group/btn flex items-center gap-2 border border-[#39d353] text-[#39d353] font-mono text-[9px] tracking-[0.15em] uppercase px-3 py-1.5 hover:bg-[#39d353] hover:text-[#010409] transition-all duration-200"
-                            >
+                        <div className="px-7 py-3 border-t flex items-center justify-between relative z-10" style={{ borderColor: "var(--border)" }}>
+                            <div className="font-mono text-[9px]" style={{ color: "var(--text-dim)" }}>$ <span style={{ color: "var(--text-muted)" }}>cat bio.txt _</span></div>
+                            <a href="#" className="flex items-center gap-2 border font-mono text-[9px] tracking-[0.15em] uppercase px-3 py-1.5 transition-all duration-200" 
+                                style={{ borderColor: "var(--accent)", color: "var(--accent)" }}
+                                onMouseEnter={e => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "var(--bg)"; }}
+                                onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--accent)"; }}>
                                 PORTFOLIO →
                             </a>
                         </div>
@@ -1224,102 +248,82 @@ export default function AboutSection() {
 
                 {/* ── BOTTOM SECTION: ACCORDIONS ── */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
                     {/* Core Expertise */}
-                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden hover:border-[#39d353] transition-colors duration-300">
+                    <div className="border relative overflow-hidden transition-colors duration-300 card-hover" style={{ borderColor: showExpertise ? "var(--accent)" : "var(--border)", background: "var(--surface)" }}>
                         <ScanlineOverlay />
-                        <CornerAccent color="#39d353" />
-                        <WindowChrome filename="CORE_EXPERTISE.log" status="ACTIVE" statusColor="#39d353" />
-
-                        <div className="p-6 relative z-10">
-                            <div className="flex items-center justify-between mb-4">
-                                <div>
-                                    <div className="font-mono text-[9px] text-[#39d353] tracking-[0.2em] mb-1">$ ls ./skills/</div>
-                                    <h3 className="font-mono font-black text-base text-white tracking-[0.1em] uppercase">
-                                        CORE_EXPERTISE
-                                    </h3>
-                                </div>
-                                <div className="border border-[#1a2332] bg-[#010409] px-3 py-1">
-                                    <span className="font-mono text-[9px] text-[#39d353] tracking-widest">{skills.length} MODULES</span>
-                                </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                {skills.map((skill, i) => (
-                                    <AccordionItem
-                                        key={i}
-                                        index={i}
-                                        icon={skill.icon}
-                                        title={skill.title}
-                                        desc={skill.desc}
-                                        isOpen={activeSkill === i}
-                                        onToggle={() => setActiveSkill(activeSkill === i ? null : i)}
-                                        accent="#39d353"
-                                    />
-                                ))}
+                        <CornerAccent color="var(--accent)" />
+                        <div onClick={() => setShowExpertise(!showExpertise)} className="cursor-pointer group/header relative z-20">
+                            <WindowChrome filename="CORE_EXPERTISE.log" status={showExpertise ? "OPEN" : "CLOSED"} statusColor="var(--accent)" />
+                            <div className="absolute right-24 md:right-32 top-1/2 -translate-y-1/2 flex items-center gap-2 md:gap-3">
+                                <span className="font-mono text-[9px] md:text-[11px] font-black tracking-[0.2em] transition-all duration-200" style={{ color: "var(--accent)" }}>
+                                    {showExpertise ? "COLLAPSE" : "EXPAND"}
+                                </span>
+                                <ChevronDown size={14} className={`transition-all duration-300 ${!showExpertise ? "animate-bounce" : ""}`} style={{ color: "var(--accent)", transform: showExpertise ? "rotate(180deg)" : "rotate(0deg)" }} />
                             </div>
                         </div>
-
-                        <div className="px-6 py-3 border-t border-[#1a2332] flex items-center gap-2 relative z-10">
-                            <span className="font-mono text-[9px] text-[#30363d]">$</span>
-                            <span className="font-mono text-[9px] text-[#8b949e]">skills --expertise _</span>
+                        <div className={`transition-all duration-500 ease-in-out overflow-hidden ${showExpertise ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"}`}>
+                            <div className="p-6 relative z-10 border-t" style={{ borderColor: "var(--border)" }}>
+                                <div className="flex items-center justify-between mb-4">
+                                    <div>
+                                        <div className="font-mono text-[11px] tracking-[0.2em] mb-1" style={{ color: "var(--accent)" }}>$ ls ./skills/</div>
+                                        <h3 className="font-mono font-black text-lg tracking-[0.1em] uppercase" style={{ color: "var(--text-primary)" }}>CORE_EXPERTISE</h3>
+                                    </div>
+                                    <div className="border px-3 py-1" style={{ borderColor: "var(--border)", background: "var(--bg)" }}>
+                                        <span className="font-mono text-[9px] tracking-widest" style={{ color: "var(--accent)" }}>{skills.length} MODULES</span>
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    {skills.map((skill, i) => (
+                                        <AccordionItem key={i} icon={skill.icon} title={skill.title} desc={skill.desc} isOpen={activeSkill === i} onToggle={() => setActiveSkill(activeSkill === i ? null : i)} accent="var(--accent)" />
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     {/* Core Qualities */}
-                    <div className="border border-[#1a2332] bg-[#0d1117] relative overflow-hidden hover:border-[#00e5ff] transition-colors duration-300">
+                    <div className="border relative overflow-hidden transition-colors duration-300 card-hover" style={{ borderColor: showQualities ? "var(--accent-blue)" : "var(--border)", background: "var(--surface)" }}>
                         <ScanlineOverlay />
-                        <CornerAccent color="#00e5ff" />
-                        <WindowChrome filename="CORE_QUALITIES.log" status="ACTIVE" statusColor="#00e5ff" />
-
-                        <div className="p-6 relative z-10">
-                            <div className="flex items-center justify-between mb-4">
-                                <div>
-                                    <div className="font-mono text-[9px] text-[#00e5ff] tracking-[0.2em] mb-1">$ ls ./traits/</div>
-                                    <h3 className="font-mono font-black text-base text-white tracking-[0.1em] uppercase">
-                                        CORE_QUALITIES
-                                    </h3>
-                                </div>
-                                <div className="border border-[#1a2332] bg-[#010409] px-3 py-1">
-                                    <span className="font-mono text-[9px] text-[#00e5ff] tracking-widest">{traits.length} TRAITS</span>
-                                </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                {traits.map((trait, i) => (
-                                    <AccordionItem
-                                        key={i}
-                                        index={i}
-                                        icon={trait.icon}
-                                        title={trait.title}
-                                        desc={trait.desc}
-                                        isOpen={activeTrait === i}
-                                        onToggle={() => setActiveTrait(activeTrait === i ? null : i)}
-                                        accent="#00e5ff"
-                                    />
-                                ))}
+                        <CornerAccent color="var(--accent-blue)" />
+                        <div onClick={() => setShowQualities(!showQualities)} className="cursor-pointer group/header relative z-20">
+                            <WindowChrome filename="CORE_QUALITIES.log" status={showQualities ? "OPEN" : "CLOSED"} statusColor="var(--accent-blue)" />
+                            <div className="absolute right-24 md:right-32 top-1/2 -translate-y-1/2 flex items-center gap-2 md:gap-3">
+                                <span className="font-mono text-[9px] md:text-[11px] font-black tracking-[0.2em] transition-all duration-200" style={{ color: "var(--accent-blue)" }}>
+                                    {showQualities ? "COLLAPSE" : "EXPAND"}
+                                </span>
+                                <ChevronDown size={14} className={`transition-all duration-300 ${!showQualities ? "animate-bounce" : ""}`} style={{ color: "var(--accent-blue)", transform: showQualities ? "rotate(180deg)" : "rotate(0deg)" }} />
                             </div>
                         </div>
-
-                        <div className="px-6 py-3 border-t border-[#1a2332] flex items-center gap-2 relative z-10">
-                            <span className="font-mono text-[9px] text-[#30363d]">$</span>
-                            <span className="font-mono text-[9px] text-[#8b949e]">traits --list _</span>
+                        <div className={`transition-all duration-500 ease-in-out overflow-hidden ${showQualities ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"}`}>
+                            <div className="p-6 relative z-10 border-t" style={{ borderColor: "var(--border)" }}>
+                                <div className="flex items-center justify-between mb-4">
+                                    <div>
+                                        <div className="font-mono text-[11px] tracking-[0.2em] mb-1" style={{ color: "var(--accent-blue)" }}>$ ls ./traits/</div>
+                                        <h3 className="font-mono font-black text-lg tracking-[0.1em] uppercase" style={{ color: "var(--text-primary)" }}>CORE_QUALITIES</h3>
+                                    </div>
+                                    <div className="border px-3 py-1" style={{ borderColor: "var(--border)", background: "var(--bg)" }}>
+                                        <span className="font-mono text-[9px] tracking-widest" style={{ color: "var(--accent-blue)" }}>{traits.length} TRAITS</span>
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    {traits.map((trait, i) => (
+                                        <AccordionItem key={i} icon={trait.icon} title={trait.title} desc={trait.desc} isOpen={activeTrait === i} onToggle={() => setActiveTrait(activeTrait === i ? null : i)} accent="var(--accent-blue)" />
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 {/* ── FOOTER ── */}
                 <div className="mt-8 flex items-center justify-between">
-                        <div className="font-mono text-[10px] text-[#8b949e] tracking-widest">
-                        $ about --profile prayag-sahu _
-                    </div>
+                    <div className="font-mono text-[10px] tracking-widest" style={{ color: "var(--text-dim)" }}>$ about --profile prayag-sahu _</div>
                     <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#39d353] animate-pulse" />
-                        <span className="font-mono text-[9px] text-[#39d353] tracking-[0.2em]">ALL SYSTEMS OPERATIONAL</span>
+                        <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "var(--accent)" }} />
+                        <span className="font-mono text-[9px] tracking-[0.2em]" style={{ color: "var(--accent)" }}>ALL SYSTEMS OPERATIONAL</span>
                     </div>
                 </div>
             </div>
-            </section>
-        </ParallaxSection>
+        </section>
     );
 }
