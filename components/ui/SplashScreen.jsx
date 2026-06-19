@@ -101,7 +101,7 @@ export default function SplashScreen({ onFinish }) {
                         transition={{ delay: 0.8 }}
                         className="text-[10px] md:text-[14px] text-[var(--accent)] tracking-[0.2em] md:tracking-[0.3em] uppercase mt-4 font-bold"
                     >
-                        THE PORTFOLIO
+                        WELCOME TO MY PORTFOLIO
                     </motion.p>
                 </div>
 

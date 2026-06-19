@@ -183,7 +183,7 @@ export default function AboutSection() {
                         <div className="p-4 relative z-10">
                             <div className="relative border overflow-hidden" style={{ borderColor: "var(--border)" }}>
                                 <CornerAccent color="var(--accent)" />
-                                <Image src="/images/portfolio.png" alt="Prayag Sahu" width={400} height={500} className="w-full object-cover transition-all duration-700" style={{ filter: "brightness(1) contrast(1.1)" }} />
+                                <Image src="/images/profile.jpg" alt="Prayag Sahu" width={400} height={500} className="w-full object-cover transition-all duration-700" style={{ filter: "brightness(1) contrast(1.1)" }} />
                                 <div className="absolute inset-0 bg-black/30 pointer-events-none" />
                             </div>
                             <div className="grid grid-cols-2 gap-2 mt-3">
