@@ -281,7 +281,7 @@ export default function AchievementsPage() {
                         <CornerAccent color="var(--accent-purple)" />
                         <WindowChrome filename="AWARDS_GALLERY.png" />
                         <div className="p-4">
-                            <img src="/images/achivements.png" alt="Achievements" className="w-full h-auto object-cover border" style={{ borderColor: "var(--border)" }} />
+                            <img src="/images/achivements.png" alt="Achievements" className="w-full h-auto object-cover border" style={{ borderColor: "var(--border)" }} fetchPriority="high" loading="eager" decoding="async" />
                         </div>
                     </div>
                 </div>

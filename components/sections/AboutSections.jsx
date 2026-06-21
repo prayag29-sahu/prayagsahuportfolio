@@ -70,7 +70,7 @@ function TypewriterText({ text, speed = 55 }) {
 /* Quick info pill */
 function InfoPill({ icon, text, accent = "var(--accent)" }) {
     return (
-        <div className="flex items-center gap-3 border px-4 py-3 group transition-colors duration-200" 
+        <div className="flex items-center gap-3 border px-4 py-3 group transition-colors duration-200"
             style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
             <span style={{ color: accent }} className="shrink-0 group-hover:scale-110 transition-transform">{icon}</span>
             <span className="font-mono text-[11px] md:text-[12px] tracking-wide group-hover:text-primary transition-colors duration-200" style={{ color: "var(--text-muted)" }}>{text}</span>
@@ -166,7 +166,7 @@ export default function AboutSection() {
                         <div className="px-6 md:px-8 py-8">
                             <h2 className={`font-mono font-black text-3xl md:text-5xl tracking-[0.06em] uppercase transition-all duration-75 ${glitch ? "translate-x-[2px]" : ""}`}
                                 style={{ color: glitch ? "var(--accent)" : "var(--text-primary)", textShadow: "0 0 24px var(--accent-glow)" }}>
-                                ABOUT_<span style={{ color: "var(--accent)" }}>ME</span><Cursor />
+                                PRAYAG_<span style={{ color: "var(--accent)" }}>SAHU</span><Cursor />
                             </h2>
                             <p className="font-mono text-[13px] mt-4 tracking-wider" style={{ color: "var(--text-muted)" }}>$ cat ./about/profile.txt — I build full-stack web applications that run in production.</p>
                         </div>
@@ -183,7 +183,7 @@ export default function AboutSection() {
                         <div className="p-4 relative z-10">
                             <div className="relative border overflow-hidden" style={{ borderColor: "var(--border)" }}>
                                 <CornerAccent color="var(--accent)" />
-                                <Image src="/images/profile.jpg" alt="Prayag Sahu" width={400} height={500} className="w-full object-cover transition-all duration-700" style={{ filter: "brightness(1) contrast(1.1)" }} />
+                                <Image src="/images/profile.jpg" alt="Prayag Sahu" width={400} height={500} className="w-full object-cover transition-all duration-700" style={{ filter: "brightness(1) contrast(1.1)" }} priority={true} />
                                 <div className="absolute inset-0 bg-black/30 pointer-events-none" />
                             </div>
                             <div className="grid grid-cols-2 gap-2 mt-3">
@@ -236,7 +236,7 @@ export default function AboutSection() {
                         </div>
                         <div className="px-7 py-3 border-t flex items-center justify-between relative z-10" style={{ borderColor: "var(--border)" }}>
                             <div className="font-mono text-[9px]" style={{ color: "var(--text-dim)" }}>$ <span style={{ color: "var(--text-muted)" }}>cat bio.txt _</span></div>
-                            <a href="#" className="flex items-center gap-2 border font-mono text-[9px] tracking-[0.15em] uppercase px-3 py-1.5 transition-all duration-200" 
+                            <a href="#" className="flex items-center gap-2 border font-mono text-[9px] tracking-[0.15em] uppercase px-3 py-1.5 transition-all duration-200"
                                 style={{ borderColor: "var(--accent)", color: "var(--accent)" }}
                                 onMouseEnter={e => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "var(--bg)"; }}
                                 onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--accent)"; }}>

@@ -7,12 +7,12 @@ import { useTheme } from '@/components/providers/ThemeProvider';
 
 /* The menu links */
 const navLinks = [
-    { label: "HOME",         href: "#home" },
-    { label: "ABOUT",        href: "#about" },
-    { label: "EDUCATION",    href: "#education" },
-    { label: "PROJECTS",     href: "#projects" },
+    // { label: "HOME",         href: "#home" },
+    { label: "ABOUT", href: "#about" },
+    { label: "EDUCATION", href: "#education" },
+    { label: "PROJECTS", href: "#projects" },
     { label: "ACHIEVEMENTS", href: "#achievements" },
-    { label: "CONTACT",      href: "#contact" },
+    { label: "CONTACT", href: "#contact" },
 ];
 
 /* Blinking computer-style cursor */
@@ -177,7 +177,7 @@ export default function Navbar() {
                                     style={{ borderColor: "var(--accent)", boxShadow: "0 0 10px var(--accent-glow)" }}
                                 />
                                 <Image
-                                    src="/images/NavLogo.png"
+                                    src="/images/main.png"
                                     alt="Prayag Sahu"
                                     fill
                                     sizes="40px"
@@ -280,8 +280,8 @@ export default function Navbar() {
                         <div className="relative w-9 h-9 shrink-0">
                             <div className="absolute inset-0 border rounded-full"
                                 style={{ borderColor: "var(--accent)", boxShadow: "0 0 8px var(--accent-glow)" }} />
-                            <Image src="/images/NavLogo.png" alt="Prayag" width={100} height={100}
-                                className="w-full h-full rounded-full object-cover" />
+                            <Image src="/images/main.png" alt="Prayag" width={100} height={100}
+                                className="w-full h-full rounded-full object-cover" priority={true} />
                         </div>
                         <div>
                             <div className="font-mono font-black text-[12px] tracking-widest" style={{ color: "var(--text-primary)" }}>

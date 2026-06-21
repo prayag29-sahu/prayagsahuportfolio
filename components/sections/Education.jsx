@@ -166,13 +166,13 @@ function PopupGallery({ item, onClose }) {
                     <div className="font-mono text-[10px] px-3 py-1 border tracking-widest" style={{ borderColor: ac, color: ac }}>{item.images.length} FILES</div>
                 </div>
                 <div className="flex-1 overflow-y-auto p-4 md:p-8 relative z-10 custom-gallery-scroll">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                    <div className="columns-1 sm:columns-2 md:columns-3 gap-5 space-y-5">
                         {item.images.map((img, i) => (
-                            <div key={i} onClick={() => setLightbox(i)} className="border p-3 relative overflow-hidden cursor-pointer group/card transition-all duration-200"
+                            <div key={i} onClick={() => setLightbox(i)} className="border p-3 relative overflow-hidden cursor-pointer group/card transition-all duration-200 break-inside-avoid"
                                 style={{ borderColor: "var(--border)", background: "var(--bg)" }}>
                                 <CornerAccent color="var(--border)" />
                                 <div className="relative overflow-hidden">
-                                    <img src={img.src} alt={img.caption} className="w-full h-48 object-cover group-hover/card:scale-105 transition-transform duration-300" />
+                                    <img src={img.src} alt={img.caption} className="w-full h-auto object-contain group-hover/card:scale-105 transition-transform duration-300" loading="lazy" decoding="async" />
                                 </div>
                                 <div className="mt-2 flex items-center justify-between">
                                     <p className="font-mono text-[10px] tracking-wider uppercase" style={{ color: "var(--text-muted)" }}>{img.caption}</p>
@@ -187,7 +187,7 @@ function PopupGallery({ item, onClose }) {
                 <div className="fixed inset-0 z-[60] flex items-center justify-center" style={{ background: "var(--bg-dim)", backdropFilter: "blur(20px)" }} onClick={() => setLightbox(null)}>
                     <div className="relative max-w-4xl w-[90%]" onClick={(e) => e.stopPropagation()}>
                         <div className="border p-2" style={{ borderColor: ac, background: "var(--surface)" }}>
-                            <img src={item.images[lightbox].src} alt={item.images[lightbox].caption} className="w-full max-h-[72vh] object-contain" />
+                            <img src={item.images[lightbox].src} alt={item.images[lightbox].caption} className="w-full max-h-[72vh] object-contain" loading="lazy" decoding="async" />
                         </div>
                     </div>
                 </div>
@@ -228,7 +228,7 @@ function EduCard({ item, index, onExplore, isHorizontal = false }) {
                         style={{ borderColor: "var(--border)", background: "var(--bg)" }}
                         onClick={() => onExplore(index)}>
                         <CornerAccent color="var(--border)" />
-                        <img src={item.poster} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+                        <img src={item.poster} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" loading="lazy" decoding="async" />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
                             <span className="font-mono text-[9px] tracking-widest text-white border border-white/30 px-3 py-1 backdrop-blur-sm">VIEW_GALLERY</span>
                         </div>
@@ -257,7 +257,7 @@ function EduCard({ item, index, onExplore, isHorizontal = false }) {
                     style={{ borderColor: "var(--border)", background: "var(--bg)" }}
                     onClick={() => onExplore(index)}>
                     <CornerAccent color="var(--border)" />
-                    <img src={item.poster} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+                    <img src={item.poster} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" loading="lazy" decoding="async" />
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
                         <span className="font-mono text-[10px] tracking-widest text-white border border-white/30 px-3 py-1 backdrop-blur-sm">VIEW_GALLERY</span>
                     </div>
@@ -312,7 +312,7 @@ function BeyondAcademics({ onExplore }) {
                     style={{ borderColor: "var(--border)", background: "var(--bg)" }}
                     onClick={onExplore}>
                     <CornerAccent color="var(--border)" />
-                    <img src={beyondData.poster} alt="Beyond Academics" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+                    <img src={beyondData.poster} alt="Beyond Academics" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" loading="lazy" decoding="async" />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
                         <span className="font-mono text-[10px] tracking-widest text-white border border-white/30 px-3 py-1 backdrop-blur-sm">OPEN_VAULT</span>
                     </div>

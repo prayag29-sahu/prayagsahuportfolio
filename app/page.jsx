@@ -14,17 +14,16 @@ export default function Portfolio() {
 
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <AboutSection />
       <EducationSection />
-      <EducationSection2 />
-      <SkillsSection />
       <ProjectsSection />
       <AchievementsSection />
       {/* Currently working on this CTA section  */}
       {/* <CTA /> */}
+      <EducationSection2 />
+      <SkillsSection />
       <ContactSection />
-
     </>
   );
 }

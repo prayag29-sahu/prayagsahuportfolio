@@ -308,6 +308,7 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
                             src={item.images[slide].src}
                             alt={item.images[slide].caption}
                             className="w-full h-full object-contain transition-opacity duration-700"
+                            loading="lazy" decoding="async"
                         />
                         {/* Dot indicators */}
                         {item.images.length > 1 && (
@@ -393,12 +394,12 @@ function PopupGallery({ item, onClose }) {
 
                 {/* Grid */}
                 <div className="flex-1 overflow-y-auto p-4 md:p-8 relative z-10 custom-gallery-scroll">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                    <div className="columns-1 sm:columns-2 md:columns-3 gap-5 space-y-5">
                         {item.images.map((img, i) => (
                             <div
                                 key={i}
                                 onClick={() => setLightbox(i)}
-                                className="border p-3 relative overflow-hidden group/card cursor-pointer transition-all duration-200"
+                                className="border p-3 relative overflow-hidden group/card cursor-pointer transition-all duration-200 break-inside-avoid"
                                 style={{ borderColor: "var(--border)", background: "var(--bg)" }}
                                 onMouseEnter={e => e.currentTarget.style.borderColor = "var(--accent)"}
                                 onMouseLeave={e => e.currentTarget.style.borderColor = "var(--border)"}
@@ -408,7 +409,8 @@ function PopupGallery({ item, onClose }) {
                                     <img
                                         src={img.src}
                                         alt={img.caption}
-                                        className="w-full h-52 object-cover group-hover/card:scale-105 transition-transform duration-300"
+                                        className="w-full h-auto object-contain group-hover/card:scale-105 transition-transform duration-300"
+                                        loading="lazy" decoding="async"
                                     />
                                     <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/20 transition-all duration-200" />
                                     <div className="absolute top-2 right-2 font-mono text-[8px] border px-1.5 py-0.5" style={{ background: "var(--bg-dim)", borderColor: "var(--border)", color: "var(--text-muted)" }}>
@@ -468,6 +470,7 @@ function PopupGallery({ item, onClose }) {
                                 src={item.images[lightbox].src}
                                 alt={item.images[lightbox].caption}
                                 className="w-full max-h-[75vh] object-contain"
+                                loading="lazy" decoding="async"
                             />
                         </div>
                         <div className="mt-3 flex items-center justify-between px-1">

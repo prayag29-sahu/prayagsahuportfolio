@@ -156,7 +156,7 @@ function SkillCategory({ title, skills, badges }) {
             {badges && badges.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                     {badges.map((url, i) => (
-                        <img key={i} src={url} alt="Skill Badge" className="h-5 hover:scale-110 transition-transform duration-200" />
+                        <img key={i} src={url} alt="Skill Badge" className="h-5 hover:scale-110 transition-transform duration-200" loading="lazy" decoding="async" />
                     ))}
                 </div>
             )}

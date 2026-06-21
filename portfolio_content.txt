@@ -1,0 +1,221 @@
+====================================================================
+PORTFOLIO WEBSITE COMPLETE CONTENT EXTRACT
+====================================================================
+Total Pages/Sections: 7 Main Sections (Hero, About, Education, Skills, Projects, Achievements, Contact)
+UI Theme: Developer/Terminal theme, Glitch effects, Neon Accents
+
+====================================================================
+1. HERO SECTION (HOME)
+====================================================================
+Titles/Roles: FULL STACK DEVELOPER, MERN STACK SPECIALIST, UI/UX DESIGNER, OPEN SOURCE CONTRIBUTOR
+Name: Prayag Sahu
+Location: Jabalpur, Madhya Pradesh, India
+Degree/Role: 3rd Year CSE @ RGPV University
+
+Core Summary/Bio:
+Full Stack Developer building web applications that run in production, not just on localhost. Architecting scalable MERN solutions for businesses and real clients.
+
+Quick Stats displayed:
+- 4+ Projects
+- 2+ Clients
+- 5K+ Commits
+- Hackathons: 4
+- Internships: 2
+- Experience: 8 Months
+
+Key Skills Tags: React, Next.js, Node.js, PostgreSQL, Tailwind, Java, C++, Figma
+Availability: OPEN TO WORK, RESPONSE < 24H
+
+Social Links Mentioned: LinkedIn, GitHub, InterviewBit, Cisco NetAcad, Twitter/X
+
+Images Mentioned:
+- Main Profile Image (e.g., /images/main.png)
+- Ambient glows and terminal scanline effects
+
+====================================================================
+2. ABOUT ME SECTION
+====================================================================
+Status: OPEN TO ROLES
+CGPA: 8.35 / 10
+Degree: B.TECH CSE
+
+Main Bio Text:
+"Production-focused Full Stack Developer dedicated to delivering end-to-end commercial web platforms. I bring hands-on experience in complex data management and system architecture, proven by the successful launch of ghotulstays.com. I specialize in utilizing the MERN stack to build highly responsive and user-centric applications that solve real-world business challenges."
+
+Core Expertise Modules:
+1. Frontend Engineering: Building responsive, accessible user interfaces using HTML, CSS, JavaScript, React, Next.js and Tailwind CSS with performance-first architecture.
+2. Backend & API Systems: Developing scalable REST APIs using Node.js and Express including authentication, authorization and secure server logic.
+3. Database Architecture: Designing optimized relational schemas using PostgreSQL with efficient queries, indexing strategies and clean data modeling.
+4. Mobile Development: Building cross-platform mobile applications using React Native integrated with backend services and APIs.
+
+Core Qualities / Traits:
+1. Core Strengths: Hardworking, self-motivated and detail-oriented developer with strong analytical thinking and problem-solving ability.
+2. Technical Foundation: Computer Science student with solid fundamentals in programming, data structures and modern web development.
+3. Career Vision: Focused on building a long-term career as a software engineer by continuously improving technical depth and system design understanding.
+4. Growth Mindset: Actively learning new technologies and frameworks to stay aligned with evolving industry standards.
+
+Images Mentioned:
+- Secondary Profile Image (/images/profile.jpg)
+
+====================================================================
+3. EDUCATION & EXTRACURRICULAR 
+====================================================================
+1. B.TECH – COMPUTER SCIENCE & ENGINEERING
+Institute: Baderia Global Institute of Engineering & Management (RGPV)
+Duration: 2023 – 2027
+Points:
+- CGPA: 8.35 / 10
+- Focused on Full Stack Development & Designing
+- Topper in IIT Level Examinations
+- Active in Hackathons & SIH Participation
+
+2. PRIMARY & SECONDARY EDUCATION (10TH & 12TH)
+Institute: Sarvottam Higher Secondary School
+Duration: 2020 – 2023
+Points:
+- 12th Grade: 88.6% (Maths & Biology) — School Topper
+- 10th Grade: 93.2% — School Topper
+- Consistent Academic Excellence & Best Student Awards
+- Active in Sports Leadership & Republic Day Participation
+
+3. BEYOND ACADEMICS (Personal Development & Extracurricular)
+Duration: CONTINUOUS
+Points:
+- Active in technical events & competitions
+- Continuous self-learning via online platforms
+- Art exploration — Sketches, C Graphics & City Design
+
+Images Mentioned (Gallery):
+- Class 10th & 12th Topper achievements, Best Student Awards, Republic day honors, Coaching achievements, Sports Leadership.
+- B.Tech achievements: SIH participation, NPTEL DBMS/CN Silver+Elite Certs, Web Design Cert, Oracle Java Course Cert, Android Dev Internship.
+- Beyond Academics: Governmental Quiz Certs, Sanskratik Gyan Exams (2015, 2019, 2023), Handmade sketches, C++ graphics sketches (Lord Buddha, Mathematician Ramanujan), Twin Town construction.
+
+====================================================================
+4. CERTIFICATIONS ARCHIVE (11+ Certs, 30+ Badges, 6 Platforms)
+====================================================================
+1. InterviewBit (DSA): 11 Badges, Streak maintenance, mastery across arrays, trees, graphs and DP.
+2. NPTEL – DBMS (IIT Kharagpur, 2025): Silver + Elite, Top 5%. Covered relational algebra, SQL, normalization and transactions.
+3. NPTEL – CN (IIT Kharagpur, 2026): Silver + Elite, Top 2%. Covered network models and internet protocols.
+4. freeCodeCamp (2023): Modern Web Technologies (2 Certs). HTML, CSS, JS, React, Node, DBs.
+5. Cisco (2026): Networking & Python (23 files/badges).
+6. NASSCOM MERN Stack (2026): Approved Internship Certification covering React, RESTful API, MongoDB.
+7. TITANS Nagpur (2026): 60 Hours Pre-Placement Training (3P) for technical and soft skills.
+8. Hackathon Champion (2024-25): SIH & BRAHMAX 1.0 Participant.
+9. Best Student Award (2023): Sincerity & Conduct Award in school.
+
+====================================================================
+5. SKILLS & DEV STATS
+====================================================================
+GitHub Stats: 37 Repositories, 5,095+ Commits/Contributions. 
+Top Languages: C++, HTML, CSS, Java, JavaScript, React.
+
+Skill Categories:
+- Languages & Core Web: C, C++, JavaScript, Java, HTML5, CSS3
+- Frontend: React.js, Tailwind CSS, Framer Motion, React Native
+- Backend: Node.js, Express.js, REST API Design, JWT Authentication, Razorpay
+- Database: MongoDB, PostgreSQL, Firebase
+- Core Concepts: Data Structures & Algorithms, OOP, DBMS
+- DevOps, Tools & Design: Git, GitHub, VS Code, Vercel, Netlify, Nginx, PM2, Linux, npm, Figma, Canva, Hostinger VPS, Replit
+- Currently Learning: System Design, Backend Security, DevOps & Scaling
+
+====================================================================
+6. ACHIEVEMENTS SECTION
+====================================================================
+Stats Tracked:
+- 8+ Projects Completed
+- 2+ Clients Served
+- 6+ Months Experience
+- 30+ Certifications
+- 5095+ GitHub Commits
+- 180+ DSA Problems
+
+Trophy Timeline items:
+- 2 Time NPTEL Silver + Elite (2025 + 2026)
+- NASSCOM Certified (2026)
+- TITANS 60Hrs Training (2026)
+- Shortlisted IIT Roper Fellowship (2026)
+- Best Student Award (2023)
+
+Major Achievements:
+1. NPTEL — IIT Kharagpur (2025): Silver + Elite Top 5% (DBMS)
+2. NPTEL — IIT Kharagpur (2026): Silver + Elite Top 2% (Computer Network)
+3. Hackathons & Events (2024-25): SIH & BRAHMAX 1.0 participation
+
+Images Mentioned: /images/achivements.png banner.
+
+====================================================================
+7. PROJECTS SECTION (15 Projects Listed)
+====================================================================
+Project Categories: Full-Stack & Production (MERN, SQL), AI & Automation (Python, ML, NLP), Frontend & UI (React, HTML, CSS), Open Source & Tools (CLI, Tools).
+
+1. Ghotul — Hospitality Platform (PRODUCTION)
+- Role: Full Stack Developer Intern · 12 Months
+- Stack: React, Node, Express, PostgreSQL, Firebase, JWT, Razorpay, Nginx, PM2
+- Description: Deployed on Hostinger VPS, replacing 100% manual operations. Room booking with real-time DB-level locking. Role-based staff portal. End-to-end Razorpay integration with HMAC verification.
+
+2. Developer Portfolio — V2 (PORTFOLIO)
+- Stack: React, Tailwind, Framer Motion, EmailJS
+- Description: Immersive parallax sections, animated skill trees, integrated email contact system.
+
+3. Fake Info Detector (AI/ML)
+- Stack: React, Node, Express, PostgreSQL, Firebase, Supabase, LLM, HuggingFace, OpenCV
+- Description: Multi-modal AI platform to detect misinformation across text, images, docs, and URLs assigning threat scores.
+
+4. StockVault — Trading Engine (FINTECH)
+- Stack: MERN, Redux, Finance API
+- Description: College major project tracking stock investments, portfolio analytics, real-time simulation.
+
+5. The Light Room (PORTFOLIO)
+- Stack: MERN, Cloudinary, Framer Motion
+- Description: Premium portfolio for a professional photographer to showcase work, manage bookings and packages.
+
+6. Shopsy — Garments E-Commerce
+- Stack: MERN, JWT
+- Description: Full garments e-commerce platform with cart management, order tracking and admin panel.
+
+7. Sachin Men's Parlor (BUSINESS)
+- Stack: MERN
+- Description: Real-time appointment booking platform for a local barbershop.
+
+8. P.S. Shivay (LEGACY)
+- Stack: HTML5, CSS3
+- Description: First web project built in 1st year engineering. Dedicated showcase of Lord Shiva's stories.
+
+9. SecureAuth Suite (SECURITY)
+- Stack: MERN, Twilio, Nodemailer, JWT
+- Description: Multi-Factor Authentication System implementing email OTP, SMS OTP, and JWT refresh rotation.
+
+10. Razorpay CLI Integration (OPEN-SOURCE)
+- Stack: JS, Node, CLI Tools, Razorpay API
+- Description: Apna College open-source contribution to abstract Razorpay order creation and HMAC verification.
+
+11. Velvet Animated Shop (FRONTEND)
+- Stack: HTML5, CSS3, JS
+- Description: Highly animated ladies' shopping website demonstrating advanced frontend CSS/JS animations.
+
+12. Language Translator (NLP)
+- Stack: HTML, CSS, JS, Python, NLP Models
+- Description: Hackathon project translating text using public APIs and NLP models.
+
+13. Jarvis — Voice Assistant (AUTOMATION)
+- Stack: Python, SpeechRecognition, pyttsx3
+- Description: Python-based OS automation assistant that executes system tasks via voice.
+
+14. GALE Employee Chatbot (HACKATHON)
+- Stack: HTML, CSS, JS, Python, NLP
+- Description: SIH Hackathon project for GALE company to resolve HR queries.
+
+15. MediMap — Care Locator (HEALTH-TECH)
+- Stack: MERN, Geolocation API
+- Description: Hospital finder with specialty matching and surgical cost calculator.
+
+Images Mentioned: Various screenshots in /images/09_Projects/
+
+====================================================================
+8. CONTACT SECTION
+====================================================================
+Email: sahuprayag229@gmail.com
+Phone: +91 79999 26855
+Location: Jabalpur, Madhya Pradesh, India
+Status: Available for Job / Freelance / Long-term Collab
+Form Fields: Full Name, Email Address, Phone (Optional), Subject, Message. (Connected via EmailJS).

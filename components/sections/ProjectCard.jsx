@@ -108,6 +108,18 @@ const mainProjects = [
     },
     {
         id: "PRJ_02",
+        title: "SJPM School + ERP System (School Management System)",
+        subtitle: "Full Stack Developer Intern · 1 Months · Remote",
+        stack: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Firebase", "Supabase", "Claudinary", "Vercel", "Railway"],
+        description: "SJPM School ERP & Website is a full-stack school management platform featuring dynamic CMS website, admissions, students, staff, academics, attendance, fees, transport, examinations, reports, RBAC authentication, analytics, document management, and multilingual administration.",
+        accentColor: "var(--accent-amber)",
+        tag: "PRODUCTION",
+        github: "https://github.com/prayag29-sahu",
+        live: "https://www.sjpmschool.com/",
+        image: "/images/09_Projects/01.png",
+    },
+    {
+        id: "PRJ_03",
         title: "Developer Portfolio — V2",
         subtitle: "Personal Portfolio · React & Tailwind",
         stack: ["React.js", "Tailwind CSS", "Framer Motion", "EmailJS"],
@@ -119,7 +131,7 @@ const mainProjects = [
         image: "/images/09_Projects/00.png",
     },
     {
-        id: "PRJ_03",
+        id: "PRJ_04",
         title: "Fake Info Detector",
         subtitle: "AI-Powered Verification Platform · College Minor Project",
         stack: ["React", "Node.js", "Express.js", "PostgreSQL", "Firebase", "Supabase", "LLM", "HuggingFace", "OpenCV"],
@@ -131,7 +143,7 @@ const mainProjects = [
         image: "/images/09_Projects/05.png",
     },
     {
-        id: "PRJ_04",
+        id: "PRJ_05",
         title: "StockVault — Trading Engine",
         subtitle: "College Major Project · NASSCOM FutureSkills MERN Intern",
         stack: ["MongoDB", "Express.js", "React", "Node.js", "Redux", "Finance API"],
@@ -143,7 +155,7 @@ const mainProjects = [
         image: "/images/09_Projects/07.png",
     },
     {
-        id: "PRJ_05",
+        id: "PRJ_06",
         title: "The Light Room",
         subtitle: "Professional Photographer Portfolio",
         stack: ["MongoDB", "Express.js", "React", "Node.js", "Cloudinary", "Framer Motion"],
@@ -155,7 +167,7 @@ const mainProjects = [
         image: "/images/09_Projects/08.png",
     },
     {
-        id: "PRJ_06",
+        id: "PRJ_07",
         title: "Shopsy — Garments E-Commerce",
         subtitle: "Full-Stack Fashion Retail Platform",
         stack: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Admin Panel"],
@@ -167,7 +179,7 @@ const mainProjects = [
         image: "/images/09_Projects/09.png",
     },
     {
-        id: "PRJ_07",
+        id: "PRJ_08",
         title: "Sachin Men's Parlor",
         subtitle: "Barber Appointment Booking System",
         stack: ["MongoDB", "Express.js", "React", "Node.js", "Real-time Booking"],
@@ -179,7 +191,7 @@ const mainProjects = [
         image: "/images/09_Projects/10.png",
     },
     {
-        id: "PRJ_08",
+        id: "PRJ_09",
         title: "P.S. Shivay",
         subtitle: "First Web Project · HTML & CSS",
         stack: ["HTML5", "CSS3"],
@@ -191,7 +203,7 @@ const mainProjects = [
         image: "/images/09_Projects/11.png",
     },
     {
-        id: "PRJ_09",
+        id: "PRJ_10",
         title: "SecureAuth Suite",
         subtitle: "Multi-Factor Authentication System",
         stack: ["MongoDB", "Express.js", "React", "Node.js", "Twilio", "Nodemailer", "JWT"],
@@ -203,7 +215,7 @@ const mainProjects = [
         image: "/images/09_Projects/02.png",
     },
     {
-        id: "PRJ_10",
+        id: "PRJ_11",
         title: "Razorpay CLI Integration",
         subtitle: "Open-Source Contribution · Apna College",
         stack: ["JavaScript", "Node.js", "CLI Tools", "Razorpay API"],
@@ -215,7 +227,7 @@ const mainProjects = [
         image: "/images/09_Projects/12.png",
     },
     {
-        id: "PRJ_11",
+        id: "PRJ_12",
         title: "Velvet Animated Shop",
         subtitle: "Ladies E-Commerce · Animated Frontend",
         stack: ["HTML5", "CSS3", "JavaScript", "Animation Libraries"],
@@ -227,7 +239,7 @@ const mainProjects = [
         image: "/images/09_Projects/minor/03/02.png",
     },
     {
-        id: "PRJ_12",
+        id: "PRJ_13",
         title: "Language Translator",
         subtitle: "Multi-Language Text Translation · Hackathon",
         stack: ["HTML5", "CSS3", "JavaScript", "Python", "Translation APIs", "NLP Models"],
@@ -239,7 +251,7 @@ const mainProjects = [
         image: "/images/09_Projects/04.png",
     },
     {
-        id: "PRJ_13",
+        id: "PRJ_14",
         title: "Jarvis — Voice Assistant",
         subtitle: "Python-Based OS Automation Assistant",
         stack: ["Python", "SpeechRecognition", "pyttsx3", "OS Modules", "Automation"],
@@ -251,7 +263,7 @@ const mainProjects = [
         image: "/images/09_Projects/06.png",
     },
     {
-        id: "PRJ_14",
+        id: "PRJ_15",
         title: "GALE Employee Chatbot",
         subtitle: "SIH Hackathon · GALE Company Entry",
         stack: ["HTML5", "CSS3", "JavaScript", "Python", "NLP", "Rule-Based Logic"],
@@ -263,7 +275,7 @@ const mainProjects = [
         image: "/images/09_Projects/minor/01/15.png",
     },
     {
-        id: "PRJ_15",
+        id: "PRJ_16",
         title: "MediMap — Care Locator",
         subtitle: "Hospital Finder · SIH Hackathon Entry",
         stack: ["MongoDB", "Express.js", "React", "Node.js", "Geolocation API", "Maps Integration"],
@@ -357,7 +369,7 @@ function ProjectPopup({ project, onClose }) {
 
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden shrink-0">
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                     <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface) 0%, transparent 60%)" }} />
                     <div className="absolute top-3 right-3 font-mono text-[8px] border px-2 py-1 font-bold tracking-widest"
                         style={{ borderColor: ac, color: ac, background: "rgba(1,4,9,0.8)" }}>{project.tag}</div>
@@ -423,7 +435,7 @@ function ProjectCard({ project, onExplore }) {
 
             {/* Image */}
             <div className="relative h-40 overflow-hidden shrink-0">
-                <img src={project.image} alt={project.title}
+                <img src={project.image} alt={project.title} loading="lazy" decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     style={{ filter: "brightness(0.82)" }} />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface) 0%, transparent 55%)" }} />
@@ -489,7 +501,7 @@ function StackCard({ stack, onExplore }) {
                 <div className="absolute inset-0 grid grid-cols-2 gap-0.5 p-0.5">
                     {stack.projects.slice(0, 4).map((proj, i) => (
                         <div key={i} className="overflow-hidden">
-                            <img src={proj.image} alt={proj.title}
+                            <img src={proj.image} alt={proj.title} loading="lazy" decoding="async"
                                 className="w-full h-full object-cover transition-all duration-500"
                                 style={{ filter: hovered ? "brightness(0.5)" : "brightness(0.18) grayscale(50%)", transform: hovered ? "scale(1.05)" : "scale(1)" }} />
                         </div>
