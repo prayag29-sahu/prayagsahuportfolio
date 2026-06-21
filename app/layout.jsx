@@ -9,6 +9,10 @@ import ClientLayout from '@/components/layout/ClientLayout';
 export const metadata = {
   title: 'Prayag Sahu — Full Stack Developer',
   description: 'Portfolio of Prayag Sahu — Full Stack Developer, Freelancer and UI/UX enthusiast from Jabalpur, MP. Building production-ready web applications.',
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

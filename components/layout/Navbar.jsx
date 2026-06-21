@@ -177,7 +177,7 @@ export default function Navbar() {
                                     style={{ borderColor: "var(--accent)", boxShadow: "0 0 10px var(--accent-glow)" }}
                                 />
                                 <Image
-                                    src="/images/main.png"
+                                    src="/images/icon.png"
                                     alt="Prayag Sahu"
                                     fill
                                     sizes="40px"
@@ -280,7 +280,7 @@ export default function Navbar() {
                         <div className="relative w-9 h-9 shrink-0">
                             <div className="absolute inset-0 border rounded-full"
                                 style={{ borderColor: "var(--accent)", boxShadow: "0 0 8px var(--accent-glow)" }} />
-                            <Image src="/images/main.png" alt="Prayag" width={100} height={100}
+                            <Image src="/images/icon.png" alt="Prayag" width={100} height={100}
                                 className="w-full h-full rounded-full object-cover" priority={true} />
                         </div>
                         <div>
