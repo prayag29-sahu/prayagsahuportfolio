@@ -66,7 +66,7 @@ function AnimatedCounter({ target, suffix = "" }) {
 
                     // Easing: easeOutExpo (starts fast, ends slow and smooth)
                     const easeOutExpo = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-                    
+
                     const current = Math.floor(easeOutExpo * numTarget);
                     setCount(current);
 
@@ -95,9 +95,9 @@ function AnimatedCounter({ target, suffix = "" }) {
 const stats = [
     { icon: <Code size={20} />, value: "8", suffix: "+", label: "Projects Completed", desc: "Production & Featured builds", color: "var(--accent)", id: "STAT_01" },
     { icon: <Star size={20} />, value: "2", suffix: "+", label: "Clients Served", desc: "Freelancing & Business systems", color: "var(--accent-blue)", id: "STAT_02" },
-    { icon: <GraduationCap size={20} />, value: "6", suffix: "+", label: "Months Experience", desc: "Professional internship duration", color: "var(--accent-amber)", id: "STAT_03" },
+    { icon: <GraduationCap size={20} />, value: "8", suffix: "+", label: "Months Experience", desc: "Professional internship duration", color: "var(--accent-amber)", id: "STAT_03" },
     { icon: <Award size={20} />, value: "30", suffix: "+", label: "Certifications", desc: "Technical & Professional", color: "var(--accent-purple)", id: "STAT_04" },
-    { icon: <Flame size={20} />, value: "5095", suffix: "+", label: "GitHub Commits", desc: "Consistent contributions", color: "var(--accent)", id: "STAT_05" },
+    { icon: <Flame size={20} />, value: "5400", suffix: "+", label: "GitHub Commits", desc: "Consistent contributions", color: "var(--accent)", id: "STAT_05" },
     { icon: <Target size={20} />, value: "180", suffix: "+", label: "DSA Problems", desc: "InterviewBit & LeetCode", color: "var(--accent-blue)", id: "STAT_06" },
 ];
 

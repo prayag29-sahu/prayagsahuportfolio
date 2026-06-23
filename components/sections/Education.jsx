@@ -62,6 +62,7 @@ const educationData = [
         ],
         images: [
             { src: "/images/13_Btech/01.1.jpg", caption: "1st Opportunity in college" },
+            { src: "/images/01_certificates/01_Major_06/NPTEL.jpeg", caption: "Top Performance in IIT's Exams" },
             { src: "/images/13_Btech/02.jpg", caption: "SIH Participation top in college level" },
             { src: "/images/13_Btech/03.png", caption: "DBMS NPTEL Topper 5% Silver + Elite Certification IIT Khragpur" },
             { src: "/images/01_certificates/01_Major_06/NPTEL_CN.png", caption: "Coputer Network NPTEL Topper 2% Silver + Elite Certification IIT Khragpur" },
@@ -207,12 +208,12 @@ function EduCard({ item, index, onExplore, isHorizontal = false }) {
     const ac = item.accentColor;
 
     return (
-        <div className={`relative border overflow-hidden group transition-all duration-300 flex flex-col ${isHorizontal ? 'lg:flex-row lg:items-stretch' : 'h-full'}`} 
+        <div className={`relative border overflow-hidden group transition-all duration-300 flex flex-col ${isHorizontal ? 'lg:flex-row lg:items-stretch' : 'h-full'}`}
             style={{ borderColor: "var(--border)", background: "var(--surface)", borderTopWidth: 3, borderTopColor: ac }}>
             <ScanlineOverlay />
             <CornerAccent color={ac} />
             <WindowChrome filename={`${item.id}.log`} status={item.status} statusColor={item.status === "ACTIVE" ? "var(--accent)" : "var(--text-muted)"} />
-            
+
             <div className={`p-4 lg:p-5 flex flex-col relative z-10 ${isHorizontal ? 'lg:flex-[1.2]' : 'h-full'}`}>
                 <div className="mb-3">
                     <div className="inline-flex items-center gap-2 border px-2 py-0.5 mb-2.5" style={{ borderColor: "var(--border)", background: "var(--bg)" }}>
@@ -224,7 +225,7 @@ function EduCard({ item, index, onExplore, isHorizontal = false }) {
                 </div>
 
                 {!isHorizontal && (
-                    <div className="relative w-full aspect-video border overflow-hidden mb-4 group/img cursor-pointer" 
+                    <div className="relative w-full aspect-video border overflow-hidden mb-4 group/img cursor-pointer"
                         style={{ borderColor: "var(--border)", background: "var(--bg)" }}
                         onClick={() => onExplore(index)}>
                         <CornerAccent color="var(--border)" />
@@ -253,7 +254,7 @@ function EduCard({ item, index, onExplore, isHorizontal = false }) {
             </div>
 
             {isHorizontal && (
-                <div className="relative w-full lg:w-none lg:flex-1 aspect-video lg:aspect-auto border-t lg:border-t-0 lg:border-l overflow-hidden group/img cursor-pointer" 
+                <div className="relative w-full lg:w-none lg:flex-1 aspect-video lg:aspect-auto border-t lg:border-t-0 lg:border-l overflow-hidden group/img cursor-pointer"
                     style={{ borderColor: "var(--border)", background: "var(--bg)" }}
                     onClick={() => onExplore(index)}>
                     <CornerAccent color="var(--border)" />
@@ -274,12 +275,12 @@ function EduCard({ item, index, onExplore, isHorizontal = false }) {
 function BeyondAcademics({ onExplore }) {
     const ac = beyondData.accentColor;
     return (
-        <div className="mt-12 border relative overflow-hidden group transition-all duration-300" 
+        <div className="mt-12 border relative overflow-hidden group transition-all duration-300"
             style={{ borderColor: "var(--border)", background: "var(--surface)", borderTopWidth: 3, borderTopColor: ac }}>
             <ScanlineOverlay />
             <CornerAccent color={ac} />
             <WindowChrome filename="EXTRA_CURRICULAR.log" status="ACTIVE" statusColor={ac} />
-            
+
             <div className="flex flex-col lg:flex-row items-stretch">
                 <div className="p-6 md:p-8 lg:p-10 flex-1 flex flex-col relative z-10">
                     <div className="mb-3">
@@ -308,7 +309,7 @@ function BeyondAcademics({ onExplore }) {
                     </button>
                 </div>
 
-                <div className="relative w-full lg:w-[35%] aspect-video lg:aspect-auto border-t lg:border-t-0 lg:border-l overflow-hidden group/img cursor-pointer" 
+                <div className="relative w-full lg:w-[35%] aspect-video lg:aspect-auto border-t lg:border-t-0 lg:border-l overflow-hidden group/img cursor-pointer"
                     style={{ borderColor: "var(--border)", background: "var(--bg)" }}
                     onClick={onExplore}>
                     <CornerAccent color="var(--border)" />
@@ -334,10 +335,10 @@ export default function Education() {
     return (
         <section className="relative py-10 md:py-14 overflow-hidden" id='education'
             style={{ background: "var(--bg)", fontFamily: "'Courier New', Courier, monospace" }}>
-            
+
             <div className="absolute inset-0 opacity-[0.025] pointer-events-none"
                 style={{ backgroundImage: "linear-gradient(var(--accent) 1px,transparent 1px),linear-gradient(90deg,var(--accent) 1px,transparent 1px)", backgroundSize: "40px 40px" }} />
-            
+
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <div className="mb-14">
                     <div className="flex items-center gap-3 mb-6">

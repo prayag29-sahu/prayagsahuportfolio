@@ -168,7 +168,22 @@ export default function AboutSection() {
                                 style={{ color: glitch ? "var(--accent)" : "var(--text-primary)", textShadow: "0 0 24px var(--accent-glow)" }}>
                                 PRAYAG_<span style={{ color: "var(--accent)" }}>SAHU</span><Cursor />
                             </h2>
-                            <p className="font-mono text-[13px] mt-4 tracking-wider" style={{ color: "var(--text-muted)" }}>$ cat ./about/profile.txt — I build full-stack web applications that run in production.</p>
+                            <div className="flex flex-wrap items-center gap-2 mt-4">
+                                {[
+                                    { label: "DEVELOPER AT GHOTUL", color: "var(--accent-amber)" },
+                                    { label: "8+ MONTHS WORK EXP", color: "var(--accent-blue)" },
+                                    { label: "2+ INTERNSHIPS", color: "var(--accent)" },
+                                    { label: "2x IIT TOPPER", color: "var(--accent-amber)" },
+                                    { label: "15+ PROJECTS", color: "var(--accent-purple)" },
+                                    { label: "4 HACKATHONS", color: "var(--accent)" },
+
+                                ].map((badge, i) => (
+                                    <div key={i} className="border px-2.5 py-1 text-[10px] sm:text-[11px] font-mono tracking-widest font-bold whitespace-nowrap bg-black/20"
+                                        style={{ borderColor: badge.color, color: badge.color }}>
+                                        {badge.label}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,24 +230,24 @@ export default function AboutSection() {
                                 </h3>
                                 <p className="font-mono text-[11px] tracking-[0.18em] mt-1" style={{ color: "var(--accent-blue)" }}>FULL STACK DEVELOPER · MERN STACK SPECIALIST</p>
                             </div>
-                            <div className="border p-6 mb-6 relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                            <div className="border p-6 mb-2 relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
                                 <CornerAccent color="var(--border-dim)" />
                                 <div className="font-mono text-[11px] tracking-[0.2em] mb-4 font-bold" style={{ color: "var(--accent)" }}>README.md</div>
                                 <div className="space-y-4 font-mono text-[13px] leading-[1.8] font-bold" style={{ color: "var(--text-muted)" }}>
                                     <p>
-                                        Production-focused <span style={{ color: "var(--accent)" }}>Full Stack Developer</span> dedicated to delivering end-to-end commercial web platforms. I bring hands-on experience in <span style={{ color: "var(--accent-purple)" }}>complex data management</span> and system architecture, proven by the successful launch of <span style={{ color: "var(--accent-blue)" }}>ghotulstays.com</span>.
+                                        Production-focused <span style={{ color: "var(--accent)" }}>Full Stack Developer</span> dedicated to delivering end-to-end commercial web platforms. I bring hands-on experience in <span style={{ color: "var(--accent-purple)" }}>complex data management</span> and system architecture, proven by the successful launch of <a href="https://ghotulstays.com" target="_blank" rel="noopener noreferrer" className="hover:underline transition-all" style={{ color: "var(--accent-blue)" }}>ghotulstays.com</a> and <a href="https://www.sjpmschool.com" target="_blank" rel="noopener noreferrer" className="hover:underline transition-all" style={{ color: "var(--accent-amber)" }}>sjpmschool.com</a>.
                                     </p>
                                     <p>
                                         I specialize in utilizing the <span style={{ color: "var(--accent)" }}>MERN stack</span> to build highly responsive and user-centric applications that solve real-world business challenges.
                                     </p>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-auto">
+                            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-auto">
                                 <InfoPill icon={<MapPin size={13} />} text="Jabalpur, Madhya Pradesh" accent="var(--accent)" />
                                 <InfoPill icon={<GraduationCap size={13} />} text="B.Tech CSE — RGPV University" accent="var(--accent-blue)" />
                                 <InfoPill icon={<Briefcase size={13} />} text="Creative Developer" accent="var(--accent-amber)" />
                                 <InfoPill icon={<Rocket size={13} />} text="Open to Opportunities" accent="var(--accent-purple)" />
-                            </div>
+                            </div> */}
                         </div>
                         <div className="px-7 py-3 border-t flex items-center justify-between relative z-10" style={{ borderColor: "var(--border)" }}>
                             <div className="font-mono text-[9px]" style={{ color: "var(--text-dim)" }}>$ <span style={{ color: "var(--text-muted)" }}>cat bio.txt _</span></div>
@@ -253,10 +268,10 @@ export default function AboutSection() {
                         <ScanlineOverlay />
                         <CornerAccent color="var(--accent)" />
                         <div onClick={() => setShowExpertise(!showExpertise)} className="cursor-pointer group/header relative z-20">
-                            <WindowChrome filename="CORE_EXPERTISE.log" status={showExpertise ? "OPEN" : "CLOSED"} statusColor="var(--accent)" />
+                            <WindowChrome filename="CORE_EXPERTISE" status={showExpertise ? "OPEN" : "CLOSED"} statusColor="var(--accent)" />
                             <div className="absolute right-24 md:right-32 top-1/2 -translate-y-1/2 flex items-center gap-2 md:gap-3">
                                 <span className="font-mono text-[9px] md:text-[11px] font-black tracking-[0.2em] transition-all duration-200" style={{ color: "var(--accent)" }}>
-                                    {showExpertise ? "COLLAPSE" : "EXPAND"}
+                                    {showExpertise ? "CLOSE" : "OPEN"}
                                 </span>
                                 <ChevronDown size={14} className={`transition-all duration-300 ${!showExpertise ? "animate-bounce" : ""}`} style={{ color: "var(--accent)", transform: showExpertise ? "rotate(180deg)" : "rotate(0deg)" }} />
                             </div>
@@ -286,10 +301,10 @@ export default function AboutSection() {
                         <ScanlineOverlay />
                         <CornerAccent color="var(--accent-blue)" />
                         <div onClick={() => setShowQualities(!showQualities)} className="cursor-pointer group/header relative z-20">
-                            <WindowChrome filename="CORE_QUALITIES.log" status={showQualities ? "OPEN" : "CLOSED"} statusColor="var(--accent-blue)" />
+                            <WindowChrome filename="CORE_QUALITIES" status={showQualities ? "OPEN" : "CLOSED"} statusColor="var(--accent-blue)" />
                             <div className="absolute right-24 md:right-32 top-1/2 -translate-y-1/2 flex items-center gap-2 md:gap-3">
                                 <span className="font-mono text-[9px] md:text-[11px] font-black tracking-[0.2em] transition-all duration-200" style={{ color: "var(--accent-blue)" }}>
-                                    {showQualities ? "COLLAPSE" : "EXPAND"}
+                                    {showQualities ? "CLOSE" : "OPEN"}
                                 </span>
                                 <ChevronDown size={14} className={`transition-all duration-300 ${!showQualities ? "animate-bounce" : ""}`} style={{ color: "var(--accent-blue)", transform: showQualities ? "rotate(180deg)" : "rotate(0deg)" }} />
                             </div>
