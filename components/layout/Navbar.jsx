@@ -289,7 +289,7 @@ export default function Navbar() {
                             </div>
                             <div className="flex items-center gap-1">
                                 <div className="w-1 h-1 rounded-full animate-pulse" style={{ background: "var(--accent)" }} />
-                                <span className="font-mono text-[9px] tracking-[0.18em]" style={{ color: "var(--accent)" }}>SOFTWARE ENGINEER FULL STACK DEV</span>
+                                <span className="font-mono text-[9px] tracking-[0.18em]" style={{ color: "var(--accent)" }}>SOFTWARE ENGINEER FULL STACK </span>
                             </div>
                         </div>
                     </div>

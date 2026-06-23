@@ -268,11 +268,11 @@ export default function AboutSection() {
                         <ScanlineOverlay />
                         <CornerAccent color="var(--accent)" />
                         <div onClick={() => setShowExpertise(!showExpertise)} className="cursor-pointer group/header relative z-20">
-                            <WindowChrome filename="CORE_EXPERTISE" status={showExpertise ? "OPEN" : "CLOSED"} statusColor="var(--accent)" />
+                            <WindowChrome filename="CORE_EXPERTISE" status={showExpertise ? "CLOSED" : "OPEN"} statusColor="var(--accent)" />
                             <div className="absolute right-24 md:right-32 top-1/2 -translate-y-1/2 flex items-center gap-2 md:gap-3">
-                                <span className="font-mono text-[9px] md:text-[11px] font-black tracking-[0.2em] transition-all duration-200" style={{ color: "var(--accent)" }}>
+                                {/* <span className="font-mono text-[9px] md:text-[11px] font-black tracking-[0.2em] transition-all duration-200" style={{ color: "var(--accent)" }}>
                                     {showExpertise ? "CLOSE" : "OPEN"}
-                                </span>
+                                </span> */}
                                 <ChevronDown size={14} className={`transition-all duration-300 ${!showExpertise ? "animate-bounce" : ""}`} style={{ color: "var(--accent)", transform: showExpertise ? "rotate(180deg)" : "rotate(0deg)" }} />
                             </div>
                         </div>
@@ -301,11 +301,11 @@ export default function AboutSection() {
                         <ScanlineOverlay />
                         <CornerAccent color="var(--accent-blue)" />
                         <div onClick={() => setShowQualities(!showQualities)} className="cursor-pointer group/header relative z-20">
-                            <WindowChrome filename="CORE_QUALITIES" status={showQualities ? "OPEN" : "CLOSED"} statusColor="var(--accent-blue)" />
+                            <WindowChrome filename="CORE_QUALITIES" status={showQualities ? "CLOSED" : "OPEN"} statusColor="var(--accent-blue)" />
                             <div className="absolute right-24 md:right-32 top-1/2 -translate-y-1/2 flex items-center gap-2 md:gap-3">
-                                <span className="font-mono text-[9px] md:text-[11px] font-black tracking-[0.2em] transition-all duration-200" style={{ color: "var(--accent-blue)" }}>
+                                {/* <span className="font-mono text-[9px] md:text-[11px] font-black tracking-[0.2em] transition-all duration-200" style={{ color: "var(--accent-blue)" }}>
                                     {showQualities ? "CLOSE" : "OPEN"}
-                                </span>
+                                </span> */}
                                 <ChevronDown size={14} className={`transition-all duration-300 ${!showQualities ? "animate-bounce" : ""}`} style={{ color: "var(--accent-blue)", transform: showQualities ? "rotate(180deg)" : "rotate(0deg)" }} />
                             </div>
                         </div>
