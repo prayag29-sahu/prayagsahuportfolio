@@ -35,30 +35,55 @@
 
   /* Theme transition */
   --transition: background-color 0.25s ease, color 0.2s ease, border-color 0.25s ease;
+
+  /* Specific Component Colors */
+  --window-header-bg: var(--bg-subtle);
+  --window-header-text: var(--text-muted);
 }
 
-/* Light mode overrides */
+/* 
+   Light mode overrides — "Terminal Sienna" palette
+   Chosen over the reference moodboard's literal hex values because those tones
+   (dusty sage, faded denim) read as soft/vintage-photo rather than "developer
+   terminal." Kept the same warm, sun-bleached FEELING — cream paper, roasted
+   umber, burnt-sienna accent — but pushed saturation/contrast up so a monospace
+   terminal UI stays crisp, energetic and legible instead of looking washed out.
+*/
 html.light {
-  --bg: #f8fafc;
-  --surface: #ffffff;
-  --surface-2: #f1f5f9;
+  --bg: #F1E8D6;
+  /* warm cream paper — not stark white, still premium */
+  --surface: #FAF5E8;
+  /* lifted panel tone, subtle depth vs bg */
+  --surface-2: #E9DBBD;
+  /* deeper warm tone for subtle fills/pills */
 
-  --border: #e2e8f0;
-  --border-dim: #cbd5e1;
+  --border: rgba(58, 44, 30, 0.22);
+  --border-dim: rgba(58, 44, 30, 0.10);
 
-  --text-primary: #0f172a;
-  --text-muted: #334155;
-  --text-dim: #000000;
+  --text-primary: #2A2015;
+  /* espresso — ~12:1 contrast on --bg */
+  --text-muted: #5C4A34;
+  /* warm umber — ~6.3:1 contrast on --bg */
+  --text-dim: #7A6448;
 
-  --accent: #166534;
-  --accent-glow: rgba(22, 101, 52, 0.08);
-  --accent-blue: #0369a1;
-  --accent-amber: #92400e;
-  --accent-purple: #6b21a8;
-  --accent-red: #991b1b;
-  --scanline-color: rgba(0, 0, 0, 0.025);
-  --bg-transparent: rgba(248, 250, 252, 0.9);
-  --bg-subtle: rgba(0, 0, 0, 0.02);
+  --accent: #C1511E;
+  /* burnt sienna — techy, energetic, not neon */
+  --accent-glow: rgba(193, 81, 30, 0.18);
+  --accent-blue: #285C63;
+  /* deep teal, cool counterpoint */
+  --accent-amber: #A97A1F;
+  /* golden ochre */
+  --accent-purple: #6C4A67;
+  /* muted plum */
+  --accent-red: #A83B2B;
+  --scanline-color: rgba(58, 44, 30, 0.035);
+  --bg-transparent: rgba(241, 232, 214, 0.92);
+  --bg-subtle: #ECE0C8;
+
+  --window-header-bg: #33241A;
+  /* rich espresso — clearly distinct from cards */
+  --window-header-text: #F3E7CE;
+  /* warm ivory — high contrast on header */
 }
 
 /* Basic Reset & Global Styles */
@@ -291,9 +316,45 @@ html.light .glass {
   box-shadow: 0 0 12px rgba(190, 255, 120, 0.6), 0 0 32px rgba(190, 255, 120, 0.35);
 }
 
+@media (max-width: 768px) {
+  #cursor-bubble {
+    display: none !important;
+  }
+}
+
+/* Cursor click pulse ring — scale(1.5) + fade, spawned on click, desktop only */
+@keyframes cursorClickRing {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.cursor-click-ring {
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  border: 1.5px solid var(--accent);
+  pointer-events: none;
+  z-index: 9998;
+  animation: cursorClickRing 0.45s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .cursor-click-ring {
+    display: none;
+  }
+}
+
 html.light #cursor-bubble {
-  background: rgba(26, 127, 55, 0.8);
-  box-shadow: 0 0 12px rgba(26, 127, 55, 0.5), 0 0 32px rgba(26, 127, 55, 0.25);
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow), 0 0 32px var(--accent-glow);
 }
 
 /* Hero Image Scan Line Effect */
@@ -350,6 +411,13 @@ html.light #cursor-bubble {
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
   color: var(--text-muted);
+}
+
+@media (max-width: 767px) {
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .theme-toggle:hover {
@@ -413,4 +481,358 @@ html.light .scanline-overlay {
 html.light [style*="--text-dim"] {
   color: #000000 !important;
   font-weight: 800 !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   Scroll-read progress bar (Task 2D)
+   ══════════════════════════════════════════════════════════ */
+.read-progress-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 200;
+  background: transparent;
+  pointer-events: none;
+}
+
+.read-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  transform-origin: left;
+  transition: transform 0.1s linear;
+}
+
+/* ══════════════════════════════════════════════════════════
+   Glitch effect — color-split (Task 2C)
+   Applied alongside the existing translate-x for a more "real"
+   CRT-desync feel: red/cyan channel offset behind the base text.
+   ══════════════════════════════════════════════════════════ */
+.glitch-active {
+  position: relative;
+}
+
+.glitch-active::before,
+.glitch-active::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.glitch-active::before {
+  color: #ff2e63;
+  transform: translate(-2px, 1px);
+  mix-blend-mode: screen;
+}
+
+.glitch-active::after {
+  color: #00e5ff;
+  transform: translate(2px, -1px);
+  mix-blend-mode: screen;
+}
+
+html.light .glitch-active::before {
+  color: var(--accent-red);
+}
+
+html.light .glitch-active::after {
+  color: var(--accent-blue);
+}
+
+/* Typewriter cursor — subtle text-shadow pulse while blinking */
+@keyframes cursorGlowPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 6px var(--accent-glow);
+  }
+
+  50% {
+    opacity: 0.25;
+    text-shadow: 0 0 2px var(--accent-glow);
+  }
+}
+
+.cursor-glow {
+  animation: cursorGlowPulse 1s ease-in-out infinite;
+}
+
+@keyframes cursorBlockGlow {
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 8px var(--accent-glow);
+  }
+
+  50% {
+    opacity: 0.2;
+    box-shadow: 0 0 2px var(--accent-glow);
+  }
+}
+
+.cursor-glow-block {
+  animation: cursorBlockGlow 1s ease-in-out infinite;
+}
+
+/* ══════════════════════════════════════════════════════════
+   Micro-interactions — buttons & cards (Task 2B)
+   Opt-in utility classes so components can adopt them without
+   inline style duplication.
+   ══════════════════════════════════════════════════════════ */
+.btn-interactive {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-interactive:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.btn-interactive:active {
+  transform: scale(0.98);
+}
+
+.card-hover-lift {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent) !important;
+  box-shadow: 0 8px 28px -8px var(--accent-glow), 0 0 24px var(--accent-glow);
+}
+
+/* Skill badges — hover scale + glow */
+.skill-badge-interactive {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-badge-interactive:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 14px var(--accent-glow);
+}
+
+/* Social / icon buttons — bounce on hover */
+@keyframes iconBounce {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.18);
+  }
+
+  70% {
+    transform: scale(0.94);
+  }
+
+  100% {
+    transform: scale(1.06);
+  }
+}
+
+.icon-bounce {
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.icon-bounce:hover {
+  animation: iconBounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  box-shadow: 0 0 14px var(--accent-glow);
+}
+
+/* Form inputs — smooth glow transition alongside existing left accent bar */
+.input-glow {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.input-glow:focus {
+  box-shadow: 0 0 0 3px var(--accent-glow);
+  border-color: var(--accent) !important;
+}
+
+/* Nav underline — smoother easing (applies wherever nav already animates width/scale) */
+.nav-underline {
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ══════════════════════════════════════════════════════════
+   Scroll-triggered entrance animation (Task 2A)
+   Element starts hidden/offset, JS toggles .in-view via
+   IntersectionObserver (see useRevealOnScroll hook).
+   ══════════════════════════════════════════════════════════ */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.reveal-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-heading {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.5s ease, transform 0.5s ease, text-shadow 0.6s ease;
+}
+
+.reveal-heading.in-view {
+  opacity: 1;
+  transform: translateX(0);
+  text-shadow: 0 0 18px var(--accent-glow);
+  animation: headingPulseFade 1.1s ease-out;
+}
+
+@keyframes headingPulseFade {
+  0% {
+    text-shadow: 0 0 0 transparent;
+  }
+
+  40% {
+    text-shadow: 0 0 24px var(--accent-glow);
+  }
+
+  100% {
+    text-shadow: 0 0 18px var(--accent-glow);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   Popup / modal open-close animation (Task 4A)
+   ══════════════════════════════════════════════════════════ */
+@keyframes popupScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popup-animate-in {
+  animation: popupScaleIn 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+/* ══════════════════════════════════════════════════════════
+   Trophy / achievement styling (Task 4B)
+   ══════════════════════════════════════════════════════════ */
+.trophy-card {
+  border-top-width: 3px !important;
+  border-top-style: solid;
+  border-image: linear-gradient(90deg, var(--accent), var(--accent-amber)) 1;
+}
+
+.trophy-glow-ring {
+  position: relative;
+}
+
+.trophy-glow-ring::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, var(--accent-glow), transparent 70%);
+  z-index: -1;
+}
+
+@keyframes counterPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.12);
+    text-shadow: 0 0 16px var(--accent-glow);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.counter-pulse {
+  display: inline-block;
+  animation: counterPulse 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Pill-slide active indicator, used by filter tabs / category tabs */
+.pill-slide-track {
+  position: relative;
+}
+
+.pill-slide-indicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: left 0.3s cubic-bezier(0.65, 0, 0.35, 1), width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Timeline connector — draws itself downward on scroll into view */
+.timeline-line {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.timeline-line.in-view {
+  transform: scaleY(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal-on-scroll,
+  .reveal-heading,
+  .timeline-line,
+  .btn-interactive,
+  .card-hover-lift,
+  .skill-badge-interactive,
+  .icon-bounce {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* 
+   Minimum readable type size 
+   Several labels were set at 8-10px, which is too small to read comfortably
+   on mobile. Raising the floor to 11px site-wide without touching markup.
+*/
+[class*="text-[8px]"],
+[class*="text-[9px]"],
+[class*="text-[10px]"] {
+  font-size: 11px !important;
+}
+
+/* 
+   Minimum comfortable tap target on touch devices.
+   Scoped to buttons and elements explicitly opted in via .tap-target — NOT
+   applied blanket to every <a>, since many links here are inline text
+   references inside paragraphs where a forced min-height would break flow.
+*/
+@media (max-width: 767px) {
+
+  button,
+  [role="button"] {
+    min-height: 44px;
+  }
+
+  .tap-target {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

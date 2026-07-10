@@ -191,6 +191,22 @@ export default function Footer() {
                                     <SocialBtn icon={<Twitter size={14} />} href="https://twitter.com" label="TWITTER" color="var(--accent-purple)" />
                                     <SocialBtn icon={<Mail size={14} />} href="mailto:sahuprayag229@gmail.com" label="EMAIL" color="var(--accent-amber)" />
                                 </div>
+
+                                {/* Resume & CV buttons */}
+                                <div className="grid grid-cols-2 gap-2.5 mt-1">
+                                    <SocialBtn
+                                        icon={<ArrowUpRight size={14} />}
+                                        href="https://drive.google.com/file/d/1IOtLumQeqg8bRSsVcXHiHkJuMdWy2I8C/view?usp=drive_link"
+                                        label="RESUME"
+                                        color="var(--accent)"
+                                    />
+                                    <SocialBtn
+                                        icon={<ArrowUpRight size={14} />}
+                                        href="https://drive.google.com/file/d/1TbHC8ykLAikD5oM3o8XLrcF0F8sdGlLV/view?usp=drive_link"
+                                        label="CV"
+                                        color="var(--accent-purple)"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>

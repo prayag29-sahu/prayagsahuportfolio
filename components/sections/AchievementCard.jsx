@@ -25,14 +25,14 @@ function CornerAccent({ color = "var(--accent)" }) {
 
 function WindowChrome({ filename, status = "LIVE", statusColor = "var(--accent)" }) {
     return (
-        <div className="flex items-center justify-between px-4 py-2.5 md:px-5 md:py-3.5 border-b" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+        <div className="flex items-center justify-between px-4 py-2.5 md:px-5 md:py-3.5 border-b" style={{ borderColor: "var(--border)", background: "var(--window-header-bg)" }}>
             <div className="flex items-center gap-3">
                 <div className="flex gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                 </div>
-                <span className="font-mono text-[11px] tracking-[0.18em] font-bold truncate max-w-[130px] md:max-w-none" style={{ color: "var(--text-muted)" }}>{filename}</span>
+                <span className="font-mono text-[11px] tracking-[0.18em] font-bold truncate max-w-[130px] md:max-w-none" style={{ color: "var(--window-header-text)" }}>{filename}</span>
             </div>
             <div className="flex items-center gap-2 shrink-0">
                 <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: statusColor }} />

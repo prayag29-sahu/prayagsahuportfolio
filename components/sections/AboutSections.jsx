@@ -1,12 +1,87 @@
 'use client';
 
 import Image from 'next/image';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import {
     RiReactjsLine, RiNodejsLine, RiDatabase2Line, RiAndroidLine,
     RiLightbulbFlashLine, RiGraduationCapLine, RiFocus3Line, RiRocketLine,
 } from "react-icons/ri";
 import { MapPin, GraduationCap, Briefcase, Rocket, ChevronDown } from "lucide-react";
+import {
+    motion, useScroll, useSpring, useTransform,
+    useMotionValue, useVelocity, useAnimationFrame,
+} from 'motion/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faJava, faNodeJs, faReact, faFigma, faCss3Alt, faGitAlt,
+} from '@fortawesome/free-brands-svg-icons';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
+
+/* Moving Tech Icons — velocity-driven scroll ticker */
+function useElementWidth(ref) {
+    const [width, setWidth] = useState(0);
+    useLayoutEffect(() => {
+        function update() { if (ref.current) setWidth(ref.current.offsetWidth); }
+        update();
+        window.addEventListener('resize', update);
+        return () => window.removeEventListener('resize', update);
+    }, []);
+    return width;
+}
+
+function IconScrollVelocity({ icons = [], velocity = 80, numCopies = 6 }) {
+    const baseX = useMotionValue(0);
+    const { scrollY } = useScroll();
+    const scrollVelocity = useVelocity(scrollY);
+    const smoothVelocity = useSpring(scrollVelocity, { damping: 50, stiffness: 400 });
+    const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 4], { clamp: false });
+    const copyRef = useRef(null);
+    const copyWidth = useElementWidth(copyRef);
+
+    function wrap(min, max, v) {
+        const range = max - min;
+        return ((((v - min) % range) + range) % range) + min;
+    }
+
+    const x = useTransform(baseX, v => copyWidth ? `${wrap(-copyWidth, 0, v)}px` : '0px');
+    const direction = useRef(1);
+
+    useAnimationFrame((t, delta) => {
+        let moveBy = direction.current * velocity * (delta / 1000);
+        if (velocityFactor.get() < 0) direction.current = -1;
+        else if (velocityFactor.get() > 0) direction.current = 1;
+        moveBy += direction.current * moveBy * velocityFactor.get();
+        baseX.set(baseX.get() + moveBy);
+    });
+
+    return (
+        <div className="relative overflow-hidden">
+            <motion.div className="flex gap-4" style={{ x }}>
+                {[...Array(numCopies)].map((_, i) => (
+                    <div key={i} ref={i === 0 ? copyRef : null} className="flex gap-4">
+                        {icons.map((IconEl, idx) => (
+                            <div key={idx}
+                                className="w-12 h-12 border transition-all duration-200 card-hover flex items-center justify-center"
+                                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+                                {IconEl}
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </motion.div>
+        </div>
+    );
+}
+
+const techIcons = [
+    <FontAwesomeIcon icon={faReact} className="text-2xl" style={{ color: '#61DBFB' }} />,
+    <FontAwesomeIcon icon={faFigma} className="text-2xl" style={{ color: '#F24E1E' }} />,
+    <FontAwesomeIcon icon={faJava} className="text-2xl" style={{ color: '#f89820' }} />,
+    <FontAwesomeIcon icon={faDatabase} className="text-2xl" style={{ color: '#4DB33D' }} />,
+    <FontAwesomeIcon icon={faNodeJs} className="text-2xl" style={{ color: '#68A063' }} />,
+    <FontAwesomeIcon icon={faCss3Alt} className="text-2xl" style={{ color: '#264de4' }} />,
+    <FontAwesomeIcon icon={faGitAlt} className="text-2xl" style={{ color: '#f05032' }} />,
+];
 
 /* Shared UI primitives for layout consistency */
 function ScanlineOverlay() {
@@ -27,14 +102,14 @@ function CornerAccent({ color = "var(--accent)" }) {
 
 function WindowChrome({ filename, status = "LIVE", statusColor = "var(--accent)" }) {
     return (
-        <div className="flex items-center justify-between px-5 py-3.5 border-b" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+        <div className="flex items-center justify-between px-5 py-3.5 border-b" style={{ borderColor: "var(--border)", background: "var(--window-header-bg)" }}>
             <div className="flex items-center gap-3">
                 <div className="flex gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                 </div>
-                <span className="font-mono text-[11px] md:text-[13px] tracking-[0.2em] truncate max-w-[150px] md:max-w-none" style={{ color: "var(--text-muted)" }}>{filename}</span>
+                <span className="font-mono text-[11px] md:text-[13px] tracking-[0.2em] truncate max-w-[150px] md:max-w-none" style={{ color: "var(--window-header-text)" }}>{filename}</span>
             </div>
             <div className="flex items-center gap-2 shrink-0">
                 <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: statusColor }} />
@@ -173,13 +248,17 @@ export default function AboutSection() {
                                     { label: "DEVELOPER AT GHOTUL", color: "var(--accent-amber)" },
                                     { label: "8+ MONTHS WORK EXP", color: "var(--accent-blue)" },
                                     { label: "2+ INTERNSHIPS", color: "var(--accent)" },
-                                    { label: "2x IIT TOPPER", color: "var(--accent-amber)" },
+                                    { label: "2x IIT TOPPER TAG", color: "var(--accent-amber)" },
                                     { label: "15+ PROJECTS", color: "var(--accent-purple)" },
                                     { label: "4 HACKATHONS", color: "var(--accent)" },
 
                                 ].map((badge, i) => (
-                                    <div key={i} className="border px-2.5 py-1 text-[10px] sm:text-[11px] font-mono tracking-widest font-bold whitespace-nowrap bg-black/20"
-                                        style={{ borderColor: badge.color, color: badge.color }}>
+                                    <div key={i} className="border px-2.5 py-1 text-[10px] sm:text-[11px] font-mono tracking-widest font-black whitespace-nowrap"
+                                        style={{ 
+                                            borderColor: badge.color, 
+                                            color: badge.color,
+                                            backgroundColor: `color-mix(in srgb, ${badge.color} 15%, transparent)`
+                                        }}>
                                         {badge.label}
                                     </div>
                                 ))}
@@ -257,6 +336,27 @@ export default function AboutSection() {
                                 onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--accent)"; }}>
                                 PORTFOLIO →
                             </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* ── TECH STACK SCROLL STRIP ── */}
+                <div className="mb-6">
+                    <div className="border relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+                        <ScanlineOverlay />
+                        <CornerAccent color="var(--accent-blue)" />
+                        <div className="flex items-center gap-2.5 px-5 py-3 border-b" style={{ borderColor: "var(--border)", background: "var(--window-header-bg)" }}>
+                            <div className="flex gap-1.5">
+                                <span className="w-2 h-2 rounded-full bg-[#ff5f56]" />
+                                <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
+                                <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                            </div>
+                            <div className="w-1.5 h-1.5 rounded-full animate-pulse ml-1" style={{ background: "var(--accent-blue)" }} />
+                            <span className="font-mono text-[11px] tracking-[0.2em] font-bold" style={{ color: "var(--window-header-text)" }}>TECH_STACK.live</span>
+                            <span className="ml-auto font-mono text-[9px] border px-2 py-0.5 tracking-widest font-bold" style={{ color: "var(--accent-blue)", borderColor: "var(--accent-blue)" }}>LIVE</span>
+                        </div>
+                        <div className="py-5 relative z-10">
+                            <IconScrollVelocity velocity={90} icons={techIcons} numCopies={6} />
                         </div>
                     </div>
                 </div>

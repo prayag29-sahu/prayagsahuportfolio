@@ -10,9 +10,9 @@ import { motion } from 'motion/react';
    I connected EmailJS so I can receive your messages directly in my inbox 
    without needing a complicated server setup.
 */
-const EMAILJS_SERVICE_ID = "service_c1lcmym";   
-const EMAILJS_TEMPLATE_ID = "template_3d23n3n";  
-const EMAILJS_PUBLIC_KEY = "iDnsyeNW2wHQtj5-7"; 
+const EMAILJS_SERVICE_ID = "service_c1lcmym";
+const EMAILJS_TEMPLATE_ID = "template_3d23n3n";
+const EMAILJS_PUBLIC_KEY = "iDnsyeNW2wHQtj5-7";
 const EMAILJS_AUTO_REPLY_ID = "template_w2i2syl";
 
 /* Basic UI parts for the computer-style look */
@@ -34,14 +34,14 @@ function CornerAccent({ color = "var(--accent)" }) {
 
 function WindowChrome({ filename, status = "LIVE", statusColor = "var(--accent)" }) {
     return (
-        <div className="flex items-center justify-between px-4 py-2.5 md:px-5 md:py-3.5 border-b" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+        <div className="flex items-center justify-between px-4 py-2.5 md:px-5 md:py-3.5 border-b" style={{ borderColor: "var(--border)", background: "var(--window-header-bg)" }}>
             <div className="flex items-center gap-3">
                 <div className="flex gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                 </div>
-                <span className="font-mono text-[11px] tracking-[0.18em] font-bold truncate max-w-[130px] md:max-w-none" style={{ color: "var(--text-muted)" }}>{filename}</span>
+                <span className="font-mono text-[11px] tracking-[0.18em] font-bold truncate max-w-[130px] md:max-w-none" style={{ color: "var(--window-header-text)" }}>{filename}</span>
             </div>
             <div className="flex items-center gap-2 shrink-0">
                 <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: statusColor }} />
@@ -160,7 +160,7 @@ function ContactItem({ icon, label, value, href, color }) {
 function StatusOverlay({ status, onReset }) {
     const isSuccess = status === "success";
     return (
-        <motion.div 
+        <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="absolute inset-0 z-50 flex items-center justify-center backdrop-blur-md"
@@ -170,27 +170,27 @@ function StatusOverlay({ status, onReset }) {
                 style={{ borderColor: isSuccess ? "var(--accent)" : "#ef4444", background: "var(--bg)" }}>
                 <ScanlineOverlay />
                 <CornerAccent color={isSuccess ? "var(--accent)" : "#ef4444"} />
-                
+
                 <div className="relative z-10">
                     {isSuccess ? (
                         <CheckCircle size={64} className="mx-auto mb-6" style={{ color: "var(--accent)" }} />
                     ) : (
                         <XCircle size={64} className="mx-auto mb-6" style={{ color: "#ef4444" }} />
                     )}
-                    
+
                     <h3 className="font-mono font-black text-2xl tracking-tighter uppercase mb-2"
                         style={{ color: "var(--text-primary)" }}>
                         {isSuccess ? "TRANSMISSION_COMPLETE" : "SYSTEM_ERROR"}
                     </h3>
-                    
+
                     <p className="font-mono text-xs tracking-wider mb-8 leading-relaxed font-bold"
                         style={{ color: "var(--text-muted)" }}>
-                        {isSuccess 
+                        {isSuccess
                             ? "Your data has been securely transmitted through the encrypted tunnel. I will process your request shortly."
                             : "Connection timed out. Please verify your network and attempt re-transmission."
                         }
                     </p>
-                    
+
                     <button onClick={onReset}
                         className="px-8 py-3 border font-mono text-[11px] tracking-[0.2em] uppercase transition-all duration-200 font-black hover:bg-white hover:text-black"
                         style={{ borderColor: isSuccess ? "var(--accent)" : "#ef4444", color: isSuccess ? "var(--accent)" : "#ef4444" }}>
@@ -218,7 +218,7 @@ export default function Contact() {
     const formRef = useRef();
     const [glitch, setGlitch] = useState(false);
     const [sending, setSending] = useState(false);
-    const [submitted, setSubmitted] = useState(null); 
+    const [submitted, setSubmitted] = useState(null);
     const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
 
     useEffect(() => {
@@ -244,11 +244,11 @@ export default function Contact() {
                 from_email: form.email,
                 user_email: form.email,
                 email: form.email,
-                reply_to: form.email, 
+                reply_to: form.email,
 
                 // Phone Fallbacks
                 phone: form.phone,
-                contact: form.phone, 
+                contact: form.phone,
                 contact_number: form.phone,
                 user_phone: form.phone,
 
@@ -259,7 +259,7 @@ export default function Contact() {
                 message: form.message,
                 user_message: form.message,
                 from_message: form.message,
-                message_html: form.message, 
+                message_html: form.message,
                 text: form.message,
                 to_name: "Prayag Sahu"
             };

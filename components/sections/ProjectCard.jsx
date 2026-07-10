@@ -23,14 +23,14 @@ function CornerAccent({ color = "var(--accent)" }) {
 function WindowChrome({ filename, status = "LIVE", statusColor = "var(--accent)" }) {
     return (
         <div className="flex items-center justify-between px-4 py-2 md:px-5 md:py-3 border-b"
-            style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+            style={{ borderColor: "var(--border)", background: "var(--window-header-bg)" }}>
             <div className="flex items-center gap-3">
                 <div className="flex gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                 </div>
-                <span className="font-mono text-[9px] md:text-[10px] tracking-[0.18em] truncate max-w-[130px] md:max-w-none" style={{ color: "var(--text-muted)" }}>{filename}</span>
+                <span className="font-mono text-[9px] md:text-[10px] tracking-[0.18em] truncate max-w-[130px] md:max-w-none" style={{ color: "var(--window-header-text)" }}>{filename}</span>
             </div>
             <div className="flex items-center gap-2 shrink-0">
                 <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: statusColor }} />
@@ -368,11 +368,15 @@ function ProjectPopup({ project, onClose }) {
                 </div>
 
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden shrink-0">
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
-                    <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface) 0%, transparent 60%)" }} />
+                <div className="relative h-72 overflow-hidden shrink-0">
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" loading="lazy" decoding="async"
+                        style={{ filter: "brightness(1.05) contrast(1.02)" }} />
+                    <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface) 0%, transparent 40%)" }} />
                     <div className="absolute top-3 right-3 font-mono text-[8px] border px-2 py-1 font-bold tracking-widest"
                         style={{ borderColor: ac, color: ac, background: "rgba(1,4,9,0.8)" }}>{project.tag}</div>
+                    <div className="absolute bottom-0 left-0 right-0 px-4 py-2 flex items-center gap-2" style={{ background: "linear-gradient(to top, rgba(1,4,9,0.7) 0%, transparent 100%)" }}>
+                        <span className="font-mono text-[9px] tracking-widest font-bold" style={{ color: "rgba(255,255,255,0.6)" }}>IMAGE_PREVIEW.png</span>
+                    </div>
                 </div>
 
                 {/* Content */}
@@ -434,11 +438,13 @@ function ProjectCard({ project, onExplore }) {
             </div>
 
             {/* Image */}
-            <div className="relative h-40 overflow-hidden shrink-0">
+            <div className="relative h-52 overflow-hidden shrink-0">
                 <img src={project.image} alt={project.title} loading="lazy" decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    style={{ filter: "brightness(0.82)" }} />
-                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface) 0%, transparent 55%)" }} />
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={{ filter: "brightness(0.95) contrast(1.02)" }} />
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface) 0%, transparent 45%)" }} />
+                <div className="absolute top-2 left-2 font-mono text-[7px] border px-1.5 py-0.5 font-bold"
+                    style={{ borderColor: ac, color: ac, background: "rgba(1,4,9,0.75)" }}>{project.id}</div>
             </div>
 
             {/* Content */}
@@ -497,19 +503,19 @@ function StackCard({ stack, onExplore }) {
             {hovered && <CornerAccent color={ac} />}
 
             {/* Preview thumbnails */}
-            <div className="relative h-24 overflow-hidden" style={{ background: "var(--bg)" }}>
+            <div className="relative h-40 overflow-hidden" style={{ background: "var(--bg)" }}>
                 <div className="absolute inset-0 grid grid-cols-2 gap-0.5 p-0.5">
                     {stack.projects.slice(0, 4).map((proj, i) => (
                         <div key={i} className="overflow-hidden">
                             <img src={proj.image} alt={proj.title} loading="lazy" decoding="async"
                                 className="w-full h-full object-cover transition-all duration-500"
-                                style={{ filter: hovered ? "brightness(0.5)" : "brightness(0.18) grayscale(50%)", transform: hovered ? "scale(1.05)" : "scale(1)" }} />
+                                style={{ filter: hovered ? "brightness(0.85)" : "brightness(0.65) saturate(0.85)", transform: hovered ? "scale(1.06)" : "scale(1)" }} />
                         </div>
                     ))}
                 </div>
-                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface) 0%, transparent 60%)" }} />
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--surface) 0%, transparent 50%)" }} />
                 <div className="absolute top-1.5 right-1.5 font-mono text-[7px] border px-1.5 py-0.5 font-bold z-10"
-                    style={{ borderColor: ac, color: ac, background: "rgba(1,4,9,0.9)" }}>
+                    style={{ borderColor: ac, color: ac, background: "rgba(1,4,9,0.85)" }}>
                     {stack.projects.length} PROJECTS
                 </div>
             </div>

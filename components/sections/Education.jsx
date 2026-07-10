@@ -22,14 +22,14 @@ function CornerAccent({ color = "var(--accent)" }) {
 
 function WindowChrome({ filename, status = "LIVE", statusColor = "var(--accent)" }) {
     return (
-        <div className="flex items-center justify-between px-4 py-2.5 border-b" style={{ borderColor: "var(--border)" }}>
+        <div className="flex items-center justify-between px-4 py-2.5 border-b" style={{ borderColor: "var(--border)", background: "var(--window-header-bg)" }}>
             <div className="flex items-center gap-3">
                 <div className="flex gap-1.5">
                     <span className="w-2 h-2 rounded-full bg-[#ff5f56]" />
                     <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
                     <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
                 </div>
-                <span className="font-mono text-[11px] tracking-[0.18em] truncate max-w-[150px] md:max-w-none" style={{ color: "var(--text-muted)" }}>{filename}</span>
+                <span className="font-mono text-[11px] tracking-[0.18em] truncate max-w-[150px] md:max-w-none" style={{ color: "var(--window-header-text)" }}>{filename}</span>
             </div>
             <div className="flex items-center gap-1.5 shrink-0">
                 <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: statusColor }} />
@@ -129,7 +129,6 @@ const beyondData = {
         { src: "/images/14_OtherActivity/08.jpg", caption: "Handmade Sketches" },
         { src: "/images/14_OtherActivity/09.jpg", caption: "Handmade Sketches" },
         { src: "/images/14_OtherActivity/10.jpg", caption: "Achievement Showcase" },
-        { src: "/images/14_OtherActivity/11.jpg", caption: "Handmade Sketches" },
         { src: "/images/14_OtherActivity/12.jpg", caption: "Twin Town construction" },
     ],
 };

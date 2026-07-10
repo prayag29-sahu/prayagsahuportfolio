@@ -437,7 +437,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Download CV + Contact */}
-                        <div className="flex gap-3 relative">
+                        {/* <div className="flex gap-3 relative">
                             <div className="flex-1 relative">
                                 <button
                                     onClick={() => setShowDownloadMenu(!showDownloadMenu)}
@@ -448,7 +448,7 @@ export default function HeroSection() {
                                     {showDownloadMenu ? "SELECT_FILE" : "DOWNLOAD_FILES"} {showDownloadMenu ? "↑" : "↓"}
                                 </button>
 
-                                {/* Dropdown Menu */}
+                              
                                 {showDownloadMenu && (
                                     <div className="absolute bottom-full left-0 w-full mb-2 border z-20 overflow-hidden animate-scale-in"
                                         style={{ borderColor: "var(--accent)", background: "var(--surface)" }}>
@@ -487,7 +487,7 @@ export default function HeroSection() {
                                 onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}>
                                 <Terminal size={13} />
                             </a>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* ═══ CENTER — Profile Card ═══ */}
