@@ -163,7 +163,7 @@ const mainProjects = [
         accentColor: "var(--accent)",
         tag: "PORTFOLIO",
         github: "https://github.com/prayag29-sahu",
-        live: null,
+        live: "https://psthelightroom.vercel.app/",
         image: "/images/09_Projects/08.png",
     },
     {
@@ -285,6 +285,18 @@ const mainProjects = [
         github: "https://github.com/prayag29-sahu",
         live: null,
         image: "/images/09_Projects/13.png",
+    },
+    {
+        id: "PRJ_17",
+        title: "Amazon clone UI",
+        subtitle: "Clone UI - Amazon Landing page",
+        stack: ["HTML", "CSS"],
+        description: "Simple HTML CSS based Prectice Amazon clone webpage",
+        accentColor: "var(--accent-purple)",
+        tag: "HEALTH-TECH",
+        github: "https://github.com/prayag29-sahu/Frontend-Project/tree/main/1.WEB%20DEVELOPMENT%20HTML%20CSS/amazon%20on%20pc",
+        live: "https://amazoncloneonpcps.netlify.app",
+        image: "/images/09_Projects/17.jpg",
     },
 ];
 
@@ -618,20 +630,7 @@ function StackGalleryPopup({ stack, onClose, onProjectExplore }) {
 export default function ProjectsPage() {
     const [popup, setPopup] = useState(null);
     const [stackPopup, setStackPopup] = useState(null);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [visibleCount, setVisibleCount] = useState(3);
     const [glitch, setGlitch] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth < 640) setVisibleCount(1);
-            else if (window.innerWidth < 1024) setVisibleCount(2);
-            else setVisibleCount(3);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     useEffect(() => {
         const t = setInterval(() => {
@@ -641,14 +640,21 @@ export default function ProjectsPage() {
         return () => clearInterval(t);
     }, []);
 
-    const maxIndex = mainProjects.length - visibleCount;
-
-    const nextSlide = () => setCurrentIndex(prev => Math.min(prev + 1, maxIndex));
-    const prevSlide = () => setCurrentIndex(prev => Math.max(prev - 1, 0));
-
     return (
         <>
-            <style>{CSS_VARS}</style>
+            <style>{`
+                ${CSS_VARS}
+                @keyframes projectMarquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(calc(-50% - 10px)); }
+                }
+                .animate-project-marquee {
+                    animation: projectMarquee 50s linear infinite;
+                }
+                .animate-project-marquee:hover {
+                    animation-play-state: paused;
+                }
+            `}</style>
             <section
                 id="projects"
                 className="relative py-12 overflow-hidden"
@@ -704,38 +710,11 @@ export default function ProjectsPage() {
                                     </div>
                                 </div>
 
-                                {/* Slider nav */}
+                                {/* Status Badge */}
                                 <div className="flex flex-col items-end gap-3 shrink-0">
-                                    <div className="font-mono text-[9px] tracking-widest" style={{ color: "var(--text-muted)" }}>
-                                        {currentIndex + 1} – {Math.min(currentIndex + visibleCount, mainProjects.length)} / {mainProjects.length}
-                                    </div>
-                                    <div className="flex gap-2">
-                                        <button onClick={prevSlide} disabled={currentIndex === 0}
-                                            className="p-3 border transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
-                                            style={{ borderColor: "var(--border)", color: "var(--accent)" }}
-                                            onMouseEnter={e => { if (currentIndex > 0) { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "var(--bg)"; } }}
-                                            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--accent)"; }}>
-                                            <ChevronLeft size={20} />
-                                        </button>
-                                        <button onClick={nextSlide} disabled={currentIndex >= maxIndex}
-                                            className="p-3 border transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
-                                            style={{ borderColor: "var(--border)", color: "var(--accent)" }}
-                                            onMouseEnter={e => { if (currentIndex < maxIndex) { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "var(--bg)"; } }}
-                                            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--accent)"; }}>
-                                            <ChevronRight size={20} />
-                                        </button>
-                                    </div>
-                                    {/* Progress dots */}
-                                    <div className="flex gap-1.5">
-                                        {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-                                            <button key={i} onClick={() => setCurrentIndex(i)}
-                                                className="rounded-full transition-all duration-200"
-                                                style={{
-                                                    width: i === currentIndex ? "16px" : "6px",
-                                                    height: "6px",
-                                                    background: i === currentIndex ? "var(--accent)" : "var(--border)",
-                                                }} />
-                                        ))}
+                                    <div className="flex items-center gap-2 border px-4 py-2" style={{ borderColor: "var(--accent)", background: "var(--bg-subtle)" }}>
+                                        <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: "var(--accent)" }} />
+                                        <span className="font-mono text-[9px] tracking-widest font-bold uppercase" style={{ color: "var(--accent)" }}>AUTO_SCROLL_ENABLED</span>
                                     </div>
                                 </div>
                             </div>
@@ -745,16 +724,13 @@ export default function ProjectsPage() {
                     {/* ── PROJECTS SLIDER ── */}
                     <div className="mb-10">
                         <div className="font-mono text-[9px] mb-3 tracking-widest uppercase font-bold" style={{ color: "var(--accent)" }}>
-                            $ cat ./active_projects.log — showing {visibleCount} of {mainProjects.length}
+                            $ cat ./active_projects.log — displaying {mainProjects.length} entries
                         </div>
-                        <div className="overflow-hidden">
-                            <div
-                                className="flex gap-5 transition-transform duration-500 ease-in-out"
-                                style={{ transform: `translateX(calc(-${currentIndex} * (100% / ${visibleCount}) - ${currentIndex} * (20px / ${visibleCount})))` }}>
-                                {mainProjects.map(p => (
-                                    <div key={p.id}
-                                        className="shrink-0"
-                                        style={{ width: `calc(${100 / visibleCount}% - ${(20 * (visibleCount - 1)) / visibleCount}px)` }}>
+                        <div className="overflow-hidden relative w-full">
+                            <div className="flex gap-5 w-max animate-project-marquee">
+                                {[...mainProjects, ...mainProjects].map((p, idx) => (
+                                    <div key={`${p.id}-${idx}`}
+                                        className="shrink-0 w-[85vw] sm:w-[320px] md:w-[360px] lg:w-[400px]">
                                         <ProjectCard project={p} onExplore={setPopup} />
                                     </div>
                                 ))}

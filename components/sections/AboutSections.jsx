@@ -245,17 +245,17 @@ export default function AboutSection() {
                             </h2>
                             <div className="flex flex-wrap items-center gap-2 mt-4">
                                 {[
-                                    { label: "DEVELOPER AT GHOTUL", color: "var(--accent-amber)" },
-                                    { label: "8+ MONTHS WORK EXP", color: "var(--accent-blue)" },
+                                    { label: "DEVELOPER AT GHOTUL Pvt. Ltd", color: "var(--accent-amber)" },
+                                    { label: "10+ MONTHS WORK EXP", color: "var(--accent-blue)" },
                                     { label: "2+ INTERNSHIPS", color: "var(--accent)" },
-                                    { label: "2x IIT TOPPER TAG", color: "var(--accent-amber)" },
+                                    { label: "2 IIT TOPPER TAG", color: "var(--accent-amber)" },
                                     { label: "15+ PROJECTS", color: "var(--accent-purple)" },
                                     { label: "4 HACKATHONS", color: "var(--accent)" },
 
                                 ].map((badge, i) => (
                                     <div key={i} className="border px-2.5 py-1 text-[10px] sm:text-[11px] font-mono tracking-widest font-black whitespace-nowrap"
-                                        style={{ 
-                                            borderColor: badge.color, 
+                                        style={{
+                                            borderColor: badge.color,
                                             color: badge.color,
                                             backgroundColor: `color-mix(in srgb, ${badge.color} 15%, transparent)`
                                         }}>
