@@ -331,6 +331,16 @@ export default function Education() {
     const [activePopup, setActivePopup] = useState(null);
     const [showBeyond, setShowBeyond] = useState(false);
 
+    useEffect(() => {
+        const handleOpenGallery = (e) => {
+            if (e.detail !== undefined && e.detail !== null) {
+                setActivePopup(e.detail);
+            }
+        };
+        window.addEventListener('openEduGallery', handleOpenGallery);
+        return () => window.removeEventListener('openEduGallery', handleOpenGallery);
+    }, []);
+
     return (
         <section className="relative py-10 md:py-14 overflow-hidden" id='education'
             style={{ background: "var(--bg)", fontFamily: "'Courier New', Courier, monospace" }}>

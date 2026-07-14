@@ -245,23 +245,34 @@ export default function AboutSection() {
                             </h2>
                             <div className="flex flex-wrap items-center gap-2 mt-4">
                                 {[
-                                    { label: "DEVELOPER AT GHOTUL Pvt. Ltd", color: "var(--accent-amber)" },
-                                    { label: "10+ MONTHS WORK EXP", color: "var(--accent-blue)" },
-                                    { label: "2+ INTERNSHIPS", color: "var(--accent)" },
-                                    { label: "2 IIT TOPPER TAG", color: "var(--accent-amber)" },
-                                    { label: "15+ PROJECTS", color: "var(--accent-purple)" },
-                                    { label: "4 HACKATHONS", color: "var(--accent)" },
-
-                                ].map((badge, i) => (
-                                    <div key={i} className="border px-2.5 py-1 text-[10px] sm:text-[11px] font-mono tracking-widest font-black whitespace-nowrap"
-                                        style={{
-                                            borderColor: badge.color,
-                                            color: badge.color,
-                                            backgroundColor: `color-mix(in srgb, ${badge.color} 15%, transparent)`
-                                        }}>
-                                        {badge.label}
-                                    </div>
-                                ))}
+                                    { label: "DEVELOPER AT GHOTUL Pvt. Ltd", color: "var(--accent-amber)", link: "https://ghotulstays.com/" },
+                                    { label: "10+ MONTHS WORK EXP", color: "var(--accent-blue)", link: "https://drive.google.com/file/d/1TbHC8ykLAikD5oM3o8XLrcF0F8sdGlLV/view?usp=drive_link" },
+                                    { label: "2+ INTERNSHIPS", color: "var(--accent)", link: "https://drive.google.com/file/d/1IOtLumQeqg8bRSsVcXHiHkJuMdWy2I8C/view?usp=drive_link" },
+                                    { label: "2 IIT TOPPER TAG", color: "var(--accent-amber)", hash: "#education", dispatch: "openEduGallery", detail: 0 },
+                                    { label: "15+ PROJECTS", color: "var(--accent-purple)", hash: "#projects" },
+                                    { label: "4 HACKATHONS", color: "var(--accent)", hash: "#education", dispatch: "openEduGallery", detail: 0 },
+                                ].map((badge, i) => {
+                                    const Tag = badge.link || badge.hash ? "a" : "div";
+                                    const props = badge.link ? { href: badge.link, target: "_blank", rel: "noopener noreferrer" } : badge.hash ? { href: badge.hash } : {};
+                                    return (
+                                        <Tag key={i} className="border px-2.5 py-1 text-[10px] sm:text-[11px] font-mono tracking-widest font-black whitespace-nowrap hover:scale-105 transition-all cursor-pointer flex items-center gap-1"
+                                            onClick={(e) => {
+                                                if (badge.dispatch) {
+                                                    // Allow scroll to happen first, then trigger popup
+                                                    setTimeout(() => window.dispatchEvent(new CustomEvent(badge.dispatch, { detail: badge.detail })), 300);
+                                                }
+                                            }}
+                                            style={{
+                                                borderColor: badge.color,
+                                                color: badge.color,
+                                                backgroundColor: `color-mix(in srgb, ${badge.color} 15%, transparent)`
+                                            }}
+                                            {...props}
+                                        >
+                                            {badge.label} {(badge.link || badge.hash) && <span style={{ fontSize: '10px' }}>↗</span>}
+                                        </Tag>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
