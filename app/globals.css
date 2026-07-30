@@ -39,6 +39,7 @@
   /* Specific Component Colors */
   --window-header-bg: var(--bg-subtle);
   --window-header-text: var(--text-muted);
+  --profile-overlay: rgba(0, 0, 0, 0.3);
 }
 
 /* 
@@ -84,6 +85,7 @@ html.light {
   /* rich espresso — clearly distinct from cards */
   --window-header-text: #F3E7CE;
   /* warm ivory — high contrast on header */
+  --profile-overlay: transparent;
 }
 
 /* Basic Reset & Global Styles */

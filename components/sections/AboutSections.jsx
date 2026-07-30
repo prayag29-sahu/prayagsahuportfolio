@@ -288,14 +288,14 @@ export default function AboutSection() {
                         <div className="p-4 relative z-10">
                             <div className="relative border overflow-hidden" style={{ borderColor: "var(--border)" }}>
                                 <CornerAccent color="var(--accent)" />
-                                <Image src="/images/profile.jpg" alt="Prayag Sahu" width={400} height={500} className="w-full object-cover transition-all duration-700" style={{ filter: "brightness(1) contrast(1.1)" }} priority={true} />
-                                <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+                                <Image src="https://res.cloudinary.com/sfitny3t/image/upload/v1785181029/profile_domhhd.jpg" alt="Prayag Sahu" width={400} height={500} className="w-full object-cover transition-all duration-700" style={{ filter: "brightness(1) contrast(1.1)" }} priority={true} />
+                                <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "var(--profile-overlay)" }} />
                             </div>
                             <div className="grid grid-cols-2 gap-2 mt-3">
                                 {[
                                     { label: "STATUS", value: "OPEN TO ROLES", color: "var(--accent)" },
                                     { label: "CGPA", value: "8.35 / 10", color: "var(--accent-blue)" },
-                                    { label: "BASE", value: "MP, INDIA", color: "var(--accent-amber)" },
+                                    { label: "LOCATION", value: "MP, INDIA", color: "var(--accent-amber)" },
                                     { label: "DEGREE", value: "B.TECH CSE", color: "var(--accent-purple)" },
                                 ].map((s) => (
                                     <div key={s.label} className="border px-3 py-2" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>

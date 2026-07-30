@@ -46,17 +46,17 @@ const certData = [
         description:
             "Solved DSA challenges and earned consistent streak badges with algorithm mastery across arrays, trees, graphs and DP.",
         images: [
-            { src: "/images/01_badges/01.png", caption: "Badge 01" },
-            { src: "/images/01_badges/02.png", caption: "Badge 02" },
-            { src: "/images/01_badges/03.png", caption: "Badge 03" },
-            { src: "/images/01_badges/04.png", caption: "Badge 04" },
-            { src: "/images/01_badges/05.png", caption: "Badge 05" },
-            { src: "/images/01_badges/06.png", caption: "Badge 06" },
-            { src: "/images/01_badges/07.png", caption: "Badge 07" },
-            { src: "/images/01_badges/08.png", caption: "Badge 08" },
-            { src: "/images/01_badges/09.png", caption: "Badge 09" },
-            { src: "/images/01_badges/10.png", caption: "Badge 10" },
-            { src: "/images/01_badges/11.png", caption: "Badge 11" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785267548/01_hy6ehz.png", caption: "Badge 01" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785267548/06_lyvanc.png", caption: "Badge 02" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785267548/03_nmubyb.png", caption: "Badge 03" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785267549/04_seniuc.png", caption: "Badge 04" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785267549/07_eqqwkh.png", caption: "Badge 05" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785267549/02_t6ycj3.png", caption: "Badge 06" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785267550/08_czhijq.png", caption: "Badge 07" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785267551/11_hkb0jj.png", caption: "Badge 08" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785267552/05_siz6ls.png", caption: "Badge 09" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785267552/09_luk7kh.png", caption: "Badge 10" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785267552/10_dmqem4.png", caption: "Badge 11" },
         ],
     },
     {
@@ -70,7 +70,7 @@ const certData = [
         description:
             "Completed IIT Kharagpur certified Database Management Systems course with Silver + Elite distinction. Covered relational algebra, SQL, normalization and transactions.",
         images: [
-            { src: "/images/01_certificates/01_Major_06/NPTEL_DBMS.png", caption: "Certificate" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785181548/NPTEL_DBMS_p2zup4.png", caption: "Certificate" },
         ],
     },
     {
@@ -84,7 +84,7 @@ const certData = [
         description:
             "Completed IIT Kharagpur certified Computer Network and Internet Protocol course with Silver + Elite distinction. Covered different models and connectivity and compunication across network.",
         images: [
-            { src: "/images/01_certificates/01_Major_06/NPTEL_CN.png", caption: "Certificate" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785181550/NPTEL_CN_yk9m3r.png", caption: "Certificate" },
         ],
     },
     {
@@ -98,7 +98,7 @@ const certData = [
         description:
             "Completed comprehensive web development curriculum covering HTML, CSS, JavaScript, React, Node and database fundamentals.",
         images: [
-            { src: "/images/01_certificates/01_Major_06/freecodecampwebdevelopment.png", caption: "Certificate" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785181540/freecodecampwebdevelopment_cxrnvd.png", caption: "Certificate" },
         ],
     },
     {
@@ -148,7 +148,7 @@ const certData = [
         description:
             "Completed a structured MERN Stack internship program certified by NASSCOM, covering modern React patterns, RESTful API design, and MongoDB data modeling.",
         images: [
-            { src: "/images/01_certificates/01_Major_06/nasscom.png", caption: "NASSCOM Cert" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785181541/nasscom_tu7jwa.png", caption: "NASSCOM Cert" },
         ],
     },
     {
@@ -162,7 +162,7 @@ const certData = [
         description:
             "Completed intensive pre-placement training focusing on technical skills, soft skills, and interview preparation for top-tier software roles.",
         images: [
-            { src: "/images/01_certificates/01_Major_06/3p.png", caption: "Training Cert" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785181549/3p_fpgwkb.png", caption: "Training Cert" },
         ],
     },
     {
@@ -176,8 +176,8 @@ const certData = [
         description:
             "Participated in SIH and BRAHMAX 1.0 (24-hour hackathon). Developed innovative solutions under tight deadlines and collaborative environments.",
         images: [
-            { src: "/images/01_certificates/01_Major_06/sih.jpg", caption: "SIH Participant" },
-            { src: "/images/01_certificates/01_Major_06/Bramhax.jpg", caption: "SIH Participant" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785181365/02_rkbtdg.jpg", caption: "SIH Participant" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785181540/Bramhax_nzwzde.jpg", caption: "Bramhax Hackathon Participant" },
         ],
     },
     {
@@ -191,7 +191,7 @@ const certData = [
         description:
             "Awarded 'Best Student' for outstanding sincerity, conduct, and academic excellence during schooling.",
         images: [
-            { src: "/images/11_Class12th/01.jpg", caption: "Award Certificate" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785178723/01_wjudua.jpg", caption: "Award Certificate" },
         ],
     },
 ];
@@ -213,79 +213,104 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
     return (
 
 
-            <div
-                className="w-[85vw] max-w-[450px] md:w-[520px] shrink-0 border relative overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-[0_0_24px_var(--accent-glow)]"
-                style={{ borderColor: "var(--border)", background: "var(--surface)" }}
-                onMouseEnter={() => setIsPaused(true)}
-                onMouseLeave={() => setIsPaused(false)}
-            >
-                <ScanlineOverlay />
-                <CornerAccent color={accentColor} />
+        <div
+            className="w-[85vw] sm:w-[350px] md:w-[360px] shrink-0 border relative overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-[0_0_24px_var(--accent-glow)]"
+            style={{ borderColor: "var(--border)", background: "var(--surface)" }}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+        >
+            <ScanlineOverlay />
+            <CornerAccent color={accentColor} />
 
-                {/* ── Top bar ── */}
-                <div
-                    className="flex items-center justify-between px-5 py-3.5 border-b relative z-10"
-                    style={{ borderColor: "var(--border)", borderTopWidth: 3, borderTopColor: accentColor, borderTopStyle: "solid", background: "var(--bg-subtle)" }}
-                >
-                    <div className="flex items-center gap-3">
-                        <div className="flex gap-2">
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
-                        </div>
-                        <span className="font-mono text-[11px] tracking-[0.2em] uppercase font-bold" style={{ color: "var(--text-muted)" }}>
-                            {item.id}.LOG
-                        </span>
+            {/* ── Top bar ── */}
+            <div
+                className="flex items-center justify-between px-4 py-3 border-b relative z-10"
+                style={{ borderColor: "var(--border)", borderTopWidth: 3, borderTopColor: accentColor, borderTopStyle: "solid", background: "var(--bg-subtle)" }}
+            >
+                <div className="flex items-center gap-2.5">
+                    <div className="flex gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-[#ff5f56]" />
+                        <span className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
+                        <span className="w-2 h-2 rounded-full bg-[#27c93f]" />
                     </div>
-                    <div className="flex items-center gap-3">
-                        <span
-                            className="font-mono text-[10px] tracking-[0.15em] px-2.5 py-1 border font-bold"
-                            style={{ color: accentColor, borderColor: accentColor }}
-                        >
-                            {item.tag}
-                        </span>
-                        <span className="font-mono text-[11px] font-bold" style={{ color: "var(--text-muted)" }}>{item.year}.txt</span>
+                    <span className="font-mono text-[9px] tracking-[0.2em] uppercase font-bold" style={{ color: "var(--text-muted)" }}>
+                        {item.id}.LOG
+                    </span>
+                </div>
+                <div className="flex items-center gap-2">
+                    <span
+                        className="font-mono text-[9px] tracking-[0.15em] px-2 py-0.5 border font-bold"
+                        style={{ color: accentColor, borderColor: accentColor }}
+                    >
+                        {item.tag}
+                    </span>
+                </div>
+            </div>
+
+            {/* ── Body ── */}
+            <div className="p-4 flex flex-col gap-4 flex-1 relative z-10">
+
+                {/* Image slider on top */}
+                <div className="relative w-full aspect-[4/3] shrink-0 border overflow-hidden group/slider cursor-pointer"
+                    style={{ borderColor: "var(--border)", background: "var(--bg)" }}
+                    onClick={() => onExplore(index)}>
+                    <CornerAccent color="var(--border)" />
+                    <img
+                        src={item.images[slide].src}
+                        alt={item.images[slide].caption}
+                        className="w-full h-full object-contain transition-all duration-700 group-hover/slider:scale-105"
+                        loading="lazy" decoding="async"
+                    />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/slider:opacity-100 transition-opacity flex items-center justify-center">
+                        <span className="font-mono text-[9px] tracking-widest text-white border border-white/30 px-3 py-1 backdrop-blur-sm">VIEW_GALLERY</span>
+                    </div>
+                    {/* Dot indicators */}
+                    {item.images.length > 1 && (
+                        <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-10">
+                            {item.images.slice(0, Math.min(item.images.length, 8)).map((_, i) => (
+                                <div
+                                    key={i}
+                                    className="w-1.5 h-1.5 rounded-full transition-all duration-300 shadow-sm"
+                                    style={{
+                                        background: i === (slide % Math.min(item.images.length, 8)) ? accentColor : "rgba(0,0,0,0.5)",
+                                        border: `1px solid ${i === (slide % Math.min(item.images.length, 8)) ? 'transparent' : 'rgba(255,255,255,0.4)'}`
+                                    }}
+                                />
+                            ))}
+                        </div>
+                    )}
+                    {/* Slide counter */}
+                    <div className="absolute top-2 right-2 font-mono text-[8px] px-1.5 py-0.5 border z-10" style={{ color: "var(--text-muted)", background: "var(--bg-subtle)", borderColor: "var(--border)" }}>
+                        {slide + 1}/{item.images.length}
                     </div>
                 </div>
 
-                {/* ── Body ── */}
-                <div className="p-6 flex flex-col md:flex-row items-start gap-6 flex-1 relative z-10">
-
-                    {/* Left */}
-                    <div className="space-y-4">
-                        <div>
-                            <h3 className="font-mono font-black text-xl tracking-tight leading-tight" style={{ color: "var(--text-primary)" }}>
-                                {item.title}
-                            </h3>
-                            <p className="font-mono text-[12px] tracking-[0.15em] mt-1 font-bold" style={{ color: accentColor }}>
-                                {item.subtitle}
-                            </p>
-                        </div>
-
-                        <p className="font-mono text-[13px] leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                            {item.description}
+                {/* Content */}
+                <div className="space-y-3 flex-1 flex flex-col">
+                    <div>
+                        <h3 className="font-mono font-black text-lg tracking-tight leading-tight line-clamp-1" style={{ color: "var(--text-primary)" }} title={item.title}>
+                            {item.title}
+                        </h3>
+                        <p className="font-mono text-[10px] tracking-[0.1em] mt-1 font-bold line-clamp-1" style={{ color: accentColor }} title={item.subtitle}>
+                            {item.subtitle}
                         </p>
+                    </div>
 
-                        <div className="flex items-center gap-4 pt-1">
-                            <div className="border px-4 py-2" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
-                                <span className="font-mono text-[10px] tracking-widest uppercase font-bold" style={{ color: "var(--text-muted)" }}>FILES </span>
-                                <span className="font-mono text-[12px] font-bold" style={{ color: accentColor }}>
-                                    {item.count}
-                                </span>
-                            </div>
-                            <div className="flex items-center gap-2 font-mono text-[10px] font-bold" style={{ color: "var(--text-muted)" }}>
-                                <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "var(--accent)" }} />
-                                LOADED
-                            </div>
+                    <p className="font-mono text-[11px] leading-relaxed line-clamp-3 flex-1" style={{ color: "var(--text-muted)" }}>
+                        {item.description}
+                    </p>
+
+                    <div className="flex items-center gap-3 pt-2 mt-auto">
+                        <div className="border px-3 py-1.5 shrink-0" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                            <span className="font-mono text-[9px] tracking-widest uppercase font-bold" style={{ color: "var(--text-muted)" }}>FILES </span>
+                            <span className="font-mono text-[11px] font-bold" style={{ color: accentColor }}>
+                                {item.count}
+                            </span>
                         </div>
-
                         <button
                             onClick={() => onExplore(index)}
-                            className="mt-2 group/btn flex items-center gap-2 border font-mono text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 transition-all duration-200 font-bold"
-                            style={{
-                                borderColor: accentColor,
-                                color: accentColor,
-                            }}
+                            className="flex-1 group/btn flex items-center justify-center gap-2 border font-mono text-[10px] tracking-[0.15em] uppercase py-1.5 transition-all duration-200 font-bold"
+                            style={{ borderColor: accentColor, color: accentColor }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.background = accentColor;
                                 e.currentTarget.style.color = "var(--bg)";
@@ -295,42 +320,13 @@ function CertCard({ item, index, onExplore, isPaused, setIsPaused }) {
                                 e.currentTarget.style.color = accentColor;
                             }}
                         >
-                            $ EXPLORE_NOW
+                            $ EXPLORE
                             <span className="transition-transform duration-200 group-hover/btn:translate-x-1">→</span>
                         </button>
                     </div>
-
-                    {/* Right — image slider */}
-                    <div className="relative w-full md:w-[200px] h-[180px] md:h-[150px] shrink-0 border overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--bg)" }}>
-
-                        <CornerAccent color="var(--border)" />
-                        <img
-                            src={item.images[slide].src}
-                            alt={item.images[slide].caption}
-                            className="w-full h-full object-contain transition-opacity duration-700"
-                            loading="lazy" decoding="async"
-                        />
-                        {/* Dot indicators */}
-                        {item.images.length > 1 && (
-                            <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1">
-                                {item.images.slice(0, Math.min(item.images.length, 8)).map((_, i) => (
-                                    <div
-                                        key={i}
-                                        className="w-1 h-1 rounded-full transition-all duration-300"
-                                        style={{
-                                            background: i === slide % Math.min(item.images.length, 8) ? accentColor : "#30363d",
-                                        }}
-                                    />
-                                ))}
-                            </div>
-                        )}
-                        {/* Slide counter */}
-                        <div className="absolute top-2 right-2 font-mono text-[8px] px-1.5 py-0.5 border" style={{ color: "var(--text-muted)", background: "var(--bg-dim)", borderColor: "var(--border)" }}>
-                            {slide + 1}/{item.images.length}
-                        </div>
-                    </div>
                 </div>
             </div>
+        </div>
     );
 }
 
@@ -434,12 +430,12 @@ function PopupGallery({ item, onClose }) {
 
             {/* Lightbox */}
             {lightbox !== null && (
-        <div
+                <div
                     className="fixed inset-0 z-[60] flex items-center justify-center"
                     style={{ background: "var(--bg-dim)", backdropFilter: "blur(20px)" }}
                     onClick={() => setLightbox(null)}
                 >
-                    <div className="relative max-w-4xl w-[90%]" onClick={(e) => e.stopPropagation()}>
+                    <div className="relative w-fit max-w-[95vw] mx-auto" onClick={(e) => e.stopPropagation()}>
                         <button
                             onClick={() => setLightbox(null)}
                             className="absolute -top-10 right-0 font-mono text-[10px] tracking-widest hover:text-theme-accent transition-colors"
@@ -449,7 +445,7 @@ function PopupGallery({ item, onClose }) {
                         </button>
                         <button
                             onClick={() => setLightbox((p) => (p - 1 + item.images.length) % item.images.length)}
-                            className="absolute left-[-50px] top-1/2 -translate-y-1/2 border p-2 transition-colors"
+                            className="absolute left-[-50px] top-1/2 -translate-y-1/2 border p-2 transition-colors hidden md:block"
                             style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
                             onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
                             onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}
@@ -458,18 +454,18 @@ function PopupGallery({ item, onClose }) {
                         </button>
                         <button
                             onClick={() => setLightbox((p) => (p + 1) % item.images.length)}
-                            className="absolute right-[-50px] top-1/2 -translate-y-1/2 border p-2 transition-colors"
+                            className="absolute right-[-50px] top-1/2 -translate-y-1/2 border p-2 transition-colors hidden md:block"
                             style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
                             onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
                             onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}
                         >
                             <ChevronRight size={20} />
                         </button>
-                        <div className="border p-2" style={{ borderColor: "var(--accent)", background: "var(--surface)" }}>
+                        <div className="border p-2 relative overflow-hidden group/lb" style={{ borderColor: "var(--accent)", background: "var(--surface)" }}>
                             <img
                                 src={item.images[lightbox].src}
                                 alt={item.images[lightbox].caption}
-                                className="w-full max-h-[75vh] object-contain"
+                                className="w-auto h-auto max-w-[90vw] md:max-w-[70vw] max-h-[75vh] object-contain"
                                 loading="lazy" decoding="async"
                             />
                         </div>
@@ -510,158 +506,158 @@ export default function Certifications() {
     }, []);
 
     return (
-            <section
-                className="relative py-10 md:py-14 overflow-hidden" id='about'
+        <section
+            className="relative py-10 md:py-14 overflow-hidden" id='about'
+            style={{
+                background: "var(--bg)",
+                fontFamily: "'Courier New', Courier, monospace",
+            }}
+        >
+            {/* Background grid */}
+            <div
+                className="absolute inset-0 opacity-[0.025] pointer-events-none"
                 style={{
-                    background: "var(--bg)",
-                    fontFamily: "'Courier New', Courier, monospace",
+                    backgroundImage: "linear-gradient(var(--accent) 1px,transparent 1px),linear-gradient(90deg,var(--accent) 1px,transparent 1px)",
+                    backgroundSize: "40px 40px",
                 }}
-            >
-                {/* Background grid */}
-                <div
-                    className="absolute inset-0 opacity-[0.025] pointer-events-none"
-                    style={{
-                        backgroundImage: "linear-gradient(var(--accent) 1px,transparent 1px),linear-gradient(90deg,var(--accent) 1px,transparent 1px)",
-                        backgroundSize: "40px 40px",
-                    }}
-                />
-                {/* Ambient glow */}
-                <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full blur-[160px] pointer-events-none" style={{ background: "var(--accent)", opacity: 0.025 }} />
-                <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full blur-[140px] pointer-events-none" style={{ background: "var(--accent-blue)", opacity: 0.02 }} />
+            />
+            {/* Ambient glow */}
+            <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full blur-[160px] pointer-events-none" style={{ background: "var(--accent)", opacity: 0.025 }} />
+            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full blur-[140px] pointer-events-none" style={{ background: "var(--accent-blue)", opacity: 0.02 }} />
 
-                <div className="relative z-10">
+            <div className="relative z-10">
 
-                    {/* ── HEADER ── */}
-                    <div className="relative z-10 max-w-7xl mx-auto px-6 mb-8">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="w-1.5 h-1.5 rounded-full animate-pulse shadow-[0_0_8px_var(--accent)]" style={{ background: "var(--accent)" }} />
-                            <span className="font-mono text-[10px] tracking-[0.3em] uppercase" style={{ color: "var(--accent)" }}>
-                                SYSTEM_MODULE / CERTIFICATIONS
-                            </span>
+                {/* ── HEADER ── */}
+                <div className="relative z-10 max-w-7xl mx-auto px-6 mb-8">
+                    <div className="flex items-center gap-3 mb-6">
+                        <div className="w-1.5 h-1.5 rounded-full animate-pulse shadow-[0_0_8px_var(--accent)]" style={{ background: "var(--accent)" }} />
+                        <span className="font-mono text-[10px] tracking-[0.3em] uppercase" style={{ color: "var(--accent)" }}>
+                            SYSTEM_MODULE / CERTIFICATIONS
+                        </span>
+                    </div>
+
+                    <div className="border relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+                        <ScanlineOverlay />
+                        <CornerAccent color="var(--accent)" />
+
+                        {/* Window chrome */}
+                        <div className="flex items-center justify-between px-4 py-2.5 md:px-5 md:py-3.5 border-b" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                            <div className="flex items-center gap-3">
+                                <div className="flex gap-2">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                                    <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                                    <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+                                </div>
+                                <span className="font-mono text-[11px] md:text-[13px] tracking-[0.2em] truncate max-w-[150px] md:max-w-none" style={{ color: "var(--text-muted)" }}>
+                                    MY_CERTIFICATIONS.txt
+                                </span>
+                            </div>
+                            <div className="flex items-center gap-2 shrink-0">
+                                <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "var(--accent)" }} />
+                                <span className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] border px-2 py-0.5 font-bold whitespace-nowrap" style={{ color: "var(--accent)", borderColor: "var(--accent)" }}>
+                                    LIVE_FEED
+                                </span>
+                            </div>
                         </div>
 
-                        <div className="border relative overflow-hidden" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
-                            <ScanlineOverlay />
-                            <CornerAccent color="var(--accent)" />
+                        {/* Title */}
+                        <div className="px-5 py-6 md:px-8 md:py-6">
+                            <h2
+                                className={`font-mono font-black text-2xl xs:text-3xl md:text-5xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "translate-x-[2px]" : ""
+                                    }`}
+                                style={{ color: glitch ? "var(--accent)" : "var(--text-primary)", textShadow: "0 0 24px var(--accent-glow)" }}
+                            >
+                                CERTIFICATIONS_<span style={{ color: "var(--accent)" }}>ARCHIVE</span>
+                                <Cursor />
+                            </h2>
+                            <p className="font-mono text-[12px] mt-3 tracking-wider max-w-xl" style={{ color: "var(--text-muted)" }}>
+                                $ cat ./certifications/* — Loaded {certData.length} records from achievement database.
+                            </p>
 
-                            {/* Window chrome */}
-                            <div className="flex items-center justify-between px-4 py-2.5 md:px-5 md:py-3.5 border-b" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
-                                <div className="flex items-center gap-3">
-                                    <div className="flex gap-2">
-                                        <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
-                                        <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
-                                        <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+                            {/* Stats row */}
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                                {[
+                                    { label: "TOTAL_CERTS", value: "11+" },
+                                    { label: "BADGES", value: "30+" },
+                                    { label: "PLATFORMS", value: "06" },
+                                    { label: "YEAR_RANGE", value: "2023–26" },
+                                ].map((s) => (
+                                    <div key={s.label} className="border px-4 py-3 md:px-5 md:py-3" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+                                        <div className="font-mono text-[9px] tracking-[0.2em] uppercase font-bold" style={{ color: "var(--accent)" }}>{s.label}</div>
+                                        <div className="font-mono text-lg md:text-xl font-bold" style={{ color: "var(--text-primary)" }}>{s.value}</div>
                                     </div>
-                                    <span className="font-mono text-[11px] md:text-[13px] tracking-[0.2em] truncate max-w-[150px] md:max-w-none" style={{ color: "var(--text-muted)" }}>
-                                        MY_CERTIFICATIONS.txt
-                                    </span>
-                                </div>
-                                <div className="flex items-center gap-2 shrink-0">
-                                    <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "var(--accent)" }} />
-                                    <span className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] border px-2 py-0.5 font-bold whitespace-nowrap" style={{ color: "var(--accent)", borderColor: "var(--accent)" }}>
-                                        LIVE_FEED
-                                    </span>
-                                </div>
+                                ))}
                             </div>
-
-                            {/* Title */}
-                            <div className="px-5 py-6 md:px-8 md:py-6">
-                                <h2
-                                    className={`font-mono font-black text-2xl xs:text-3xl md:text-5xl tracking-[0.08em] uppercase transition-all duration-75 ${glitch ? "translate-x-[2px]" : ""
-                                        }`}
-                                    style={{ color: glitch ? "var(--accent)" : "var(--text-primary)", textShadow: "0 0 24px var(--accent-glow)" }}
-                                >
-                                    CERTIFICATIONS_<span style={{ color: "var(--accent)" }}>ARCHIVE</span>
-                                    <Cursor />
-                                </h2>
-                                <p className="font-mono text-[12px] mt-3 tracking-wider max-w-xl" style={{ color: "var(--text-muted)" }}>
-                                    $ cat ./certifications/* — Loaded {certData.length} records from achievement database.
-                                </p>
-
-                                {/* Stats row */}
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                                    {[
-                                        { label: "TOTAL_CERTS", value: "11+" },
-                                        { label: "BADGES", value: "30+" },
-                                        { label: "PLATFORMS", value: "06" },
-                                        { label: "YEAR_RANGE", value: "2023–26" },
-                                    ].map((s) => (
-                                        <div key={s.label} className="border px-4 py-3 md:px-5 md:py-3" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
-                                            <div className="font-mono text-[9px] tracking-[0.2em] uppercase font-bold" style={{ color: "var(--accent)" }}>{s.label}</div>
-                                            <div className="font-mono text-lg md:text-xl font-bold" style={{ color: "var(--text-primary)" }}>{s.value}</div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* ── SCROLLING CARDS TRACK ── */}
-                    <div className="relative overflow-hidden">
-                        {/* Left fade */}
-                        <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                            style={{ background: "linear-gradient(to right, var(--bg), transparent)" }} />
-                        {/* Right fade */}
-                        <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-                            style={{ background: "linear-gradient(to left, var(--bg), transparent)" }} />
-
-                        <div
-                            className="flex gap-6 px-6"
-                            style={{
-                                animation: `cert-scroll 32s linear infinite`,
-                                animationPlayState: isPaused ? "paused" : "running",
-                                width: "max-content",
-                            }}
-                        >
-                            {[...certData, ...certData].map((item, index) => (
-                                <CertCard
-                                    key={index}
-                                    item={item}
-                                    index={index % certData.length}
-                                    onExplore={(i) => setActivePopup(i % certData.length)}
-                                    isPaused={isPaused}
-                                    setIsPaused={setIsPaused}
-                                />
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* ── FOOTER ROW ── */}
-                    <div className="max-w-6xl mx-auto px-6 mt-10 flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div className="font-mono text-[10px] tracking-widest" style={{ color: "var(--text-muted)" }}>
-                            $ certifications --list --all _
-                        </div>
-                        <div className="flex flex-wrap items-center justify-center gap-3">
-                            {certData.map((c, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => setActivePopup(i)}
-                                    className="font-mono text-[9px] tracking-[0.15em] px-3 py-1.5 border transition-all duration-200 uppercase"
-                                    style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
-                                    onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
-                                    onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}
-                                >
-                                    {c.id}
-                                </button>
-                            ))}
                         </div>
                     </div>
                 </div>
 
-                {/* ── POPUP ── */}
-                {activePopup !== null && (
-                    <PopupGallery
-                        item={certData[activePopup]}
-                        onClose={() => setActivePopup(null)}
-                    />
-                )}
+                {/* ── SCROLLING CARDS TRACK ── */}
+                <div className="relative overflow-hidden">
+                    {/* Left fade */}
+                    <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+                        style={{ background: "linear-gradient(to right, var(--bg), transparent)" }} />
+                    {/* Right fade */}
+                    <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+                        style={{ background: "linear-gradient(to left, var(--bg), transparent)" }} />
 
-                <style jsx>{`
+                    <div
+                        className="flex gap-6 px-6"
+                        style={{
+                            animation: `cert-scroll 32s linear infinite`,
+                            animationPlayState: isPaused ? "paused" : "running",
+                            width: "max-content",
+                        }}
+                    >
+                        {[...certData, ...certData].map((item, index) => (
+                            <CertCard
+                                key={index}
+                                item={item}
+                                index={index % certData.length}
+                                onExplore={(i) => setActivePopup(i % certData.length)}
+                                isPaused={isPaused}
+                                setIsPaused={setIsPaused}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                {/* ── FOOTER ROW ── */}
+                <div className="max-w-6xl mx-auto px-6 mt-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div className="font-mono text-[10px] tracking-widest" style={{ color: "var(--text-muted)" }}>
+                        $ certifications --list --all _
+                    </div>
+                    <div className="flex flex-wrap items-center justify-center gap-3">
+                        {certData.map((c, i) => (
+                            <button
+                                key={i}
+                                onClick={() => setActivePopup(i)}
+                                className="font-mono text-[9px] tracking-[0.15em] px-3 py-1.5 border transition-all duration-200 uppercase"
+                                style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+                                onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
+                                onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}
+                            >
+                                {c.id}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* ── POPUP ── */}
+            {activePopup !== null && (
+                <PopupGallery
+                    item={certData[activePopup]}
+                    onClose={() => setActivePopup(null)}
+                />
+            )}
+
+            <style jsx>{`
         @keyframes cert-scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
       `}</style>
-            </section>
+        </section>
     );
 }

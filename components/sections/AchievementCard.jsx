@@ -143,18 +143,18 @@ function StatCard({ stat }) {
         >
             <ScanlineOverlay />
             {hovered && <CornerAccent color={ac} />}
-            <div className="p-6 relative z-10">
-                <div className="flex items-start justify-between mb-4">
-                    <div className="w-9 h-9 border flex items-center justify-center transition-all duration-200"
+            <div className="p-4 relative z-10">
+                <div className="flex items-center gap-3 mb-3">
+                    <div className="w-8 h-8 shrink-0 border flex items-center justify-center transition-all duration-200 [&>svg]:w-4 [&>svg]:h-4"
                         style={{ borderColor: hovered ? ac : "var(--border)", color: hovered ? ac : "var(--text-muted)", background: hovered ? `${ac}15` : "transparent" }}>
                         {stat.icon}
                     </div>
+                    <div className="font-mono font-black text-xl md:text-2xl" style={{ color: hovered ? ac : "var(--text-primary)" }}>
+                        <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                    </div>
                 </div>
-                <div className="font-mono font-black text-2xl md:text-3xl mb-1.5" style={{ color: hovered ? ac : "var(--text-primary)" }}>
-                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                </div>
-                <div className="font-mono text-[12px] font-bold mb-1.5 tracking-tight uppercase" style={{ color: "var(--text-primary)" }}>{stat.label}</div>
-                <div className="font-mono text-[10px] tracking-wider leading-relaxed font-bold" style={{ color: "var(--text-muted)" }}>{stat.desc}</div>
+                <div className="font-mono text-[10px] md:text-[11px] font-bold mb-1 tracking-tight uppercase" style={{ color: "var(--text-primary)" }}>{stat.label}</div>
+                <div className="font-mono text-[9px] tracking-wider leading-relaxed font-bold line-clamp-2" style={{ color: "var(--text-muted)" }}>{stat.desc}</div>
             </div>
             <div className="h-[3px] w-0 transition-all duration-500 group-hover:w-full" style={{ background: ac }} />
         </div>
@@ -214,8 +214,8 @@ function TrophyTicker() {
             <CornerAccent />
             <WindowChrome filename="TROPHY_FEED.live" status="STREAMING" />
             <div className="relative overflow-hidden py-4">
-                <div className="flex gap-6 ticker-animate" style={{ width: "max-content" }}>
-                    {[...trophyItems, ...trophyItems, ...trophyItems].map((t, i) => (
+                <div className="flex gap-6 animate-trophy-marquee w-max">
+                    {[...trophyItems, ...trophyItems].map((t, i) => (
                         <div key={i} className="flex items-center gap-3 border px-5 py-3 shrink-0"
                             style={{ borderColor: "var(--border)", background: "var(--bg-subtle)", borderLeftWidth: 3, borderLeftColor: t.color }}>
                             <span className="text-xl">{t.icon}</span>
@@ -287,13 +287,16 @@ export default function AchievementsPage() {
                 </div>
             </div>
 
-            <style jsx>{`
-                @keyframes ticker {
+            <style>{`
+                @keyframes trophyMarquee {
                     0% { transform: translateX(0); }
-                    100% { transform: translateX(-33.33%); }
+                    100% { transform: translateX(calc(-50% - 12px)); }
                 }
-                .ticker-animate {
-                    animation: ticker 20s linear infinite;
+                .animate-trophy-marquee {
+                    animation: trophyMarquee 25s linear infinite;
+                }
+                .animate-trophy-marquee:hover {
+                    animation-play-state: paused;
                 }
             `}</style>
         </section>

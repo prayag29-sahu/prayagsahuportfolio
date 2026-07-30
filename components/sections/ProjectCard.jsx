@@ -104,7 +104,7 @@ const mainProjects = [
         tag: "PRODUCTION",
         github: "https://github.com/prayag29-sahu",
         live: "https://ghotulstays.com",
-        image: "/images/09_Projects/03.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785268404/Screenshot_2026-07-29_012302_fpo8r5.png",
     },
     {
         id: "PRJ_02",
@@ -116,7 +116,7 @@ const mainProjects = [
         tag: "PRODUCTION",
         github: "https://github.com/prayag29-sahu",
         live: "https://www.sjpmschool.com/",
-        image: "/images/09_Projects/01.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179591/01_dmktrp.png",
     },
     {
         id: "PRJ_03",
@@ -128,7 +128,7 @@ const mainProjects = [
         tag: "PORTFOLIO",
         github: "https://github.com/prayag29-sahu",
         live: "https://prayagsahu.vercel.app/",
-        image: "/images/09_Projects/00.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785268515/Screenshot_2026-07-29_012455_qor9sh.png",
     },
     {
         id: "PRJ_04",
@@ -140,7 +140,7 @@ const mainProjects = [
         tag: "AI / ML",
         github: "https://github.com/prayag29-sahu",
         live: "https://fakeinfodetectionvercel.vercel.app",
-        image: "/images/09_Projects/05.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179555/05_ot2ygo.png",
     },
     {
         id: "PRJ_05",
@@ -152,7 +152,7 @@ const mainProjects = [
         tag: "FINTECH",
         github: "https://github.com/Pranjalpatel07/Stock-app",
         live: "https://sb-stock-app.vercel.app",
-        image: "/images/09_Projects/07.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179540/07_afnurw.png",
     },
     {
         id: "PRJ_06",
@@ -164,7 +164,7 @@ const mainProjects = [
         tag: "PORTFOLIO",
         github: "https://github.com/prayag29-sahu",
         live: "https://psthelightroom.vercel.app/",
-        image: "/images/09_Projects/08.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179537/08_ief6bb.png",
     },
     {
         id: "PRJ_07",
@@ -176,7 +176,7 @@ const mainProjects = [
         tag: "E-COMMERCE",
         github: "https://github.com/prayag29-sahu",
         live: null,
-        image: "/images/09_Projects/09.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179636/09_rdnz6p.png",
     },
     {
         id: "PRJ_08",
@@ -188,7 +188,7 @@ const mainProjects = [
         tag: "BUSINESS",
         github: "https://github.com/prayag29-sahu",
         live: null,
-        image: "/images/09_Projects/10.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179642/10_fbohvm.png",
     },
     {
         id: "PRJ_09",
@@ -200,7 +200,7 @@ const mainProjects = [
         tag: "LEGACY",
         github: "https://github.com/prayag29-sahu/Shivay",
         live: "https://prayag-sahu.github.io/www.P.S.shivay.com",
-        image: "/images/09_Projects/11.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179615/11_sufg9q.png",
     },
     {
         id: "PRJ_10",
@@ -212,7 +212,7 @@ const mainProjects = [
         tag: "SECURITY",
         github: "https://github.com/prayag29-sahu",
         live: null,
-        image: "/images/09_Projects/02.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179524/02_mq1ynr.png",
     },
     {
         id: "PRJ_11",
@@ -224,7 +224,7 @@ const mainProjects = [
         tag: "OPEN-SOURCE",
         github: "https://github.com/prayag29-sahu",
         live: null,
-        image: "/images/09_Projects/12.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179565/12_azwsiw.png",
     },
     {
         id: "PRJ_12",
@@ -236,7 +236,7 @@ const mainProjects = [
         tag: "FRONTEND",
         github: "https://github.com/prayag29-sahu",
         live: null,
-        image: "/images/09_Projects/minor/03/02.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785268780/02_vcjeax.png",
     },
     {
         id: "PRJ_13",
@@ -248,7 +248,7 @@ const mainProjects = [
         tag: "NLP",
         github: "https://github.com/prayag29-sahu",
         live: null,
-        image: "/images/09_Projects/04.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179511/04_nj58nj.png",
     },
     {
         id: "PRJ_14",
@@ -260,7 +260,7 @@ const mainProjects = [
         tag: "AUTOMATION",
         github: "https://github.com/prayag29-sahu",
         live: null,
-        image: "/images/09_Projects/06.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179533/06_qsgnw3.png",
     },
     {
         id: "PRJ_15",
@@ -272,7 +272,7 @@ const mainProjects = [
         tag: "HACKATHON",
         github: "https://github.com/prayag29-sahu",
         live: null,
-        image: "/images/09_Projects/minor/01/15.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785268883/15_pkvq0e.png",
     },
     {
         id: "PRJ_16",
@@ -284,7 +284,7 @@ const mainProjects = [
         tag: "HEALTH-TECH",
         github: "https://github.com/prayag29-sahu",
         live: null,
-        image: "/images/09_Projects/13.png",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179578/13_sseolk.png",
     },
     {
         id: "PRJ_17",
@@ -296,7 +296,7 @@ const mainProjects = [
         tag: "HEALTH-TECH",
         github: "https://github.com/prayag29-sahu/Frontend-Project/tree/main/1.WEB%20DEVELOPMENT%20HTML%20CSS/amazon%20on%20pc",
         live: "https://amazoncloneonpcps.netlify.app",
-        image: "/images/09_Projects/17.jpg",
+        image: "https://res.cloudinary.com/sfitny3t/image/upload/v1785179597/17_s49flg.jpg",
     },
 ];
 
@@ -738,7 +738,7 @@ export default function ProjectsPage() {
                         </div>
                     </div>
 
-                    {/* ── STACK CATEGORIES ── */}
+                    {/* ── STACK CATEGORIES ── 
                     <div className="border relative overflow-hidden mb-8" style={{ borderColor: "var(--border)", background: "var(--surface)", borderTopWidth: 2, borderTopColor: "var(--accent-blue)" }}>
                         <ScanlineOverlay />
                         <CornerAccent color="var(--accent-blue)" />
@@ -767,6 +767,7 @@ export default function ProjectsPage() {
                             </div>
                         </div>
                     </div>
+                    */}
 
                     {/* ── FOOTER ── */}
                     <div className="flex items-center justify-between">

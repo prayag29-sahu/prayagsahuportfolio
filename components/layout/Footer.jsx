@@ -213,7 +213,7 @@ export default function Footer() {
 
                     {/* Links Column: Quick links to other pages */}
                     <div className="lg:col-span-4 flex flex-col gap-4">
- 
+
                         {/* Portfolio links */}
                         <div className="border relative overflow-hidden flex-1" style={{ borderColor: "var(--border)", background: "var(--surface-2)" }}>
                             <ScanlineOverlay />
@@ -231,7 +231,7 @@ export default function Footer() {
                                 </ul>
                             </div>
                         </div>
- 
+
                         {/* Connect links */}
                         <div className="border relative overflow-hidden flex-1" style={{ borderColor: "var(--border)", background: "var(--surface-2)" }}>
                             <ScanlineOverlay />
@@ -245,7 +245,7 @@ export default function Footer() {
                                 <ul className="space-y-0.5">
                                     <FooterLink href="#contact" label="Contact Me" accent="var(--accent-amber)" size="0.5kb" />
                                     <FooterLink href="#about" label="About" accent="var(--accent-amber)" size="1.1kb" />
-                                    <FooterLink href="/PrayagCV.pdf" label="Resume" accent="var(--accent-amber)" size="2.4mb" />
+                                    <FooterLink href="https://drive.google.com/file/d/1IOtLumQeqg8bRSsVcXHiHkJuMdWy2I8C/view?usp=drive_link" label="Resume" accent="var(--accent-amber)" size="2.4mb" />
                                 </ul>
                             </div>
                         </div>
@@ -267,13 +267,13 @@ export default function Footer() {
                                 </div>
                             </div>
 
-                             <div className="p-5 relative z-10 font-mono text-[13px] space-y-3 font-bold">
+                            <div className="p-5 relative z-10 font-mono text-[13px] space-y-3 font-bold">
                                 {[
-                                    { cmd: "$ whoami",  out: "prayag-sahu",          outColor: "var(--accent)" },
-                                    { cmd: "$ location",out: "Jabalpur, MP, IN",     outColor: "var(--accent-blue)" },
-                                    { cmd: "$ role",    out: "Creative Engineer",    outColor: "var(--text-muted)" },
-                                    { cmd: "$ email",   out: "sahuprayag229@...",     outColor: "var(--accent-purple)" },
-                                    { cmd: "$ commits", out: "5,095+ this year",      outColor: "var(--accent-blue)" },
+                                    { cmd: "$ whoami", out: "prayag-sahu", outColor: "var(--accent)" },
+                                    { cmd: "$ location", out: "Jabalpur, MP, IN", outColor: "var(--accent-blue)" },
+                                    { cmd: "$ role", out: "Creative Engineer", outColor: "var(--text-muted)" },
+                                    { cmd: "$ email", out: "sahuprayag229@...", outColor: "var(--accent-purple)" },
+                                    { cmd: "$ commits", out: "5,095+ this year", outColor: "var(--accent-blue)" },
                                 ].map((line, i) => (
                                     <div key={i}>
                                         <div className="text-[10px]" style={{ color: "var(--text-dim)" }}>{line.cmd}</div>
