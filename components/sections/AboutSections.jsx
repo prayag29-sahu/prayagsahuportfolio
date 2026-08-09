@@ -247,7 +247,7 @@ export default function AboutSection() {
                                 {[
                                     { label: "DEVELOPER AT GHOTUL Pvt. Ltd", color: "var(--accent-amber)", link: "https://ghotulstays.com/" },
                                     { label: "10+ MONTHS WORK EXP", color: "var(--accent-blue)", link: "https://drive.google.com/file/d/1TbHC8ykLAikD5oM3o8XLrcF0F8sdGlLV/view?usp=drive_link" },
-                                    { label: "2+ INTERNSHIPS", color: "var(--accent)", link: "https://drive.google.com/file/d/1IOtLumQeqg8bRSsVcXHiHkJuMdWy2I8C/view?usp=drive_link" },
+                                    { label: "3 INTERNSHIPS", color: "var(--accent)", link: "https://drive.google.com/file/d/1IOtLumQeqg8bRSsVcXHiHkJuMdWy2I8C/view?usp=drive_link" },
                                     { label: "2 IIT TOPPER TAG", color: "var(--accent-amber)", hash: "#education", dispatch: "openEduGallery", detail: 0 },
                                     { label: "15+ PROJECTS", color: "var(--accent-purple)", hash: "#projects" },
                                     { label: "4 HACKATHONS", color: "var(--accent)", hash: "#education", dispatch: "openEduGallery", detail: 0 },

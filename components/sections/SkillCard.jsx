@@ -7,7 +7,7 @@ const GITHUB_DATA = {
     profileUrl: "https://github.com/prayag29-sahu",
     label: "FULL STACK DEV",
     repositories: 37,
-    commits: "5095+",
+    commits: "5390+",
     contributions: "5,095",
     topLanguages: ["C++", "HTML", "CSS", "Java", "JavaScript", "React"],
 };
@@ -249,9 +249,9 @@ export default function DevStats() {
                         <div className="p-6 relative z-10">
                             <div className="flex items-center justify-between mb-6">
                                 <div>
-                                    <a href={GITHUB_DATA.profileUrl} target="_blank" rel="noopener noreferrer" 
-                                       className="font-mono font-black text-xl hover:text-theme-accent transition-colors underline decoration-dotted" 
-                                       style={{ color: "var(--text-primary)" }}>
+                                    <a href={GITHUB_DATA.profileUrl} target="_blank" rel="noopener noreferrer"
+                                        className="font-mono font-black text-xl hover:text-theme-accent transition-colors underline decoration-dotted"
+                                        style={{ color: "var(--text-primary)" }}>
                                         {GITHUB_DATA.username}
                                     </a>
                                     <div className="text-[11px] font-mono tracking-widest font-bold" style={{ color: "var(--accent)" }}>{GITHUB_DATA.label}</div>
