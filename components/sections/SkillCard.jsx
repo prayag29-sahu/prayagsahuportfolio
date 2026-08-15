@@ -7,8 +7,8 @@ const GITHUB_DATA = {
     profileUrl: "https://github.com/prayag29-sahu",
     label: "FULL STACK DEV",
     repositories: 37,
-    commits: "5390+",
-    contributions: "5,095",
+    commits: "5,390+",
+    contributions: "5,390",
     topLanguages: ["C++", "HTML", "CSS", "Java", "JavaScript", "React"],
 };
 

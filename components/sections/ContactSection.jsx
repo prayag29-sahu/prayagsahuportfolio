@@ -2,18 +2,13 @@
 
 import { useRef, useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, CheckCircle, XCircle, Terminal, Loader } from "lucide-react";
-import emailjs from '@emailjs/browser';
 import { motion } from 'motion/react';
 
 /* 
-   Email Service Setup 
-   I connected EmailJS so I can receive your messages directly in my inbox 
-   without needing a complicated server setup.
+   Server-Side Email Service Setup 
+   EmailJS logic has been securely moved to /app/api/contact/route.js 
+   so your keys remain private and are not exposed to the browser!
 */
-const EMAILJS_SERVICE_ID = "service_c1lcmym";
-const EMAILJS_TEMPLATE_ID = "template_3d23n3n";
-const EMAILJS_PUBLIC_KEY = "iDnsyeNW2wHQtj5-7";
-const EMAILJS_AUTO_REPLY_ID = "template_w2i2syl";
 
 /* Basic UI parts for the computer-style look */
 function ScanlineOverlay() {
@@ -264,18 +259,24 @@ export default function Contact() {
                 to_name: "Prayag Sahu"
             };
 
-            // 1. Send the email to you
-            await emailjs.send(
-                EMAILJS_SERVICE_ID,
-                EMAILJS_TEMPLATE_ID,
-                templateParams,
-                EMAILJS_PUBLIC_KEY
-            );
+            // Securely send data to our own server-side API Route instead of directly from browser
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(templateParams)
+            });
 
-            setSubmitted("success");
-            setForm({ name: "", email: "", phone: "", subject: "", message: "" });
+            const data = await response.json();
+
+            if (data.success) {
+                setSubmitted("success");
+                setForm({ name: "", email: "", phone: "", subject: "", message: "" });
+            } else {
+                console.error("Server API Error:", data.error);
+                setSubmitted("error");
+            }
         } catch (error) {
-            console.error("EmailJS Error:", error);
+            console.error("Network Error:", error);
             setSubmitted("error");
         } finally {
             setSending(false);
