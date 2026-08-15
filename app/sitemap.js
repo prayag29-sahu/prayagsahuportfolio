@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://prayagsahu.com'; // Change to your actual domain name
+  const baseUrl = 'https://www.prayagsahu.tech';
 
   return [
     {

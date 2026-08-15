@@ -27,7 +27,7 @@ export const metadata = {
   openGraph: {
     title: 'Prayag Sahu — Full Stack Developer',
     description: 'Explore the portfolio of Prayag Sahu. Premium web applications, MERN stack projects, and innovative UI/UX designs.',
-    url: 'https://prayagsahu.com', // TODO: Update this to your actual deployed domain
+    url: 'https://www.prayagsahu.tech', // Updated to actual deployed domain
     siteName: 'Prayag Sahu Portfolio',
     images: [
       {
@@ -58,8 +58,7 @@ export const metadata = {
     },
   },
   verification: {
-    // You will get this code from Google Search Console later
-    google: 'YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE_HERE', 
+    google: 'y5RsjJcdP0MbIdCaQJFxBTFL-DVDdTrUMrQEKxw9b1Y', 
   },
   icons: {
     icon: "/icon.png",
