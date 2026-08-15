@@ -8,6 +8,7 @@ export async function POST(request) {
         const serviceId = process.env.EMAILJS_SERVICE_ID;
         const templateId = process.env.EMAILJS_TEMPLATE_ID;
         const publicKey = process.env.EMAILJS_PUBLIC_KEY;
+        const privateKey = process.env.EMAILJS_PRIVATE_KEY; // Optional but recommended
 
         if (!serviceId || !templateId || !publicKey) {
             console.error("EmailJS configuration missing on server.");
@@ -21,6 +22,11 @@ export async function POST(request) {
             template_params: body
         };
 
+        // Add private key if provided (required by some EmailJS account settings)
+        if (privateKey) {
+            payload.accessToken = privateKey;
+        }
+
         const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -30,7 +36,8 @@ export async function POST(request) {
         if (!response.ok) {
             const text = await response.text();
             console.error('EmailJS API Error:', text);
-            return NextResponse.json({ success: false, error: 'Failed to send message.' }, { status: 500 });
+            // Sending the actual error text back to the client to see what went wrong
+            return NextResponse.json({ success: false, error: `EmailJS Error: ${text}` }, { status: 500 });
         }
 
         return NextResponse.json({ success: true });
