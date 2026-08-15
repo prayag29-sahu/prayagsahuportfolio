@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Link as LinkIcon } from "lucide-react";
 
 /* Basic UI parts for the education section */
 function ScanlineOverlay() {
@@ -90,7 +90,9 @@ const educationData = [
             "Active in Sports Leadership & Republic Day Participation",
         ],
         images: [
+            { src: "https://res.cloudinary.com/sfitny3t/video/upload/v1786780664/school_lphzjk.mp4", caption: "Farewell Ceremony 2023", type: "video" },
             { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785178723/01_wjudua.jpg", caption: "Best Student Award in college 2023" },
+            { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1786781561/tachers_day_c0momm.png", caption: "Teachers Day Celebration 2022" },
             { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785182847/reward_fdzwfb.png", caption: "Class 12th Topper catagory" },
             { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785178724/03_pwrrrh.jpg", caption: "Physics Topper In Gyanoday Academy" },
             { src: "https://res.cloudinary.com/sfitny3t/image/upload/v1785178730/06_lrhhvy.jpg", caption: "Chemistry Topper In Gyanoday Academy" },
@@ -175,7 +177,11 @@ function PopupGallery({ item, onClose }) {
                                 style={{ borderColor: "var(--border)", background: "var(--bg)" }}>
                                 <CornerAccent color="var(--border)" />
                                 <div className="relative overflow-hidden">
-                                    <img src={img.src} alt={img.caption} className="w-full h-auto object-contain group-hover/card:scale-105 transition-transform duration-300" loading="lazy" decoding="async" />
+                                    {img.type === 'video' ? (
+                                        <video src={img.src} className="w-full h-auto object-contain group-hover/card:scale-105 transition-transform duration-300" autoPlay muted loop playsInline />
+                                    ) : (
+                                        <img src={img.src} alt={img.caption} className="w-full h-auto object-contain group-hover/card:scale-105 transition-transform duration-300" loading="lazy" decoding="async" />
+                                    )}
                                 </div>
                                 <div className="mt-2 flex items-center justify-between">
                                     <p className="font-mono text-[10px] tracking-wider uppercase" style={{ color: "var(--text-muted)" }}>{img.caption}</p>
@@ -187,10 +193,17 @@ function PopupGallery({ item, onClose }) {
                 </div>
             </div>
             {lightbox !== null && (
-                <div className="fixed inset-0 z-[60] flex items-center justify-center" style={{ background: "var(--bg-dim)", backdropFilter: "blur(20px)" }} onClick={() => setLightbox(null)}>
-                    <div className="relative max-w-4xl w-[90%]" onClick={(e) => e.stopPropagation()}>
-                        <div className="border p-2" style={{ borderColor: ac, background: "var(--surface)" }}>
-                            <img src={item.images[lightbox].src} alt={item.images[lightbox].caption} className="w-full max-h-[72vh] object-contain" loading="lazy" decoding="async" />
+                <div className="fixed inset-0 z-[60] flex items-center justify-center p-4" style={{ background: "var(--bg-dim)", backdropFilter: "blur(20px)" }} onClick={() => setLightbox(null)}>
+                    <div className="relative max-w-4xl w-[90%] flex flex-col items-end" onClick={(e) => e.stopPropagation()}>
+                        <button onClick={() => setLightbox(null)} className="absolute -top-10 right-0 p-1 hover:text-[var(--accent)] text-white transition-all z-10">
+                            <X size={24} />
+                        </button>
+                        <div className="border p-2 w-full shadow-[0_0_30px_rgba(0,0,0,0.5)]" style={{ borderColor: ac, background: "var(--surface)" }}>
+                            {item.images[lightbox].type === 'video' ? (
+                                <video src={item.images[lightbox].src} controls autoPlay muted playsInline className="w-full max-h-[72vh] object-contain" />
+                            ) : (
+                                <img src={item.images[lightbox].src} alt={item.images[lightbox].caption} className="w-full max-h-[72vh] object-contain" loading="lazy" decoding="async" />
+                            )}
                         </div>
                     </div>
                 </div>
@@ -239,12 +252,29 @@ function EduCard({ item, index, onExplore, isHorizontal = false }) {
                 )}
 
                 <div className="space-y-1.5 mb-5 flex-1">
-                    {item.points.map((pt, i) => (
-                        <div key={i} className="flex items-start gap-2.5">
-                            <span className="font-mono text-[14px] mt-0.5 shrink-0" style={{ color: "var(--accent)" }}>▸</span>
-                            <span className="font-mono text-[12px] leading-relaxed" style={{ color: "var(--text-muted)" }}>{pt}</span>
-                        </div>
-                    ))}
+                    {item.points.map((pt, i) => {
+                        const isVideoClickable = pt === "Consistent Academic Excellence & Best Student Awards";
+                        return (
+                            <div key={i} className="flex items-start gap-2.5">
+                                <span className="font-mono text-[14px] mt-0.5 shrink-0" style={{ color: "var(--accent)" }}>▸</span>
+                                <span className="font-mono text-[12px] leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                                    {isVideoClickable ? (
+                                        <span
+                                            className="cursor-pointer hover:text-[var(--accent)] transition-colors inline-flex items-center gap-1.5 group/link"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                const event = new CustomEvent('openVideoPopup', { detail: "https://res.cloudinary.com/sfitny3t/video/upload/v1786780664/school_lphzjk.mp4" });
+                                                window.dispatchEvent(event);
+                                            }}
+                                        >
+                                            <span>{pt}</span>
+                                            <LinkIcon size={12} className="opacity-60 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all" />
+                                        </span>
+                                    ) : pt}
+                                </span>
+                            </div>
+                        )
+                    })}
                 </div>
 
                 <button onClick={() => onExplore(index)} className={`group/btn flex items-center justify-center gap-2 border font-mono text-[11px] tracking-widest uppercase py-2.5 transition-all duration-200 ${isHorizontal ? 'w-fit px-8' : 'w-full'}`}
@@ -331,6 +361,7 @@ function BeyondAcademics({ onExplore }) {
 export default function Education() {
     const [activePopup, setActivePopup] = useState(null);
     const [showBeyond, setShowBeyond] = useState(false);
+    const [videoPopupUrl, setVideoPopupUrl] = useState(null);
 
     useEffect(() => {
         const handleOpenGallery = (e) => {
@@ -338,8 +369,17 @@ export default function Education() {
                 setActivePopup(e.detail);
             }
         };
+        const handleOpenVideo = (e) => {
+            if (e.detail) {
+                setVideoPopupUrl(e.detail);
+            }
+        };
         window.addEventListener('openEduGallery', handleOpenGallery);
-        return () => window.removeEventListener('openEduGallery', handleOpenGallery);
+        window.addEventListener('openVideoPopup', handleOpenVideo);
+        return () => {
+            window.removeEventListener('openEduGallery', handleOpenGallery);
+            window.removeEventListener('openVideoPopup', handleOpenVideo);
+        };
     }, []);
 
     return (
@@ -385,6 +425,17 @@ export default function Education() {
 
             {showBeyond && (
                 <PopupGallery item={beyondData} onClose={() => setShowBeyond(false)} />
+            )}
+
+            {videoPopupUrl && (
+                <div className="fixed inset-0 z-[80] flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.85)", backdropFilter: "blur(8px)" }} onClick={() => setVideoPopupUrl(null)}>
+                    <div className="relative border p-1 bg-black max-w-4xl w-fit flex flex-col items-end shadow-[0_0_30px_rgba(0,0,0,0.5)]" style={{ borderColor: "var(--accent)" }} onClick={e => e.stopPropagation()}>
+                        <button onClick={() => setVideoPopupUrl(null)} className="absolute -top-10 right-0 p-1 hover:text-[var(--accent)] text-white transition-all z-10">
+                            <X size={24} />
+                        </button>
+                        <video src={videoPopupUrl} controls autoPlay muted playsInline className="max-w-full max-h-[85vh] w-auto h-auto object-contain" />
+                    </div>
+                </div>
             )}
         </section>
     );
